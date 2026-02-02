@@ -1,6 +1,10 @@
 "use client";
 
-import { createTheme, MantineProvider as MantineProviderBase } from "@mantine/core";
+import {
+  createTheme,
+  DirectionProvider,
+  MantineProvider as MantineProviderBase,
+} from "@mantine/core";
 
 type MantineProviderProps = {
   children: React.ReactNode;
@@ -94,8 +98,10 @@ const theme = createTheme({
 
 export function MantineProvider({ children, direction = "ltr" }: MantineProviderProps) {
   return (
-    <MantineProviderBase theme={theme} defaultColorScheme="light" direction={direction}>
-      {children}
-    </MantineProviderBase>
+    <DirectionProvider initialDirection={direction} detectDirection={false}>
+      <MantineProviderBase theme={theme} defaultColorScheme="light">
+        {children}
+      </MantineProviderBase>
+    </DirectionProvider>
   );
 }
