@@ -1,0 +1,84 @@
+.root {
+  background: var(--readdy-bg);
+}
+
+.eyebrow {
+  letter-spacing: 0.1em;
+  color: var(--section-green);
+}
+
+.title {
+  color: var(--readdy-gray-800);
+}
+
+.subtitle {
+  color: var(--readdy-gray-700);
+}
+
+.tabActive {
+  background: var(--readdy-teal);
+  color: white;
+  border-color: var(--readdy-teal);
+}
+
+.tabInactive {
+  color: var(--readdy-gray-700);
+  border-color: var(--readdy-border);
+}
+
+.card {
+  border: 1px solid var(--readdy-border);
+  overflow: hidden;
+  background: var(--background);
+}
+
+.splitGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 180px;
+}
+
+.halfBefore {
+  background: var(--readdy-gray-100);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.halfAfter {
+  background: var(--readdy-teal-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.beforeImage,
+.afterImage {
+  object-fit: cover;
+}
+
+.badgeBefore {
+  background: #dc2626;
+  border-radius: 12px;
+  color: white;
+  font-size: 0.7rem;
+  font-weight: 600;
+}
+
+.badgeAfter {
+  background: var(--readdy-teal);
+  border-radius: 12px;
+  color: white;
+  font-size: 0.7rem;
+  font-weight: 600;
+}
+
+.cardTitle {
+  color: var(--readdy-gray-800);
+}
+
+.cardDetail {
+  color: var(--readdy-teal);
+}

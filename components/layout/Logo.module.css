@@ -1,0 +1,66 @@
+.link {
+  text-decoration: none;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: var(--shadow-md);
+}
+
+.iconDefault {
+  background: var(--readdy-teal);
+}
+
+.iconLight {
+  background: var(--primary-cta);
+}
+
+.iconSvg {
+  color: white;
+}
+
+.textWrap {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+}
+
+.primary {
+  font-weight: 700;
+  font-size: 1.125rem;
+  letter-spacing: -0.02em;
+}
+
+.primaryDefault {
+  color: var(--readdy-gray-800);
+}
+
+.primaryLight {
+  color: #fff;
+}
+
+.secondary {
+  font-weight: 600;
+  font-size: 1.125rem;
+  letter-spacing: -0.02em;
+}
+
+.secondaryDefault {
+  color: var(--readdy-teal);
+}
+
+.secondaryLight {
+  color: rgba(255, 255, 255, 0.95);
+}

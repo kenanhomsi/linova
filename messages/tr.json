@@ -1,0 +1,285 @@
+{
+  "common": {
+    "siteName": "Linova Clinic",
+    "siteFullName": "Linova Clinic Istanbul",
+    "siteTagline": "Türkiye Diş İmplantı | Hollywood Gülüş",
+    "skipToContent": "Ana içeriğe geç",
+    "getAppointment": "Randevu Al",
+    "whatsapp": "WhatsApp",
+    "bookNow": "Hemen Randevu Al",
+    "nav": {
+      "home": "Ana Sayfa",
+      "services": "Hizmetler",
+      "whyChooseUs": "Neden Biz",
+      "technology": "Teknoloji",
+      "contact": "İletişim"
+    },
+    "footer": {
+      "aboutUs": "Hakkımızda",
+      "treatments": "Tedaviler",
+      "smileGallery": "Gülüş Galerisi",
+      "team": "Ekibimiz",
+      "contact": "İletişim",
+      "services": "Hizmetler",
+      "popularTreatments": "Popüler Tedaviler",
+      "getInTouch": "Bize Ulaşın",
+      "visitUs": "Bizi Ziyaret Edin",
+      "doYouWantAppointment": "Randevu almak ister misiniz?",
+      "getAnAppointment": "Randevu al",
+      "allRightsReserved": "Tüm Hakları Saklıdır",
+      "instagram": "Instagram",
+      "facebook": "Facebook",
+      "youtube": "YouTube",
+      "whatsapp": "WhatsApp"
+    },
+    "footerServices": {
+      "cosmeticDentistry": "Estetik Diş Hekimliği",
+      "dentalImplants": "Diş İmplantı",
+      "medicalTourism": "Medikal Turizm",
+      "technology": "Teknoloji"
+    },
+    "footerTreatments": {
+      "hollywoodSmile": "Hollywood Gülüş",
+      "allOn4Implants": "All-on-4 İmplant",
+      "veneers": "Kaplama",
+      "teethWhitening": "Diş Beyazlatma"
+    },
+    "footerLegal": {
+      "privacyPolicy": "Gizlilik Politikası",
+      "termsOfService": "Hizmet Şartları",
+      "websiteBuilder": "Web Sitesi"
+    },
+    "address": "Nişantaşı, İstanbul, Türkiye",
+    "workingHours": "Pzt - Cum: 09:00 - 18:00",
+    "workingHoursFooter": "Pzt - Cum: 09:00 - 18:00\nCmt: 10:00 - 16:00"
+  },
+  "home": {
+    "hero": {
+      "badge": "İstanbul'da Premium Diş Bakımı",
+      "title": "Gülüş Yolculuğunuzu Dönüştürün",
+      "titleHighlight": "Gülüş Yolculuğu",
+      "subtitle": "İstanbul'un kalbinde son teknoloji, uzman bakım ve olağanüstü medikal turizm deneyimini bir araya getiren dünya standartlarında diş tedavileri",
+      "ctaPrimary": "Ücretsiz Danışmanlık Alın",
+      "ctaSecondary": "Hizmetleri Keşfedin"
+    },
+    "stats": [
+      { "value": "15+", "label": "Yıllık Deneyim" },
+      { "value": "10K+", "label": "Mutlu Hasta" },
+      { "value": "50+", "label": "Hizmet Verilen Ülke" },
+      { "value": "98%", "label": "Memnuniyet Oranı" }
+    ],
+    "expertise": {
+      "eyebrow": "Uzmanlığımız",
+      "title": "Kapsamlı Diş Çözümleri",
+      "subtitle": "Kozmetik iyileştirmelerden karmaşık restorasyonlara, en son teknoloji ve tekniklerle kapsamlı diş tedavileri sunuyoruz"
+    },
+    "treatmentCards": [
+      { "category": "Estetik Diş Hekimliği", "title": "Hollywood Gülüş", "description": "Kaplama, beyazlatma ve gülüş tasarımını bir araya getiren tam estetik dönüşüm, muhteşem ve doğal bir sonuç", "cta": "Randevu Al", "badge": "En Popüler" },
+      { "category": "Restoratif Diş Hekimliği", "title": "Diş İmplantı", "description": "Doğal dişler gibi görünen, hissedilen ve işlev gören titanyum implantlarla kalıcı diş değişimi", "cta": "Randevu Al", "badge": "En Popüler" },
+      { "category": "Restoratif Diş Hekimliği", "title": "All-on-4 ve All-on-6 İmplant", "description": "Birden fazla eksik diş için anında sonuç veren tam ark sabit çözümler", "cta": "Daha Fazla" },
+      { "category": "Estetik Diş Hekimliği", "title": "Diş Kaplama", "description": "Mükemmel dişler için ultra ince zirkonyum, E-max ve porselen kaplamalar", "cta": "Daha Fazla" },
+      { "category": "Estetik Diş Hekimliği", "title": "Diş Beyazlatma", "description": "Daha parlak ve özgüvenli bir gülüş için profesyonel lazer beyazlatma", "cta": "Daha Fazla" },
+      { "category": "Restoratif Diş Hekimliği", "title": "Diş Kronu ve Köprüler", "description": "Hasarlı dişlerin gücünü, işlevini ve görünümünü geri kazanın", "cta": "Daha Fazla" },
+      { "category": "Dijital Diş Hekimliği", "title": "Dijital Gülüş Tasarımı", "description": "İdeal gülüş dönüşümünüz için 3D önizleme ve planlama", "cta": "Daha Fazla" },
+      { "category": "İleri Teknoloji", "title": "Lazer Diş Hekimliği", "description": "Modern lazer teknolojisiyle hassas, minimal invaziv tedaviler", "cta": "Daha Fazla" }
+    ],
+    "completeDentalSolutionsCards": [
+      { "category": "Estetik Diş Hekimliği", "title": "Hollywood Gülüş", "description": "Kaplama, beyazlatma ve gülüş tasarımını bir araya getiren tam estetik dönüşüm", "cta": "Randevu Al", "badge": "En Popüler" },
+      { "category": "Restoratif Diş Hekimliği", "title": "Diş İmplantı", "description": "Doğal dişler gibi görünen titanyum implantlarla kalıcı değişim", "cta": "Randevu Al", "badge": "En Popüler" },
+      { "category": "Restoratif Diş Hekimliği", "title": "All-on-4 & All-on-6", "description": "Birden fazla eksik diş için anında sonuç veren tam ark sabit çözümler", "cta": "Daha Fazla" },
+      { "category": "Estetik Diş Hekimliği", "title": "Diş Kaplama", "description": "Mükemmel dişler için ultra ince zirkonyum, E-max ve porselen", "cta": "Daha Fazla" },
+      { "category": "Estetik Diş Hekimliği", "title": "Diş Beyazlatma", "description": "Daha parlak gülüş için profesyonel lazer beyazlatma", "cta": "Daha Fazla" },
+      { "category": "Restoratif Diş Hekimliği", "title": "Diş Kronu ve Köprüler", "description": "Hasarlı dişlerin gücünü ve görünümünü geri kazanın", "cta": "Daha Fazla" },
+      { "category": "Dijital Diş Hekimliği", "title": "Dijital Gülüş Tasarımı", "description": "İdeal gülüş dönüşümünüz için 3D önizleme ve planlama", "cta": "Daha Fazla" },
+      { "category": "İleri Teknoloji", "title": "Lazer Diş Hekimliği", "description": "Modern lazer teknolojisiyle hassas, minimal invaziv tedaviler", "cta": "Daha Fazla" }
+    ],
+    "whyLinova": {
+      "eyebrow": "Neden Linova Clinic",
+      "title": "İstanbul'da Güvenilir Ortağınız",
+      "subtitle": "Dünya standartlarında diş uzmanlığını olağanüstü hasta bakımı ve medikal turizm mükemmelliğiyle bir araya getiriyoruz",
+      "cards": [
+        { "title": "Uluslararası Standartlar", "description": "Avrupa kalite protokolleri ve sterilizasyon standartlarına sahip ISO sertifikalı klinik", "cta": "Daha Fazla" },
+        { "title": "Uzman Ekip", "description": "Uluslararası eğitimli ve 15+ yıl deneyimli son derece nitelikli diş hekimleri", "cta": "Daha Fazla" },
+        { "title": "Şeffaf Fiyatlandırma", "description": "UK/ABD fiyatlarına kıyasla gizli maliyet olmadan %70'e varan tasarruf", "cta": "Daha Fazla" },
+        { "title": "Medikal Turizm", "description": "Tam seyahat yardımı, havalimanı transferleri ve konaklama desteği", "cta": "Daha Fazla" },
+        { "title": "Ömür Boyu Garanti", "description": "Kapsamlı sonrası bakımla tüm tedavilerde uzatılmış garanti", "cta": "Daha Fazla" },
+        { "title": "7/24 Destek", "description": "Günün her saati çok dilli hasta koordinatörleri", "cta": "Daha Fazla" }
+      ]
+    },
+    "smileTransformations": {
+      "eyebrow": "Gerçek Sonuçlar",
+      "title": "Gülüş Dönüşümleri",
+      "subtitle": "Uzman diş tedavilerimizle hastalarımızın elde ettiği hayat değiştiren sonuçları görün",
+      "tabs": ["Tüm Vakalar", "Hollywood Gülüş", "İmplant", "Kaplama", "Beyazlatma"],
+      "before": "Önce",
+      "after": "Sonra"
+    },
+    "transformations": [
+      { "title": "Hollywood Gülüş Dönüşümü", "detail": "16 Zirkonyum Kaplama", "category": "Hollywood Gülüş" },
+      { "title": "Diş İmplantı Başarısı", "detail": "4 Diş İmplantı", "category": "İmplant" },
+      { "title": "Kaplama Mükemmelliği", "detail": "8 E-max Kaplama", "category": "Kaplama" },
+      { "title": "Tam Gülüş Dönüşümü", "detail": "20 Kaplama + Beyazlatma", "category": "Kaplama" },
+      { "title": "Lazer Beyazlatma Sonuçları", "detail": "Profesyonel Lazer Beyazlatma", "category": "Beyazlatma" },
+      { "title": "All-on-4 Tam Restorasyon", "detail": "All-on-4 İmplant", "category": "İmplant" }
+    ],
+    "gallery": {
+      "sectionTitle": "Hastalarımızın Hikayeleri"
+    },
+    "galleryTabs": ["Önce ve Sonra", "Kliniğimiz"],
+    "galleryItems": [
+      { "title": "Hollywood Gülüş", "tag": "Kaplama" },
+      { "title": "Diş Kaplama", "tag": "Estetik" },
+      { "title": "All-on-4 İmplant", "tag": "İmplant" },
+      { "title": "Diş Beyazlatma", "tag": "Beyazlatma" }
+    ],
+    "dentalJourney": {
+      "title": "İstanbul'da diş yolculuğunuz",
+      "subtitle": "Lüks konaklama, VIP transferler ve kişiselleştirilmiş tedavi planları içeren tam bakım paketleri",
+      "cta": "Ziyaretinizi Planlayın",
+      "cards": [
+        { "title": "Online Danışmanlık", "description": "Detaylı sanal değerlendirme ve kişiselleştirilmiş tedavi planlarıyla yolculuğunuza evden başlayın" },
+        { "title": "VIP Havalimanı Transferi", "description": "Havalimanından kliniğe ve otele özel şoförlü rahat ulaşım" },
+        { "title": "Lüks Konaklama", "description": "Tedavi programınıza uygun, İstanbul'un seçkin lokasyonlarında konforlu otel konaklamaları" },
+        { "title": "Çok Dilli Destek", "description": "Tüm ziyaretiniz boyunca İngilizce ve diğer dillerde akıcı hasta koordinatörleri" }
+      ]
+    },
+    "digitalDentistry": {
+      "eyebrow": "İleri Dijital Diş Hekimliği",
+      "title": "İleri Dijital Diş Hekimliği",
+      "intro": "Hassas teşhis, konforlu tedaviler ve öngörülebilir sonuçlar için en son teknolojiye yatırım yapıyoruz. Dijital iş akışımız diş bakımı deneyiminizin her yönünü geliştirir.",
+      "highlight": {
+        "title": "Dijital Gülüş Tasarımı",
+        "description": "Tedavi başlamadan önce yeni gülüşünüzü görselleştirin. DSD teknolojimiz ideal gülüş dönüşümünüzün hassas dijital planını oluşturur.",
+        "cta": "Teknolojileri Gör"
+      },
+      "tech": [
+        { "badge": "En Son Teknoloji", "title": "3D CBCT Görüntüleme", "description": "Minimal radyasyon maruziyetiyle hassas implant planlaması ve karmaşık cerrahi prosedürler için üç boyutlu görüntüleme.", "cta": "Daha Fazla" },
+        { "badge": "En Son Teknoloji", "title": "Lazer Tedavileri", "description": "Daha hızlı iyileşme, azaltılmış rahatsızlık ve yumuşak doku tedavilerinde üstün hassasiyetle minimal invaziv prosedürler.", "cta": "Daha Fazla" }
+      ],
+      "bullets": [
+        { "title": "Ağız İçi Tarama", "description": "Dijital ölçüler, kron, kaplama ve hizalayıcılar için üstün doğruluk sağlarken rahatsız edici geleneksel kalıpları ortadan kaldırır." },
+        { "title": "CAD/CAM Sistemi", "description": "Tedavi süresini azaltan ve mükemmel uyum ve estetik sağlayan, aynı gün içinde tasarlanıp üretilen restorasyonlar." }
+      ]
+    },
+    "testimonials": [
+      {
+        "flag": "🇬🇧",
+        "quote": "Hollywood gülüşüm için Londra'dan İstanbul'a geldim ve bu hayatımın en iyi kararıydı! Linova Clinic ekibi inanılmaz derecede profesyoneldi ve sonuçlar beklentilerimi aştı. Özgüvenim fırladı!",
+        "name": "Sarah Mitchell",
+        "country": "Birleşik Krallık",
+        "treatment": "Hollywood Gülüş",
+        "timeAgo": "3 hafta önce"
+      },
+      {
+        "flag": "🇺🇸",
+        "quote": "Yıllarca süren diş problemlerinden sonra nihayet çözümü Linova Clinic'te buldum. All-on-4 işlemi ağrısızdı ve sonuçlar muhteşem. ABD fiyatlarına kıyasla binlerce tasarruf ettim ve daha kaliteli bakım aldım!",
+        "name": "James Anderson",
+        "country": "Amerika Birleşik Devletleri",
+        "treatment": "All-on-4 Diş İmplantı",
+        "timeAgo": "1 ay önce"
+      },
+      {
+        "flag": "🇦🇺",
+        "quote": "Deneyim baştan sona kusursuzdu. Klinik her şeyi ayarladı - havalimanı karşılama, otel ve tüm randevular. Kaplamalarım kesinlikle doğal görünüyor ve yeni gülüşümle daha mutlu olamazdım!",
+        "name": "Emma Thompson",
+        "country": "Avustralya",
+        "treatment": "Diş Kaplama",
+        "timeAgo": "2 hafta önce"
+      },
+      {
+        "flag": "🇩🇪",
+        "quote": "Olağanüstü kalite ve profesyonellik! Alman hassasiyet standartları Türk misafirperverliğiyle birleşince bu deneyim muhteşem oldu. Tam ağız restorasyonum mükemmel görünüyor ve sonrası bakım desteği harika.",
+        "name": "Michael Weber",
+        "country": "Almanya",
+        "treatment": "Tam Ağız Restorasyonu",
+        "timeAgo": "1 ay önce"
+      },
+      {
+        "flag": "🇫🇷",
+        "quote": "Magnifique! Gülüş tasarımımdaki detaylara verilen özen ve sanatsal yaklaşım etkileyiciydi. Ekip tam olarak ne istediğimi anladı ve sonuçlar doğal güzellikte. Diş turizmi düşünen herkese şiddetle tavsiye ederim!",
+        "name": "Sophie Laurent",
+        "country": "Fransa",
+        "treatment": "Diş Beyazlatma ve Kaplama",
+        "timeAgo": "3 hafta önce"
+      },
+      {
+        "flag": "🇨🇦",
+        "quote": "Yurtdışında diş tedavisi için seyahat etmekten endişeliydim ama Linova Clinic her şeyi kolaylaştırdı. Kullandıkları teknoloji son derece gelişmiş ve sonuçlar harika. Toronto'dan yapılan yolculuğa değer!",
+        "name": "David Chen",
+        "country": "Kanada",
+        "treatment": "Diş İmplantı ve Kron",
+        "timeAgo": "2 hafta önce"
+      }
+    ],
+    "reviewsSection": {
+      "title": "Hasta Yorumları",
+      "googleRating": "4.9",
+      "googleLabel": "En Yüksek Puanlı Hizmet",
+      "verifiedBadge": "Trustindex Tarafından Doğrulandı",
+      "readMore": "Devamını oku",
+      "quoteMaxLength": 120
+    },
+    "readyCta": {
+      "eyebrow": "HEMEN BAŞLA",
+      "title": "Hayalinizdeki Gülüşe Hazır mısınız?",
+      "subtitle": "Detaylı, kişiselleştirilmiş bir tedavi planıyla gülüş dönüşümünüze bugün başlayın. Çok dilli ekibimiz diş yolculuğunuzun her adımında size rehberlik etmek için burada.",
+      "callLabel": "Bizi her zaman arayın",
+      "emailLabel": "E-posta gönderin",
+      "hoursLabel": "Çalışma saatleri",
+      "hours": "Pzt - Cum: 09:00 - 18:00",
+      "ctaButton": "Ücretsiz Danışmanlık Alın"
+    },
+    "footerForm": {
+      "title": "Gülüş Yolculuğunuza Başlayın",
+      "subtitle": "Ücretsiz danışmanlığınızı rezerve edin ve gülüşünüzü nasıl dönüştürebileceğimizi keşfedin",
+      "fullName": "Ad Soyad",
+      "email": "E-posta",
+      "phone": "Telefon Numarası",
+      "treatmentInterest": "İlgilendiğiniz Tedavi",
+      "treatmentOptions": [
+        "Tedavi seçin",
+        "Hollywood Gülüş",
+        "Diş İmplantı",
+        "Diş Kaplama",
+        "Diş Beyazlatma",
+        "All-on-4 İmplant",
+        "Diğer Tedavi"
+      ],
+      "message": "Mesaj",
+      "messagePlaceholder": "0/500 karakter",
+      "sendButton": "Mesaj Gönder",
+      "quickContact": "Hızlı İletişim",
+      "callUs": "Bizi Arayın",
+      "whatsapp": "Bize Yazın",
+      "emailUs": "E-posta",
+      "visitTitle": "Kliniğimizi Ziyaret Edin",
+      "addressLabel": "Adres",
+      "address": "Nişantaşı\nİstanbul, Türkiye",
+      "hoursLabel": "Çalışma Saatleri",
+      "hours": "Pzt - Cum: 09:00 - 18:00\nCmt: 10:00 - 16:00"
+    },
+    "faq": {
+      "title": "SSS",
+      "subtitle": "sıkça sorulan sorular",
+      "items": [
+        { "question": "Türkiye'de lüks bir diş kliniği için neden Linova Clinic'i seçmeliyim?", "answer": "Linova Clinic'te dünya standartlarında diş hekimliğini premium hasta bakımıyla harmanlayarak diş deneyimini yeniden tanımlıyoruz. Türkiye'de önde gelen bir lüks diş kliniği olarak en son teknoloji, VIP bekleme konforu ve mükemmel gülüşe yolculuğunuzu rahatlatıcı ve dönüştürücü kılan özverili uluslararası hasta ekibi sunuyoruz." },
+        { "question": "Linova Clinic yüksek kaliteli Diş Türkiye paketleri için doğru seçim mi?", "answer": "Kesinlikle. Uluslararası ziyaretçilere özel olarak tasarlanmış kapsamlı Diş Türkiye hizmetlerinde uzmanız. Tüm dahil paketlerimiz ileri diş tedavilerinizi, lüks otel konaklamalarını, özel VIP transferleri ve çok dilli yardımı kapsar; üst düzey diş bakımını erişilebilir ve stressiz kılar." },
+        { "question": "Uluslararası hastalar için sizi önde gelen bir İstanbul diş kliniği yapan nedir?", "answer": "Birinci sınıf bir İstanbul diş kliniği olarak Avrupa ve Asya'nın kesişim noktasındayız. Kliniğimiz karmaşık tam ağız rekonstrüksiyonları ve Hollywood Gülüşlerinde uzman cerrahlar ve estetik diş hekimleri tarafından çalıştırılıyor. Küresel estetik standartları karşılayan sonuçlar sunmak için en son 3D görüntüleme ve dijital gülüş tasarımını kullanıyoruz." },
+        { "question": "Yola çıkmadan önce lüks bir Diş Türkiye sağlayıcısında danışmanlık alabilir miyim?", "answer": "" },
+        { "question": "Linova Clinic lüks bir klinik olmasına rağmen tedaviler uygun fiyatlı mı?", "answer": "" }
+      ]
+    }
+  },
+  "contact": {
+    "title": "İletişim",
+    "description": "Ücretsiz danışmanlık alın. Diş tedavileri, WhatsApp veya mesaj için İstanbul'da Linova Clinic ile iletişime geçin."
+  },
+  "treatments": {
+    "title": "Tedaviler",
+    "description": "Kapsamlı diş tedavileri: estetik, restoratif, implant, kaplama, tam ağız restorasyonu ve İstanbul'da medikal turizm desteği."
+  },
+  "whyUs": {
+    "title": "Neden Biz",
+    "description": "Online danışmanlık, VIP havalimanı transferleri, lüks konaklama, çok dilli koordinatörler ve diş tedavinizle İstanbul'da kültür turları."
+  }
+}

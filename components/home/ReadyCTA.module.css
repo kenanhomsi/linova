@@ -1,0 +1,155 @@
+.root {
+  background: var(--background);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+.eyebrow {
+  letter-spacing: 0.15em;
+  color: var(--section-green);
+}
+
+.title {
+  line-height: 1.2;
+  color: var(--foreground);
+}
+
+.titleAccent {
+  color: var(--section-green);
+}
+
+.subtitle {
+  color: var(--readdy-gray-700);
+}
+
+.iconWrap {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--readdy-teal-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--readdy-teal);
+  flex-shrink: 0;
+}
+
+.label {
+  color: var(--readdy-gray-700);
+}
+
+.contactLink {
+  color: var(--foreground);
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.foreground {
+  color: var(--foreground);
+}
+
+.link {
+  text-decoration: none;
+}
+
+.ctaPrimary {
+  background: var(--primary-cta);
+  color: white;
+  border: none;
+  box-shadow: var(--shadow-lg);
+}
+
+.ctaSecondary {
+  background: var(--background);
+  border-color: var(--readdy-border);
+  color: var(--foreground);
+}
+
+.rightGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto auto;
+  gap: 1rem;
+  max-width: 520px;
+  margin-left: auto;
+}
+
+.mockCard {
+  background: var(--background);
+  border: 1px solid var(--readdy-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  padding: 12px;
+  min-height: 160px;
+}
+
+.mockLabel {
+  color: var(--readdy-gray-700);
+}
+
+.mockBadge {
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.65rem;
+  font-weight: 600;
+  background: var(--readdy-gray-100);
+  color: var(--readdy-gray-700);
+}
+
+.mockGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4px;
+  margin-bottom: 8px;
+}
+
+.mockCell {
+  aspect-ratio: 1;
+  background: var(--readdy-gray-100);
+  border-radius: 4px;
+}
+
+.mockBar {
+  height: 40px;
+  background: var(--readdy-gray-100);
+  border-radius: 4px;
+  margin-bottom: 8px;
+}
+
+.yearsCard {
+  grid-column: 1 / -1;
+  background: linear-gradient(135deg, var(--readdy-teal-light) 0%, var(--readdy-teal) 50%, var(--readdy-teal-dark) 100%);
+  border-radius: var(--radius-xl);
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  box-shadow: var(--shadow-xl);
+}
+
+.yearsIconWrap {
+  width: 56px;
+  height: 56px;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.yearsSubtitle {
+  color: rgba(255, 255, 255, 0.95);
+}

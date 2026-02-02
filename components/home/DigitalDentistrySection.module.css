@@ -1,0 +1,255 @@
+.root {
+  background: #FAFAF9;
+  padding: 120px 20px;
+}
+
+[data-theme="dark"] .root {
+  background: var(--readdy-bg);
+}
+
+/* Header: title left, intro right, aligned to top */
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: end;
+  max-width: 100%;
+}
+
+@media (max-width: 900px) {
+  .header {
+    grid-template-columns: 1fr;
+  }
+}
+
+.title {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 65px;
+  font-weight: 500;
+  line-height: 1.65;
+  color: var(--readdy-gray-800);
+}
+
+.titleLine {
+  display: block;
+}
+
+.intro {
+  max-width: 550px;
+  color: var(--readdy-gray-700);
+  font-size: 21px;
+  line-height: 1.65;
+  font-weight: 400;
+}
+
+/* Main: left = one dark card, right = 2x2 grid */
+.main {
+  display: grid;
+  grid-template-columns: 0.7fr 1.3fr;
+  gap: 1.5rem;
+  align-items: stretch;
+}
+
+@media (max-width: 900px) {
+  .main {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Left – Digital Smile Design card (white, like second image) */
+.highlightCard {
+  background: var(--background);
+  border: 1px solid var(--readdy-border);
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+}
+
+.latestBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  align-self: flex-start;
+  padding: 0.35rem 0.65rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--readdy-teal);
+  border: 1px solid var(--readdy-teal);
+  border-radius: var(--radius-md);
+  margin-bottom: 1rem;
+  background: var(--readdy-teal-pale);
+}
+
+.badgeStar {
+  flex-shrink: 0;
+}
+
+.highlightImageBox {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  min-height: 200px;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  margin-bottom: 1.25rem;
+  background: var(--readdy-gray-100);
+}
+
+.highlightImg {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+}
+
+.highlightTitle {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--readdy-teal);
+  margin-bottom: 0.5rem;
+}
+
+.highlightDesc {
+  color: var(--readdy-gray-700);
+  line-height: 1.65;
+  font-size: 0.95rem;
+  margin-bottom: 1.25rem;
+  flex: 1;
+}
+
+.highlightButton {
+  background: var(--readdy-gray-800);
+  color: #fff;
+  font-weight: 600;
+  border: none;
+}
+
+.highlightButton:hover {
+  background: var(--readdy-gray-900);
+}
+
+.link {
+  text-decoration: none;
+}
+
+/* Right column – single 2x2 grid */
+.rightCol {
+  display: flex;
+  flex-direction: column;
+}
+
+.grid2x2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  align-content: start;
+}
+
+/* Tech cards: badge + image + teal title + description + pill button (second image style) */
+.techCard {
+  position: relative;
+  background: var(--background);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--readdy-border);
+  display: flex;
+  flex-direction: column;
+}
+
+.techBadge {
+  position: absolute;
+  top: 0.75rem;
+  left: 0.75rem;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.35rem 0.65rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--readdy-teal);
+  border: 1px solid var(--readdy-teal);
+  border-radius: var(--radius-md);
+  background: rgba(255, 255, 255, 0.95);
+}
+
+[data-theme="dark"] .techBadge {
+  background: var(--readdy-gray-100);
+}
+
+.techBadgeStar {
+  color: var(--readdy-teal);
+  flex-shrink: 0;
+}
+
+.techImageBox {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  min-height: 180px;
+  background: var(--readdy-gray-100);
+}
+
+.techImg {
+  object-fit: cover;
+}
+
+.techContent {
+  padding: 1.25rem;
+  gap: 0.5rem;
+}
+
+.techTitle {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--readdy-teal);
+}
+
+.techDesc {
+  color: var(--readdy-gray-700);
+  line-height: 1.6;
+}
+
+.techButton {
+  background: var(--readdy-gray-800);
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  margin-top: 0.25rem;
+}
+
+.techButton:hover {
+  background: var(--readdy-gray-900);
+}
+
+/* Bottom two cards: circular icon + title + description, no button */
+.bulletCard {
+  background: var(--background);
+  box-shadow: var(--shadow-sm);
+}
+
+.bulletIcon {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--readdy-teal-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--readdy-teal);
+  margin-bottom: 0.75rem;
+}
+
+.bulletTitle {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--readdy-gray-800);
+  margin-bottom: 0.25rem;
+}
+
+.bulletDesc {
+  color: var(--readdy-gray-700);
+  line-height: 1.55;
+}

@@ -1,0 +1,436 @@
+{
+  "common": {
+    "siteName": "Linova Clinic",
+    "siteFullName": "Linova Clinic Istanbul",
+    "siteTagline": "Dental Implants Turkey | Hollywood Smile Makeover",
+    "skipToContent": "Skip to main content",
+    "getAppointment": "Get Appointment",
+    "whatsapp": "WhatsApp",
+    "bookNow": "Book Now",
+    "nav": {
+      "home": "Home",
+      "services": "Services",
+      "whyChooseUs": "Why Choose Us",
+      "technology": "Technology",
+      "contact": "Contact"
+    },
+    "footer": {
+      "aboutUs": "About Us",
+      "treatments": "Treatments",
+      "smileGallery": "Smile Gallery",
+      "team": "Team",
+      "contact": "Contact",
+      "services": "Services",
+      "popularTreatments": "Popular Treatments",
+      "getInTouch": "Get in Touch",
+      "visitUs": "Visit Us",
+      "doYouWantAppointment": "Do you want to get appointment?",
+      "getAnAppointment": "Get an appointment",
+      "allRightsReserved": "All Rights Reserved",
+      "instagram": "Instagram",
+      "facebook": "Facebook",
+      "youtube": "YouTube",
+      "whatsapp": "WhatsApp"
+    },
+    "footerServices": {
+      "cosmeticDentistry": "Cosmetic Dentistry",
+      "dentalImplants": "Dental Implants",
+      "medicalTourism": "Medical Tourism",
+      "technology": "Technology"
+    },
+    "footerTreatments": {
+      "hollywoodSmile": "Hollywood Smile",
+      "allOn4Implants": "All-on-4 Implants",
+      "veneers": "Veneers",
+      "teethWhitening": "Teeth Whitening"
+    },
+    "footerLegal": {
+      "privacyPolicy": "Privacy Policy",
+      "termsOfService": "Terms of Service",
+      "websiteBuilder": "Website Builder"
+    },
+    "address": "Nişantaşı District, Istanbul, Turkey",
+    "workingHours": "Mon - Fri: 09:00 - 18:00",
+    "workingHoursFooter": "Mon - Fri: 9:00 AM - 6:00 PM\nSat: 10:00 AM - 4:00 PM"
+  },
+  "home": {
+    "hero": {
+      "badge": "Premium Dental Care in Istanbul",
+      "title": "Transform Your Smile Journey",
+      "titleHighlight": "Smile Journey",
+      "subtitle": "World-class dental treatments combining cutting-edge technology, expert care, and exceptional medical tourism experience in the heart of Istanbul",
+      "ctaPrimary": "Get Free Consultation",
+      "ctaSecondary": "Explore Services"
+    },
+    "stats": [
+      { "value": "15+", "label": "Years Experience" },
+      { "value": "10K+", "label": "Happy Patients" },
+      { "value": "50+", "label": "Countries Served" },
+      { "value": "98%", "label": "Satisfaction Rate" }
+    ],
+    "expertise": {
+      "eyebrow": "Our Expertise",
+      "title": "Complete Dental Solutions",
+      "subtitle": "From cosmetic enhancements to complex restorations, we offer comprehensive dental treatments using the latest technology and techniques"
+    },
+    "treatmentCards": [
+      {
+        "category": "Cosmetic Dentistry",
+        "title": "Hollywood Smile Makeover",
+        "description": "Complete cosmetic transformation combining veneers, whitening, and smile design for a stunning, natural-looking result",
+        "cta": "Book Consultation",
+        "badge": "Most Popular"
+      },
+      {
+        "category": "Restorative Dentistry",
+        "title": "Dental Implants",
+        "description": "Permanent tooth replacement with titanium implants that look, feel, and function like natural teeth",
+        "cta": "Book Consultation",
+        "badge": "Most Popular"
+      },
+      {
+        "category": "Restorative Dentistry",
+        "title": "All-on-4 & All-on-6 Implants",
+        "description": "Full arch fixed solutions for multiple missing teeth with immediate results",
+        "cta": "Learn More"
+      },
+      {
+        "category": "Cosmetic Dentistry",
+        "title": "Dental Veneers",
+        "description": "Ultra-thin zirconia, E-max, and porcelain shells for perfect teeth",
+        "cta": "Learn More"
+      },
+      {
+        "category": "Cosmetic Dentistry",
+        "title": "Teeth Whitening",
+        "description": "Professional laser bleaching for a brighter, confident smile",
+        "cta": "Learn More"
+      },
+      {
+        "category": "Restorative Dentistry",
+        "title": "Dental Crowns & Bridges",
+        "description": "Restore strength, function, and appearance of damaged teeth",
+        "cta": "Learn More"
+      },
+      {
+        "category": "Digital Dentistry",
+        "title": "Digital Smile Design",
+        "description": "3D preview and planning for your ideal smile transformation",
+        "cta": "Learn More"
+      },
+      {
+        "category": "Advanced Technology",
+        "title": "Laser Dentistry",
+        "description": "Precise, minimally invasive treatments with modern laser technology",
+        "cta": "Learn More"
+      }
+    ],
+    "completeDentalSolutionsCards": [
+      {
+        "category": "Cosmetic Dentistry",
+        "title": "Hollywood Smile Makeover",
+        "description": "Complete cosmetic transformation combining veneers, whitening, and smile design for a stunning, natural-looking result",
+        "cta": "Book Consultation",
+        "badge": "Most Popular"
+      },
+      {
+        "category": "Restorative Dentistry",
+        "title": "Dental Implants",
+        "description": "Permanent tooth replacement with titanium implants that look, feel, and function like natural teeth",
+        "cta": "Book Consultation",
+        "badge": "Most Popular"
+      },
+      {
+        "category": "Restorative Dentistry",
+        "title": "All-on-4 & All-on-6",
+        "description": "Full arch fixed solutions for multiple missing teeth with immediate results",
+        "cta": "Learn More"
+      },
+      {
+        "category": "Cosmetic Dentistry",
+        "title": "Dental Veneers",
+        "description": "Ultra thin zirconia, E-max, and porcelain shells for perfect teeth",
+        "cta": "Learn More"
+      },
+      {
+        "category": "Cosmetic Dentistry",
+        "title": "Teeth Whitening",
+        "description": "Professional laser bleaching for a brighter, confident smile",
+        "cta": "Learn More"
+      },
+      {
+        "category": "Restorative Dentistry",
+        "title": "Dental Crowns & Bridges",
+        "description": "Restore strength, function, and appearance of damaged teeth",
+        "cta": "Learn More"
+      },
+      {
+        "category": "Digital Dentistry",
+        "title": "Digital Smile Design",
+        "description": "3D preview and planning for your ideal smile transformation",
+        "cta": "Learn More"
+      },
+      {
+        "category": "Advanced Technology",
+        "title": "Laser Dentistry",
+        "description": "Precise, minimally invasive treatments with modern laser technology",
+        "cta": "Learn More"
+      }
+    ],
+    "whyLinova": {
+      "eyebrow": "Why Linova Clinic",
+      "title": "Your Trusted Partner in Istanbul",
+      "subtitle": "Combining world-class dental expertise with exceptional patient care and medical tourism excellence",
+      "cards": [
+        {
+          "title": "International Standards",
+          "description": "ISO-certified clinic with European quality protocols and sterilization standards",
+          "cta": "Learn More"
+        },
+        {
+          "title": "Expert Team",
+          "description": "Highly qualified dentists with international training and 15+ years experience",
+          "cta": "Learn More"
+        },
+        {
+          "title": "Transparent Pricing",
+          "description": "Up to 70% savings compared to UK/US prices with no hidden costs",
+          "cta": "Learn More"
+        },
+        {
+          "title": "Medical Tourism",
+          "description": "Complete travel assistance, airport transfers, and accommodation support",
+          "cta": "Learn More"
+        },
+        {
+          "title": "Lifetime Warranty",
+          "description": "Extended guarantees on all treatments with comprehensive aftercare",
+          "cta": "Learn More"
+        },
+        {
+          "title": "24/7 Support",
+          "description": "Multilingual patient coordinators available around the clock",
+          "cta": "Learn More"
+        }
+      ]
+    },
+    "smileTransformations": {
+      "eyebrow": "Real Results",
+      "title": "Smile Transformations",
+      "subtitle": "See the life-changing results our patients have achieved with our expert dental treatments",
+      "tabs": ["All Cases", "Hollywood Smile", "Implants", "Veneers", "Whitening"],
+      "before": "Before",
+      "after": "After"
+    },
+    "transformations": [
+      { "title": "Hollywood Smile Transformation", "detail": "16 Zirconia Veneers", "category": "Hollywood Smile" },
+      { "title": "Dental Implant Success", "detail": "4 Dental Implants", "category": "Implants" },
+      { "title": "Veneer Perfection", "detail": "8 E-max Veneers", "category": "Veneers" },
+      { "title": "Complete Smile Makeover", "detail": "20 Veneers + Whitening", "category": "Veneers" },
+      { "title": "Laser Whitening Results", "detail": "Professional Laser Whitening", "category": "Whitening" },
+      { "title": "All-on-4 Full Restoration", "detail": "All-on-4 Implants", "category": "Implants" }
+    ],
+    "gallery": {
+      "sectionTitle": "Our Patient's Stories"
+    },
+    "galleryTabs": ["Before & After", "Our Clinic"],
+    "galleryItems": [
+      { "title": "Hollywood Smile", "tag": "Veneers" },
+      { "title": "Dental Veneers", "tag": "Cosmetic" },
+      { "title": "All-on-4 Implants", "tag": "Implants" },
+      { "title": "Teeth Whitening", "tag": "Whitening" }
+    ],
+    "dentalJourney": {
+      "title": "your dental journey in istanbul",
+      "subtitle": "Complete care packages including luxury accommodation, VIP transfers, and personalized treatment plans",
+      "cta": "Plan Your Visit",
+      "cards": [
+        {
+          "title": "Online Consultation",
+          "description": "Start your journey from home with detailed virtual assessment and personalized treatment plans"
+        },
+        {
+          "title": "VIP Airport Transfer",
+          "description": "Convenient transportation from airport to clinic and hotel with dedicated driver service"
+        },
+        {
+          "title": "Luxury Accommodation",
+          "description": "Comfortable hotel stays matched to your treatment schedule in premium Istanbul locations"
+        },
+        {
+          "title": "Multilingual Support",
+          "description": "Patient coordinators fluent in English and other languages throughout your entire visit"
+        }
+      ]
+    },
+    "digitalDentistry": {
+      "eyebrow": "Advanced Digital Dentistry",
+      "title": "Advanced Digital Dentistry",
+      "intro": "We invest in cutting-edge technology to ensure precise diagnostics, comfortable treatments, and predictable results. Our digital workflow enhances every aspect of your dental care experience.",
+      "highlight": {
+        "title": "Digital Smile Design",
+        "description": "Visualize your new smile before treatment begins. Our DSD technology creates a precise digital blueprint of your ideal smile transformation.",
+        "cta": "See Technology"
+      },
+      "tech": [
+        {
+          "badge": "Latest Technology",
+          "title": "3D CBCT Imaging",
+          "description": "Three-dimensional imaging for precise implant planning and complex surgical procedures with minimal radiation exposure.",
+          "cta": "Learn More"
+        },
+        {
+          "badge": "Latest Technology",
+          "title": "Laser Treatments",
+          "description": "Minimally invasive procedures with faster healing times, reduced discomfort, and superior precision for soft tissue treatments.",
+          "cta": "Learn More"
+        }
+      ],
+      "bullets": [
+        {
+          "title": "Intraoral Scanning",
+          "description": "Digital impressions eliminate uncomfortable traditional molds while providing superior accuracy for crowns, veneers, and aligners."
+        },
+        {
+          "title": "CAD/CAM System",
+          "description": "Same-day restorations designed and milled in-house, reducing treatment time and ensuring perfect fit and aesthetics."
+        }
+      ]
+    },
+    "testimonials": [
+      {
+        "flag": "🇬🇧",
+        "quote": "I traveled from London to Istanbul for my Hollywood smile, and it was the best decision ever! The team at Linova Clinic was incredibly professional, and the results exceeded my expectations. My confidence has skyrocketed!",
+        "name": "Sarah Mitchell",
+        "country": "United Kingdom",
+        "treatment": "Hollywood Smile Makeover",
+        "timeAgo": "3 weeks ago"
+      },
+      {
+        "flag": "🇺🇸",
+        "quote": "After years of dental problems, I finally found the solution at Linova Clinic. The All-on-4 procedure was painless, and the results are amazing. I saved thousands compared to US prices and got better quality care!",
+        "name": "James Anderson",
+        "country": "United States",
+        "treatment": "All-on-4 Dental Implants",
+        "timeAgo": "1 month ago"
+      },
+      {
+        "flag": "🇦🇺",
+        "quote": "The entire experience was seamless from start to finish. The clinic arranged everything - airport pickup, hotel, and all appointments. My veneers look absolutely natural, and I couldn't be happier with my new smile!",
+        "name": "Emma Thompson",
+        "country": "Australia",
+        "treatment": "Dental Veneers",
+        "timeAgo": "2 weeks ago"
+      },
+      {
+        "flag": "🇩🇪",
+        "quote": "Exceptional quality and professionalism! The German standards of precision combined with Turkish hospitality made this experience outstanding. My full mouth restoration looks perfect, and the aftercare support is excellent.",
+        "name": "Michael Weber",
+        "country": "Germany",
+        "treatment": "Full Mouth Restoration",
+        "timeAgo": "1 month ago"
+      },
+      {
+        "flag": "🇫🇷",
+        "quote": "Magnifique! The attention to detail and artistic approach to my smile design was impressive. The team understood exactly what I wanted, and the results are naturally beautiful. Highly recommend for anyone considering dental tourism!",
+        "name": "Sophie Laurent",
+        "country": "France",
+        "treatment": "Teeth Whitening & Veneers",
+        "timeAgo": "3 weeks ago"
+      },
+      {
+        "flag": "🇨🇦",
+        "quote": "I was nervous about traveling abroad for dental work, but Linova Clinic made everything easy. The technology they use is cutting-edge, and the results are fantastic. Worth every penny and the trip from Toronto!",
+        "name": "David Chen",
+        "country": "Canada",
+        "treatment": "Dental Implants & Crowns",
+        "timeAgo": "2 weeks ago"
+      }
+    ],
+    "reviewsSection": {
+      "title": "Patients Reviews",
+      "googleRating": "4.9",
+      "googleLabel": "Top Rated Service",
+      "verifiedBadge": "Verified by Trustindex",
+      "readMore": "Read more",
+      "quoteMaxLength": 120
+    },
+    "readyCta": {
+      "eyebrow": "GET STARTED",
+      "title": "Ready for Your Dream Smile?",
+      "subtitle": "Start your smile transformation today with a detailed, personalized treatment plan. Our multilingual team is here to guide you through every step of your dental journey.",
+      "callLabel": "Call us anytime",
+      "emailLabel": "Email us",
+      "hoursLabel": "Working hours",
+      "hours": "Mon - Fri: 09:00 - 18:00",
+      "ctaButton": "Book Free Consultation"
+    },
+    "footerForm": {
+      "title": "Start Your Smile Journey",
+      "subtitle": "Book your free consultation and discover how we can transform your smile",
+      "fullName": "Full Name",
+      "email": "Email",
+      "phone": "Phone Number",
+      "treatmentInterest": "Treatment Interest",
+      "treatmentOptions": [
+        "Select a treatment",
+        "Hollywood Smile Makeover",
+        "Dental Implants",
+        "Dental Veneers",
+        "Teeth Whitening",
+        "All-on-4 Implants",
+        "Other Treatment"
+      ],
+      "message": "Message",
+      "messagePlaceholder": "0/500 characters",
+      "sendButton": "Send Message",
+      "quickContact": "Quick Contact",
+      "callUs": "Call Us",
+      "whatsapp": "Chat with Us",
+      "emailUs": "Email",
+      "visitTitle": "Visit Our Clinic",
+      "addressLabel": "Address",
+      "address": "Nişantaşı District\nIstanbul, Turkey",
+      "hoursLabel": "Working Hours",
+      "hours": "Mon - Fri: 9:00 AM - 6:00 PM\nSat: 10:00 AM - 4:00 PM"
+    },
+    "faq": {
+      "title": "FAQ",
+      "subtitle": "frequently asked questions",
+      "items": [
+        {
+          "question": "Why should I choose Linova Clinic for a Luxury Dental Clinic in Turkey?",
+          "answer": "At Dentaray Clinic, we redefine the dental experience by blending world-class dentistry with premium patient care. As a premier Luxury Dental Clinic in Turkey, we offer state-of-the-art technology, VIP lounge comforts, and a dedicated international patient team to ensure your journey to a perfect smile is as relaxing as it is transformative."
+        },
+        {
+          "question": "Is Linova Clinic the right choice for high-quality Dental Turkey packages?",
+          "answer": "Absolutely. We specialize in comprehensive Dental Turkey services designed specifically for international visitors. Our all-inclusive packages cover your advanced dental treatments, luxury hotel stays, private VIP transfers, and multilingual assistance, making high-end dental care accessible and stress-free."
+        },
+        {
+          "question": "What makes you a leading Dental Clinic Istanbul for international patients?",
+          "answer": "Being a top-tier Dental Clinic Istanbul, we are located at the crossroads of Europe and Asia. Our clinic is staffed by expert surgeons and cosmetic dentists who specialize in complex full-mouth reconstructions and Hollywood Smiles. We utilize the latest 3D imaging and digital smile design to provide results that meet global aesthetic standards."
+        },
+        {
+          "question": "Can I get a consultation at a Luxury Dental Turkey provider before flying out?",
+          "answer": ""
+        },
+        {
+          "question": "Are treatments at Linova Clinic affordable despite being a Luxury Dental Clinic?",
+          "answer": ""
+        }
+      ]
+    }
+  },
+  "contact": {
+    "title": "Contact",
+    "description": "Get a free consultation. Contact Linova Clinic in Istanbul for dental treatments, WhatsApp, or send a message."
+  },
+  "treatments": {
+    "title": "Treatments",
+    "description": "Comprehensive dental treatments: cosmetic, restorative, implants, veneers, full mouth restoration, and medical tourism support in Istanbul."
+  },
+  "whyUs": {
+    "title": "Why Choose Us",
+    "description": "Online consultation, VIP airport transfers, luxury accommodation, multilingual coordinators, and cultural tours in Istanbul with your dental treatment."
+  }
+}

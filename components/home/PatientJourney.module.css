@@ -1,0 +1,36 @@
+.stepContent {
+  flex: 1;
+}
+
+.journeyTitle {
+  color: var(--readdy-gray-800);
+}
+
+[data-theme="dark"] .journeyTitle {
+  color: var(--readdy-gray-900);
+}
+
+.journeySubtitle {
+  color: var(--readdy-gray-700);
+}
+
+[data-theme="dark"] .journeySubtitle {
+  color: var(--readdy-gray-800);
+}
+
+.stepLabel {
+  color: var(--readdy-teal-dark);
+}
+
+.stepDesc {
+  color: var(--readdy-gray-700);
+}
+
+[data-theme="dark"] .stepDesc {
+  color: var(--readdy-gray-800);
+}
+
+.stepIcon {
+  background: var(--readdy-teal-light) !important;
+  color: var(--readdy-teal) !important;
+}

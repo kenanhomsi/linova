@@ -1,0 +1,48 @@
+.formBox {
+  background: var(--background);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--readdy-border);
+}
+
+.contactBox {
+  background: var(--readdy-teal);
+  border-radius: var(--radius-lg);
+  color: white;
+  box-shadow: var(--shadow-lg);
+}
+
+.link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.visitTitle {
+  color: var(--readdy-gray-800);
+}
+
+.iconWrap {
+  color: var(--readdy-teal);
+  margin-top: 2px;
+}
+
+.label {
+  color: var(--readdy-gray-800);
+}
+
+.value {
+  color: var(--readdy-gray-700);
+  white-space: pre-line;
+}
+
+.mapWrap {
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--readdy-border);
+  height: 280px;
+  background: var(--readdy-gray-100);
+}
+
+.mapIframe {
+  border: 0;
+}

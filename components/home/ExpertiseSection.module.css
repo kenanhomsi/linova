@@ -1,0 +1,105 @@
+.root {
+  background: var(--background);
+}
+
+.eyebrow {
+  letter-spacing: 0.1em;
+  color: var(--section-green);
+}
+
+.title {
+  color: var(--readdy-gray-800);
+}
+
+.subtitle {
+  color: var(--readdy-gray-700);
+}
+
+.card {
+  border: 1px solid var(--readdy-border);
+  overflow: hidden;
+}
+
+.imageBox {
+  background: var(--readdy-gray-100);
+}
+
+.heroImage {
+  object-fit: cover;
+}
+
+.badge {
+  background: var(--readdy-teal);
+  border-radius: 20px;
+  color: white;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.iconCircle {
+  background: var(--readdy-teal-light);
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--readdy-teal);
+}
+
+.categoryIcon {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--readdy-teal-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--readdy-teal);
+}
+
+.categoryLabel {
+  letter-spacing: 0.08em;
+  color: var(--readdy-teal);
+}
+
+.cardTitle {
+  color: var(--readdy-gray-800);
+}
+
+.cardDesc {
+  color: var(--readdy-gray-700);
+}
+
+.link {
+  text-decoration: none;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--readdy-teal);
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.smallImageBox {
+  background: var(--readdy-gray-100);
+}
+
+.smallIcon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--readdy-teal-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--readdy-teal);
+}
+
+.bar {
+  background: var(--readdy-teal);
+  color: white;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}

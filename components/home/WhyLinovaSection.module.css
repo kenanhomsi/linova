@@ -1,0 +1,123 @@
+.root {
+  background: var(--readdy-bg);
+  position: relative;
+}
+
+.eyebrow {
+  letter-spacing: 0.12em;
+  color: var(--section-green);
+}
+
+.title {
+  font-size: 60px;
+  color: var(--foreground);
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+.subtitle {
+  color: var(--readdy-gray-700);
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.grid {
+  align-items: stretch;
+}
+
+.cardWrapper {
+  height: 100%;
+}
+
+.card {
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  background: var(--background);
+  border: 1px solid var(--readdy-border);
+  transition: background 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cardFeatured {
+  background: var(--readdy-teal);
+  border: none;
+  box-shadow: var(--shadow-md);
+}
+
+.decorativeCircle {
+  position: absolute;
+  top: -24px;
+  right: -24px;
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.12);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.cardFeatured .decorativeCircle {
+  opacity: 1;
+}
+
+.cardInner {
+  position: relative;
+  z-index: 1;
+}
+
+.iconWrap {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: var(--readdy-teal-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--readdy-teal);
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.cardFeatured .iconWrap {
+  background: rgba(255, 255, 255, 0.22);
+  color: #fff;
+}
+
+.cardTitle {
+  color: var(--foreground);
+  line-height: 1.25;
+  transition: color 0.3s ease;
+}
+
+.cardFeatured .cardTitle {
+  color: #fff;
+}
+
+.cardDesc {
+  color: var(--readdy-gray-700);
+  flex: 1;
+  transition: color 0.3s ease;
+}
+
+.cardFeatured .cardDesc {
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.cta {
+  text-decoration: none;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--readdy-teal);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: color 0.3s ease, gap 0.2s ease;
+}
+
+.cta:hover {
+  gap: 10px;
+  text-underline-offset: 4px;
+}
+
+.cardFeatured .cta {
+  color: #fff !important;
+}

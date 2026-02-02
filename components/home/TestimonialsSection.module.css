@@ -1,0 +1,192 @@
+.root {
+  background: var(--section-beige, #fbf8f6);
+}
+
+.headerRow {
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+}
+
+.accentLine {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 80%;
+  min-height: 36px;
+  background: var(--primary-cta-light, #818cf8);
+  border-radius: 2px;
+  opacity: 0.8;
+}
+
+.titleWithAccent {
+  color: var(--readdy-gray-800);
+  position: relative;
+  padding-left: 20px;
+}
+
+.googleLogo {
+  letter-spacing: -0.5px;
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
+}
+
+.googleLetter {
+  color: var(--google-letter-color, #4285F4);
+}
+
+.stars {
+  color: #FBBC05;
+  letter-spacing: 2px;
+}
+
+.ratingBox {
+  background: var(--background);
+  border-radius: var(--radius-lg);
+  padding: 12px 20px;
+  box-shadow: var(--shadow-md);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.ratingLabel {
+  color: var(--readdy-gray-800);
+}
+
+.verifiedBadge {
+  background: var(--section-green);
+  color: white;
+  border-radius: var(--radius-md);
+  padding: 10px 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+
+.verifiedIcon {
+  opacity: 0.9;
+}
+
+.carouselWrap {
+  position: relative;
+  margin-top: 8px;
+}
+
+.arrowLeft {
+  position: absolute;
+  left: -8px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  background: var(--background);
+  color: var(--readdy-gray-700);
+  box-shadow: var(--shadow-md);
+}
+
+.arrowLeftDisabled {
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+.arrowRight {
+  position: absolute;
+  right: -8px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  background: var(--background);
+  color: var(--readdy-gray-700);
+  box-shadow: var(--shadow-md);
+}
+
+.arrowRightDisabled {
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+.scrollArea {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding: 8px 0;
+  margin: 0 48px;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.scrollArea::-webkit-scrollbar {
+  display: none;
+}
+
+.card {
+  min-width: 320px;
+  max-width: 360px;
+  flex-shrink: 0;
+  scroll-snap-align: start;
+  background: var(--background);
+  border: 1px solid var(--readdy-border);
+}
+
+.avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--readdy-gray-100);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+}
+
+.cardName {
+  color: var(--readdy-gray-800);
+  text-transform: uppercase;
+}
+
+.cardTime {
+  color: var(--readdy-gray-700);
+}
+
+.googleBadge {
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  background: var(--readdy-gray-100);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.googleBadgeText {
+  color: var(--google-letter-color, #4285F4);
+}
+
+[data-theme="dark"] .googleLetter,
+[data-theme="dark"] .googleBadgeText {
+  color: var(--primary-cta-light);
+}
+
+.verifiedCheck {
+  color: var(--primary-cta);
+}
+
+.quoteText {
+  color: var(--readdy-gray-700);
+}
+
+.readMoreBtn {
+  color: var(--readdy-gray-800);
+  font-weight: 600;
+  font-size: inherit;
+  text-decoration: underline;
+}
+
+.treatmentLabel {
+  color: var(--section-green);
+}

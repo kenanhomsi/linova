@@ -1,0 +1,157 @@
+.header {
+  border-bottom: 1px solid var(--readdy-border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--header-bg);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.header[data-hero="true"] {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  background: transparent;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.headerScrolled {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+}
+
+.navGroup {
+  flex-shrink: 0;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.navLink {
+  font-size: 0.9375rem;
+  font-weight: 500;
+  display: inline-block;
+  position: relative;
+  white-space: nowrap;
+  color: var(--nav-color, var(--header-fg));
+}
+
+.navLink:hover {
+  color: var(--nav-hover, var(--readdy-teal));
+}
+
+.navLinkActive {
+  font-weight: 600;
+  color: var(--nav-active, var(--readdy-teal));
+}
+
+.logoWrap {
+  flex-shrink: 0;
+}
+
+.centerNav {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 0;
+}
+
+@media (max-width: 767px) {
+  .centerNav {
+    display: none !important;
+  }
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+}
+
+.actions {
+  flex-shrink: 0;
+}
+
+.whatsappLink {
+  text-decoration: none;
+}
+
+.contactLink {
+  text-decoration: none;
+}
+
+.drawerHeader {
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--readdy-border);
+}
+
+.drawerBody {
+  padding-top: 24px;
+}
+
+.drawerSection {
+  padding-top: 16px;
+  border-top: 1px solid var(--readdy-border);
+}
+
+.drawerLink {
+  font-size: 1rem;
+  font-weight: 500;
+  text-decoration: none;
+  color: var(--foreground);
+  padding: 12px 16px;
+  border-radius: var(--radius-md);
+  background: transparent;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.drawerLink:hover {
+  background: var(--readdy-teal-pale);
+  color: var(--readdy-teal);
+}
+
+.drawerLinkActive {
+  font-weight: 600;
+  color: var(--readdy-teal);
+  background: var(--readdy-teal-pale);
+}
+
+.drawerWhatsApp {
+  text-decoration: none;
+  width: 100%;
+}
+
+.drawerWhatsAppBtn {
+  border-color: var(--readdy-border);
+  color: var(--foreground);
+  border-radius: var(--radius-md);
+}
+
+.drawerContactBtn {
+  background: var(--readdy-teal);
+  color: white;
+  border: none;
+  border-radius: var(--radius-md);
+}
+
+.whatsappBtn {
+  border-color: var(--readdy-border);
+  color: var(--header-fg);
+}
+
+.whatsappBtnHero {
+  border-color: rgba(255, 255, 255, 0.6);
+  color: #fff;
+}
+
+.ctaBtn {
+  background: var(--readdy-teal);
+  color: white;
+  border: none;
+  border-radius: 8px;
+}
+
+.ctaBtnHero {
+  background: var(--primary-cta);
+  color: white;
+  border: none;
+  border-radius: 8px;
+}

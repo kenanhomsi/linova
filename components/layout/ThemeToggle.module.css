@@ -1,0 +1,4 @@
+.button {
+  color: var(--header-fg);
+  background: var(--header-bg-soft);
+}

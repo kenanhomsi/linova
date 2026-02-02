@@ -1,0 +1,39 @@
+.wrapper {
+  padding-top: clamp(2rem, 5vw, 3.5rem);
+  padding-bottom: clamp(2.5rem, 6vw, 4rem);
+  text-align: center;
+}
+
+.eyebrow {
+  letter-spacing: 0.12em;
+  color: var(--readdy-teal);
+  font-weight: 600;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.title {
+  color: var(--readdy-gray-800);
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 0.75rem;
+}
+
+[data-theme="dark"] .title {
+  color: var(--readdy-gray-900);
+}
+
+.subtitle {
+  color: var(--readdy-gray-700);
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  max-width: 560px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+[data-theme="dark"] .subtitle {
+  color: var(--readdy-gray-800);
+}

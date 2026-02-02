@@ -1,0 +1,20 @@
+.root {
+  background: #f8fafb;
+}
+
+.eyebrow {
+  letter-spacing: 0.12em;
+  color: var(--section-green, var(--readdy-teal));
+}
+
+.title {
+  color: var(--readdy-gray-800);
+}
+
+.subtitle {
+  color: var(--readdy-gray-700);
+}
+
+[data-theme="dark"] .root {
+  background: var(--readdy-bg);
+}
