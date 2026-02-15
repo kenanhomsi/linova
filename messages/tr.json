@@ -68,6 +68,10 @@
       { "value": "50+", "label": "Hizmet Verilen Ülke" },
       { "value": "98%", "label": "Memnuniyet Oranı" }
     ],
+    "socialProof": {
+      "eyebrow": "Dünya çapında güven",
+      "title": "50'den fazla ülkeden hastalar tarafından tercih ediliyoruz"
+    },
     "expertise": {
       "eyebrow": "Uzmanlığımız",
       "title": "Kapsamlı Diş Çözümleri",
@@ -84,14 +88,96 @@
       { "category": "İleri Teknoloji", "title": "Lazer Diş Hekimliği", "description": "Modern lazer teknolojisiyle hassas, minimal invaziv tedaviler", "cta": "Daha Fazla" }
     ],
     "completeDentalSolutionsCards": [
-      { "category": "Estetik Diş Hekimliği", "title": "Hollywood Gülüş", "description": "Kaplama, beyazlatma ve gülüş tasarımını bir araya getiren tam estetik dönüşüm", "cta": "Randevu Al", "badge": "En Popüler" },
-      { "category": "Restoratif Diş Hekimliği", "title": "Diş İmplantı", "description": "Doğal dişler gibi görünen titanyum implantlarla kalıcı değişim", "cta": "Randevu Al", "badge": "En Popüler" },
-      { "category": "Restoratif Diş Hekimliği", "title": "All-on-4 & All-on-6", "description": "Birden fazla eksik diş için anında sonuç veren tam ark sabit çözümler", "cta": "Daha Fazla" },
-      { "category": "Estetik Diş Hekimliği", "title": "Diş Kaplama", "description": "Mükemmel dişler için ultra ince zirkonyum, E-max ve porselen", "cta": "Daha Fazla" },
-      { "category": "Estetik Diş Hekimliği", "title": "Diş Beyazlatma", "description": "Daha parlak gülüş için profesyonel lazer beyazlatma", "cta": "Daha Fazla" },
-      { "category": "Restoratif Diş Hekimliği", "title": "Diş Kronu ve Köprüler", "description": "Hasarlı dişlerin gücünü ve görünümünü geri kazanın", "cta": "Daha Fazla" },
-      { "category": "Dijital Diş Hekimliği", "title": "Dijital Gülüş Tasarımı", "description": "İdeal gülüş dönüşümünüz için 3D önizleme ve planlama", "cta": "Daha Fazla" },
-      { "category": "İleri Teknoloji", "title": "Lazer Diş Hekimliği", "description": "Modern lazer teknolojisiyle hassas, minimal invaziv tedaviler", "cta": "Daha Fazla" }
+      {
+        "category": "Estetik Diş Hekimliği",
+        "title": "Hollywood Gülüş",
+        "description": "Kaplama, beyazlatma ve gülüş tasarımını bir araya getiren tam estetik dönüşüm. Özgüveninizi artıran muhteşem ve doğal bir sonuç.",
+        "cta": "Randevu Al",
+        "badge": "En Popüler",
+        "highlights": [
+          "Özel dijital gülüş tasarımı önizlemesi",
+          "Premium E-max & Zirkonyum malzemeler",
+          "5–7 günde tam dönüşüm"
+        ]
+      },
+      {
+        "category": "Restoratif Diş Hekimliği",
+        "title": "Diş İmplantı",
+        "description": "Doğal dişler gibi görünen, hissedilen ve işlev gören titanyum implantlarla kalıcı diş değişimi. Hassasiyet ve uzun ömürlü sonuçlar için dijital planlama.",
+        "cta": "Randevu Al",
+        "badge": "En Popüler",
+        "highlights": [
+          "Alman titanyum implant sistemleri",
+          "Ömür boyu garanti dahil",
+          "3D dijital cerrahi planlama"
+        ]
+      },
+      {
+        "category": "Restoratif Diş Hekimliği",
+        "title": "All-on-4 & All-on-6",
+        "description": "Birden fazla eksik diş için anında sonuç veren tam ark sabit çözümler. İleri implant teknikleriyle tüm çeneyi tek seansta restore edin.",
+        "cta": "Daha Fazla",
+        "highlights": [
+          "Bir günde tam ark restorasyonu",
+          "Kemik grefti gerekmez",
+          "Anında sabit protez"
+        ]
+      },
+      {
+        "category": "Estetik Diş Hekimliği",
+        "title": "Diş Kaplama",
+        "description": "Mükemmel dişler için ultra ince zirkonyum, E-max ve porselen kaplamalar. Boşlukları, kırıkları ve renk değişimini kusursuz, doğal bir görünümle düzeltin.",
+        "cta": "Daha Fazla",
+        "highlights": [
+          "0.3mm ultra ince kaplamalar",
+          "Prepsiz ve minimal prep seçenekleri",
+          "Doğal şeffaflık uyumu"
+        ]
+      },
+      {
+        "category": "Estetik Diş Hekimliği",
+        "title": "Diş Beyazlatma",
+        "description": "Daha parlak ve özgüvenli bir gülüş için profesyonel lazer beyazlatma. Tek bir klinik seansında uzun ömürlü parlak sonuçlar elde edin.",
+        "cta": "Daha Fazla",
+        "highlights": [
+          "8 tona kadar beyazlama",
+          "Profesyonel klinik tedavisi",
+          "Uzun ömürlü sonuçlar"
+        ]
+      },
+      {
+        "category": "Restoratif Diş Hekimliği",
+        "title": "Diş Kronu ve Köprüler",
+        "description": "Hasarlı dişlerin gücünü, işlevini ve görünümünü dayanıklılık ve estetik için tasarlanmış hassas seramik restorasyonlarla geri kazanın.",
+        "cta": "Daha Fazla",
+        "highlights": [
+          "CAD/CAM hassas üretim",
+          "Aynı gün restorasyon mümkün",
+          "Premium seramik malzemeler"
+        ]
+      },
+      {
+        "category": "Dijital Diş Hekimliği",
+        "title": "Dijital Gülüş Tasarımı",
+        "description": "İdeal gülüş dönüşümünüz için 3D önizleme ve planlama. Yapay zeka destekli dijital planlarla tedaviden önce geleceğinizin gülüşünü görün.",
+        "cta": "Daha Fazla",
+        "highlights": [
+          "Tedaviden önce gülüşünüzü görün",
+          "AI destekli yüz analizi",
+          "Hassas dijital planlar"
+        ]
+      },
+      {
+        "category": "İleri Teknoloji",
+        "title": "Lazer Diş Hekimliği",
+        "description": "Modern lazer teknolojisiyle hassas, minimal invaziv tedaviler. Daha hızlı iyileşme, azaltılmış rahatsızlık ve üstün hassasiyet deneyimleyin.",
+        "cta": "Daha Fazla",
+        "highlights": [
+          "Minimal invaziv prosedürler",
+          "Daha hızlı iyileşme ve toparlanma",
+          "Azaltılmış rahatsızlık"
+        ]
+      }
     ],
     "whyLinova": {
       "eyebrow": "Neden Linova Clinic",
@@ -113,6 +199,14 @@
       "tabs": ["Tüm Vakalar", "Hollywood Gülüş", "İmplant", "Kaplama", "Beyazlatma"],
       "before": "Önce",
       "after": "Sonra"
+    },
+    "beforeAfterShowcase": {
+      "eyebrow": "Kanıtlanmış Sonuçlar",
+      "title": "Farkı Görün.",
+      "titleAccent": "Güveni Hissedin.",
+      "subtitle": "Dönüşümü görmek için sürükleyin — gerçek hastalar, gerçek sonuçlar, sıfır filtre",
+      "cta": "Dönüşümünüzü Başlatın",
+      "dragHint": "Karşılaştırmak için sürükleyin"
     },
     "transformations": [
       { "title": "Hollywood Gülüş Dönüşümü", "detail": "16 Zirkonyum Kaplama", "category": "Hollywood Gülüş" },
@@ -212,12 +306,14 @@
       }
     ],
     "reviewsSection": {
-      "title": "Hasta Yorumları",
+      "eyebrow": "HASTALARIMIZ NE DİYOR",
+      "title": "Gerçek Hikayeler, Gerçek Gülüşler",
+      "subtitle": "Dünya genelinden binlerce hasta diş dönüşümleri için Linova Klinik'e güveniyor. İşte söyledikleri.",
       "googleRating": "4.9",
       "googleLabel": "En Yüksek Puanlı Hizmet",
       "verifiedBadge": "Trustindex Tarafından Doğrulandı",
       "readMore": "Devamını oku",
-      "quoteMaxLength": 120
+      "quoteMaxLength": 140
     },
     "readyCta": {
       "eyebrow": "HEMEN BAŞLA",

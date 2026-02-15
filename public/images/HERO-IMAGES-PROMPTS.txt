@@ -1,0 +1,29 @@
+# Hero composite images – prompts
+
+Save the generated images here as:
+- hero-patient.jpg   (left side)
+- hero-istanbul.jpg  (right side)
+
+---
+
+## 1. hero-patient.jpg (left – “Will I look good?”)
+
+**Prompt for DALL·E / Midjourney / AI image generator:**
+
+Warm, genuine close-up portrait of a person with a confident, happy smile after dental treatment. Natural daylight, soft window or outdoor light, no clinical or medical setting. Person looks relaxed and pleased, natural skin tones, shallow depth of field with softly blurred background. Professional but approachable, emotional connection. Photorealistic, high-end lifestyle photography.
+
+**Stock photo keywords:** smiling woman portrait natural light, happy patient lifestyle, confident smile outdoor, post-treatment satisfaction portrait.
+
+**Suggested free sources:** Unsplash, Pexels – search “smiling woman natural light portrait” or “happy person confident smile”.
+
+---
+
+## 2. hero-istanbul.jpg (right – “Will I enjoy my trip?”)
+
+**Prompt for DALL·E / Midjourney / AI image generator:**
+
+Stunning view of Istanbul at golden hour: Hagia Sophia and Bosphorus with warm sunset light, slightly soft focus, dreamy atmosphere. Famous landmark, travel-destination mood, no people in foreground. Photorealistic, cinematic, warm tones.
+
+**Stock photo keywords:** Istanbul golden hour, Hagia Sophia sunset, Bosphorus Istanbul, Galata Tower golden hour.
+
+**Suggested free sources:** Unsplash, Pexels – search “Istanbul golden hour” or “Hagia Sophia sunset”.

@@ -10,6 +10,7 @@
   position: absolute;
   inset: 0;
   z-index: 0;
+  overflow: hidden;
 }
 
 .bgInner {
@@ -17,11 +18,62 @@
   inset: 0;
 }
 
+/* ── Patient Journey composite: diagonal split with rotating images ── */
+.bgComposite {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  isolation: isolate;
+}
+
+/* Left panel: smiling patients */
+.heroLeft {
+  position: relative;
+  overflow: hidden;
+  clip-path: polygon(0 0, 100% 0, 70% 100%, 0 100%);
+}
+
+/* Right panel: Istanbul landmarks & sea */
+.heroRight {
+  position: relative;
+  overflow: hidden;
+  clip-path: polygon(30% 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+/* Wrapper for each slide so AnimatePresence can crossfade */
+.slideWrapper {
+  position: absolute;
+  inset: 0;
+}
+
+/* Diagonal blend seam overlay */
+.heroBlend {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(
+    115deg,
+    transparent 42%,
+    rgba(12, 70, 62, 0.45) 48%,
+    rgba(12, 70, 62, 0.55) 50%,
+    rgba(12, 70, 62, 0.45) 52%,
+    transparent 58%
+  );
+  pointer-events: none;
+}
+
+/* Hero images */
 .heroImage {
   object-fit: cover;
   opacity: 0.5;
 }
 
+.bgComposite .heroImage {
+  opacity: 0.6;
+}
+
+/* ── Content overlay ── */
 .container {
   position: relative;
   z-index: 1;
@@ -82,20 +134,4 @@
   border-color: rgba(255, 255, 255, 0.8);
   color: var(--readdy-teal);
   background: transparent;
-}
-
-.footer {
-  margin-top: auto;
-  border-top: 1px solid rgba(255, 255, 255, 0.15);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.statsItem {
-  text-align: center;
-}
-
-.statsLabel {
-  letter-spacing: 0.05em;
 }

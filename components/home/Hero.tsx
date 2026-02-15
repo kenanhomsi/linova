@@ -3,11 +3,26 @@
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import Image from "next/image";
-import { Container, Text, Button, Stack, Box, Group, SimpleGrid } from "@mantine/core";
-import { motion } from "framer-motion";
+import { useEffect, useState, useCallback } from "react";
+import { Container, Text, Button, Stack, Box, Group } from "@mantine/core";
+import { motion, AnimatePresence } from "framer-motion";
 import { IconChevronRight, IconStar } from "@tabler/icons-react";
-import heroSection from "@/public/heroSection.jpg";
 import styles from "./Hero.module.css";
+
+/** Rotating hero images — left: smiling patients, right: Istanbul sea/landmarks */
+const PATIENT_IMAGES = [
+  "/images/hero-patient-1.jpg",
+  "/images/hero-patient-2.jpg",
+  "/images/hero-patient-3.jpg",
+];
+
+const ISTANBUL_IMAGES = [
+  "/images/hero-istanbul-1.jpg",
+  "/images/hero-istanbul-2.jpg",
+  "/images/hero-istanbul-3.jpg",
+];
+
+const SLIDE_INTERVAL = 4000; // ms
 
 const container = {
   hidden: { opacity: 0 },
@@ -29,46 +44,94 @@ const item = {
   },
 };
 
-const statsItem = {
-  hidden: { opacity: 0, y: 16 },
-  visible: (i: number) => ({
-    opacity: 1,
-    y: 0,
-    transition: { delay: 0.6 + i * 0.08, duration: 0.4, ease: [0.25, 0.46, 0.45, 0.94] as const },
-  }),
+const fadeVariants = {
+  enter: { opacity: 0 },
+  center: { opacity: 1 },
+  exit: { opacity: 0 },
 };
 
 export function Hero() {
   const t = useTranslations("home");
   const heroTitle = t("hero.title");
   const heroTitleHighlight = t("hero.titleHighlight");
-  const stats = t.raw("stats") as Array<{ value: string; label: string }>;
+
+  const [patientIdx, setPatientIdx] = useState(0);
+  const [istanbulIdx, setIstanbulIdx] = useState(0);
+
+  const nextSlide = useCallback(() => {
+    setPatientIdx((prev) => (prev + 1) % PATIENT_IMAGES.length);
+    setIstanbulIdx((prev) => (prev + 1) % ISTANBUL_IMAGES.length);
+  }, []);
+
+  useEffect(() => {
+    const timer = setInterval(nextSlide, SLIDE_INTERVAL);
+    return () => clearInterval(timer);
+  }, [nextSlide]);
 
   return (
     <Box pos="relative" className={`${styles.root} hero-bg-pulse`}>
-      {heroSection && (
-        <motion.div
-          initial={{ opacity: 0, scale: 1.08 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1.4, ease: [0.25, 0.46, 0.45, 0.94] }}
-          className={styles.bgLayer}
-        >
-          <motion.div
-            className={styles.bgInner}
-            animate={{ scale: [1, 1.03, 1] }}
-            transition={{ duration: 20, repeat: Infinity, ease: "easeInOut" }}
-          >
-            <Image
-              src={heroSection}
-              alt="Linova Clinic Istanbul"
-              fill
-              priority
-              className={styles.heroImage}
-              sizes="100vw"
-            />
-          </motion.div>
-        </motion.div>
-      )}
+      {/* Background composite: left patient + right Istanbul, both rotating */}
+      <motion.div
+        initial={{ opacity: 0, scale: 1.08 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 1.4, ease: [0.25, 0.46, 0.45, 0.94] }}
+        className={styles.bgLayer}
+      >
+        <div className={styles.bgComposite}>
+          {/* Left: Smiling patients */}
+          <div className={styles.heroLeft}>
+            <AnimatePresence mode="popLayout">
+              <motion.div
+                key={`patient-${patientIdx}`}
+                variants={fadeVariants}
+                initial="enter"
+                animate="center"
+                exit="exit"
+                transition={{ duration: 1, ease: "easeInOut" }}
+                className={styles.slideWrapper}
+              >
+                <Image
+                  src={PATIENT_IMAGES[patientIdx]}
+                  alt="Confident, happy patient with a beautiful smile"
+                  fill
+                  priority={patientIdx === 0}
+                  className={styles.heroImage}
+                  sizes="50vw"
+                />
+              </motion.div>
+            </AnimatePresence>
+          </div>
+
+          {/* Right: Istanbul sea & landmarks */}
+          <div className={styles.heroRight}>
+            <AnimatePresence mode="popLayout">
+              <motion.div
+                key={`istanbul-${istanbulIdx}`}
+                variants={fadeVariants}
+                initial="enter"
+                animate="center"
+                exit="exit"
+                transition={{ duration: 1, ease: "easeInOut" }}
+                className={styles.slideWrapper}
+              >
+                <Image
+                  src={ISTANBUL_IMAGES[istanbulIdx]}
+                  alt="Istanbul — Bosphorus sea, mosques, and skyline at golden hour"
+                  fill
+                  priority={istanbulIdx === 0}
+                  className={styles.heroImage}
+                  sizes="50vw"
+                />
+              </motion.div>
+            </AnimatePresence>
+          </div>
+
+          {/* Diagonal blend seam */}
+          <div className={styles.heroBlend} aria-hidden />
+        </div>
+      </motion.div>
+
+      {/* Content overlay */}
       <Container size="lg" className={styles.container}>
         <motion.div
           variants={container}
@@ -136,31 +199,6 @@ export function Hero() {
               </Group>
             </motion.div>
           </Stack>
-        </motion.div>
-
-        <motion.div
-          initial="hidden"
-          animate="visible"
-          variants={container}
-          className={styles.footer}
-        >
-          <SimpleGrid cols={{ base: 2, sm: 4 }} spacing="xl" py="xl">
-            {stats.map((stat, i) => (
-              <motion.div
-                key={stat.label}
-                variants={statsItem}
-                custom={i}
-                className={styles.statsItem}
-              >
-                <Text fw={800} size="2.25rem" lh={1.1} c="white">
-                  {stat.value}
-                </Text>
-                <Text size="xs" c="rgba(255,255,255,0.85)" fw={600} tt="uppercase" mt={4} className={styles.statsLabel}>
-                  {stat.label}
-                </Text>
-              </motion.div>
-            ))}
-          </SimpleGrid>
         </motion.div>
       </Container>
     </Box>

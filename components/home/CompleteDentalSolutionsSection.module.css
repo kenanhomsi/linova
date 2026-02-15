@@ -1,158 +1,303 @@
+/* ─── Section Root ─── */
 .root {
-  background: var(--background);
+  background: var(--section-beige);
 }
 
+/* ─── Header ─── */
 .eyebrow {
-  letter-spacing: 0.1em;
+  letter-spacing: 0.12em;
   color: var(--section-green);
 }
 
-.title {
+.heading {
   color: var(--readdy-gray-800);
 }
 
-.subtitle {
+.sub {
   color: var(--readdy-gray-700);
 }
 
-.card {
-  border: 1px solid var(--readdy-border);
-  overflow: hidden;
+/* ─── Treatment Tabs ─── */
+.tabsScroll {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  padding: 0.25rem 0;
+}
+
+.tabsScroll::-webkit-scrollbar {
+  display: none;
+}
+
+.tabsRow {
+  display: flex;
+  gap: 4px;
+  justify-content: center;
+  flex-wrap: nowrap;
+  min-width: max-content;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .tabsRow {
+    justify-content: flex-start;
+    padding: 0 1rem;
+  }
+}
+
+.tab {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 14px 14px 18px;
+  border-radius: var(--radius-lg);
+  transition: all var(--transition-normal);
+  min-width: 84px;
+  cursor: pointer;
+}
+
+.tab:hover {
+  background: rgba(14, 156, 140, 0.06);
+}
+
+.tabOn {
+  background: rgba(14, 156, 140, 0.06);
+}
+
+.tabIcon {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px dashed var(--readdy-gray-200);
+  color: var(--readdy-gray-700);
+  transition: all var(--transition-normal);
   background: var(--background);
-  height: 100%;
-  display: flex;
-  flex-direction: column;
 }
 
-.cardBody {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  min-height: 0;
+.tabOn .tabIcon {
+  border: 2px solid var(--readdy-teal);
+  color: var(--readdy-teal);
+  background: white;
+  box-shadow: 0 4px 14px rgba(14, 156, 140, 0.15);
 }
 
-.cardBody .link {
-  margin-top: auto;
+.tab:hover .tabIcon {
+  border-color: var(--readdy-teal);
+  color: var(--readdy-teal);
 }
 
-.imageBox {
+[data-theme="dark"] .tabIcon {
   background: var(--readdy-gray-100);
 }
 
-.imageBoxSmall {
-  background: var(--readdy-gray-100);
+[data-theme="dark"] .tabOn .tabIcon {
+  background: var(--readdy-gray-50);
 }
 
-.heroImage {
+.tabLabel {
+  color: var(--readdy-gray-700);
+  text-align: center;
+  max-width: 78px;
+  line-height: 1.25;
+  font-weight: 600;
+  transition: color var(--transition-fast);
+}
+
+.tabOn .tabLabel {
+  color: var(--readdy-teal);
+  font-weight: 700;
+}
+
+/* Animated underline bar for active tab */
+.tabBar {
+  position: absolute;
+  bottom: 4px;
+  left: 20%;
+  right: 20%;
+  height: 3px;
+  border-radius: 3px;
+  background: var(--readdy-teal);
+}
+
+/* ─── Spotlight Card ─── */
+.spotlight {
+  background: var(--background);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-lg);
+  overflow: hidden;
+  border: 1px solid var(--readdy-border);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 440px;
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+}
+
+/* ─── Image ─── */
+.imgWrap {
+  position: relative;
+  min-height: 340px;
+  overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .imgWrap {
+    min-height: 260px;
+  }
+}
+
+.img {
   object-fit: cover;
+  transition: transform 0.6s var(--ease-out-smooth);
+}
+
+.spotlight:hover .img {
+  transform: scale(1.03);
 }
 
 .badge {
-  background: linear-gradient(135deg, var(--readdy-teal) 0%, var(--readdy-teal-light) 100%);
-  border-radius: 20px;
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  background: linear-gradient(
+    135deg,
+    var(--readdy-teal) 0%,
+    var(--readdy-teal-dark) 100%
+  );
   color: white;
+  padding: 6px 18px;
+  border-radius: 20px;
   font-size: 0.75rem;
   font-weight: 600;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.03em;
+  box-shadow: 0 2px 8px rgba(14, 156, 140, 0.3);
 }
 
-.badgeCircle {
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  background: white;
-  box-shadow: var(--shadow-sm);
+[dir="rtl"] .badge {
+  left: auto;
+  right: 16px;
+}
+
+/* ─── Content ─── */
+.body {
+  padding: 2.5rem;
   display: flex;
-  align-items: center;
+  flex-direction: column;
   justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .body {
+    padding: 1.5rem;
+  }
+}
+
+.cat {
+  letter-spacing: 0.1em;
   color: var(--readdy-teal);
 }
 
-[data-theme="dark"] .badgeCircle {
-  background: var(--readdy-gray-100);
-}
-
-.categoryIcon {
-  width: 28px;
-  height: 28px;
-  min-width: 28px;
-  border-radius: 50%;
-  background: var(--readdy-teal-light);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--readdy-teal);
-}
-
-.categoryLabel {
-  letter-spacing: 0.08em;
-  color: var(--readdy-teal);
+.counter {
+  color: var(--readdy-gray-700);
+  opacity: 0.7;
+  font-variant-numeric: tabular-nums;
 }
 
 .cardTitle {
   color: var(--readdy-gray-800);
-  transition: color var(--transition-fast);
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1.25;
 }
 
-.card:hover .cardTitle {
-  color: var(--readdy-teal);
+@media (min-width: 769px) {
+  .cardTitle {
+    font-size: 1.85rem;
+  }
 }
 
-/* Hover: central icon overlay on image (visible when card is hovered) */
-.hoverIconOverlay {
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity var(--transition-normal);
-}
-
-.card:hover .hoverIconOverlay {
-  opacity: 1;
-}
-
-.hoverIconCircle {
-  width: 56px;
-  height: 56px;
-  border-radius: 50%;
-  background: white;
-  border: 2px solid var(--readdy-teal);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--readdy-teal);
-  box-shadow: var(--shadow-md);
-}
-
-[data-theme="dark"] .hoverIconCircle {
-  background: var(--readdy-gray-100);
-}
-
-.cardDesc {
+.desc {
   color: var(--readdy-gray-700);
 }
 
-.link {
-  text-decoration: none;
-  font-size: 0.875rem;
-  font-weight: 600;
-  color: var(--readdy-teal);
-  display: inline-flex;
-  align-items: center;
-  gap: 4px;
-  transition: color var(--transition-fast);
+/* ─── Highlights ─── */
+.highlights {
+  margin-top: 0.5rem;
 }
 
-.link:hover {
-  color: var(--readdy-teal-hover);
-}
-
-.smallIcon {
-  width: 32px;
-  height: 32px;
-  min-width: 32px;
+.checkCircle {
+  width: 22px;
+  height: 22px;
+  min-width: 22px;
   border-radius: 50%;
-  background: var(--readdy-teal-light);
+  background: var(--readdy-teal-pale);
   display: flex;
   align-items: center;
   justify-content: center;
   color: var(--readdy-teal);
+}
+
+.hl {
+  color: var(--readdy-gray-800);
+}
+
+/* ─── CTA ─── */
+.ctaWrap {
+  margin-top: auto;
+  padding-top: 1rem;
+}
+
+.cta {
+  background: var(--primary-cta);
+  color: white;
+  border: none;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  transition: background var(--transition-fast), transform var(--transition-fast);
+}
+
+.cta:hover {
+  background: var(--primary-cta-hover);
+}
+
+/* ─── Progress Dots ─── */
+.dotsRow {
+  padding: 1rem 0 1.25rem;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--readdy-gray-200);
+  transition: all var(--transition-normal);
+  padding: 0;
+}
+
+.dotOn {
+  width: 28px;
+  border-radius: 4px;
+  background: var(--readdy-teal);
+}
+
+/* ─── Dark mode overrides ─── */
+[data-theme="dark"] .spotlight {
+  background: var(--readdy-bg);
+}
+
+[data-theme="dark"] .badge {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
 }

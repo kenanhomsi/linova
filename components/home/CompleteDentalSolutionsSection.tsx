@@ -1,5 +1,6 @@
 "use client";
 
+import React, { useState, useCallback, useEffect, useRef } from "react";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import Image from "next/image";
@@ -8,289 +9,300 @@ import {
   Title,
   Text,
   Stack,
-  SimpleGrid,
-  Card,
   Box,
   Group,
+  Button,
+  UnstyledButton,
 } from "@mantine/core";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import {
   IconStar,
   IconMoodSmile,
-  IconHeart,
   IconBolt,
   IconDeviceDesktop,
   IconSettings,
+  IconCheck,
+  IconChevronRight,
 } from "@tabler/icons-react";
 import { COMPLETE_DENTAL_SOLUTIONS_CARDS } from "@/lib/home-data";
-import { HERO_IMAGE } from "@/lib/constants";
-import { FadeInUp, StaggerContainer, StaggerItem } from "@/components/ui/Animate";
+import { FadeInUp } from "@/components/ui/Animate";
 import styles from "./CompleteDentalSolutionsSection.module.css";
 
-type CategoryIcon = "star" | "tooth" | "bolt" | "device" | "settings";
+/* ─── Constants ─── */
+const AUTO_PLAY_MS = 6000;
 
-function CategoryIcon({ type }: { type: CategoryIcon }) {
-  const size = 14;
+/* ─── Icon resolver (matches categoryIcon field in data) ─── */
+type IconKey = "star" | "tooth" | "bolt" | "device" | "settings";
+
+function renderIcon(type: IconKey, size = 24) {
   switch (type) {
     case "star":
-      return <IconStar size={size} />;
+      return <IconStar size={size} stroke={1.5} />;
     case "tooth":
-      return <IconMoodSmile size={size} />;
+      return <IconMoodSmile size={size} stroke={1.5} />;
     case "bolt":
-      return <IconBolt size={size} />;
+      return <IconBolt size={size} stroke={1.5} />;
     case "device":
-      return <IconDeviceDesktop size={size} />;
+      return <IconDeviceDesktop size={size} stroke={1.5} />;
     case "settings":
-      return <IconSettings size={size} />;
+      return <IconSettings size={size} stroke={1.5} />;
     default:
-      return <IconMoodSmile size={size} />;
+      return <IconMoodSmile size={size} stroke={1.5} />;
   }
 }
 
-function CategoryIconSmall({ type }: { type: CategoryIcon }) {
-  const size = 18;
-  switch (type) {
-    case "star":
-      return <IconStar size={size} />;
-    case "tooth":
-      return <IconMoodSmile size={size} />;
-    case "bolt":
-      return <IconBolt size={size} />;
-    case "device":
-      return <IconDeviceDesktop size={18} />;
-    case "settings":
-      return <IconSettings size={18} />;
-    default:
-      return <IconMoodSmile size={18} />;
-  }
-}
-
-/** Center overlay icon for hover – heart for restorative (tooth), star for cosmetic, etc. */
-function HoverOverlayIcon({ type }: { type: CategoryIcon }) {
-  const size = 28;
-  switch (type) {
-    case "star":
-      return <IconStar size={size} />;
-    case "tooth":
-      return <IconHeart size={size} />;
-    case "bolt":
-      return <IconBolt size={size} />;
-    case "device":
-      return <IconDeviceDesktop size={size} />;
-    case "settings":
-      return <IconSettings size={size} />;
-    default:
-      return <IconHeart size={size} />;
-  }
-}
-
-interface CompleteDentalSolutionsSectionProps {
-  /** When false, section renders with no entrance or hover animations. */
+/* ─── Types ─── */
+interface Props {
   animated?: boolean;
 }
 
-type CardMeta = (typeof COMPLETE_DENTAL_SOLUTIONS_CARDS)[number];
-type CardText = { category: string; title: string; description: string; cta: string; badge?: string };
+type CardTranslation = {
+  category: string;
+  title: string;
+  description: string;
+  cta: string;
+  badge?: string;
+  highlights?: string[];
+};
 
-export function CompleteDentalSolutionsSection({
-  animated = true,
-}: CompleteDentalSolutionsSectionProps) {
+type MergedCard = (typeof COMPLETE_DENTAL_SOLUTIONS_CARDS)[number] &
+  CardTranslation;
+
+/* ─── Conditional animation wrapper ─── */
+function MaybeAnimate({
+  animated,
+  children,
+  delay = 0,
+}: {
+  animated: boolean;
+  children: React.ReactNode;
+  delay?: number;
+}) {
+  if (!animated) return <>{children}</>;
+  return <FadeInUp delay={delay}>{children}</FadeInUp>;
+}
+
+/* ─── Main Component ─── */
+export function CompleteDentalSolutionsSection({ animated = true }: Props) {
   const t = useTranslations("home");
-  const cardsText = t.raw("completeDentalSolutionsCards") as CardText[];
+  const raw = t.raw("completeDentalSolutionsCards") as CardTranslation[];
+
   const cards = COMPLETE_DENTAL_SOLUTIONS_CARDS.map((meta, i) => ({
     ...meta,
-    ...(cardsText[i] ?? {}),
-  })) as Array<CardMeta & CardText>;
+    ...(raw[i] ?? {}),
+  })) as MergedCard[];
 
-  const featured = cards.filter((c) => c.featured);
-  const rest = cards.filter((c) => !c.featured);
+  /* State */
+  const [active, setActive] = useState(0);
+  const [paused, setPaused] = useState(false);
+  const timer = useRef<ReturnType<typeof setTimeout>>(undefined);
+  const tabsRef = useRef<HTMLDivElement>(null);
 
-  const placeholderImage = HERO_IMAGE;
+  const card = cards[active];
 
-  const header = (
-    <Stack gap="xs" ta="center" maw={700} mx="auto">
-      <Text size="sm" fw={600} tt="uppercase" className={styles.eyebrow}>
-        {t("expertise.eyebrow")}
-      </Text>
-      <Title order={2} size="2rem" fw={700} className={styles.title}>
-        {t("expertise.title")}
-      </Title>
-      <Text size="lg" lh={1.6} className={styles.subtitle}>
-        {t("expertise.subtitle")}
-      </Text>
-    </Stack>
-  );
-
-  const cardContent = (
-    card: (typeof cards)[number],
-    isFeatured: boolean,
-    index: number
-  ) => (
-    <>
-      <Box
-        pos="relative"
-        h={isFeatured ? 280 : 200}
-        className={isFeatured ? styles.imageBox : styles.imageBoxSmall}
-      >
-        <Image
-          src={card.image || placeholderImage}
-          alt={card.title}
-          fill
-          className={styles.heroImage}
-          sizes={isFeatured ? "(max-width: 768px) 100vw, 50vw" : "(max-width: 768px) 100vw, 33vw"}
-        />
-        {isFeatured && "badge" in card && card.badge ? (
-          <Box pos="absolute" top={12} left={12} px="sm" py={4} className={styles.badge}>
-            {card.badge}
-          </Box>
-        ) : (
-          <Box pos="absolute" top={12} left={12} className={styles.badgeCircle}>
-            <CategoryIconSmall type={card.categoryIcon} />
-          </Box>
-        )}
-        <Box
-          pos="absolute"
-          top="50%"
-          left="50%"
-          style={{ transform: "translate(-50%, -50%)" }}
-          className={styles.hoverIconOverlay}
-          aria-hidden
-        >
-          <Box className={styles.hoverIconCircle}>
-            <HoverOverlayIcon type={card.categoryIcon} />
-          </Box>
-        </Box>
-      </Box>
-      <Stack gap="sm" p={isFeatured ? "lg" : "md"} className={styles.cardBody}>
-        <Group gap="xs">
-          <Box className={styles.categoryIcon}>
-            <CategoryIcon type={card.categoryIcon} />
-          </Box>
-          <Text size="xs" fw={700} tt="uppercase" className={styles.categoryLabel}>
-            {card.category.toUpperCase()}
-          </Text>
-        </Group>
-        <Title
-          order={isFeatured ? 3 : 4}
-          size={isFeatured ? "h4" : "h5"}
-          fw={700}
-          className={styles.cardTitle}
-        >
-          {card.title}
-        </Title>
-        <Text
-          size="sm"
-          lh={1.6}
-          className={styles.cardDesc}
-          lineClamp={isFeatured ? undefined : 2}
-        >
-          {card.description}
-        </Text>
-        <Link
-          href={isFeatured ? "/contact" : "/treatments"}
-          className={styles.link}
-        >
-          {card.cta} →
-        </Link>
-      </Stack>
-    </>
-  );
-
-  const featuredGrid = (
-    <SimpleGrid cols={{ base: 1, md: 2 }} spacing="lg">
-      {featured.map((card, i) => (
-        <Card
-          key={card.title}
-          shadow="md"
-          padding={0}
-          radius="md"
-          className={`card-hover ${styles.card}`}
-        >
-          {cardContent(card, true, i)}
-        </Card>
-      ))}
-    </SimpleGrid>
-  );
-
-  const restGrid = (
-    <SimpleGrid cols={{ base: 1, sm: 3 }} spacing="lg" mt="lg">
-      {rest.map((card, i) => (
-        <Card
-          key={card.title}
-          shadow="sm"
-          padding={0}
-          radius="md"
-          className={`card-hover ${styles.card}`}
-        >
-          {cardContent(card, false, i)}
-        </Card>
-      ))}
-    </SimpleGrid>
-  );
-
-  if (!animated) {
-    return (
-      <Box id="services" className={`section-spacing ${styles.root}`}>
-        <Container size="xl">
-          <Stack gap="xl">
-            {header}
-            {featuredGrid}
-            {restGrid}
-          </Stack>
-        </Container>
-      </Box>
+  /* Auto-play */
+  useEffect(() => {
+    if (paused) return;
+    timer.current = setTimeout(
+      () => setActive((p) => (p + 1) % cards.length),
+      AUTO_PLAY_MS
     );
-  }
+    return () => clearTimeout(timer.current);
+  }, [active, paused, cards.length]);
+
+  const go = useCallback(
+    (i: number) => {
+      if (i === active) return;
+      setActive(i);
+    },
+    [active]
+  );
+
+
+  const counter = `${String(active + 1).padStart(2, "0")} / ${String(
+    cards.length
+  ).padStart(2, "0")}`;
 
   return (
-    <Box id="services" className={`section-spacing ${styles.root}`}>
+    <Box
+      id="services"
+      className={`section-spacing ${styles.root}`}
+      onMouseEnter={() => setPaused(true)}
+      onMouseLeave={() => setPaused(false)}
+    >
       <Container size="xl">
         <Stack gap="xl">
-          <FadeInUp>{header}</FadeInUp>
+          {/* ── Header ── */}
+          <MaybeAnimate animated={animated}>
+            <Stack gap="xs" ta="center" maw={700} mx="auto">
+              <Text
+                size="sm"
+                fw={600}
+                tt="uppercase"
+                className={styles.eyebrow}
+              >
+                {t("expertise.eyebrow")}
+              </Text>
+              <Title
+                order={2}
+                size="2rem"
+                fw={700}
+                className={styles.heading}
+              >
+                {t("expertise.title")}
+              </Title>
+              <Text size="lg" lh={1.6} className={styles.sub}>
+                {t("expertise.subtitle")}
+              </Text>
+            </Stack>
+          </MaybeAnimate>
 
-          <StaggerContainer staggerChildren={0.1}>
-            <SimpleGrid cols={{ base: 1, md: 2 }} spacing="lg">
-              {featured.map((card, i) => (
-                <StaggerItem key={card.title}>
-                  <motion.div
-                    style={{ height: "100%" }}
-                    whileHover={{ y: -4 }}
-                    transition={{ duration: 0.25 }}
+          {/* ── Treatment Selector Tabs ── */}
+          <MaybeAnimate animated={animated} delay={0.08}>
+            <Box className={styles.tabsScroll}>
+              <div ref={tabsRef} className={styles.tabsRow}>
+                {cards.map((c, i) => (
+                  <UnstyledButton
+                    key={i}
+                    onClick={() => go(i)}
+                    className={`${styles.tab} ${i === active ? styles.tabOn : ""
+                      }`}
+                    role="tab"
+                    aria-selected={i === active}
                   >
-                    <Card
-                      shadow="md"
-                      padding={0}
-                      radius="md"
-                      className={`card-hover ${styles.card}`}
-                    >
-                      {cardContent(card, true, i)}
-                    </Card>
-                  </motion.div>
-                </StaggerItem>
-              ))}
-            </SimpleGrid>
+                    <Box className={styles.tabIcon}>
+                      {renderIcon(c.categoryIcon, 22)}
+                    </Box>
+                    <Text size="xs" className={styles.tabLabel}>
+                      {c.title}
+                    </Text>
+                    {/* Animated active indicator */}
+                    {i === active && (
+                      <motion.div
+                        layoutId="tabActiveBar"
+                        className={styles.tabBar}
+                        transition={{
+                          type: "spring",
+                          stiffness: 500,
+                          damping: 35,
+                        }}
+                      />
+                    )}
+                  </UnstyledButton>
+                ))}
+              </div>
+            </Box>
+          </MaybeAnimate>
 
-            <SimpleGrid cols={{ base: 1, sm: 3 }} spacing="lg" mt="lg">
-              {rest.map((card, i) => (
-                <StaggerItem key={card.title}>
-                  <motion.div
-                    style={{ height: "100%" }}
-                    whileHover={{ y: -4 }}
-                    transition={{ duration: 0.25 }}
-                  >
-                    <Card
-                      shadow="sm"
-                      padding={0}
-                      radius="md"
-                      className={`card-hover ${styles.card}`}
-                    >
-                      {cardContent(card, false, i)}
-                    </Card>
-                  </motion.div>
-                </StaggerItem>
-              ))}
-            </SimpleGrid>
-          </StaggerContainer>
+          {/* ── Spotlight Card ── */}
+          <MaybeAnimate animated={animated} delay={0.14}>
+            <Box className={styles.spotlight}>
+              <AnimatePresence mode="wait" initial={false}>
+                <motion.div
+                  key={active}
+                  initial={{ opacity: 0, y: 16 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -16 }}
+                  transition={{
+                    duration: 0.4,
+                    ease: [0.25, 0.46, 0.45, 0.94],
+                  }}
+                  className={styles.grid}
+                >
+                  {/* Image side */}
+                  <Box className={styles.imgWrap}>
+                    <Image
+                      src={card.image}
+                      alt={card.title}
+                      fill
+                      className={styles.img}
+                      sizes="(max-width: 768px) 100vw, 45vw"
+                    />
+                    {card.badge && (
+                      <Box className={styles.badge}>{card.badge}</Box>
+                    )}
+                  </Box>
+
+                  {/* Content side */}
+                  <Stack gap="md" className={styles.body}>
+                    <Group gap="xs" justify="space-between" align="center">
+                      <Text
+                        size="xs"
+                        fw={700}
+                        tt="uppercase"
+                        className={styles.cat}
+                      >
+                        {card.category}
+                      </Text>
+                      <Text size="xs" fw={600} className={styles.counter}>
+                        {counter}
+                      </Text>
+                    </Group>
+
+                    <Title order={3} className={styles.cardTitle}>
+                      {card.title}
+                    </Title>
+
+                    <Text size="md" lh={1.7} className={styles.desc}>
+                      {card.description}
+                    </Text>
+
+                    {card.highlights && card.highlights.length > 0 && (
+                      <Stack gap={8} className={styles.highlights}>
+                        {card.highlights.map((h: string, idx: number) => (
+                          <Group
+                            key={idx}
+                            gap="xs"
+                            wrap="nowrap"
+                            align="center"
+                          >
+                            <Box className={styles.checkCircle}>
+                              <IconCheck size={12} stroke={3} />
+                            </Box>
+                            <Text size="sm" fw={500} className={styles.hl}>
+                              {h}
+                            </Text>
+                          </Group>
+                        ))}
+                      </Stack>
+                    )}
+
+                    <Box className={styles.ctaWrap}>
+                      <Link
+                        href={card.featured ? "/contact" : "/treatments"}
+                        style={{ textDecoration: "none" }}
+                      >
+                        <Button
+                          size="md"
+                          radius="md"
+                          fw={600}
+                          className={styles.cta}
+                          rightSection={
+                            <IconChevronRight size={16} stroke={2.5} />
+                          }
+                        >
+                          {card.cta}
+                        </Button>
+                      </Link>
+                    </Box>
+                  </Stack>
+                </motion.div>
+              </AnimatePresence>
+
+              {/* Progress dots */}
+              <Group gap={6} justify="center" className={styles.dotsRow}>
+                {cards.map((_, i) => (
+                  <UnstyledButton
+                    key={i}
+                    onClick={() => go(i)}
+                    className={`${styles.dot} ${i === active ? styles.dotOn : ""
+                      }`}
+                    aria-label={`Treatment ${i + 1}`}
+                  />
+                ))}
+              </Group>
+            </Box>
+          </MaybeAnimate>
         </Stack>
       </Container>
     </Box>

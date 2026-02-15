@@ -5,6 +5,7 @@ export const SITE_TAGLINE = "Dental Implants Turkey | Hollywood Smile Makeover";
 // First clinic image for hero (path under public/)
 export const HERO_IMAGE = "/images/WhatsApp Image 2026-01-27 at 12.47.00 PM.jpeg";
 
+
 export const WHATSAPP_NUMBER: string = "905321234567"; // +90 532 123 4567
 export const WHATSAPP_LINK = WHATSAPP_NUMBER
   ? `https://wa.me/${WHATSAPP_NUMBER.replace(/\D/g, "")}`

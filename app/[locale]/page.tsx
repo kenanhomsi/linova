@@ -1,6 +1,9 @@
 "use client";
 
 import { Hero } from "@/components/home/Hero";
+import { StatsBar } from "@/components/home/StatsBar";
+import { SocialProofSection } from "@/components/home/SocialProofSection";
+import { BeforeAfterShowcase } from "@/components/home/BeforeAfterShowcase";
 import { CompleteDentalSolutionsSection } from "@/components/home/CompleteDentalSolutionsSection";
 import { WhyLinovaSection } from "@/components/home/WhyLinovaSection";
 import { SmileTransformations } from "@/components/home/SmileTransformations";
@@ -18,6 +21,13 @@ export default function Home() {
   return (
     <Box>
       <Hero />
+      <StatsBar />
+      <SectionReveal>
+        <SocialProofSection />
+      </SectionReveal>
+      <SectionReveal delay={0.05}>
+        <BeforeAfterShowcase />
+      </SectionReveal>
       <SectionReveal>
         <CompleteDentalSolutionsSection animated />
       </SectionReveal>

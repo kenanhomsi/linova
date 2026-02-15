@@ -1,0 +1,43 @@
+.root {
+  background: var(--mantine-color-gray-0);
+}
+
+[data-mantine-color-scheme="dark"] .root {
+  background: var(--mantine-color-dark-7);
+}
+
+.eyebrow {
+  color: var(--mantine-color-teal-6);
+}
+
+.title {
+  color: var(--mantine-color-gray-9);
+}
+
+[data-mantine-color-scheme="dark"] .title {
+  color: var(--mantine-color-gray-0);
+}
+
+.card {
+  position: relative;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.card:hover {
+  box-shadow: var(--mantine-shadow-md);
+  transform: translateY(-2px);
+}
+
+.quoteIcon {
+  color: var(--mantine-color-teal-4);
+  opacity: 0.7;
+  margin-bottom: var(--mantine-spacing-xs);
+}
+
+.quote {
+  color: var(--mantine-color-gray-7);
+}
+
+[data-mantine-color-scheme="dark"] .quote {
+  color: var(--mantine-color-gray-4);
+}

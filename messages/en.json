@@ -68,6 +68,10 @@
       { "value": "50+", "label": "Countries Served" },
       { "value": "98%", "label": "Satisfaction Rate" }
     ],
+    "socialProof": {
+      "eyebrow": "Trust worldwide",
+      "title": "Loved by patients from 50+ countries"
+    },
     "expertise": {
       "eyebrow": "Our Expertise",
       "title": "Complete Dental Solutions",
@@ -129,52 +133,92 @@
       {
         "category": "Cosmetic Dentistry",
         "title": "Hollywood Smile Makeover",
-        "description": "Complete cosmetic transformation combining veneers, whitening, and smile design for a stunning, natural-looking result",
+        "description": "Complete cosmetic transformation combining veneers, whitening, and smile design for a stunning, natural-looking result that boosts your confidence and enhances your appearance.",
         "cta": "Book Consultation",
-        "badge": "Most Popular"
+        "badge": "Most Popular",
+        "highlights": [
+          "Custom digital smile design preview",
+          "Premium E-max & Zirconia materials",
+          "Complete transformation in 5–7 days"
+        ]
       },
       {
         "category": "Restorative Dentistry",
         "title": "Dental Implants",
-        "description": "Permanent tooth replacement with titanium implants that look, feel, and function like natural teeth",
+        "description": "Permanent tooth replacement with titanium implants that look, feel, and function like natural teeth. Planned digitally for precision and long-lasting results.",
         "cta": "Book Consultation",
-        "badge": "Most Popular"
+        "badge": "Most Popular",
+        "highlights": [
+          "German titanium implant systems",
+          "Lifetime warranty included",
+          "3D digital surgical planning"
+        ]
       },
       {
         "category": "Restorative Dentistry",
         "title": "All-on-4 & All-on-6",
-        "description": "Full arch fixed solutions for multiple missing teeth with immediate results",
-        "cta": "Learn More"
+        "description": "Full arch fixed solutions for multiple missing teeth with immediate results. Restore an entire jaw in a single session with advanced implant techniques.",
+        "cta": "Learn More",
+        "highlights": [
+          "Full arch restoration in one day",
+          "No bone grafting required",
+          "Immediate fixed prosthesis"
+        ]
       },
       {
         "category": "Cosmetic Dentistry",
         "title": "Dental Veneers",
-        "description": "Ultra thin zirconia, E-max, and porcelain shells for perfect teeth",
-        "cta": "Learn More"
+        "description": "Ultra-thin zirconia, E-max, and porcelain shells for perfect teeth. Correct gaps, chips, and discoloration with a flawless, natural-looking appearance.",
+        "cta": "Learn More",
+        "highlights": [
+          "Ultra-thin 0.3mm shells",
+          "No-prep & minimal-prep options",
+          "Natural translucency match"
+        ]
       },
       {
         "category": "Cosmetic Dentistry",
         "title": "Teeth Whitening",
-        "description": "Professional laser bleaching for a brighter, confident smile",
-        "cta": "Learn More"
+        "description": "Professional laser bleaching for a brighter, more confident smile. Achieve visible results in a single in-office session with long-lasting brightness.",
+        "cta": "Learn More",
+        "highlights": [
+          "Up to 8 shades brighter",
+          "Professional in-office treatment",
+          "Long-lasting results"
+        ]
       },
       {
         "category": "Restorative Dentistry",
         "title": "Dental Crowns & Bridges",
-        "description": "Restore strength, function, and appearance of damaged teeth",
-        "cta": "Learn More"
+        "description": "Restore the strength, function, and appearance of damaged teeth with precision-crafted ceramic restorations designed for durability and aesthetics.",
+        "cta": "Learn More",
+        "highlights": [
+          "CAD/CAM precision-crafted fit",
+          "Same-day restorations available",
+          "Premium ceramic materials"
+        ]
       },
       {
         "category": "Digital Dentistry",
         "title": "Digital Smile Design",
-        "description": "3D preview and planning for your ideal smile transformation",
-        "cta": "Learn More"
+        "description": "3D preview and planning for your ideal smile transformation. See your future smile before treatment begins with AI-powered digital blueprints.",
+        "cta": "Learn More",
+        "highlights": [
+          "Preview your smile before treatment",
+          "AI-powered facial analysis",
+          "Precise digital blueprints"
+        ]
       },
       {
         "category": "Advanced Technology",
         "title": "Laser Dentistry",
-        "description": "Precise, minimally invasive treatments with modern laser technology",
-        "cta": "Learn More"
+        "description": "Precise, minimally invasive treatments with modern laser technology. Experience faster healing, reduced discomfort, and superior precision.",
+        "cta": "Learn More",
+        "highlights": [
+          "Minimally invasive procedures",
+          "Faster healing & recovery",
+          "Reduced discomfort"
+        ]
       }
     ],
     "whyLinova": {
@@ -221,6 +265,14 @@
       "tabs": ["All Cases", "Hollywood Smile", "Implants", "Veneers", "Whitening"],
       "before": "Before",
       "after": "After"
+    },
+    "beforeAfterShowcase": {
+      "eyebrow": "Proven Results",
+      "title": "See the Difference.",
+      "titleAccent": "Feel the Confidence.",
+      "subtitle": "Drag to reveal the transformation — real patients, real results, zero filters",
+      "cta": "Start Your Transformation",
+      "dragHint": "Drag to compare"
     },
     "transformations": [
       { "title": "Hollywood Smile Transformation", "detail": "16 Zirconia Veneers", "category": "Hollywood Smile" },
@@ -348,12 +400,14 @@
       }
     ],
     "reviewsSection": {
-      "title": "Patients Reviews",
+      "eyebrow": "WHAT OUR PATIENTS SAY",
+      "title": "Real Stories, Real Smiles",
+      "subtitle": "Thousands of patients from around the world trust Linova Clinic for their dental transformation. Here's what they have to say.",
       "googleRating": "4.9",
       "googleLabel": "Top Rated Service",
       "verifiedBadge": "Verified by Trustindex",
       "readMore": "Read more",
-      "quoteMaxLength": 120
+      "quoteMaxLength": 140
     },
     "readyCta": {
       "eyebrow": "GET STARTED",

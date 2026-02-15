@@ -1,120 +1,146 @@
+/* ===== Root ===== */
 .root {
-  background: var(--section-beige, #fbf8f6);
-}
-
-.headerRow {
-  display: flex;
-  justify-content: flex-end;
+  background: var(--background);
   position: relative;
+  overflow: hidden;
 }
 
-.accentLine {
+/* Subtle decorative gradient blob */
+.root::before {
+  content: "";
   position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 4px;
-  height: 80%;
-  min-height: 36px;
-  background: var(--primary-cta-light, #818cf8);
-  border-radius: 2px;
-  opacity: 0.8;
+  top: -120px;
+  right: -80px;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(
+    circle,
+    rgba(14, 156, 140, 0.06) 0%,
+    transparent 70%
+  );
+  border-radius: 50%;
+  pointer-events: none;
 }
 
-.titleWithAccent {
-  color: var(--readdy-gray-800);
-  position: relative;
-  padding-left: 20px;
+.root::after {
+  content: "";
+  position: absolute;
+  bottom: -100px;
+  left: -60px;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(
+    circle,
+    rgba(67, 56, 202, 0.04) 0%,
+    transparent 70%
+  );
+  border-radius: 50%;
+  pointer-events: none;
 }
 
+/* ===== Google logo ===== */
 .googleLogo {
-  letter-spacing: -0.5px;
+  letter-spacing: -0.3px;
   font-family: var(--font-geist-sans), system-ui, sans-serif;
 }
 
 .googleLetter {
-  color: var(--google-letter-color, #4285F4);
+  color: var(--google-letter-color, #4285f4);
 }
 
+/* ===== Stars ===== */
 .stars {
-  color: #FBBC05;
-  letter-spacing: 2px;
+  color: #fbbc05;
 }
 
-.ratingBox {
-  background: var(--background);
-  border-radius: var(--radius-lg);
-  padding: 12px 20px;
-  box-shadow: var(--shadow-md);
+/* ===== Trust bar ===== */
+.trustBadge {
   display: flex;
   align-items: center;
   gap: 12px;
+  background: var(--readdy-gray-50);
+  border: 1px solid var(--readdy-border);
+  border-radius: 100px;
+  padding: 10px 24px;
+  transition: box-shadow var(--transition-fast);
 }
 
-.ratingLabel {
+.trustBadge:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.ratingPill {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.ratingValue {
   color: var(--readdy-gray-800);
 }
 
+.ratingLabel {
+  color: var(--readdy-gray-700);
+}
+
 .verifiedBadge {
-  background: var(--section-green);
-  color: white;
-  border-radius: var(--radius-md);
-  padding: 10px 16px;
   display: flex;
   align-items: center;
   gap: 8px;
+  color: var(--section-green);
+  background: var(--section-green-soft);
+  border-radius: 100px;
+  padding: 10px 20px;
   font-weight: 600;
-  font-size: 0.875rem;
+  transition: box-shadow var(--transition-fast);
 }
 
-.verifiedIcon {
-  opacity: 0.9;
+.verifiedBadge:hover {
+  box-shadow: var(--shadow-md);
 }
 
+/* ===== Carousel ===== */
 .carouselWrap {
   position: relative;
-  margin-top: 8px;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 3;
+  background: var(--primary-cta) !important;
+  color: white !important;
+  border: none !important;
+  box-shadow: var(--shadow-lg);
+  transition: transform var(--transition-fast), opacity var(--transition-fast),
+    box-shadow var(--transition-fast);
+}
+
+.arrow:hover {
+  transform: translateY(-50%) scale(1.08);
+  box-shadow: var(--shadow-xl);
 }
 
 .arrowLeft {
-  position: absolute;
-  left: -8px;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 2;
-  background: var(--background);
-  color: var(--readdy-gray-700);
-  box-shadow: var(--shadow-md);
-}
-
-.arrowLeftDisabled {
-  opacity: 0.4;
-  pointer-events: none;
+  left: -22px;
 }
 
 .arrowRight {
-  position: absolute;
-  right: -8px;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 2;
-  background: var(--background);
-  color: var(--readdy-gray-700);
-  box-shadow: var(--shadow-md);
+  right: -22px;
 }
 
-.arrowRightDisabled {
-  opacity: 0.4;
+.arrowDisabled {
+  opacity: 0;
   pointer-events: none;
 }
 
 .scrollArea {
   display: flex;
-  gap: 20px;
+  gap: 24px;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
-  padding: 8px 0;
-  margin: 0 48px;
+  padding: 12px 4px;
   scrollbar-width: none;
   -ms-overflow-style: none;
 }
@@ -123,70 +149,198 @@
   display: none;
 }
 
+/* ===== Card ===== */
 .card {
-  min-width: 320px;
-  max-width: 360px;
+  min-width: 340px;
+  max-width: 380px;
   flex-shrink: 0;
   scroll-snap-align: start;
-  background: var(--background);
-  border: 1px solid var(--readdy-border);
+  background: var(--background) !important;
+  border: 1px solid var(--readdy-border) !important;
+  overflow: visible;
+  transition: transform var(--transition-normal),
+    box-shadow var(--transition-normal), border-color var(--transition-normal);
 }
 
-.avatar {
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 48px rgba(14, 156, 140, 0.1),
+    0 8px 24px rgba(67, 56, 202, 0.06);
+  border-color: var(--readdy-teal) !important;
+}
+
+.cardInner {
+  padding: 28px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* ===== Quote icon ===== */
+.quoteIcon {
   width: 44px;
   height: 44px;
-  border-radius: 50%;
-  background: var(--readdy-gray-100);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.25rem;
-}
-
-.cardName {
-  color: var(--readdy-gray-800);
-  text-transform: uppercase;
-}
-
-.cardTime {
-  color: var(--readdy-gray-700);
-}
-
-.googleBadge {
-  width: 28px;
-  height: 28px;
-  border-radius: 6px;
-  background: var(--readdy-gray-100);
+  border-radius: 12px;
+  background: linear-gradient(135deg, var(--primary-cta), var(--readdy-teal));
+  color: white;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
 }
 
-.googleBadgeText {
-  color: var(--google-letter-color, #4285F4);
-}
-
-[data-theme="dark"] .googleLetter,
-[data-theme="dark"] .googleBadgeText {
-  color: var(--primary-cta-light);
-}
-
-.verifiedCheck {
-  color: var(--primary-cta);
-}
-
+/* ===== Quote text ===== */
 .quoteText {
   color: var(--readdy-gray-700);
+  min-height: 72px;
 }
 
 .readMoreBtn {
-  color: var(--readdy-gray-800);
-  font-weight: 600;
-  font-size: inherit;
+  color: var(--primary-cta);
+  cursor: pointer;
+  transition: color var(--transition-fast);
+}
+
+.readMoreBtn:hover {
+  color: var(--primary-cta-hover);
   text-decoration: underline;
 }
 
-.treatmentLabel {
+/* ===== Divider ===== */
+.cardDivider {
+  height: 1px;
+  background: var(--readdy-border);
+  opacity: 0.6;
+}
+
+/* ===== Avatar ===== */
+.avatar {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: var(--readdy-gray-50);
+  border: 2px solid var(--readdy-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* ===== Name / Country ===== */
+.cardName {
+  color: var(--readdy-gray-800);
+}
+
+.cardCountry {
+  color: var(--readdy-gray-700);
+  margin-top: 2px;
+}
+
+/* ===== Google dot ===== */
+.googleDot {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #4285f4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.googleDotText {
+  color: white !important;
+  font-size: 10px !important;
+  line-height: 1;
+}
+
+/* ===== Treatment tag ===== */
+.treatmentTag {
+  display: inline-flex;
+  align-self: flex-start;
+  padding: 5px 14px;
+  border-radius: 100px;
+  background: var(--section-green-soft);
   color: var(--section-green);
+}
+
+/* ===== Pagination dots ===== */
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: none;
+  background: var(--readdy-gray-200);
+  cursor: pointer;
+  padding: 0;
+  transition: all var(--transition-fast);
+}
+
+.dot:hover {
+  background: var(--readdy-teal);
+  opacity: 0.6;
+}
+
+.dotActive {
+  background: var(--primary-cta) !important;
+  width: 28px;
+  border-radius: 100px;
+}
+
+/* ===== Dark mode overrides ===== */
+[data-theme="dark"] .googleLetter {
+  filter: brightness(1.1);
+}
+
+[data-theme="dark"] .googleDot {
+  background: #6d9eef;
+}
+
+[data-theme="dark"] .card:hover {
+  box-shadow: 0 20px 48px rgba(61, 212, 196, 0.08),
+    0 8px 24px rgba(99, 102, 241, 0.06);
+}
+
+[data-theme="dark"] .quoteIcon {
+  background: linear-gradient(135deg, var(--primary-cta-light), var(--readdy-teal));
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .card {
+    min-width: 290px;
+    max-width: 320px;
+  }
+
+  .cardInner {
+    padding: 22px 18px;
+  }
+
+  .arrowLeft {
+    left: -12px;
+  }
+
+  .arrowRight {
+    right: -12px;
+  }
+
+  .trustBadge {
+    padding: 8px 16px;
+    gap: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    min-width: 270px;
+    max-width: 290px;
+  }
+
+  .arrow {
+    display: none;
+  }
+
+  .scrollArea {
+    padding: 8px 0;
+  }
 }
