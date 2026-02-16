@@ -7,6 +7,14 @@
   color: var(--readdy-gray-800);
 }
 
+[data-theme="dark"] .title {
+  color: var(--readdy-gray-900);
+}
+
 .subtitle {
   color: var(--readdy-gray-700);
+}
+
+[data-theme="dark"] .subtitle {
+  color: var(--readdy-gray-800);
 }

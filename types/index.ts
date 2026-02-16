@@ -1,3 +1,5 @@
+import type { StaticImageData } from "next/image";
+
 export type TreatmentCategory =
   | "cosmetic"
   | "restorative"
@@ -12,10 +14,12 @@ export interface Treatment {
   title: string;
   shortDescription: string;
   category: TreatmentCategory;
+  image?: StaticImageData;
 }
 
 export interface TreatmentCategoryInfo {
   id: TreatmentCategory;
   title: string;
   description?: string;
+  icon?: string;
 }

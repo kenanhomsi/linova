@@ -1,6 +1,7 @@
 import { Box, Container } from "@mantine/core";
 import { TreatmentsPageHeader } from "@/components/treatments/TreatmentsPageHeader";
 import { TreatmentsContent } from "@/components/treatments/TreatmentsContent";
+import { TreatmentsCTA } from "@/components/treatments/TreatmentsCTA";
 import { BackToTop } from "@/components/layout/BackToTop";
 import type { Metadata } from "next";
 
@@ -13,10 +14,9 @@ export const metadata: Metadata = {
 export default function TreatmentsPage() {
   return (
     <Box component="main">
-      <Container size="xl">
-        <TreatmentsPageHeader />
-      </Container>
+      <TreatmentsPageHeader />
       <TreatmentsContent />
+      <TreatmentsCTA />
       <BackToTop />
     </Box>
   );

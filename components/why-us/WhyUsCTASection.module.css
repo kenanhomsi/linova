@@ -1,0 +1,97 @@
+.section {
+  background: linear-gradient(
+    135deg,
+    rgba(12, 70, 62, 0.94) 0%,
+    rgba(14, 156, 140, 0.88) 50%,
+    rgba(10, 52, 46, 0.92) 100%
+  );
+  padding: clamp(3rem, 7vw, 5rem) 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.section::before {
+  content: "";
+  position: absolute;
+  top: -40%;
+  right: -15%;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.04);
+  pointer-events: none;
+}
+
+.section::after {
+  content: "";
+  position: absolute;
+  bottom: -30%;
+  left: -10%;
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.03);
+  pointer-events: none;
+}
+
+.eyebrow {
+  letter-spacing: 0.15em;
+  color: #e8c547;
+  font-size: 0.8125rem;
+  position: relative;
+  z-index: 1;
+}
+
+.title {
+  color: #ffffff;
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  position: relative;
+  z-index: 1;
+}
+
+.subtitle {
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 1.0625rem;
+  line-height: 1.7;
+  max-width: 560px;
+  position: relative;
+  z-index: 1;
+}
+
+.ctaPrimary {
+  background: #ffffff !important;
+  color: #0e9c8c !important;
+  font-weight: 700 !important;
+  border: none !important;
+  position: relative;
+  z-index: 1;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast) !important;
+}
+
+.ctaPrimary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2) !important;
+}
+
+.ctaSecondary {
+  color: #ffffff !important;
+  border-color: rgba(255, 255, 255, 0.4) !important;
+  position: relative;
+  z-index: 1;
+  transition: background var(--transition-fast), border-color var(--transition-fast) !important;
+}
+
+.ctaSecondary:hover {
+  background: rgba(255, 255, 255, 0.12) !important;
+  border-color: rgba(255, 255, 255, 0.7) !important;
+}
+
+.note {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.8125rem;
+  position: relative;
+  z-index: 1;
+}

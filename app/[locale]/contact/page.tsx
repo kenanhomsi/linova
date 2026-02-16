@@ -2,6 +2,7 @@ import { Container, Box, Stack } from "@mantine/core";
 import { ContactBlock } from "@/components/shared/ContactBlock";
 import { ContactPageHeader } from "@/components/contact/ContactPageHeader";
 import type { Metadata } from "next";
+import styles from "./page.module.css";
 
 export const metadata: Metadata = {
   title: "Contact",
@@ -11,7 +12,7 @@ export const metadata: Metadata = {
 
 export default function ContactPage() {
   return (
-    <Box id="contact" py="xl" style={{ background: "#f8fafb", minHeight: "70vh" }}>
+    <Box id="contact" py="xl" className={styles.root}>
       <Container size="xl">
         <Stack gap="xl">
           <ContactPageHeader />

@@ -22,21 +22,23 @@ export default function Home() {
     <Box>
       <Hero />
       <StatsBar />
-      <SectionReveal>
+      {/* <SectionReveal>
         <SocialProofSection />
+      </SectionReveal> */}
+
+      <SectionReveal>
+        <CompleteDentalSolutionsSection animated />
+      </SectionReveal>
+
+      <SectionReveal delay={0.05}>
+        <WhyLinovaSection />
       </SectionReveal>
       <SectionReveal delay={0.05}>
         <BeforeAfterShowcase />
       </SectionReveal>
-      <SectionReveal>
-        <CompleteDentalSolutionsSection animated />
-      </SectionReveal>
-      <SectionReveal delay={0.05}>
-        <WhyLinovaSection />
-      </SectionReveal>
-      <SectionReveal delay={0.08}>
+      {/* <SectionReveal delay={0.08}>
         <SmileTransformations />
-      </SectionReveal>
+      </SectionReveal> */}
       <SectionReveal delay={0.05}>
         <GallerySection />
       </SectionReveal>

@@ -1,0 +1,6 @@
+/* Contact page: theme-aware background for light/dark mode */
+.root {
+  background: var(--background);
+  color: var(--foreground);
+  min-height: 70vh;
+}

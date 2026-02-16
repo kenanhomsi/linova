@@ -21,6 +21,10 @@
   color: var(--readdy-gray-800);
 }
 
+[data-theme="dark"] .visitTitle {
+  color: var(--readdy-gray-900);
+}
+
 .iconWrap {
   color: var(--readdy-teal);
   margin-top: 2px;
@@ -30,9 +34,17 @@
   color: var(--readdy-gray-800);
 }
 
+[data-theme="dark"] .label {
+  color: var(--readdy-gray-900);
+}
+
 .value {
   color: var(--readdy-gray-700);
   white-space: pre-line;
+}
+
+[data-theme="dark"] .value {
+  color: var(--readdy-gray-800);
 }
 
 .mapWrap {

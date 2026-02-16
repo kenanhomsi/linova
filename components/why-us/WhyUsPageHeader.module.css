@@ -1,39 +1,118 @@
-.wrapper {
-  padding-top: clamp(2rem, 5vw, 3.5rem);
+.hero {
+  position: relative;
+  overflow: hidden;
+  padding-top: clamp(3rem, 7vw, 5rem);
   padding-bottom: clamp(2.5rem, 6vw, 4rem);
+}
+
+.heroBgImage {
+  object-fit: cover;
+  object-position: center 40%;
+  z-index: 0;
+}
+
+.heroOverlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(
+    135deg,
+    rgba(10, 52, 46, 0.92) 0%,
+    rgba(12, 70, 62, 0.88) 40%,
+    rgba(14, 120, 108, 0.85) 100%
+  );
+}
+
+.heroContent {
+  position: relative;
+  z-index: 2;
+}
+
+.wrapper {
   text-align: center;
 }
 
 .eyebrow {
-  letter-spacing: 0.12em;
-  color: var(--readdy-teal);
+  letter-spacing: 0.15em;
+  color: rgba(255, 255, 255, 0.75);
   font-weight: 600;
-  font-size: 0.875rem;
+  font-size: 0.8125rem;
   text-transform: uppercase;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.25rem;
 }
 
 .title {
-  color: var(--readdy-gray-800);
-  font-size: clamp(1.75rem, 4vw, 2.5rem);
-  font-weight: 700;
-  line-height: 1.2;
-  margin-bottom: 0.75rem;
+  color: #ffffff;
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 800;
+  line-height: 1.15;
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.01em;
 }
 
-[data-theme="dark"] .title {
-  color: var(--readdy-gray-900);
+.titleHighlight {
+  background: linear-gradient(135deg, #b8e8e2, #e8c547);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .subtitle {
-  color: var(--readdy-gray-700);
+  color: rgba(255, 255, 255, 0.88);
   font-size: 1.0625rem;
-  line-height: 1.6;
-  max-width: 560px;
+  line-height: 1.7;
+  max-width: 660px;
   margin-left: auto;
   margin-right: auto;
 }
 
-[data-theme="dark"] .subtitle {
-  color: var(--readdy-gray-800);
+/* Highlights row */
+.highlightsRow {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-top: 2.5rem;
+}
+
+@media (min-width: 48em) {
+  .highlightsRow {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.25rem;
+  }
+}
+
+.highlightCard {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: var(--radius-lg);
+  padding: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.875rem;
+  transition: background var(--transition-fast), transform var(--transition-fast);
+}
+
+.highlightCard:hover {
+  background: rgba(255, 255, 255, 0.16);
+  transform: translateY(-2px);
+}
+
+.highlightIcon {
+  color: #e8c547;
+  flex-shrink: 0;
+}
+
+.highlightTitle {
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.highlightDesc {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.8125rem;
+  line-height: 1.4;
+  margin-top: 0.125rem;
 }
