@@ -1,6 +1,4 @@
-"use client";
-
-import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { Container, Title, Text, Stack, Group, Button, Box } from "@mantine/core";
 import { IconBrandWhatsapp } from "@tabler/icons-react";
@@ -8,8 +6,8 @@ import { WHATSAPP_LINK } from "@/lib/constants";
 import { FadeInUp } from "@/components/ui/Animate";
 import styles from "./TreatmentsCTA.module.css";
 
-export function TreatmentsCTA() {
-  const tCommon = useTranslations("common");
+export async function TreatmentsCTA() {
+  const tCommon = await getTranslations("common");
 
   return (
     <Box component="section" className={styles.root} aria-labelledby="treatments-cta-heading">

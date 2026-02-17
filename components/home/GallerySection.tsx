@@ -1,6 +1,4 @@
-"use client";
-
-import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
 import { Container, Title, Box } from "@mantine/core";
 import { FadeInUp } from "@/components/ui/Animate";
 import styles from "./GallerySection.module.css";
@@ -11,8 +9,8 @@ const PATIENT_VIDEOS = [
   "/images/WhatsApp Video 2026-02-03 at 12.51.02 AM.mp4",
 ];
 
-export function GallerySection() {
-  const t = useTranslations("home");
+export async function GallerySection() {
+  const t = await getTranslations("home");
 
   return (
     <Box id="gallery" className={`section-spacing ${styles.root}`}>

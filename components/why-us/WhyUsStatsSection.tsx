@@ -1,5 +1,3 @@
-"use client";
-
 import { Container, Box, Text } from "@mantine/core";
 import { StaggerContainer, StaggerItem } from "@/components/ui/Animate";
 import styles from "./WhyUsStatsSection.module.css";

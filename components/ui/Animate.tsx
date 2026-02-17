@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { motion, useInView, useScroll, type Variants } from "framer-motion";
+import { motion, useInView, useScroll, useTransform, type Variants } from "framer-motion";
 import styles from "./Animate.module.css";
 
 const defaultEase = [0.25, 0.46, 0.45, 0.94] as const;
@@ -197,4 +197,69 @@ export function SectionReveal({
   );
 }
 
-export { motion, useInView, useScroll };
+interface ParallaxImageProps {
+  children: React.ReactNode;
+  className?: string;
+  speed?: number;
+}
+
+export function ParallaxImage({
+  children,
+  className,
+  speed = -0.15,
+}: ParallaxImageProps) {
+  const ref = React.useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start end", "end start"],
+  });
+  const y = useTransform(scrollYProgress, [0, 1], [`${speed * -100}%`, `${speed * 100}%`]);
+
+  return (
+    <motion.div ref={ref} style={{ y }} className={className}>
+      {children}
+    </motion.div>
+  );
+}
+
+interface TextRevealByWordProps {
+  text: string;
+  className?: string;
+  as?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "p" | "span" | "div";
+  once?: boolean;
+  amount?: number;
+}
+
+export function TextRevealByWord({
+  text,
+  className,
+  as: Tag = "p",
+  once = true,
+  amount = 0.3,
+}: TextRevealByWordProps) {
+  const ref = React.useRef<HTMLDivElement>(null);
+  const inView = useInView(ref, { once, amount });
+  const words = text.split(" ");
+
+  return (
+    <Tag className={className}>
+      {words.map((word, i) => (
+        <motion.span
+          key={`${word}-${i}`}
+          initial={{ opacity: 0, y: 10 }}
+          animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }}
+          transition={{
+            duration: 0.4,
+            delay: i * 0.05,
+            ease: [0.25, 0.46, 0.45, 0.94],
+          }}
+          style={{ display: "inline-block", marginInlineEnd: "0.3em" }}
+        >
+          {word}
+        </motion.span>
+      ))}
+    </Tag>
+  );
+}
+
+export { motion, useInView, useScroll, useTransform };

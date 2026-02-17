@@ -1,5 +1,3 @@
-"use client";
-
 import Image from "next/image";
 import { Container, Stack, Title, Text, Box } from "@mantine/core";
 import { IconDental, IconStarFilled, IconWorld, IconUsers } from "@tabler/icons-react";

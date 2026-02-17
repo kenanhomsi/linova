@@ -1,13 +1,11 @@
-"use client";
-
-import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
 import { Container, Box, Stack, Title, Text } from "@mantine/core";
 import { ContactBlock } from "@/components/shared/ContactBlock";
 import { FadeInUp } from "@/components/ui/Animate";
 import styles from "./GetInTouchSection.module.css";
 
-export function GetInTouchSection() {
-  const t = useTranslations("home");
+export async function GetInTouchSection() {
+  const t = await getTranslations("home");
 
   return (
     <Box id="get-in-touch" className={`section-spacing ${styles.root}`}>

@@ -1,5 +1,3 @@
-"use client";
-
 import Link from "next/link";
 import { Container, Box, Title, Text, Badge } from "@mantine/core";
 import {

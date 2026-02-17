@@ -13,10 +13,29 @@ import {
   IconArrowRight,
 } from "@tabler/icons-react";
 import dentalJourneyBg from "@/public/istanbul.jpg";
-import { FadeInUp, StaggerContainer, StaggerItem } from "@/components/ui/Animate";
+import { FadeInUp, StaggerContainer, ParallaxImage } from "@/components/ui/Animate";
 import styles from "./DentalJourneySection.module.css";
 
 const JOURNEY_ICONS = [IconMessageCircle, IconPlane, IconBuilding, IconWorld] as const;
+
+const journeyCardVariant = (index: number) => ({
+  hidden: {
+    opacity: 0,
+    y: 30,
+    rotate: index % 2 === 0 ? -2 : 2,
+    scale: 0.95,
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    rotate: 0,
+    scale: 1,
+    transition: {
+      duration: 0.6,
+      ease: [0.25, 0.46, 0.45, 0.94] as [number, number, number, number],
+    },
+  },
+});
 
 export function DentalJourneySection() {
   const t = useTranslations("home");
@@ -25,14 +44,16 @@ export function DentalJourneySection() {
   return (
     <Box className={styles.root}>
       <Box pos="absolute" inset={0} className={styles.bgLayer}>
-        <Image
-          src={dentalJourneyBg}
-          alt="Istanbul"
-          fill
-          priority={false}
-          className={styles.heroImage}
-          sizes="100vw"
-        />
+        <ParallaxImage speed={-0.2} className={styles.parallaxBg}>
+          <Image
+            src={dentalJourneyBg}
+            alt="Istanbul"
+            fill
+            priority={false}
+            className={styles.heroImage}
+            sizes="100vw"
+          />
+        </ParallaxImage>
         <Box pos="absolute" inset={0} className={styles.overlay} />
         <Box pos="absolute" inset={0} className={styles.textureOverlay} />
       </Box>
@@ -53,7 +74,7 @@ export function DentalJourneySection() {
                 const [firstWord, ...restWords] = card.title.split(" ");
                 const restOfTitle = restWords.length > 0 ? ` ${restWords.join(" ")}` : "";
                 return (
-                  <StaggerItem key={card.title}>
+                  <motion.div key={card.title} variants={journeyCardVariant(i)}>
                     <Box className={styles.card}>
                       <Box className={styles.cardIcon}>
                         <Icon size={28} stroke={2} />
@@ -69,7 +90,7 @@ export function DentalJourneySection() {
                       </Text>
                       <Box className={styles.cardLine} />
                     </Box>
-                  </StaggerItem>
+                  </motion.div>
                 );
               })}
             </SimpleGrid>

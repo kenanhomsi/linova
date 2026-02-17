@@ -209,6 +209,12 @@ button:active:not(:disabled), [role="button"]:active {
   padding-bottom: var(--section-padding);
 }
 
+@media (max-width: 480px) {
+  :root {
+    --section-padding: clamp(2rem, 5vw, 3rem);
+  }
+}
+
 /* Section title block – consistent hierarchy */
 .section-title-block {
   text-align: center;

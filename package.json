@@ -15,6 +15,7 @@
     "@mantine/form": "^8.3.13",
     "@mantine/hooks": "^8.3.13",
     "@tabler/icons-react": "^3.36.1",
+    "critters": "^0.0.23",
     "framer-motion": "^12.29.2",
     "next": "16.1.6",
     "next-intl": "^4.8.2",

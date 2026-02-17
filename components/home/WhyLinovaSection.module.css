@@ -9,7 +9,7 @@
 }
 
 .title {
-  font-size: 60px;
+  font-size: clamp(1.75rem, 6vw, 3.75rem);
   color: var(--foreground);
   line-height: 1.2;
   letter-spacing: -0.02em;
@@ -120,4 +120,22 @@
 
 .cardFeatured .cta {
   color: #fff !important;
+}
+
+/* ─── Mobile responsive ─── */
+@media (max-width: 768px) {
+  .iconWrap {
+    width: 44px;
+    height: 44px;
+  }
+
+  .card {
+    transition: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .subtitle {
+    font-size: 0.9rem;
+  }
 }

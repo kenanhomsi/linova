@@ -8,6 +8,13 @@ const nextConfig: NextConfig = {
   turbopack: {
     root: path.resolve(process.cwd()),
   },
+  images: {
+    formats: ["image/avif", "image/webp"],
+  },
+  experimental: {
+    optimizeCss: true,
+  },
+  compress: true,
 };
 
 export default withNextIntl(nextConfig);

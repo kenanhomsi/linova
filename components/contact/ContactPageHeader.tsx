@@ -1,12 +1,10 @@
-"use client";
-
-import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
 import { Stack, Title, Text } from "@mantine/core";
 import { FadeInUp } from "@/components/ui/Animate";
 import styles from "./ContactPageHeader.module.css";
 
-export function ContactPageHeader() {
-  const t = useTranslations("home");
+export async function ContactPageHeader() {
+  const t = await getTranslations("home");
 
   return (
     <FadeInUp>

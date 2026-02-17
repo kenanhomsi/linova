@@ -1,8 +1,6 @@
-"use client";
-
 import { Group, Text, Stack, Title, SimpleGrid, Box } from "@mantine/core";
 import { IconPhone, IconBrandWhatsapp, IconMail, IconMapPin, IconClock } from "@tabler/icons-react";
-import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
 import { PHONE, PHONE_TEL, EMAIL, WHATSAPP_LINK } from "@/lib/constants";
 import { FooterForm } from "./FooterForm";
 import { FadeInUp } from "@/components/ui/Animate";
@@ -11,8 +9,8 @@ import styles from "./ContactBlock.module.css";
 const MAP_EMBED_URL =
   "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3010.2797555!2d28.9922!3d41.0542!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDHCsDAzJzE1LjEiTiAyOMKwNTknMzIuMCJF!5e0!3m2!1sen!2str!4v1635000000000!5m2!1sen!2str!4v1635000000000";
 
-export function ContactBlock() {
-  const t = useTranslations("home");
+export async function ContactBlock() {
+  const t = await getTranslations("home");
   const form = t.raw("footerForm") as { address: string; hours: string; quickContact: string; callUs: string; whatsapp: string; emailUs: string; visitTitle: string; addressLabel: string; hoursLabel: string };
   const addressLines = form.address.split("\n");
   const hoursLines = form.hours.split("\n");

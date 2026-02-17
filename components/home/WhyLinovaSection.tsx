@@ -13,7 +13,7 @@ import {
   IconClock,
   IconHeadset,
 } from "@tabler/icons-react";
-import { FadeInUp, StaggerContainer, StaggerItem } from "@/components/ui/Animate";
+import { FadeInUp, StaggerContainer, TextRevealByWord } from "@/components/ui/Animate";
 import styles from "./WhyLinovaSection.module.css";
 
 const ICONS = [
@@ -27,6 +27,22 @@ const ICONS = [
 
 const CARD_TRANSITION = { duration: 0.3, ease: [0.25, 0.46, 0.45, 0.94] as const };
 
+const cardEntryVariant = (index: number) => ({
+  hidden: {
+    opacity: 0,
+    x: index % 2 === 0 ? -30 : 30,
+    rotate: index % 2 === 0 ? -3 : 3,
+    scale: 0.95,
+  },
+  visible: {
+    opacity: 1,
+    x: 0,
+    rotate: 0,
+    scale: 1,
+    transition: { duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] as [number, number, number, number] },
+  },
+});
+
 export function WhyLinovaSection() {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
   const t = useTranslations("home");
@@ -36,29 +52,35 @@ export function WhyLinovaSection() {
     <Box id="why-us" className={`section-spacing ${styles.root}`}>
       <Container size="xl">
         <Stack gap={48}>
-          <FadeInUp>
-            <Stack gap="md" ta="center" maw={720} mx="auto">
+          <Stack gap="md" ta="center" maw={720} mx="auto">
+            <FadeInUp>
               <Text size="sm" fw={700} tt="uppercase" className={styles.eyebrow}>
                 {t("whyLinova.eyebrow")}
               </Text>
-              <Title order={2} className={styles.title +
-                ' text-gray-900 font-bold'
-              }>
-                {t("whyLinova.title")}
-              </Title>
+            </FadeInUp>
+            <TextRevealByWord
+              text={t("whyLinova.title")}
+              as="h2"
+              className={`${styles.title} text-gray-900 font-bold`}
+            />
+            <FadeInUp delay={0.15}>
               <Text size="lg" lh={1.65} className={styles.subtitle}>
                 {t("whyLinova.subtitle")}
               </Text>
-            </Stack>
-          </FadeInUp>
+            </FadeInUp>
+          </Stack>
 
-          <StaggerContainer as="div" staggerChildren={0.06}>
+          <StaggerContainer as="div" staggerChildren={0.1}>
             <SimpleGrid cols={{ base: 1, sm: 2, md: 3 }} spacing="xl" className={styles.grid}>
               {cards.map((card, i) => {
                 const Icon = ICONS[i];
                 const isFeatured = hoveredIndex === i;
                 return (
-                  <StaggerItem key={card.title}>
+                  <motion.div
+                    key={card.title}
+                    variants={cardEntryVariant(i)}
+                    transition={CARD_TRANSITION}
+                  >
                     <motion.div
                       className={styles.cardWrapper}
                       onMouseEnter={() => setHoveredIndex(i)}
@@ -89,7 +111,7 @@ export function WhyLinovaSection() {
                         </Stack>
                       </Card>
                     </motion.div>
-                  </StaggerItem>
+                  </motion.div>
                 );
               })}
             </SimpleGrid>

@@ -1,6 +1,4 @@
-"use client";
-
-import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
 import { Container, Title, Text, SimpleGrid, Card, Stack, Box } from "@mantine/core";
 import { IconQuote } from "@tabler/icons-react";
 import { FadeInUp } from "@/components/ui/Animate";
@@ -8,8 +6,8 @@ import styles from "./SocialProofSection.module.css";
 
 const QUOTE_MAX_LENGTH = 100;
 
-export function SocialProofSection() {
-  const t = useTranslations("home");
+export async function SocialProofSection() {
+  const t = await getTranslations("home");
   const eyebrow = t("socialProof.eyebrow");
   const title = t("socialProof.title");
   const testimonials = t.raw("testimonials") as Array<{

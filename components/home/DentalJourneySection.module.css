@@ -9,8 +9,23 @@
   padding-bottom: 3rem;
 }
 
+@media (max-width: 768px) {
+  .root {
+    min-height: auto;
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+  }
+}
+
 .bgLayer {
   z-index: 0;
+}
+
+.parallaxBg {
+  position: absolute;
+  inset: -20% 0;
+  width: 100%;
+  height: 140%;
 }
 
 .heroImage {
@@ -49,14 +64,14 @@
   color: white;
   font-weight: 700;
   line-height: 1.25;
-  font-size: 60px;
+  font-size: clamp(1.75rem, 6vw, 3.75rem);
   z-index: 10;
 }
 
 .subtitle {
   color: white;
   font-weight: 200;
-  font-size: 1.5rem;
+  font-size: clamp(1rem, 2.5vw, 1.5rem);
   line-height: 1.5;
   text-align: right;
   margin-left: auto;
@@ -64,10 +79,18 @@
   margin-bottom: auto;
 }
 
+@media (max-width: 900px) {
+  .subtitle {
+    text-align: left;
+    margin-left: 0;
+    font-size: 1rem;
+  }
+}
+
 /* Frosted glass card */
 .card {
   min-height: 300px;
-  min-width: 250px;
+  min-width: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -81,6 +104,24 @@
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
   cursor: default;
   transition: box-shadow var(--transition-normal), transform var(--transition-normal);
+}
+
+@media (max-width: 768px) {
+  .card {
+    min-height: 200px;
+    padding: 16px;
+    border-radius: 16px;
+  }
+
+  .card:hover {
+    transform: none;
+  }
+
+  .cardIcon {
+    width: 44px;
+    height: 44px;
+    margin-bottom: 10px;
+  }
 }
 
 .card:hover {
@@ -160,13 +201,33 @@
   border-radius: 9999px;
 }
 
+@media (max-width: 480px) {
+  .ctaButton {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .ctaIconWrap {
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+  }
+}
+
 [data-theme="dark"] .ctaButton {
   background: var(--readdy-gray-100);
   color: var(--foreground);
   border-color: var(--readdy-border);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] .ctaButton:hover {
+  border-color: var(--readdy-teal);
+  box-shadow: 0 4px 20px rgba(61, 212, 196, 0.2);
 }
 
 [data-theme="dark"] .ctaIconWrap {
-  background: var(--readdy-teal);
-  color: var(--readdy-teal-pale);
+  background: linear-gradient(135deg, var(--readdy-teal) 0%, #0ea5a0 100%);
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(61, 212, 196, 0.3);
 }

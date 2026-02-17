@@ -1,6 +1,6 @@
 .root {
   background: #FAFAF9;
-  padding: 120px 20px;
+  padding: clamp(3rem, 8vw, 7.5rem) 20px;
 }
 
 [data-theme="dark"] .root {
@@ -14,19 +14,21 @@
   justify-content: space-between;
   align-items: end;
   max-width: 100%;
+  gap: 1.5rem;
 }
 
 @media (max-width: 900px) {
   .header {
-    grid-template-columns: 1fr;
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
 
 .title {
   font-family: Georgia, "Times New Roman", serif;
-  font-size: 65px;
+  font-size: clamp(2rem, 6vw, 4.0625rem);
   font-weight: 500;
-  line-height: 1.65;
+  line-height: 1.4;
   color: var(--readdy-gray-800);
 }
 
@@ -37,7 +39,7 @@
 .intro {
   max-width: 550px;
   color: var(--readdy-gray-700);
-  font-size: 21px;
+  font-size: clamp(1rem, 2vw, 1.3125rem);
   line-height: 1.65;
   font-weight: 400;
 }
@@ -128,6 +130,17 @@
 
 .highlightButton:hover {
   background: var(--readdy-gray-900);
+}
+
+[data-theme="dark"] .highlightButton {
+  background: linear-gradient(135deg, var(--readdy-teal) 0%, #0ea5a0 100%);
+  color: #fff;
+  box-shadow: 0 2px 12px rgba(61, 212, 196, 0.25);
+}
+
+[data-theme="dark"] .highlightButton:hover {
+  background: linear-gradient(135deg, var(--readdy-teal-hover) 0%, #2dd4bf 100%);
+  box-shadow: 0 4px 20px rgba(61, 212, 196, 0.35);
 }
 
 .link {
@@ -224,6 +237,17 @@
   background: var(--readdy-gray-900);
 }
 
+[data-theme="dark"] .techButton {
+  background: linear-gradient(135deg, var(--readdy-teal) 0%, #0ea5a0 100%);
+  color: #fff;
+  box-shadow: 0 2px 12px rgba(61, 212, 196, 0.25);
+}
+
+[data-theme="dark"] .techButton:hover {
+  background: linear-gradient(135deg, var(--readdy-teal-hover) 0%, #2dd4bf 100%);
+  box-shadow: 0 4px 20px rgba(61, 212, 196, 0.35);
+}
+
 /* Bottom two cards: circular icon + title + description, no button */
 .bulletCard {
   background: var(--background);
@@ -252,4 +276,47 @@
 .bulletDesc {
   color: var(--readdy-gray-700);
   line-height: 1.55;
+}
+
+/* ─── Mobile responsive ─── */
+@media (max-width: 768px) {
+  .main {
+    grid-template-columns: 1fr;
+  }
+
+  .grid2x2 {
+    grid-template-columns: 1fr;
+  }
+
+  .highlightImageBox {
+    min-height: 180px;
+  }
+
+  .techImageBox {
+    min-height: 140px;
+  }
+
+  .techContent {
+    padding: 1rem;
+  }
+
+  .highlightTitle {
+    font-size: 1.15rem;
+  }
+
+  .techTitle {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .highlightImageBox {
+    min-height: 160px;
+    aspect-ratio: 16 / 9;
+  }
+
+  .techImageBox {
+    min-height: 120px;
+    aspect-ratio: 16 / 9;
+  }
 }

@@ -20,6 +20,18 @@
   color: white;
   border: none;
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
+  transition: background var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+[data-theme="dark"] .ctaButton {
+  background: linear-gradient(135deg, rgba(61, 212, 196, 0.2) 0%, rgba(14, 165, 160, 0.25) 100%);
+  border: 1px solid rgba(61, 212, 196, 0.3);
+  box-shadow: 0 2px 14px rgba(61, 212, 196, 0.15);
+}
+
+[data-theme="dark"] .ctaButton:hover {
+  background: linear-gradient(135deg, rgba(61, 212, 196, 0.3) 0%, rgba(14, 165, 160, 0.35) 100%);
+  box-shadow: 0 4px 20px rgba(61, 212, 196, 0.25);
 }
 
 .footerLink {
@@ -106,4 +118,41 @@
 
 .legalSpan {
   display: inline-block;
+}
+
+/* ─── Mobile responsive ─── */
+@media (max-width: 768px) {
+  .ctaBar .mantine-Group-root {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .socialBtn {
+    width: 36px;
+    height: 36px;
+  }
+
+  .footerLink {
+    font-size: 0.8rem;
+  }
+
+  .contactLink {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .legalWrap {
+    display: block;
+    text-align: center;
+  }
+
+  .legalSeparator {
+    display: none;
+  }
+
+  .legalLink {
+    display: block;
+    padding: 4px 0;
+  }
 }

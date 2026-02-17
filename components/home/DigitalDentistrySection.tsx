@@ -1,6 +1,4 @@
-"use client";
-
-import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { Container, Title, Text, Stack, SimpleGrid, Card, Button, Box } from "@mantine/core";
 import { IconScan, IconPrinter, IconStar } from "@tabler/icons-react";
@@ -10,8 +8,8 @@ import styles from "./DigitalDentistrySection.module.css";
 import digitalSmileDesign from "@/public/Digital Smile Design.jpg";
 import Image from "next/image";
 
-export function DigitalDentistrySection() {
-  const t = useTranslations("home");
+export async function DigitalDentistrySection() {
+  const t = await getTranslations("home");
   const digital = t.raw("digitalDentistry") as typeof DIGITAL_DENTISTRY;
   const techWithImages = DIGITAL_DENTISTRY.tech.map((meta, i) => ({
     ...meta,
@@ -70,7 +68,7 @@ export function DigitalDentistrySection() {
               </Card>
 
               <Box className={styles.rightCol}>
-                <SimpleGrid cols={2} spacing="md" className={styles.grid2x2}>
+                <SimpleGrid cols={{ base: 1, sm: 2 }} spacing="md" className={styles.grid2x2}>
                   {techWithImages.map((item) => (
                     <Card key={item.title} padding={0} radius="xl" className={styles.techCard} withBorder>
                       <span className={styles.techBadge}>

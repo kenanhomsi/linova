@@ -78,7 +78,7 @@ export function Header() {
         WebkitBackdropFilter: backdropBlur,
         ["--nav-color" as string]: "var(--header-fg)",
         ["--nav-active" as string]: "var(--readdy-teal)",
-        ["--nav-hover" as string]: "var(--readdy-teal)",
+        ["--nav-hover" as string]: "var(--readdy-teal-hover)",
       }}
     >
       <Container size="xl" py="md">

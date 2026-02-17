@@ -1,5 +1,3 @@
-"use client";
-
 import Link from "next/link";
 import { Container, Title, Text, Stack, Group, Button, Box } from "@mantine/core";
 import { IconMessageCircle, IconPhoneCall } from "@tabler/icons-react";
@@ -24,27 +22,27 @@ export function WhyUsCTASection() {
               treatment plan with transparent pricing.
             </Text>
             <Group gap="md" mt="sm">
-              <Button
-                component={Link}
-                href="/contact"
-                size="lg"
-                radius="md"
-                className={styles.ctaPrimary}
-                leftSection={<IconMessageCircle size={20} />}
-              >
-                Book Free Consultation
-              </Button>
-              <Button
-                component="a"
-                href="tel:+905551234567"
-                size="lg"
-                radius="md"
-                variant="outline"
-                className={styles.ctaSecondary}
-                leftSection={<IconPhoneCall size={20} />}
-              >
-                Call Us Now
-              </Button>
+              <Link href="/contact" style={{ textDecoration: "none" }}>
+                <Button
+                  size="lg"
+                  radius="md"
+                  className={styles.ctaPrimary}
+                  leftSection={<IconMessageCircle size={20} />}
+                >
+                  Book Free Consultation
+                </Button>
+              </Link>
+              <a href="tel:+905551234567" style={{ textDecoration: "none" }}>
+                <Button
+                  size="lg"
+                  radius="md"
+                  variant="outline"
+                  className={styles.ctaSecondary}
+                  leftSection={<IconPhoneCall size={20} />}
+                >
+                  Call Us Now
+                </Button>
+              </a>
             </Group>
             <Text size="xs" className={styles.note}>
               Free consultation with no obligation. Response within 2 hours.
