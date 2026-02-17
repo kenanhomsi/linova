@@ -1,18 +1,33 @@
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import Image from "next/image";
 import { Card, Text } from "@mantine/core";
 import { IconArrowRight } from "@tabler/icons-react";
 import type { Treatment } from "@/types";
 import styles from "./ServiceCard.module.css";
 
+const TREATMENT_BLOG_MAP: Record<string, string> = {
+  "hollywood-smile": "hollywood-smile-complete-guide-2026",
+  "dental-veneers": "porcelain-veneers-vs-composite-veneers",
+  "teeth-whitening": "teeth-whitening-professional-vs-at-home",
+  "dental-implants": "dental-implants-vs-bridges-which-is-right",
+  "all-on-4-6": "all-on-4-dental-implants-everything-you-need-to-know",
+  "crowns-bridges": "complete-guide-dental-crowns-bridges",
+  "digital-smile-design": "digital-smile-design-technology-explained",
+  "laser-dentistry": "3d-cbct-imaging-modern-dentistry",
+  "xray-cbct": "3d-cbct-imaging-modern-dentistry",
+  "full-mouth-restoration": "dental-implants-vs-bridges-which-is-right",
+};
+
 interface ServiceCardProps {
   treatment: Treatment;
 }
 
 export function ServiceCard({ treatment }: ServiceCardProps) {
+  const blogSlug = TREATMENT_BLOG_MAP[treatment.slug] || "hollywood-smile-complete-guide-2026";
+
   return (
     <Link
-      href={`/treatments#${treatment.slug}`}
+      href={`/blogs/${blogSlug}`}
       className={styles.link}
     >
       <Card padding={0} className={styles.card}>

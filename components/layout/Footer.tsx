@@ -100,6 +100,9 @@ export function Footer() {
               <Link href="/why-us" className={styles.footerLink}>
                 {t("footer.team")}
               </Link>
+              <Link href="/blogs" className={styles.footerLink}>
+                {t("footer.blog")}
+              </Link>
               <Link href="/contact" className={styles.footerLink}>
                 {t("footer.contact")}
               </Link>

@@ -55,7 +55,7 @@ export async function DigitalDentistrySection() {
                 <Text className={styles.highlightDesc}>
                   {t("digitalDentistry.highlight.description")}
                 </Text>
-                <Link href="/treatments" className={styles.link}>
+                <Link href="/blogs/digital-smile-design-technology-explained" className={styles.link}>
                   <Button
                     fullWidth
                     size="md"
@@ -81,7 +81,7 @@ export async function DigitalDentistrySection() {
                       <Stack gap="xs" className={styles.techContent}>
                         <Title order={4} className={styles.techTitle}>{item.title}</Title>
                         <Text size="sm" lh={1.6} className={styles.techDesc}>{item.description}</Text>
-                        <Link href="/treatments" className={styles.link}>
+                        <Link href={`/blogs/${item.blogSlug}`} className={styles.link}>
                           <Button fullWidth size="md" radius="xl" className={styles.techButton}>
                             {item.cta}
                           </Button>

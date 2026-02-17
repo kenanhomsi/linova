@@ -1,0 +1,87 @@
+.root {
+  padding-top: clamp(2rem, 4vw, 3.5rem);
+  padding-bottom: clamp(3rem, 6vw, 5rem);
+}
+
+/* Filter tabs */
+.filtersWrap {
+  padding: 0.5rem 0;
+}
+
+.filterBtn {
+  position: relative;
+  padding: 0.5rem 1.25rem;
+  border-radius: 100px;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--text-secondary, rgba(0, 0, 0, 0.55));
+  background: var(--filter-bg, rgba(0, 0, 0, 0.04));
+  border: 1px solid transparent;
+  transition: all 0.25s ease;
+  white-space: nowrap;
+}
+
+.filterBtn:hover {
+  color: var(--readdy-teal, #0e786c);
+  background: var(--filter-hover-bg, rgba(14, 120, 108, 0.06));
+}
+
+.filterBtnActive {
+  color: #ffffff;
+  background: var(--readdy-teal, #0e786c);
+  border-color: var(--readdy-teal, #0e786c);
+}
+
+.filterBtnActive:hover {
+  color: #ffffff;
+  background: var(--readdy-teal-hover, #0c6b60);
+}
+
+.activeBar {
+  position: absolute;
+  bottom: -2px;
+  left: 25%;
+  right: 25%;
+  height: 2px;
+  border-radius: 1px;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.resultCount {
+  color: var(--text-muted, rgba(0, 0, 0, 0.45));
+  text-align: center;
+}
+
+/* Blog grid */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 36em) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 62em) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.gridItem {
+  display: flex;
+}
+
+/* Dark mode */
+:global([data-mantine-color-scheme="dark"]) .filterBtn {
+  --filter-bg: rgba(255, 255, 255, 0.06);
+  --filter-hover-bg: rgba(14, 120, 108, 0.12);
+  --text-secondary: rgba(255, 255, 255, 0.55);
+}
+
+:global([data-mantine-color-scheme="dark"]) .resultCount {
+  color: rgba(255, 255, 255, 0.4);
+}

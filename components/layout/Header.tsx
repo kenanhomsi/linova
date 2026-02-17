@@ -24,6 +24,7 @@ const NAV_CONFIG = [
   { href: "/treatments", labelKey: "nav.services" },
   { href: "/why-us", labelKey: "nav.whyChooseUs" },
   { href: "/#technology", labelKey: "nav.technology" },
+  { href: "/blogs", labelKey: "nav.blog" },
   { href: "/contact", labelKey: "nav.contact" },
 ] as const;
 

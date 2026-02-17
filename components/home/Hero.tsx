@@ -182,7 +182,7 @@ export function Hero() {
                     {t("hero.ctaPrimary")}
                   </Button>
                 </Link>
-                <Link href="/treatments" className={styles.link}>
+                <Link href="/blogs/hollywood-smile-complete-guide-2026" className={styles.link}>
                   <Button
                     size="lg"
                     variant="outline"

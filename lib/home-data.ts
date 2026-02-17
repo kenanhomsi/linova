@@ -46,6 +46,7 @@ export const TREATMENT_CARDS = [
     featured: true,
     image: hollywoodSmile,
     badge: "Most Popular",
+    blogSlug: "hollywood-smile-complete-guide-2026",
   },
   {
     category: "Restorative Dentistry",
@@ -56,6 +57,7 @@ export const TREATMENT_CARDS = [
     featured: true,
     image: dentalImplants,
     badge: "Most Popular",
+    blogSlug: "dental-implants-vs-bridges-which-is-right",
   },
   {
     category: "Restorative Dentistry",
@@ -64,6 +66,7 @@ export const TREATMENT_CARDS = [
     cta: "Learn More",
     featured: false,
     image: allOn4,
+    blogSlug: "all-on-4-dental-implants-everything-you-need-to-know",
   },
   {
     category: "Cosmetic Dentistry",
@@ -72,6 +75,7 @@ export const TREATMENT_CARDS = [
     cta: "Learn More",
     featured: false,
     image: dentalVeneers,
+    blogSlug: "porcelain-veneers-vs-composite-veneers",
   },
   {
     category: "Cosmetic Dentistry",
@@ -80,6 +84,7 @@ export const TREATMENT_CARDS = [
     cta: "Learn More",
     featured: false,
     image: teethWhitening,
+    blogSlug: "teeth-whitening-professional-vs-at-home",
   },
   {
     category: "Restorative Dentistry",
@@ -88,6 +93,7 @@ export const TREATMENT_CARDS = [
     cta: "Learn More",
     featured: false,
     image: dentalCrowns,
+    blogSlug: "complete-guide-dental-crowns-bridges",
   },
   {
     category: "Digital Dentistry",
@@ -96,6 +102,7 @@ export const TREATMENT_CARDS = [
     cta: "Learn More",
     featured: false,
     image: digitalSmileDesign,
+    blogSlug: "digital-smile-design-technology-explained",
   },
   {
     category: "Advanced Technology",
@@ -104,6 +111,7 @@ export const TREATMENT_CARDS = [
     cta: "Learn More",
     featured: false,
     image: laserDentistry,
+    blogSlug: "3d-cbct-imaging-modern-dentistry",
   },
 ] as const;
 
@@ -118,7 +126,8 @@ export const COMPLETE_DENTAL_SOLUTIONS_CARDS = [
     cta: "Book Consultation",
     featured: true,
     badge: "Most Popular",
-    image: hollywoodSmile, // e.g. /images/treatments/hollywood-smile.jpg
+    image: hollywoodSmile,
+    blogSlug: "hollywood-smile-complete-guide-2026",
   },
   {
     category: "Restorative Dentistry",
@@ -129,7 +138,8 @@ export const COMPLETE_DENTAL_SOLUTIONS_CARDS = [
     cta: "Book Consultation",
     featured: true,
     badge: "Most Popular",
-    image: dentalImplants, // e.g. /images/treatments/dental-implants.jpg
+    image: dentalImplants,
+    blogSlug: "dental-implants-vs-bridges-which-is-right",
   },
   {
     category: "Restorative Dentistry",
@@ -139,6 +149,7 @@ export const COMPLETE_DENTAL_SOLUTIONS_CARDS = [
     cta: "Learn More",
     featured: false,
     image: allOn4,
+    blogSlug: "all-on-4-dental-implants-everything-you-need-to-know",
   },
   {
     category: "Cosmetic Dentistry",
@@ -148,6 +159,7 @@ export const COMPLETE_DENTAL_SOLUTIONS_CARDS = [
     cta: "Learn More",
     featured: false,
     image: dentalVeneers,
+    blogSlug: "porcelain-veneers-vs-composite-veneers",
   },
   {
     category: "Cosmetic Dentistry",
@@ -157,6 +169,7 @@ export const COMPLETE_DENTAL_SOLUTIONS_CARDS = [
     cta: "Learn More",
     featured: false,
     image: teethWhitening,
+    blogSlug: "teeth-whitening-professional-vs-at-home",
   },
   {
     category: "Restorative Dentistry",
@@ -166,6 +179,7 @@ export const COMPLETE_DENTAL_SOLUTIONS_CARDS = [
     cta: "Learn More",
     featured: false,
     image: dentalCrowns,
+    blogSlug: "complete-guide-dental-crowns-bridges",
   },
   {
     category: "Digital Dentistry",
@@ -175,6 +189,7 @@ export const COMPLETE_DENTAL_SOLUTIONS_CARDS = [
     cta: "Learn More",
     featured: false,
     image: digitalSmileDesign,
+    blogSlug: "digital-smile-design-technology-explained",
   },
   {
     category: "Advanced Technology",
@@ -184,6 +199,7 @@ export const COMPLETE_DENTAL_SOLUTIONS_CARDS = [
     cta: "Learn More",
     featured: false,
     image: laserDentistry,
+    blogSlug: "3d-cbct-imaging-modern-dentistry",
   },
 ];
 
@@ -357,6 +373,7 @@ export const DIGITAL_DENTISTRY = {
         "Three-dimensional imaging for precise implant planning and complex surgical procedures with minimal radiation exposure.",
       cta: "Learn More",
       image: DCBCTImaging,
+      blogSlug: "3d-cbct-imaging-modern-dentistry",
     },
     {
       badge: "Latest Technology",
@@ -365,6 +382,7 @@ export const DIGITAL_DENTISTRY = {
         "Minimally invasive procedures with faster healing times, reduced discomfort, and superior precision for soft tissue treatments.",
       cta: "Learn More",
       image: laserDentistry,
+      blogSlug: "3d-cbct-imaging-modern-dentistry",
     },
   ],
   bullets: [

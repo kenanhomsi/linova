@@ -12,7 +12,8 @@
       "services": "Hizmetlerimiz",
       "whyChooseUs": "Neden Biz",
       "technology": "Teknolojimiz",
-      "contact": "İletişim"
+      "contact": "İletişim",
+      "blog": "Blog"
     },
     "footer": {
       "aboutUs": "Hakkımızda",
@@ -20,6 +21,7 @@
       "smileGallery": "Gülüş Galerisi",
       "team": "Uzman Ekibimiz",
       "contact": "İletişim",
+      "blog": "Blog",
       "services": "Hizmetlerimiz",
       "popularTreatments": "En Çok Tercih Edilen Tedaviler",
       "getInTouch": "Bize Ulaşın",
@@ -392,5 +394,105 @@
   "whyUs": {
     "title": "Neden Biz",
     "description": "Online danışmanlık, VIP havalimanı transferi, lüks konaklama, çok dilli koordinatörler ve diş tedavinizle birlikte İstanbul kültür turları."
+  },
+  "chat": {
+    "title": "Bizimle Sohbet Edin",
+    "subtitle": "Gülüş asistanınız",
+    "placeholder": "Mesajınızı yazın...",
+    "send": "Gönder",
+    "welcomeMessage": "Linova Clinic'e hoş geldiniz! Diş bakım asistanınızım. Bugün size nasıl yardımcı olabilirim?",
+    "poweredBy": "Linova Clinic Asistanı",
+    "quickActions": {
+      "treatments": "Tedavilerimiz",
+      "pricing": "Fiyat Bilgisi",
+      "consultation": "Ücretsiz Danışmanlık",
+      "whatsapp": "WhatsApp'tan Yazın"
+    },
+    "botName": "Linova Asistanı",
+    "typing": "Yazıyor..."
+  },
+  "blogs": {
+    "title": "Blog",
+    "description": "Linova Clinic İstanbul'dan uzman diş sağlığı içerikleri, hasta rehberleri ve estetik ve restoratif diş hekimliğindeki en son gelişmeler.",
+    "pageHeader": {
+      "eyebrow": "Bilgi ve Uzman Önerileri",
+      "title": "Diş Sağlığı",
+      "titleHighlight": "Blog",
+      "subtitle": "İstanbul'daki uzman ekibimizden güncel makaleler, hasta rehberleri ve diş hekimliği trendleri"
+    },
+    "categories": {
+      "all": "Tüm Yazılar",
+      "cosmeticDentistry": "Estetik Diş Hekimliği",
+      "dentalImplants": "Diş İmplantı",
+      "medicalTourism": "Sağlık Turizmi",
+      "oralHealth": "Ağız Sağlığı",
+      "technology": "Teknoloji"
+    },
+    "readMore": "Makaleyi Oku",
+    "minRead": "dk okuma",
+    "featuredBadge": "Öne Çıkan",
+    "byAuthor": "Yazar:",
+    "posts": [
+      {
+        "title": "Hollywood Gülüş: 2026 İçin Eksiksiz Rehber",
+        "excerpt": "Türkiye'de Hollywood Gülüş yaptırmak hakkında bilmeniz gereken her şey — kaplama türlerinden maliyetlere, dönüşüm sürecinizde sizi nelerin beklediğine kadar.",
+        "content": ""
+      },
+      {
+        "title": "Diş İmplantı mı, Köprü mü: Hangisi Size Uygun?",
+        "excerpt": "Diş implantları ile geleneksel köprülerin avantajlarını, dezavantajlarını, dayanıklılığını ve maliyetlerini karşılaştırarak en doğru kararı vermenize yardımcı oluyoruz.",
+        "content": ""
+      },
+      {
+        "title": "İstanbul Neden Diş Turizminin Dünya Başkenti?",
+        "excerpt": "Binlerce hastanın neden dünya standartlarında diş bakımı için İstanbul'u tercih ettiğini keşfedin — %70'e varan tasarruf, uzman hekimler ve unutulmaz bir kültürel deneyim.",
+        "content": ""
+      },
+      {
+        "title": "All-on-4 Diş İmplantı: Bilmeniz Gereken Her Şey",
+        "excerpt": "Tek günde tam bir çene dişi restorasyonu sağlayan devrimci All-on-4 tekniğine derinlemesine bakış — adaylık kriterleri, işlem, iyileşme ve maliyetler dahil.",
+        "content": ""
+      },
+      {
+        "title": "Porselen Kaplama mı, Kompozit Kaplama mı: Doğru Seçim",
+        "excerpt": "Porselen ve kompozit kaplamalar arasındaki temel farkları anlayın — dayanıklılık, estetik, maliyet ve gülüşünüz için en iyi sonucu hangi seçeneğin sunduğu.",
+        "content": ""
+      },
+      {
+        "title": "Dijital Gülüş Tasarımı: Teknolojiyle Dönüşen Diş Hekimliği",
+        "excerpt": "Yapay zekâ destekli yüz analizi ve 3D planlamanın tedavi başlamadan önce yeni gülüşünüzü önizlemenizi nasıl sağladığını ve neden daha üstün sonuçlar verdiğini öğrenin.",
+        "content": "Dijital Gülüş Tasarımı (DSD), tedaviye başlamadan önce yeni gülüşünüzü ekranda görmenizi ve hekimle birlikte planlamanızı sağlayan bir yaklaşımdır. Fotoğraf ve tarama verileriyle yüz ve dişleriniz 3D ortamda modellenir.\n\nDSD sayesinde diş boyutu, formu, rengi ve gülüş çizgisi hasta beklentisine göre ayarlanabilir. Bu önizleme hem hekime hem size net bir hedef sunar; tedavi sonucu önceden tahmin edilebilir hale gelir.\n\nYapay zeka destekli yüz analizi, yüz oranları ve dudak-diş uyumunu değerlendirerek daha doğal ve kişiye özel sonuçlar üretilmesine yardımcı olur. 3D planlama ise kaplama ve implant planlamasında hassasiyeti artırır.\n\nBu teknoloji sayesinde hasta memnuniyeti yükselir, revizyon ihtiyacı azalır ve tedavi süreci daha şeffaf ilerler. Dijital gülüş tasarımı, estetik diş hekimliğinde artık vazgeçilmez bir adım olarak kabul edilmektedir."
+      },
+      {
+        "title": "Diş İmplantlarınızı Ömür Boyu Sağlıklı Tutmanın Yolları",
+        "excerpt": "Diş implantlarınızın on yıllar boyunca sağlıklı, işlevsel ve güzel kalmasını sağlayacak temel bakım ipuçları ve günlük alışkanlıklar.",
+        "content": "Diş implantlarının uzun ömürlü olması düzenli bakım ve doğru alışkanlıklara bağlıdır. Günlük temizlik, periyodik kontroller ve bazı davranışlara dikkat etmek implantlarınızı on yıllarca sağlıklı tutar.\n\nGünde en az iki kez yumuşak kıllı fırça ile dişlerinizi fırçalayın; implant çevresini ve diş eti hattını özellikle temizleyin. Ara yüz fırçası veya implant için uygun ipler ile ara bölgeleri günlük temizlemeniz önerilir. Aşırı sert fırçalama ve aşındırıcı macunlardan kaçının.\n\nYılda en az bir veya iki kez diş hekiminize kontrol ve profesyonel temizlik için gidin. Röntgen ve implant çevresi kemik kontrolü erken sorunların tespitinde kritiktir.\n\nSert buz, kabuklu yemiş veya kalem ısırma gibi implantlara aşırı kuvvet bindiren alışkanlıklardan kaçının. Gece diş gıcırdatıyorsanız gece plağı kullanımı hekiminizce önerilebilir. Bu basit önlemler implantlarınızın ömür boyu sağlıklı kalmasına yardımcı olur."
+      },
+      {
+        "title": "Profesyonel Diş Beyazlatma mı, Evde Beyazlatma mı?",
+        "excerpt": "Pazarlama hilelerini bir kenara bırakıp bir diş hekiminin gözünden klinikte lazer beyazlatma ile popüler ev beyazlatma ürünlerinin dürüst karşılaştırması.",
+        "content": "Diş beyazlatma konusunda klinikte yapılan profesyonel uygulamalar ile evde kullanılan kitler arasında belirgin farklar vardır. Güvenlik, etki süresi ve sonuç kalitesi açısından her iki seçeneği bilmek doğru karar vermenize yardımcı olur.\n\nProfesyonel lazer veya ışık destekli beyazlatma, diş hekimi gözetiminde yüksek konsantrasyonlu jellerle uygulanır. Diş eti koruması yapılır, süre ve doz kontrol altındadır. Tek seansta belirgin ve daha öngörülebilir sonuç alınır; genelde 8 tona kadar açılma mümkündür.\n\nEv beyazlatma kitleri daha düşük konsantrasyonlu ürünler içerir; kullanım süresi ve sıklığı hasta tarafından yönetilir. Yanlış kullanımda diş eti tahrişi veya hassasiyet riski artar. Sonuçlar daha yavaş ve değişkendir.\n\nGüvenlik açısından önce ağız muayenesi ve uygunluk değerlendirmesi şarttır. Dolgu ve kaplamalar beyazlamaz; sadece doğal dişler açılır. Hassas dişler veya diş eti hastalığı varsa hekim önerisi olmadan ev ürünleri kullanılmamalıdır. Kalıcı ve güvenli sonuç için profesyonel klinik beyazlatması önerilir."
+      },
+      {
+        "title": "Türkiye'ye Diş Tedavisi Seyahatinizde Sizi Neler Bekliyor?",
+        "excerpt": "İlk online danışmanlığınızdan VIP havalimanı transferinize kadar İstanbul'daki diş turizmi deneyiminizi planlamanız için adım adım rehber.",
+        "content": "Türkiye'de diş tedavisi yolculuğu, danışmanlıktan tedaviye ve dönüşe kadar planlı ilerlediğinde sorunsuz ve konforlu bir deneyime dönüşür. Bu rehber, sizi adım adım nelerin beklediğini özetler.\n\nİlk aşama genellikle online veya WhatsApp üzerinden ücretsiz ön danışmanlıktır. Röntgen veya fotoğraflarınız paylaşılır, uzman hekim durumunuzu değerlendirir ve size özel tedavi planı ile net fiyat teklifi sunulur. Seyahatiniz öncesi tüm sorularınız yanıtlanır.\n\nUçuşunuzdan sonra VIP havalimanı transferi ile kliniğe veya otelinize ulaştırılırsınız. Konaklama tedavi programınıza uygun otellerde ayarlanabilir. İlk muayene günü detaylı muayene ve gerekirse ek görüntüleme yapılır; tedavi takvimi netleştirilir.\n\nTedavi günlerinde çok dilli koordinatörler size eşlik eder. Tedavi tamamlandıktan sonra kontroller ve bakım önerileri verilir; gerekirse yurtdışından takip desteği sunulur. Bu süreç sayesinde diş tedaviniz ve İstanbul deneyiminiz güvenle planlanabilir."
+      },
+      {
+        "title": "3D CBCT Görüntüleme: Hassas Diş Hekimliğinin Geleceği",
+        "excerpt": "Konik ışınlı bilgisayarlı tomografinin implant planlamasını, cerrahi doğruluğu ve hasta güvenliğini detaylı 3D görselleştirmelerle nasıl devrimleştirdiği.",
+        "content": "3D CBCT (konik ışınlı bilgisayarlı tomografi), çene ve dişlerin üç boyutlu görüntülenmesini sağlayan ileri bir görüntüleme teknolojisidir. İmplant planlaması, karmaşık cerrahi ve kök kanal tedavilerinde doğruluğu ve güvenliği artırır.\n\nKlasik 2D röntgenlere göre kemik yüksekliği, genişlik ve yoğunluk, sinir kanalları ve komşu yapılar net biçimde görülür. İmplantın yerleşeceği pozisyon milimetrik hassasiyetle belirlenir; kemik grefti ihtiyacı önceden değerlendirilir.\n\nAvantajlar arasında tek çekimle geniş alan görüntüleme, daha düşük radyasyon dozu (geleneksel tomografiye kıyasla) ve dijital planlama ile cerrahi şablon üretimi sayılabilir. Bu sayede operasyon süresi kısalır, komplikasyon riski azalır.\n\nGüvenlik açısından hamilelerde kullanımı sınırlıdır; gerektiğinde kurşun önlük ve dar alan taraması ile doz minimize edilir. 3D CBCT, modern implant ve cerrahi diş hekimliğinde vazgeçilmez bir araç olarak kabul edilmektedir."
+      },
+      {
+        "title": "Diş Kronları ve Köprüler: Eksiksiz Hasta Rehberi",
+        "excerpt": "Hastaların diş kronları ve köprüler hakkında bilmesi gereken her şey — malzeme türleri, işlem süreci, bakım önerileri ve gerçek ömürleri.",
+        "content": "Diş kronları hasarlı veya zayıf bir dişi kaplayan; köprüler ise bir veya birkaç eksik dişin yanındaki sağlam dişlere oturtulan sabit protezlerdir. Malzeme seçimi, işlem süreci ve bakım hakkında bilgi sahibi olmak sonucunuzu olumlu etkiler.\n\nKron ve köprü malzemeleri arasında metal-seramik, tam seramik (zirkonyum, E-max) ve altın alaşımlı kronlar sayılabilir. Tam seramik ve zirkonyum estetik ve biyouyumluluk açısından ön plandadır; ön bölge için sıklıkla tercih edilir.\n\nİşlem genelde iki aşamada tamamlanır: hazırlık ve ölçü sonrası geçici restorasyon takılır; laboratuvar sürecinde kalıcı kron veya köprü hazırlanır. İkinci randevuda kalıcı yapıştırma ve ısırık ayarı yapılır. CAD/CAM kullanan kliniklerde aynı gün restorasyon da mümkündür.\n\nBakımda günlük fırçalama ve ara yüz temizliği, sert gıdalarda dikkat ve periyodik kontroller önemlidir. Düzgün bakımla kron ve köprüler ortalama 10–15 yıl veya daha uzun ömürlü olabilir. Hekiminizin önerdiği kontrollere uyum, uzun vadeli başarının anahtarıdır."
+      },
+      {
+        "title": "Türkiye'de Diş Tedavi Maliyetlerinde %70'e Varan Tasarruf",
+        "excerpt": "Türkiye'deki diş tedavi maliyetlerinin İngiltere, ABD ve Avrupa ile şeffaf karşılaştırması — düşük fiyatın neden düşük kalite anlamına gelmediğini keşfedin.",
+        "content": "Türkiye'de diş tedavisi alan uluslararası hastalar, İngiltere, ABD veya Batı Avrupa'daki fiyatlara kıyasla önemli maliyet tasarrufu elde eder. Bu tasarruf, kaliteden ödün vermeden mümkün olur.\n\nMaliyet karşılaştırması yapıldığında tek implant, Hollywood Gülüş paketi veya All-on-4 gibi kapsamlı tedavilerde %50–70 aralığında fark görülür. Örneğin İngiltere'de tek implant için ödenen tutarın bir kısmıyla Türkiye'de aynı standartlarda tedavi alınabilir; konaklama ve uçuş dahil paketler hâlâ toplamda avantajlı olabilir.\n\nDüşük fiyatın nedeni işletme maliyetleri, yaşam maliyeti farkları ve rekabetçi piyasa yapısıdır. Kalite ise uluslararası sertifikalar, Avrupa uyumlu malzemeler ve eğitimli kadrolarla korunur. Önde gelen Türk klinikleri aynı implant markalarını ve laboratuvar protokollerini kullanır.\n\nŞeffaf fiyatlandırma, paket teklifleri ve gizli maliyet olmaması hasta güvenini artırır. Türkiye'de diş tedavisi seçenekleri hem maliyet hem kalite açısından değerlendirildiğinde, birçok hasta için mantıklı ve tatmin edici bir tercih sunmaktadır."
+      }
+    ]
   }
 }

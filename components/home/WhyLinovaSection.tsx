@@ -25,6 +25,15 @@ const ICONS = [
   IconHeadset,
 ] as const;
 
+const CARD_BLOG_SLUGS = [
+  "why-istanbul-top-destination-dental-tourism",
+  "hollywood-smile-complete-guide-2026",
+  "save-up-to-70-percent-dental-costs-turkey",
+  "what-to-expect-dental-trip-turkey",
+  "how-to-maintain-dental-implants-long-term",
+  "what-to-expect-dental-trip-turkey",
+] as const;
+
 const CARD_TRANSITION = { duration: 0.3, ease: [0.25, 0.46, 0.45, 0.94] as const };
 
 const cardEntryVariant = (index: number) => ({
@@ -101,7 +110,7 @@ export function WhyLinovaSection() {
                           <Text size="sm" lh={1.65} className={styles.cardDesc}>
                             {card.description}
                           </Text>
-                          <Link href="/#contact" className={styles.cta}>
+                          <Link href={`/blogs/${CARD_BLOG_SLUGS[i]}`} className={styles.cta}>
                             {card.cta} →
                           </Link>
                         </Stack>

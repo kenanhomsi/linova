@@ -1,6 +1,6 @@
 "use client";
 
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import Image from "next/image";
 import { Container, Title, Text, Stack, SimpleGrid, Card, Box, Group } from "@mantine/core";
 import { motion } from "framer-motion";
@@ -84,7 +84,7 @@ export function ExpertiseSection() {
                         <Text size="sm" lh={1.6} className={styles.cardDesc}>
                           {card.description}
                         </Text>
-                        <Link href="/contact" className={styles.link}>
+                        <Link href={`/blogs/${card.blogSlug}`} className={styles.link}>
                           {card.cta} →
                         </Link>
                       </Stack>
@@ -128,7 +128,7 @@ export function ExpertiseSection() {
                         <Text size="sm" lineClamp={2} className={styles.cardDesc}>
                           {card.description}
                         </Text>
-                        <Link href="/treatments" className={styles.link}>
+                        <Link href={`/blogs/${card.blogSlug}`} className={styles.link}>
                           Learn More →
                         </Link>
                       </Stack>

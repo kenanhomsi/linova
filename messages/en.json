@@ -12,7 +12,8 @@
       "services": "Services",
       "whyChooseUs": "Why Choose Us",
       "technology": "Technology",
-      "contact": "Contact"
+      "contact": "Contact",
+      "blog": "Blog"
     },
     "footer": {
       "aboutUs": "About Us",
@@ -20,6 +21,7 @@
       "smileGallery": "Smile Gallery",
       "team": "Team",
       "contact": "Contact",
+      "blog": "Blog",
       "services": "Services",
       "popularTreatments": "Popular Treatments",
       "getInTouch": "Get in Touch",
@@ -486,5 +488,105 @@
   "whyUs": {
     "title": "Why Choose Us",
     "description": "Online consultation, VIP airport transfers, luxury accommodation, multilingual coordinators, and cultural tours in Istanbul with your dental treatment."
+  },
+  "chat": {
+    "title": "Chat with Us",
+    "subtitle": "Your smile assistant",
+    "placeholder": "Type your message...",
+    "send": "Send",
+    "welcomeMessage": "Welcome to Linova Clinic! I'm your dental care assistant. How can I help you today?",
+    "poweredBy": "Linova Clinic Assistant",
+    "quickActions": {
+      "treatments": "Our Treatments",
+      "pricing": "Pricing Info",
+      "consultation": "Free Consultation",
+      "whatsapp": "Chat on WhatsApp"
+    },
+    "botName": "Linova Assistant",
+    "typing": "Typing..."
+  },
+  "blogs": {
+    "title": "Blog",
+    "description": "Expert dental insights, patient guides, and the latest in cosmetic and restorative dentistry from Linova Clinic Istanbul.",
+    "pageHeader": {
+      "eyebrow": "Insights & Expert Tips",
+      "title": "Dental Health",
+      "titleHighlight": "Blog",
+      "subtitle": "Expert articles, patient guides, and the latest dental trends from our specialist team in Istanbul"
+    },
+    "categories": {
+      "all": "All Posts",
+      "cosmeticDentistry": "Cosmetic Dentistry",
+      "dentalImplants": "Dental Implants",
+      "medicalTourism": "Medical Tourism",
+      "oralHealth": "Oral Health",
+      "technology": "Technology"
+    },
+    "readMore": "Read Article",
+    "minRead": "min read",
+    "featuredBadge": "Featured",
+    "byAuthor": "By",
+    "posts": [
+      {
+        "title": "Hollywood Smile: The Complete Guide for 2026",
+        "excerpt": "Everything you need to know about getting a Hollywood Smile makeover in Turkey — from veneer types and costs to what to expect during your transformation journey.",
+        "content": "A Hollywood Smile combines veneers, whitening, and digital smile design for a celebrity-quality result. The three main veneer types are E-max (excellent aesthetics and strength), zirconia (maximum durability for back teeth), and traditional porcelain (proven natural look). Your dentist will recommend the right mix based on your bite and goals.\n\nThe procedure typically involves consultation, digital or physical impressions, temporary veneers, and final bonding over two visits. Minimal tooth preparation preserves healthy enamel. Most patients experience little discomfort and can return to normal activities within days.\n\nRecovery is straightforward: avoid hard foods initially, maintain good oral hygiene, and attend follow-up checks. Costs in Turkey are often 50–70% lower than in the UK or US, with the same premium materials and lab work. Good candidates have healthy gums and teeth, realistic expectations, and may need prior treatment for decay or gum disease. A thorough assessment ensures long-lasting, natural-looking results."
+      },
+      {
+        "title": "Dental Implants vs. Bridges: Which Is Right for You?",
+        "excerpt": "Comparing the pros, cons, longevity, and costs of dental implants versus traditional bridges to help you make the best decision for your oral health.",
+        "content": "Dental implants replace the root and crown with a titanium post and custom crown, while a bridge uses adjacent teeth as supports for a false tooth. Implants preserve bone and do not require altering healthy neighbours; bridges are fixed in fewer visits but rely on grinding down the teeth on either side.\n\nImplants typically last decades or a lifetime with proper care and often come with extended warranties. Bridges usually last 10–15 years and may need replacement when supporting teeth or the bridge itself wear. Cost-wise, a single implant is often higher upfront than a bridge, but over time implant maintenance can be lower.\n\nChoose implants when you want the most durable, bone-preserving option and have adequate bone density. Choose a bridge when you prefer a faster, non-surgical solution or when implants are not suitable. Your dentist will consider your anatomy, budget, and long-term goals to recommend the best option for you."
+      },
+      {
+        "title": "Why Istanbul Is the World's Top Destination for Dental Tourism",
+        "excerpt": "Discover why thousands of patients choose Istanbul for world-class dental care — combining savings of up to 70%, expert doctors, and an unforgettable cultural experience.",
+        "content": "Turkey has become a global leader in dental tourism thanks to strict quality standards, internationally trained clinicians, and state-of-the-art clinics that rival those in Western Europe and North America. Patients from the UK, US, and Gulf countries routinely report savings of 50–70% on complex treatments such as full-mouth restorations and Hollywood Smiles.\n\nIstanbul offers a unique blend of world-class dentistry and rich culture. Many clinics provide all-inclusive medical tourism packages: airport transfers, accommodation near the clinic, and coordination of appointments so you can combine treatment with sightseeing. The city's position between Europe and Asia makes it easily accessible and an attractive destination for a short dental trip.\n\nWhen choosing a clinic, look for ISO certification, digital technology such as 3D imaging and digital smile design, and transparent pricing. Leading Istanbul practices welcome international patients with multilingual staff and dedicated care from consultation to follow-up, making dental tourism both affordable and reassuring."
+      },
+      {
+        "title": "All-on-4 Dental Implants: Everything You Need to Know",
+        "excerpt": "A deep dive into the revolutionary All-on-4 technique that restores a full arch of teeth in a single day, including candidacy, procedure, recovery, and costs.",
+        "content": "All-on-4 uses four strategically placed implants per arch to support a full set of fixed teeth. By angling the back implants, surgeons often avoid bone grafting even when bone loss has occurred. This means many patients who were told they could not have implants can still enjoy a fixed, non-removable solution.\n\nThe procedure is performed under local anaesthesia or sedation. Implants are placed and a temporary full-arch prosthesis is attached the same day, so you leave the clinic with functional teeth. After a healing period of a few months, the final, precision-crafted prosthesis is fitted for optimal comfort and aesthetics.\n\nIdeal candidates include those with multiple missing teeth or failing dentitions who want to avoid removable dentures. Recovery involves a soft diet initially and careful oral hygiene. Compared with traditional implants, All-on-4 reduces the number of implants and often the need for bone grafts, shortening treatment time and cost while delivering a stable, long-lasting smile."
+      },
+      {
+        "title": "Porcelain Veneers vs. Composite Veneers: Making the Right Choice",
+        "excerpt": "Understanding the key differences between porcelain and composite veneers — durability, aesthetics, cost, and which option delivers the best results for your smile.",
+        "content": "Porcelain veneers are thin shells made in a dental lab from high-strength ceramic. They offer superior stain resistance, lifelike translucency, and typically last 15–20 years or more with good care. Composite veneers are applied directly in the chair using tooth-coloured resin; they are more affordable and can be repaired easily but are more prone to staining and wear.\n\nAesthetically, porcelain provides a more natural, glass-like appearance and is better at masking dark or uneven tooth colour. Composite can look very good on front teeth but may discolour over time and is less durable under heavy biting forces.\n\nMaintenance for both includes daily brushing, flossing, and avoiding using teeth as tools. Porcelain requires minimal tooth preparation when done with modern techniques; composite may need less preparation but more frequent polishing or replacement. When longevity and top-tier aesthetics matter most, porcelain is usually the preferred choice; when budget or a single-visit solution is the priority, composite can be a suitable alternative."
+      },
+      {
+        "title": "Digital Smile Design: How Technology Is Transforming Dentistry",
+        "excerpt": "Learn how AI-powered facial analysis and 3D planning allow you to preview your new smile before treatment even begins — and why it leads to superior outcomes.",
+        "content": "Digital Smile Design (DSD) uses photos, videos, and 3D scans to analyse your face and smile, then creates a digital blueprint of your ideal result. Dentists can show you a realistic preview of veneers, crowns, or whitening before any treatment begins, so you and your clinician are aligned on goals and aesthetics.\n\nAdvanced software incorporates facial analysis to ensure your new smile harmonises with your lips, gums, and facial proportions. AI tools help identify symmetry, tooth proportions, and gum contours that suit your features. This reduces guesswork and improves communication between you and your dental team.\n\n3D planning connects the digital design to actual treatment: guides for tooth preparation, lab instructions for veneers or crowns, and in some cases same-day milling. Patients benefit from predictable outcomes, fewer surprises, and a collaborative process. DSD is now a standard in leading cosmetic and restorative practices and is a key reason why modern smile makeovers look both natural and consistent."
+      },
+      {
+        "title": "How to Maintain Your Dental Implants for a Lifetime",
+        "excerpt": "Essential aftercare tips and daily habits to ensure your dental implants stay healthy, functional, and beautiful for decades to come.",
+        "content": "Dental implants can last a lifetime when supported by good oral hygiene and regular professional care. Brush at least twice daily with a soft toothbrush, paying attention to the gum line around each implant. Many patients benefit from interdental brushes or water flossers to clean between and around implant-supported crowns and bridges.\n\nAttend check-ups and cleanings as recommended by your dentist—typically every six months. Professional cleaning removes plaque and tartar that home care cannot, and your clinician can check implant stability, screw tightness, and gum health. Early signs of trouble include bleeding gums, looseness, or discomfort; report these promptly to avoid complications.\n\nAvoid chewing extremely hard items such as ice or unpopped kernels, and if you grind or clench, a night guard can protect both natural teeth and implant restorations. A balanced diet and avoiding smoking support healing and long-term success. With consistent care and follow-up, your implants can remain a stable, comfortable part of your smile for decades."
+      },
+      {
+        "title": "Professional Teeth Whitening vs. At-Home Kits: What Actually Works?",
+        "excerpt": "Cutting through the marketing hype — a dentist's honest comparison of in-office laser whitening versus popular at-home whitening products and strips.",
+        "content": "In-office professional whitening uses stronger, controlled concentrations of bleaching gel, often activated by a laser or LED light. Treatment is completed in about an hour, with results often visible immediately and typically lasting one to three years with good habits. Your gums are protected, and the procedure is supervised for safety and comfort.\n\nAt-home kits include over-the-counter strips, trays, and paint-on gels. They use lower concentrations of peroxide, so results are gradual and more modest. Strips and trays can improve mild staining but may not reach between teeth or suit uneven colour. Incorrect use can cause sensitivity or gum irritation.\n\nProfessional whitening is best when you want faster, more dramatic results and customised care. At-home options are useful for maintenance or mild brightening between dental visits. Both approaches are safe when used as directed; your dentist can recommend the right option based on your tooth colour, sensitivity, and goals. Avoiding staining foods and tobacco helps any whitening result last longer."
+      },
+      {
+        "title": "What to Expect on Your Dental Trip to Turkey",
+        "excerpt": "A step-by-step guide to planning your dental tourism experience in Istanbul — from your first online consultation to your VIP airport transfer home.",
+        "content": "Your journey typically starts with an online consultation: you share photos, X-rays if available, and your goals. The clinic prepares a personalised treatment plan and quote. Once you confirm, they can assist with travel dates, flights, and accommodation so everything fits your treatment schedule.\n\nOn arrival, many clinics offer VIP airport transfers to your hotel and the practice. The first in-person visit includes a full examination, 3D imaging if needed, and finalisation of the plan. Treatment is then carried out over the following days, with same-day or next-day options for many procedures.\n\nBetween appointments, you can explore Istanbul's historic sites, bazaars, and restaurants. The clinic coordinates your schedule so you have time to recover and enjoy the city. After your final session, you receive aftercare instructions and follow-up support. A return transfer to the airport completes the experience. From consultation to home, a well-organised dental trip to Turkey combines high-quality care with a smooth, memorable visit."
+      },
+      {
+        "title": "3D CBCT Imaging: The Future of Precision Dentistry",
+        "excerpt": "How cone-beam computed tomography is revolutionizing implant planning, surgical accuracy, and patient safety with detailed 3D visualizations.",
+        "content": "Cone-beam computed tomography (CBCT) captures a 3D image of your jaws, teeth, sinuses, and nerves in a single scan. Unlike traditional dental X-rays, which show a flat image, CBCT reveals bone density, height, and width, as well as the exact position of nerves and sinuses. This information is essential for safe, precise implant placement.\n\nSurgeons use CBCT to plan implant angle, length, and position before the procedure, reducing the risk of damaging adjacent structures. Digital planning can be linked to guided surgery, where templates or navigation systems help place implants exactly as planned. The result is greater accuracy, fewer complications, and often shorter surgery and healing times.\n\nCBCT uses a focused beam and short exposure, so radiation is typically lower than medical CT and comparable to a series of standard dental X-rays. For implant planning, the benefits of 3D imaging far outweigh the minimal exposure. Leading clinics now consider CBCT a standard of care for implant and complex restorative treatment."
+      },
+      {
+        "title": "The Complete Guide to Dental Crowns and Bridges",
+        "excerpt": "Everything patients should know about dental crowns and bridges — types of materials, the procedure timeline, care tips, and how long they really last.",
+        "content": "Crowns restore a single damaged or root-filled tooth; bridges replace one or more missing teeth by anchoring to neighbouring teeth. Common crown materials include all-ceramic or zirconia (excellent aesthetics and strength), metal-ceramic (durable and cost-effective), and full gold (still used for back teeth where appearance is less critical). Your dentist will recommend based on position, bite, and your priorities.\n\nThe procedure usually involves preparing the tooth, taking a digital or traditional impression, and fitting a temporary crown. The permanent crown or bridge is made in a lab or with in-house CAD/CAM equipment, then cemented or bonded at a second visit. Same-day crowns are possible in many modern clinics.\n\nAftercare includes brushing and flossing daily, with extra attention around the margins where the crown meets the gum. Avoid using crowned teeth to open packages or bite very hard objects. With good oral hygiene and regular check-ups, quality crowns and bridges typically last 10–20 years or longer, making them a reliable solution for restoring function and appearance."
+      },
+      {
+        "title": "How to Save Up to 70% on Dental Costs in Turkey",
+        "excerpt": "A transparent breakdown of dental treatment costs in Turkey compared to the UK, US, and Europe — and why lower prices don't mean lower quality.",
+        "content": "Dental costs in Turkey are often 50–70% lower than in the UK, US, or Western Europe for the same treatments. A full set of veneers, All-on-4 implants, or a Hollywood Smile can cost a fraction of the price abroad while using the same premium materials—E-max, zirconia, and leading implant brands—and comparable technology and training.\n\nLower overheads, favourable exchange rates, and competitive labour and lab costs in Turkey explain much of the difference, not lower standards. Reputable clinics hold ISO certification, use 3D imaging and digital smile design, and employ dentists trained in Europe or the US. Many offer guarantees and detailed treatment plans so you know exactly what you are paying for.\n\nWhen choosing a clinic, look for transparent pricing, before-and-after galleries, patient reviews, and a clear breakdown of what is included. Avoid deals that seem too good to be true. A trusted dental tourism provider will offer consultation, transfer, accommodation support, and aftercare—so you can save significantly without compromising on quality or safety."
+      }
+    ]
   }
 }

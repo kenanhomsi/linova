@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { Container, Title, Text, Stack, Box } from "@mantine/core";
 import { motion } from "framer-motion";
 import {
@@ -23,6 +23,7 @@ const REASONS = [
       "Our ISO-certified clinic follows strict European quality protocols, state-of-the-art sterilization standards, and uses only FDA-approved materials from leading global brands.",
     highlight: "ISO 9001 Certified",
     cta: "Learn More",
+    blogSlug: "why-istanbul-top-destination-dental-tourism",
   },
   {
     icon: IconUserStar,
@@ -31,6 +32,7 @@ const REASONS = [
       "Our dentists hold international qualifications with 15+ years of experience in cosmetic and restorative dentistry. Many trained at leading European and American universities.",
     highlight: "15+ Years Experience",
     cta: "Meet the Team",
+    blogSlug: "hollywood-smile-complete-guide-2026",
   },
   {
     icon: IconTag,
@@ -39,6 +41,7 @@ const REASONS = [
       "Save up to 70% compared to UK, US, and European prices — with no hidden fees. Every treatment plan includes a detailed, upfront cost breakdown before you commit.",
     highlight: "Up to 70% Savings",
     cta: "See Pricing",
+    blogSlug: "save-up-to-70-percent-dental-costs-turkey",
   },
   {
     icon: IconWorld,
@@ -47,6 +50,7 @@ const REASONS = [
       "From VIP airport transfers and luxury hotel stays to multilingual coordination and Istanbul city tours — we handle every detail so you can focus on your smile.",
     highlight: "All-Inclusive Packages",
     cta: "Plan Your Visit",
+    blogSlug: "what-to-expect-dental-trip-turkey",
   },
   {
     icon: IconClock,
@@ -55,6 +59,7 @@ const REASONS = [
       "We stand behind our work with extended warranties on all major treatments. Our aftercare program includes follow-up consultations, even after you return home.",
     highlight: "Lifetime Guarantee",
     cta: "Learn More",
+    blogSlug: "how-to-maintain-dental-implants-long-term",
   },
   {
     icon: IconHeadset,
@@ -63,6 +68,7 @@ const REASONS = [
       "Dedicated patient coordinators available around the clock in English, Arabic, Turkish, German, and more — from your first inquiry to post-treatment follow-ups.",
     highlight: "Always Available",
     cta: "Contact Us",
+    blogSlug: "what-to-expect-dental-trip-turkey",
   },
 ];
 
@@ -116,7 +122,7 @@ export function WhyUsReasonsSection() {
                           <Text size="sm" className={styles.cardDesc}>
                             {reason.description}
                           </Text>
-                          <Link href="/contact" className={styles.cta}>
+                          <Link href={`/blogs/${reason.blogSlug}`} className={styles.cta}>
                             {reason.cta} <span aria-hidden>→</span>
                           </Link>
                         </div>
