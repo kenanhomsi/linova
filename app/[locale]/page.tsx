@@ -73,12 +73,11 @@ export default async function Home({ params }: Props) {
       <SectionReveal>
         <CompleteDentalSolutionsSection animated />
       </SectionReveal>
-
-      <SectionReveal delay={0.05}>
-        <WhyLinovaSection />
-      </SectionReveal>
       <SectionReveal delay={0.05}>
         <BeforeAfterShowcase />
+      </SectionReveal>
+      <SectionReveal delay={0.05}>
+        <WhyLinovaSection />
       </SectionReveal>
       <SectionReveal delay={0.05}>
         <GallerySection />

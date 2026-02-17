@@ -58,11 +58,7 @@ export function WhyLinovaSection() {
                 {t("whyLinova.eyebrow")}
               </Text>
             </FadeInUp>
-            <TextRevealByWord
-              text={t("whyLinova.title")}
-              as="h2"
-              className={`${styles.title} text-gray-900 font-bold`}
-            />
+            <h2 className={`${styles.title} text-gray-900 font-bold`}>{t("whyLinova.title")}</h2>
             <FadeInUp delay={0.15}>
               <Text size="lg" lh={1.65} className={styles.subtitle}>
                 {t("whyLinova.subtitle")}
