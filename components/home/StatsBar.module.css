@@ -3,8 +3,12 @@
   color: #fff;
 }
 
+.steadyWrap {
+  width: 100%;
+}
+
 @media (max-width: 480px) {
-  .root {
+  .steadyWrap {
     padding-top: 1rem !important;
     padding-bottom: 1rem !important;
   }

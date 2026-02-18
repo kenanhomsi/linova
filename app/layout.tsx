@@ -15,6 +15,9 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://linovaclinic.com"),
+  icons: {
+    icon: "/favicon.svg",
+  },
   title: {
     default: "Linova Clinic Istanbul | Dental Implants Turkey | Hollywood Smile Makeover",
     template: "%s | Linova Clinic Istanbul",

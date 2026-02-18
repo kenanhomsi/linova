@@ -16,11 +16,13 @@ import {
 } from "@mantine/core";
 import { motion, AnimatePresence } from "framer-motion";
 import {
-  IconStar,
+  IconSparkles,
+  IconDental,
   IconMoodSmile,
-  IconBolt,
-  IconDeviceDesktop,
-  IconSettings,
+  IconSunHigh,
+  IconCrown,
+  IconScan,
+  IconFlame,
   IconCheck,
   IconChevronRight,
 } from "@tabler/icons-react";
@@ -32,22 +34,33 @@ import styles from "./CompleteDentalSolutionsSection.module.css";
 const AUTO_PLAY_MS = 6000;
 
 /* ─── Icon resolver (matches categoryIcon field in data) ─── */
-type IconKey = "star" | "tooth" | "bolt" | "device" | "settings";
+type IconKey =
+  | "sparkles"
+  | "implant"
+  | "veneer"
+  | "whitening"
+  | "crown"
+  | "digital"
+  | "laser";
 
 function renderIcon(type: IconKey, size = 24) {
   switch (type) {
-    case "star":
-      return <IconStar size={size} stroke={1.5} />;
-    case "tooth":
+    case "sparkles":
+      return <IconSparkles size={size} stroke={1.5} />;
+    case "implant":
+      return <IconDental size={size} stroke={1.5} />;
+    case "veneer":
       return <IconMoodSmile size={size} stroke={1.5} />;
-    case "bolt":
-      return <IconBolt size={size} stroke={1.5} />;
-    case "device":
-      return <IconDeviceDesktop size={size} stroke={1.5} />;
-    case "settings":
-      return <IconSettings size={size} stroke={1.5} />;
+    case "whitening":
+      return <IconSunHigh size={size} stroke={1.5} />;
+    case "crown":
+      return <IconCrown size={size} stroke={1.5} />;
+    case "digital":
+      return <IconScan size={size} stroke={1.5} />;
+    case "laser":
+      return <IconFlame size={size} stroke={1.5} />;
     default:
-      return <IconMoodSmile size={size} stroke={1.5} />;
+      return <IconDental size={size} stroke={1.5} />;
   }
 }
 

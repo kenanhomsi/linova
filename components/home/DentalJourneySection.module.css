@@ -88,6 +88,13 @@
 }
 
 /* Frosted glass card */
+.cardLink {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
 .card {
   min-height: 300px;
   min-width: 0;
@@ -102,7 +109,7 @@
   border-radius: 20px;
   border: 1px solid rgba(255, 255, 255, 0.2);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
-  cursor: default;
+  cursor: pointer;
   transition: box-shadow var(--transition-normal), transform var(--transition-normal);
 }
 

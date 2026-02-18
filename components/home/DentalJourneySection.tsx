@@ -13,6 +13,7 @@ import {
   IconArrowRight,
 } from "@tabler/icons-react";
 import dentalJourneyBg from "@/public/istanbul.jpg";
+import { WHATSAPP_LINK } from "@/lib/constants";
 import { FadeInUp, StaggerContainer, ParallaxImage } from "@/components/ui/Animate";
 import styles from "./DentalJourneySection.module.css";
 
@@ -37,9 +38,25 @@ const journeyCardVariant = (index: number) => ({
   },
 });
 
+type CardAction = { type: "whatsapp"; message: string } | { type: "link"; href: string };
+
 export function DentalJourneySection() {
   const t = useTranslations("home");
-  const journey = t.raw("dentalJourney") as { title: string; subtitle: string; cta: string; cards: Array<{ title: string; description: string }> };
+  const journey = t.raw("dentalJourney") as {
+    title: string;
+    subtitle: string;
+    cta: string;
+    whatsappConsultation: string;
+    whatsappMultilingual: string;
+    cards: Array<{ title: string; description: string }>;
+  };
+
+  const cardActions: CardAction[] = [
+    { type: "whatsapp", message: journey.whatsappConsultation },
+    { type: "link", href: "/why-us" },
+    { type: "link", href: "/why-us" },
+    { type: "whatsapp", message: journey.whatsappMultilingual },
+  ];
 
   return (
     <Box className={styles.root}>
@@ -71,25 +88,45 @@ export function DentalJourneySection() {
             <SimpleGrid cols={{ base: 1, sm: 2, lg: 4 }} spacing="md">
               {journey.cards.map((card, i) => {
                 const Icon = JOURNEY_ICONS[i] ?? IconMessageCircle;
+                const action = cardActions[i];
                 const [firstWord, ...restWords] = card.title.split(" ");
                 const restOfTitle = restWords.length > 0 ? ` ${restWords.join(" ")}` : "";
+                const cardContent = (
+                  <Box className={styles.card}>
+                    <Box className={styles.cardIcon}>
+                      <Icon size={28} stroke={2} />
+                    </Box>
+                    <Title order={4} size="h5" c="white" fw={700} mb="xs">
+                      {firstWord}
+                      {restOfTitle && (
+                        <span className={styles.cardTitleAccent}>{restOfTitle}</span>
+                      )}
+                    </Title>
+                    <Text size="sm" c="rgba(255,255,255,0.88)" lh={1.6}>
+                      {card.description}
+                    </Text>
+                    <Box className={styles.cardLine} />
+                  </Box>
+                );
                 return (
                   <motion.div key={card.title} variants={journeyCardVariant(i)}>
-                    <Box className={styles.card}>
-                      <Box className={styles.cardIcon}>
-                        <Icon size={28} stroke={2} />
-                      </Box>
-                      <Title order={4} size="h5" c="white" fw={700} mb="xs">
-                        {firstWord}
-                        {restOfTitle && (
-                          <span className={styles.cardTitleAccent}>{restOfTitle}</span>
-                        )}
-                      </Title>
-                      <Text size="sm" c="rgba(255,255,255,0.88)" lh={1.6}>
-                        {card.description}
-                      </Text>
-                      <Box className={styles.cardLine} />
-                    </Box>
+                    {action?.type === "whatsapp" ? (
+                      <a
+                        href={`${WHATSAPP_LINK}?text=${encodeURIComponent(action.message)}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={styles.cardLink}
+                        aria-label={card.title}
+                      >
+                        {cardContent}
+                      </a>
+                    ) : action?.type === "link" ? (
+                      <Link href={action.href} className={styles.cardLink} aria-label={card.title}>
+                        {cardContent}
+                      </Link>
+                    ) : (
+                      cardContent
+                    )}
                   </motion.div>
                 );
               })}

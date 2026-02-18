@@ -119,7 +119,7 @@ export const TREATMENT_CARDS = [
 export const COMPLETE_DENTAL_SOLUTIONS_CARDS = [
   {
     category: "Cosmetic Dentistry",
-    categoryIcon: "star" as const,
+    categoryIcon: "sparkles" as const,
     title: "Hollywood Smile Makeover",
     description:
       "Complete cosmetic transformation combining veneers, whitening, and smile design for a stunning, natural-looking result",
@@ -131,7 +131,7 @@ export const COMPLETE_DENTAL_SOLUTIONS_CARDS = [
   },
   {
     category: "Restorative Dentistry",
-    categoryIcon: "tooth" as const,
+    categoryIcon: "implant" as const,
     title: "Dental Implants",
     description:
       "Permanent tooth replacement with titanium implants that look, feel, and function like natural teeth",
@@ -143,7 +143,7 @@ export const COMPLETE_DENTAL_SOLUTIONS_CARDS = [
   },
   {
     category: "Restorative Dentistry",
-    categoryIcon: "tooth" as const,
+    categoryIcon: "implant" as const,
     title: "All-on-4 & All-on-6",
     description: "Full arch fixed solutions for multiple missing teeth with immediate results",
     cta: "Learn More",
@@ -153,7 +153,7 @@ export const COMPLETE_DENTAL_SOLUTIONS_CARDS = [
   },
   {
     category: "Cosmetic Dentistry",
-    categoryIcon: "tooth" as const,
+    categoryIcon: "veneer" as const,
     title: "Dental Veneers",
     description: "Ultra thin zirconia, E-max, and porcelain shells for perfect teeth",
     cta: "Learn More",
@@ -163,7 +163,7 @@ export const COMPLETE_DENTAL_SOLUTIONS_CARDS = [
   },
   {
     category: "Cosmetic Dentistry",
-    categoryIcon: "bolt" as const,
+    categoryIcon: "whitening" as const,
     title: "Teeth Whitening",
     description: "Professional laser bleaching for a brighter, confident smile",
     cta: "Learn More",
@@ -173,7 +173,7 @@ export const COMPLETE_DENTAL_SOLUTIONS_CARDS = [
   },
   {
     category: "Restorative Dentistry",
-    categoryIcon: "tooth" as const,
+    categoryIcon: "crown" as const,
     title: "Dental Crowns & Bridges",
     description: "Restore strength, function, and appearance of damaged teeth",
     cta: "Learn More",
@@ -183,7 +183,7 @@ export const COMPLETE_DENTAL_SOLUTIONS_CARDS = [
   },
   {
     category: "Digital Dentistry",
-    categoryIcon: "device" as const,
+    categoryIcon: "digital" as const,
     title: "Digital Smile Design",
     description: "3D preview and planning for your ideal smile transformation",
     cta: "Learn More",
@@ -193,7 +193,7 @@ export const COMPLETE_DENTAL_SOLUTIONS_CARDS = [
   },
   {
     category: "Advanced Technology",
-    categoryIcon: "settings" as const,
+    categoryIcon: "laser" as const,
     title: "Laser Dentistry",
     description: "Precise, minimally invasive treatments with modern laser technology",
     cta: "Learn More",

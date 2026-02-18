@@ -232,6 +232,8 @@
       "title": "İstanbul'da diş tedavi yolculuğunuz",
       "subtitle": "Lüks konaklama, VIP transfer ve size özel tedavi planlarını içeren eksiksiz bakım paketleri",
       "cta": "Ziyaretinizi Planlayın",
+      "whatsappConsultation": "Merhaba, uzaktan danışmanlık randevusu alıp kişiye özel tedavi planı istiyorum.",
+      "whatsappMultilingual": "Merhaba, bir sorum var.",
       "cards": [
         { "title": "Online Ön Danışmanlık", "description": "Evinizin konforundan ayrılmadan detaylı sanal değerlendirme ve kişiye özel tedavi planıyla yolculuğunuza başlayın" },
         { "title": "VIP Havalimanı Transferi", "description": "Havalimanından kliniğe ve otelinize özel şoförlü konforlu ulaşım hizmeti" },
