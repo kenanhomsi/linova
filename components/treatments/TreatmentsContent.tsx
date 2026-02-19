@@ -8,6 +8,7 @@ import {
   IconDeviceDesktop,
   IconPlane,
 } from "@tabler/icons-react";
+import { getTranslations } from "next-intl/server";
 import { CATEGORIES, getTreatmentsByCategory } from "@/lib/treatments";
 import { ServiceCard } from "@/components/shared/ServiceCard";
 import { SectionReveal, StaggerContainer, StaggerItem } from "@/components/ui/Animate";
@@ -23,7 +24,8 @@ const CATEGORY_ICONS: Record<TreatmentCategory, React.ComponentType<{ size?: num
   tourism: IconPlane,
 };
 
-export function TreatmentsContent() {
+export async function TreatmentsContent() {
+  const t = await getTranslations("treatments");
   return (
     <Container size="xl" py="md" pb="xl">
       {/* Quick-jump category nav */}
@@ -40,7 +42,7 @@ export function TreatmentsContent() {
                 className={styles.navLink}
               >
                 {Icon && <Icon size={16} stroke={2} />}
-                <span>{category.title}</span>
+                <span>{t(`categories.${category.id}.title`)}</span>
                 <Badge size="xs" variant="light" color="teal" className={styles.navBadge}>
                   {treatments.length}
                 </Badge>
@@ -55,6 +57,8 @@ export function TreatmentsContent() {
         if (treatments.length === 0) return null;
         const useAltBg = index % 2 === 1;
         const Icon = CATEGORY_ICONS[category.id];
+        const categoryTitle = t(`categories.${category.id}.title`);
+        const categoryDescription = t(`categories.${category.id}.description`);
         return (
           <SectionReveal key={category.id} delay={0.03} amount={0.08}>
             <Box
@@ -73,11 +77,11 @@ export function TreatmentsContent() {
                     order={2}
                     className={styles.sectionTitle}
                   >
-                    {category.title}
+                    {categoryTitle}
                   </Title>
-                  {category.description && (
+                  {categoryDescription && (
                     <Text className={styles.sectionDescription}>
-                      {category.description}
+                      {categoryDescription}
                     </Text>
                   )}
                 </div>

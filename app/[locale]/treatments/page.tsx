@@ -41,13 +41,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function TreatmentsPage({ params }: Props) {
   const { locale } = await params;
   setRequestLocale(locale);
+  const tCommon = await getTranslations("common");
+  const tTreatments = await getTranslations("treatments");
 
   return (
     <main>
       <BreadcrumbJsonLd
         items={[
-          { name: "Home", url: `${BASE_URL}/${locale}` },
-          { name: "Treatments", url: `${BASE_URL}/${locale}/treatments` },
+          { name: tCommon("nav.home"), url: `${BASE_URL}/${locale}` },
+          { name: tTreatments("title"), url: `${BASE_URL}/${locale}/treatments` },
         ]}
       />
       <TreatmentsPageHeader />

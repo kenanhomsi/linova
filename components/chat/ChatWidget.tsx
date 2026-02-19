@@ -114,7 +114,6 @@ export function ChatWidget() {
 
   const handleQuickAction = useCallback(
     (action: string) => {
-      setShowQuickActions(false);
       if (!hasInteracted) setHasInteracted(true);
 
       if (action === "whatsapp") {

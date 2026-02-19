@@ -9,12 +9,10 @@ import { motion, AnimatePresence } from "framer-motion";
 import { IconChevronRight, IconStar } from "@tabler/icons-react";
 import styles from "./Hero.module.css";
 
-/** Rotating hero images — left: smiling patients, right: Istanbul sea/landmarks */
-const PATIENT_IMAGES = [
-  "/images/hero-patient-1.jpg",
-  "/images/hero-patient-2.jpg",
-  "/images/hero-patient-3.jpg",
-];
+/** Left: clinic video; right: rotating Istanbul sea/landmarks */
+const HERO_VIDEO = "/images/video2.mp4";
+const HERO_VIDEO1 = "/images/video1.mp4";
+
 
 const ISTANBUL_IMAGES = [
   "/images/hero-istanbul-1.jpg",
@@ -55,11 +53,9 @@ export function Hero() {
   const heroTitle = t("hero.title");
   const heroTitleHighlight = t("hero.titleHighlight");
 
-  const [patientIdx, setPatientIdx] = useState(0);
   const [istanbulIdx, setIstanbulIdx] = useState(0);
 
   const nextSlide = useCallback(() => {
-    setPatientIdx((prev) => (prev + 1) % PATIENT_IMAGES.length);
     setIstanbulIdx((prev) => (prev + 1) % ISTANBUL_IMAGES.length);
   }, []);
 
@@ -78,32 +74,23 @@ export function Hero() {
         className={styles.bgLayer}
       >
         <div className={styles.bgComposite}>
-          {/* Left: Smiling patients */}
+          {/* Left: Clinic video */}
           <div className={styles.heroLeft}>
-            <AnimatePresence mode="popLayout">
-              <motion.div
-                key={`patient-${patientIdx}`}
-                variants={fadeVariants}
-                initial="enter"
-                animate="center"
-                exit="exit"
-                transition={{ duration: 1, ease: "easeInOut" }}
-                className={styles.slideWrapper}
-              >
-                <Image
-                  src={PATIENT_IMAGES[patientIdx]}
-                  alt="Confident, happy patient with a beautiful smile"
-                  fill
-                  priority={patientIdx === 0}
-                  className={styles.heroImage}
-                  sizes="50vw"
-                />
-              </motion.div>
-            </AnimatePresence>
+            <div className={styles.slideWrapper}>
+              <video
+                src={HERO_VIDEO}
+                autoPlay
+                loop
+                muted
+                playsInline
+                aria-label="Linova Clinic — premium dental care"
+                className={styles.heroVideo}
+              />
+            </div>
           </div>
 
           {/* Right: Istanbul sea & landmarks */}
-          <div className={styles.heroRight}>
+          {/* <div className={styles.heroRight}>
             <AnimatePresence mode="popLayout">
               <motion.div
                 key={`istanbul-${istanbulIdx}`}
@@ -124,8 +111,20 @@ export function Hero() {
                 />
               </motion.div>
             </AnimatePresence>
+          </div> */}
+          <div className={styles.heroRight}>
+            <div className={styles.slideWrapper}>
+              <video
+                src={HERO_VIDEO1}
+                autoPlay
+                loop
+                muted
+                playsInline
+                aria-label="Linova Clinic — premium dental care"
+                className={styles.heroVideo}
+              />
+            </div>
           </div>
-
           {/* Diagonal blend seam */}
           <div className={styles.heroBlend} aria-hidden />
         </div>

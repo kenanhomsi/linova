@@ -1,13 +1,16 @@
 // Data matching readdy.link design: Linova Clinic Istanbul
-import hollywoodSmile from "@/public/HollywoodSmile.jpg";
-import  digitalSmileDesign from "@/public/Dental Crowns.jpg";
-import allOn4 from "@/public/All-on-4.jpg";
-import dentalVeneers from "@/public/Dental Veneers.jpg";
-import dentalImplants from "@/public/DentalImplants.jpg";
-import teethWhitening from "@/public/Teeth Whitening.jpg";
-import dentalCrowns from "@/public/Digital Smile Design.jpg";
 import laserDentistry from "@/public/Laser Dentistry.jpg";
-import DCBCTImaging from "@/public/3DCBCTImaging.jpg";
+
+const IMAGES = {
+  hollywoodSmile: "/images/hollywood-smile/pic1.jpeg",
+  dentalVeneers: "/images/dental-veneers/pic1.jpeg",
+  teethWhitening: "/images/teeth-whitening/pic1.jpeg",
+  dentalImplants: "/images/dental-implants/pic1.jpeg",
+  allOn4: "/images/all-on-4-6/pic1.jpeg",
+  dentalCrowns: "/images/dental-crowns-bridges/pic1.jpeg",
+  digitalSmileDesign: "/images/digital-smile-design/pic1.jpeg",
+  DCBCTImaging: "/images/xray-cbct.jpeg",
+} as const;
 
 
 
@@ -44,7 +47,7 @@ export const TREATMENT_CARDS = [
       "Complete cosmetic transformation combining veneers, whitening, and smile design for a stunning, natural-looking result",
     cta: "Book Consultation",
     featured: true,
-    image: hollywoodSmile,
+    image: IMAGES.hollywoodSmile,
     badge: "Most Popular",
     blogSlug: "hollywood-smile-complete-guide-2026",
   },
@@ -55,7 +58,7 @@ export const TREATMENT_CARDS = [
       "Permanent tooth replacement with titanium implants that look, feel, and function like natural teeth",
     cta: "Book Consultation",
     featured: true,
-    image: dentalImplants,
+    image: IMAGES.dentalImplants,
     badge: "Most Popular",
     blogSlug: "dental-implants-vs-bridges-which-is-right",
   },
@@ -65,7 +68,7 @@ export const TREATMENT_CARDS = [
     description: "Full arch fixed solutions for multiple missing teeth with immediate results",
     cta: "Learn More",
     featured: false,
-    image: allOn4,
+    image: IMAGES.allOn4,
     blogSlug: "all-on-4-dental-implants-everything-you-need-to-know",
   },
   {
@@ -74,7 +77,7 @@ export const TREATMENT_CARDS = [
     description: "Ultra-thin zirconia, E-max, and porcelain shells for perfect teeth",
     cta: "Learn More",
     featured: false,
-    image: dentalVeneers,
+    image: IMAGES.dentalVeneers,
     blogSlug: "porcelain-veneers-vs-composite-veneers",
   },
   {
@@ -83,7 +86,7 @@ export const TREATMENT_CARDS = [
     description: "Professional laser bleaching for a brighter, confident smile",
     cta: "Learn More",
     featured: false,
-    image: teethWhitening,
+    image: IMAGES.teethWhitening,
     blogSlug: "teeth-whitening-professional-vs-at-home",
   },
   {
@@ -92,7 +95,7 @@ export const TREATMENT_CARDS = [
     description: "Restore strength, function, and appearance of damaged teeth",
     cta: "Learn More",
     featured: false,
-    image: dentalCrowns,
+    image: IMAGES.dentalCrowns,
     blogSlug: "complete-guide-dental-crowns-bridges",
   },
   {
@@ -101,7 +104,7 @@ export const TREATMENT_CARDS = [
     description: "3D preview and planning for your ideal smile transformation",
     cta: "Learn More",
     featured: false,
-    image: digitalSmileDesign,
+    image: IMAGES.digitalSmileDesign,
     blogSlug: "digital-smile-design-technology-explained",
   },
   {
@@ -126,7 +129,7 @@ export const COMPLETE_DENTAL_SOLUTIONS_CARDS = [
     cta: "Book Consultation",
     featured: true,
     badge: "Most Popular",
-    image: hollywoodSmile,
+    image: IMAGES.hollywoodSmile,
     blogSlug: "hollywood-smile-complete-guide-2026",
   },
   {
@@ -138,7 +141,7 @@ export const COMPLETE_DENTAL_SOLUTIONS_CARDS = [
     cta: "Book Consultation",
     featured: true,
     badge: "Most Popular",
-    image: dentalImplants,
+    image: IMAGES.dentalImplants,
     blogSlug: "dental-implants-vs-bridges-which-is-right",
   },
   {
@@ -148,7 +151,7 @@ export const COMPLETE_DENTAL_SOLUTIONS_CARDS = [
     description: "Full arch fixed solutions for multiple missing teeth with immediate results",
     cta: "Learn More",
     featured: false,
-    image: allOn4,
+    image: IMAGES.allOn4,
     blogSlug: "all-on-4-dental-implants-everything-you-need-to-know",
   },
   {
@@ -158,7 +161,7 @@ export const COMPLETE_DENTAL_SOLUTIONS_CARDS = [
     description: "Ultra thin zirconia, E-max, and porcelain shells for perfect teeth",
     cta: "Learn More",
     featured: false,
-    image: dentalVeneers,
+    image: IMAGES.dentalVeneers,
     blogSlug: "porcelain-veneers-vs-composite-veneers",
   },
   {
@@ -168,7 +171,7 @@ export const COMPLETE_DENTAL_SOLUTIONS_CARDS = [
     description: "Professional laser bleaching for a brighter, confident smile",
     cta: "Learn More",
     featured: false,
-    image: teethWhitening,
+    image: IMAGES.teethWhitening,
     blogSlug: "teeth-whitening-professional-vs-at-home",
   },
   {
@@ -178,7 +181,7 @@ export const COMPLETE_DENTAL_SOLUTIONS_CARDS = [
     description: "Restore strength, function, and appearance of damaged teeth",
     cta: "Learn More",
     featured: false,
-    image: dentalCrowns,
+    image: IMAGES.dentalCrowns,
     blogSlug: "complete-guide-dental-crowns-bridges",
   },
   {
@@ -188,7 +191,7 @@ export const COMPLETE_DENTAL_SOLUTIONS_CARDS = [
     description: "3D preview and planning for your ideal smile transformation",
     cta: "Learn More",
     featured: false,
-    image: digitalSmileDesign,
+    image: IMAGES.digitalSmileDesign,
     blogSlug: "digital-smile-design-technology-explained",
   },
   {
@@ -372,7 +375,7 @@ export const DIGITAL_DENTISTRY = {
       description:
         "Three-dimensional imaging for precise implant planning and complex surgical procedures with minimal radiation exposure.",
       cta: "Learn More",
-      image: DCBCTImaging,
+      image: IMAGES.DCBCTImaging,
       blogSlug: "3d-cbct-imaging-modern-dentistry",
     },
     {

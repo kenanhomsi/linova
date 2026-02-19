@@ -7,6 +7,7 @@
     "getAppointment": "Get Appointment",
     "whatsapp": "WhatsApp",
     "bookNow": "Book Now",
+    "learnMore": "Learn more",
     "nav": {
       "home": "Home",
       "services": "Services",
@@ -485,11 +486,129 @@
   },
   "treatments": {
     "title": "Treatments",
-    "description": "Comprehensive dental treatments: cosmetic, restorative, implants, veneers, full mouth restoration, and medical tourism support in Istanbul."
+    "description": "Comprehensive dental treatments: cosmetic, restorative, implants, veneers, full mouth restoration, and medical tourism support in Istanbul.",
+    "pageHeader": {
+      "eyebrow": "Comprehensive Dental Solutions",
+      "title": "World-Class Treatments,",
+      "titleHighlight": "Personalized for You",
+      "subtitle": "From cosmetic smile makeovers to advanced implant solutions and full mouth restorations — our expert team delivers exceptional dental care with cutting-edge technology in the heart of Istanbul. Save up to 70% compared to UK and US prices."
+    },
+    "stats": {
+      "treatments": "Treatments",
+      "happyPatients": "Happy Patients",
+      "countriesServed": "Countries Served",
+      "satisfactionRate": "Satisfaction Rate"
+    },
+    "cta": {
+      "eyebrow": "Ready to start?",
+      "title": "Book Your Free Consultation",
+      "subtitle": "Discuss your goals with our team and get a personalized treatment plan. We're here to help you smile with confidence."
+    },
+    "categories": {
+      "cosmetic": { "title": "Cosmetic Dentistry", "description": "Achieve your dream smile with our full range of cosmetic treatments — from Hollywood Smile makeovers to precision veneers and professional whitening." },
+      "restorative": { "title": "Restorative & Reconstructive Dentistry", "description": "Rebuild function and beauty with permanent implant solutions, advanced full-arch restorations, and durable crown and bridge work." },
+      "general": { "title": "General & Preventive Dentistry", "description": "Maintain optimal oral health with comprehensive check-ups, advanced diagnostic imaging, and expert periodontal care." },
+      "surgical": { "title": "Specialized & Surgical Services", "description": "Complex procedures performed by experienced oral surgeons using the latest minimally invasive techniques for faster recovery." },
+      "digital": { "title": "Digital & Technology-Enhanced Dentistry", "description": "Experience the future of dentistry with 3D smile previews, computer-guided implant placement, and precision laser treatments." },
+      "tourism": { "title": "Medical Tourism & Patient Support", "description": "A seamless dental tourism experience — from your first virtual consultation to VIP airport transfers, luxury accommodation, and aftercare." }
+    },
+    "items": {
+      "hollywood-smile": { "title": "Hollywood Smile Makeover", "shortDescription": "A complete smile transformation combining custom veneers, professional whitening, and digital smile design for a stunning, natural-looking result that turns heads." },
+      "dental-veneers": { "title": "Dental Veneers (Zirconia, E-max, Porcelain)", "shortDescription": "Ultra-thin, custom-crafted shells bonded to your teeth to perfect color, shape, and symmetry — choose from premium zirconia, E-max, or porcelain options." },
+      "teeth-whitening": { "title": "Teeth Whitening", "shortDescription": "Professional in-office laser whitening that brightens your smile up to 8 shades in a single visit, with long-lasting results you'll love." },
+      "composite-bonding": { "title": "Composite Bonding", "shortDescription": "Fix minor chips, close gaps, or reshape uneven teeth in a single painless visit using tooth-colored composite resin for a seamless, natural finish." },
+      "dental-implants": { "title": "Dental Implants", "shortDescription": "The gold standard in permanent tooth replacement — titanium implants that look, feel, and function exactly like your natural teeth with a 98% success rate." },
+      "all-on-4-6": { "title": "All-on-4 & All-on-6 Implants", "shortDescription": "Full-arch fixed prosthetics on just 4–6 strategically placed implants — a complete set of teeth in a single day with immediate function and aesthetics." },
+      "zygomatic-implants": { "title": "Zygomatic Implants", "shortDescription": "An advanced implant solution for patients with severe bone loss, anchored in the cheekbone to avoid the need for bone grafting procedures." },
+      "crowns-bridges": { "title": "Dental Crowns & Bridges", "shortDescription": "Restore damaged or missing teeth with custom-crafted crowns and bridges that match your natural teeth in strength, color, and shape." },
+      "full-mouth-restoration": { "title": "Full Mouth Restoration", "shortDescription": "A comprehensive reconstruction plan combining multiple treatments to fully restore function, aesthetics, and oral health for long-term results." },
+      "checkups": { "title": "Routine Dental Check-ups & Consultation", "shortDescription": "A thorough oral health evaluation with digital imaging, personalized treatment planning, and expert guidance to keep your smile healthy." },
+      "xray-cbct": { "title": "Dental X-Rays / 3D CBCT Imaging", "shortDescription": "State-of-the-art 3D cone-beam imaging for precise diagnosis, implant planning, and complex treatment design with minimal radiation exposure." },
+      "gum-periodontal": { "title": "Gum & Periodontal Treatments", "shortDescription": "Expert treatment for gum disease, deep cleaning, and periodontal therapy to protect your teeth and ensure lasting oral health foundations." },
+      "oral-surgery": { "title": "Oral Surgery", "shortDescription": "From wisdom tooth extractions to complex surgical procedures — performed by experienced oral surgeons with minimally invasive techniques and fast recovery." },
+      "sinus-lift-bone-graft": { "title": "Sinus Lift & Bone Grafting", "shortDescription": "Advanced bone augmentation procedures to build the foundation needed for successful implant placement, using premium graft materials." },
+      "root-canal": { "title": "Root Canal Therapy", "shortDescription": "Save your natural tooth with precise endodontic treatment — modern techniques and anesthesia ensure a comfortable, virtually painless experience." },
+      "digital-smile-design": { "title": "Digital Smile Design (DSD)", "shortDescription": "Visualize your new smile before treatment begins with advanced 3D digital planning — see exactly how your transformation will look from every angle." },
+      "laser-dentistry": { "title": "Laser Dentistry", "shortDescription": "Precise, minimally invasive soft and hard tissue treatments using cutting-edge laser technology for faster healing and superior comfort." },
+      "online-consultation": { "title": "Online Consultation & Treatment Planning", "shortDescription": "Start your dental journey from home — share photos, get a detailed virtual assessment, and receive a personalized treatment plan with transparent pricing." },
+      "airport-transfers": { "title": "VIP Airport Transfers", "shortDescription": "Arrive in style with complimentary VIP pickup from Istanbul Airport — a dedicated driver takes you directly to your hotel or clinic, hassle-free." },
+      "accommodation": { "title": "Luxury Accommodation Arrangements", "shortDescription": "Stay in hand-picked premium hotels near the clinic, perfectly matched to your treatment schedule and personal preferences." },
+      "multilingual-coordinators": { "title": "Multilingual Patient Coordinators", "shortDescription": "Dedicated coordinators fluent in English, Arabic, Turkish, and more — guiding you through every step of your treatment journey." },
+      "tour-addons": { "title": "Tour & Experience Add-Ons", "shortDescription": "Combine your dental visit with curated Istanbul experiences — historic tours, Bosphorus cruises, shopping excursions, and cultural highlights." }
+    },
+    "learnMore": "Learn more"
   },
   "whyUs": {
     "title": "Why Choose Us",
-    "description": "Online consultation, VIP airport transfers, luxury accommodation, multilingual coordinators, and cultural tours in Istanbul with your dental treatment."
+    "description": "Online consultation, VIP airport transfers, luxury accommodation, multilingual coordinators, and cultural tours in Istanbul with your dental treatment.",
+    "pageHeader": {
+      "eyebrow": "Why Choose Linova Clinic",
+      "title": "Where World-Class Dentistry",
+      "titleHighlight": "Meets Exceptional Care",
+      "subtitle": "We combine internationally certified dental expertise with a premium medical tourism experience — from your first virtual consultation to VIP transfers, luxury stays, and lifelong aftercare. Everything is designed around your comfort, safety, and smile.",
+      "highlights": {
+        "iso": { "title": "ISO Certified", "desc": "European quality standards" },
+        "years": { "title": "15+ Years", "desc": "Expert dental care" },
+        "savings": { "title": "Up to 70% Savings", "desc": "Vs. UK & US prices" },
+        "warranty": { "title": "Lifetime Warranty", "desc": "On all treatments" }
+      }
+    },
+    "stats": [
+      { "value": "10,000+", "label": "Patients Treated", "detail": "From 50+ countries worldwide" },
+      { "value": "15+", "label": "Years of Experience", "detail": "In advanced dental care" },
+      { "value": "70%", "label": "Average Savings", "detail": "Compared to UK & US prices" },
+      { "value": "98%", "label": "Satisfaction Rate", "detail": "Based on patient reviews" },
+      { "value": "24/7", "label": "Patient Support", "detail": "Multilingual coordinators" },
+      { "value": "5★", "label": "Google Rating", "detail": "Verified patient reviews" }
+    ],
+    "reasons": {
+      "eyebrow": "Our Difference",
+      "sectionTitle": "Your Trusted Dental Partner in Istanbul",
+      "sectionSubtitle": "Six pillars that set us apart — combining world-class dental expertise with an exceptional patient experience that keeps thousands coming back.",
+      "items": [
+        { "title": "International Standards & Certifications", "description": "Our ISO-certified clinic follows strict European quality protocols, state-of-the-art sterilization standards, and uses only FDA-approved materials from leading global brands.", "highlight": "ISO 9001 Certified", "cta": "Learn More", "blogSlug": "why-istanbul-top-destination-dental-tourism" },
+        { "title": "Expert Dental Team", "description": "Our dentists hold international qualifications with 15+ years of experience in cosmetic and restorative dentistry. Many trained at leading European and American universities.", "highlight": "15+ Years Experience", "cta": "Meet the Team", "blogSlug": "hollywood-smile-complete-guide-2026" },
+        { "title": "Transparent & Affordable Pricing", "description": "Save up to 70% compared to UK, US, and European prices — with no hidden fees. Every treatment plan includes a detailed, upfront cost breakdown before you commit.", "highlight": "Up to 70% Savings", "cta": "See Pricing", "blogSlug": "save-up-to-70-percent-dental-costs-turkey" },
+        { "title": "Complete Medical Tourism Package", "description": "From VIP airport transfers and luxury hotel stays to multilingual coordination and Istanbul city tours — we handle every detail so you can focus on your smile.", "highlight": "All-Inclusive Packages", "cta": "Plan Your Visit", "blogSlug": "what-to-expect-dental-trip-turkey" },
+        { "title": "Lifetime Warranty & Aftercare", "description": "We stand behind our work with extended warranties on all major treatments. Our aftercare program includes follow-up consultations, even after you return home.", "highlight": "Lifetime Guarantee", "cta": "Learn More", "blogSlug": "how-to-maintain-dental-implants-long-term" },
+        { "title": "24/7 Multilingual Support", "description": "Dedicated patient coordinators available around the clock in English, Arabic, Turkish, German, and more — from your first inquiry to post-treatment follow-ups.", "highlight": "Always Available", "cta": "Contact Us", "blogSlug": "what-to-expect-dental-trip-turkey" }
+      ]
+    },
+    "support": {
+      "eyebrow": "Medical Tourism Excellence",
+      "sectionTitle": "Your Complete Care Package",
+      "sectionSubtitle": "We take care of everything beyond your dental treatment — from the moment you book until long after you return home. Your only job is to smile.",
+      "bannerText": "Your Dental Destination: Istanbul, Turkey",
+      "services": [
+        { "title": "Free Online Consultation", "description": "Start from the comfort of your home. Share photos or X-rays, discuss your goals with our dentists, and receive a detailed treatment plan with transparent pricing — all via video call.", "stat": "Within 24h", "statLabel": "response time" },
+        { "title": "VIP Airport Transfers", "description": "A dedicated driver meets you at Istanbul Airport arrivals with a name sign. Enjoy a private, comfortable ride directly to your hotel or the clinic — included in every package.", "stat": "Complimentary", "statLabel": "for all patients" },
+        { "title": "Premium Accommodation", "description": "We partner with hand-picked 4 and 5-star hotels near the clinic. Your stay is coordinated around your treatment schedule, with special medical tourism rates.", "stat": "4-5★", "statLabel": "partner hotels" },
+        { "title": "Multilingual Coordinators", "description": "Dedicated patient coordinators fluent in English, Arabic, Turkish, German, French, and more. They guide you through every step — from booking to aftercare.", "stat": "6+", "statLabel": "languages spoken" },
+        { "title": "Istanbul Tours & Experiences", "description": "Make the most of your visit with curated experiences — Bosphorus boat tours, Grand Bazaar shopping, historical site visits, and authentic Turkish cuisine experiences.", "stat": "10+", "statLabel": "curated experiences" }
+      ]
+    },
+    "journey": {
+      "eyebrow": "How It Works",
+      "sectionTitle": "Your Patient Journey in 5 Simple Steps",
+      "sectionSubtitle": "From first contact to lifelong aftercare — we guide you through every step of your dental transformation with dedicated support at each stage.",
+      "badgeValue": "10,000+",
+      "badgeLabel": "Happy patients worldwide",
+      "steps": [
+        { "label": "Online Consultation", "description": "Share your dental concerns, photos, and X-rays. Our team creates a detailed, personalized treatment plan with transparent pricing — all from the comfort of your home.", "duration": "1–2 days" },
+        { "label": "Book & Plan Your Trip", "description": "Confirm your treatment schedule, and we handle the rest — flight coordination, hotel booking, and a complete itinerary tailored to your needs and preferences.", "duration": "1–2 weeks before" },
+        { "label": "Arrival & VIP Transfer", "description": "A dedicated driver meets you at Istanbul Airport for a private transfer to your hotel. Your patient coordinator contacts you to confirm next-day appointments.", "duration": "Day 1" },
+        { "label": "Your Treatment", "description": "Expert dental care in our modern Istanbul clinic using cutting-edge technology. Multiple treatments can be combined efficiently to minimize your visit duration.", "duration": "Day 2–5" },
+        { "label": "Aftercare & Follow-Up", "description": "Return home with a complete aftercare guide. Our team provides ongoing remote follow-ups, answers any questions, and coordinates local check-ups if needed.", "duration": "Ongoing" }
+      ]
+    },
+    "cta": {
+      "eyebrow": "Start Your Journey",
+      "title": "Ready to Transform Your Smile?",
+      "subtitle": "Join over 10,000 happy patients from 50+ countries who trusted Linova Clinic with their smile. Book your free consultation today and get a personalized treatment plan with transparent pricing.",
+      "buttonConsultation": "Book Free Consultation",
+      "buttonCall": "Call Us Now",
+      "note": "Free consultation with no obligation. Response within 2 hours."
+    }
   },
   "chat": {
     "title": "Chat with Us",

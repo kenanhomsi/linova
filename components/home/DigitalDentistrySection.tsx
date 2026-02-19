@@ -5,8 +5,9 @@ import { IconScan, IconPrinter, IconStar } from "@tabler/icons-react";
 import { DIGITAL_DENTISTRY } from "@/lib/home-data";
 import { FadeInUp, StaggerContainer } from "@/components/ui/Animate";
 import styles from "./DigitalDentistrySection.module.css";
-import digitalSmileDesign from "@/public/Digital Smile Design.jpg";
 import Image from "next/image";
+
+const DIGITAL_SMILE_HIGHLIGHT_IMAGE = "/images/digital-smile-design/pic1.jpeg";
 
 export async function DigitalDentistrySection() {
   const t = await getTranslations("home");
@@ -42,7 +43,7 @@ export async function DigitalDentistrySection() {
                 </span>
                 <Box className={styles.highlightImageBox}>
                   <Image
-                    src={digitalSmileDesign.src ?? digitalSmileDesign}
+                    src={DIGITAL_SMILE_HIGHLIGHT_IMAGE}
                     alt="Digital Smile Design"
                     width={500}
                     height={280}

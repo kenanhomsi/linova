@@ -44,13 +44,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function WhyUsPage({ params }: Props) {
   const { locale } = await params;
   setRequestLocale(locale);
+  const tCommon = await getTranslations("common");
+  const tWhyUs = await getTranslations("whyUs");
 
   return (
     <main>
       <BreadcrumbJsonLd
         items={[
-          { name: "Home", url: `${BASE_URL}/${locale}` },
-          { name: "Why Choose Us", url: `${BASE_URL}/${locale}/why-us` },
+          { name: tCommon("nav.home"), url: `${BASE_URL}/${locale}` },
+          { name: tWhyUs("title"), url: `${BASE_URL}/${locale}/why-us` },
         ]}
       />
       <WhyUsPageHeader />

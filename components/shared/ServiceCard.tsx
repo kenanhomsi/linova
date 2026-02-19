@@ -2,6 +2,7 @@ import { Link } from "@/i18n/navigation";
 import Image from "next/image";
 import { Card, Text } from "@mantine/core";
 import { IconArrowRight } from "@tabler/icons-react";
+import { getTranslations } from "next-intl/server";
 import type { Treatment } from "@/types";
 import styles from "./ServiceCard.module.css";
 
@@ -22,8 +23,12 @@ interface ServiceCardProps {
   treatment: Treatment;
 }
 
-export function ServiceCard({ treatment }: ServiceCardProps) {
+export async function ServiceCard({ treatment }: ServiceCardProps) {
   const blogSlug = TREATMENT_BLOG_MAP[treatment.slug] || "hollywood-smile-complete-guide-2026";
+  const tTreatments = await getTranslations("treatments");
+  const tCommon = await getTranslations("common");
+  const title = tTreatments(`items.${treatment.slug}.title`);
+  const shortDescription = tTreatments(`items.${treatment.slug}.shortDescription`);
 
   return (
     <Link
@@ -35,11 +40,11 @@ export function ServiceCard({ treatment }: ServiceCardProps) {
           <div className={styles.imageWrap}>
             <Image
               src={treatment.image}
-              alt={treatment.title}
+              alt={title}
               fill
               sizes="(max-width: 576px) 100vw, (max-width: 768px) 50vw, 33vw"
               className={styles.image}
-              placeholder="blur"
+              {...(typeof treatment.image !== "string" ? { placeholder: "blur" as const } : {})}
             />
             <div className={styles.imageOverlay} />
           </div>
@@ -49,12 +54,12 @@ export function ServiceCard({ treatment }: ServiceCardProps) {
           </div>
         )}
         <div className={styles.content}>
-          <h3 className={styles.cardTitle}>{treatment.title}</h3>
+          <h3 className={styles.cardTitle}>{title}</h3>
           <Text size="sm" className={styles.cardDescription} lineClamp={3}>
-            {treatment.shortDescription}
+            {shortDescription}
           </Text>
           <span className={styles.arrow} aria-hidden>
-            Learn more <IconArrowRight size={14} stroke={2.5} />
+            {tCommon("learnMore")} <IconArrowRight size={14} stroke={2.5} />
           </span>
         </div>
       </Card>

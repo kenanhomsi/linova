@@ -7,6 +7,7 @@
     "getAppointment": "Randevu Alın",
     "whatsapp": "WhatsApp",
     "bookNow": "Hemen Randevu Al",
+    "learnMore": "Daha fazla",
     "nav": {
       "home": "Ana Sayfa",
       "services": "Hizmetlerimiz",
@@ -391,11 +392,129 @@
   },
   "treatments": {
     "title": "Tedavilerimiz",
-    "description": "Kapsamlı diş tedavileri: estetik diş hekimliği, restoratif tedaviler, implant, kaplama, tam ağız restorasyonu ve İstanbul'da sağlık turizmi desteği."
+    "description": "Kapsamlı diş tedavileri: estetik diş hekimliği, restoratif tedaviler, implant, kaplama, tam ağız restorasyonu ve İstanbul'da sağlık turizmi desteği.",
+    "pageHeader": {
+      "eyebrow": "Kapsamlı Diş Çözümleri",
+      "title": "Dünya Standartlarında Tedaviler,",
+      "titleHighlight": "Sizin İçin Kişiselleştirilmiş",
+      "subtitle": "Kozmetik gülüş yenilemelerinden ileri implant çözümlerine ve tam ağız restorasyonuna — uzman ekibimiz İstanbul'un kalbinde son teknoloji ile olağanüstü diş bakımı sunar. İngiltere ve ABD fiyatlarına kıyasla %70'e varan tasarruf."
+    },
+    "stats": {
+      "treatments": "Tedavi",
+      "happyPatients": "Mutlu Hasta",
+      "countriesServed": "Hizmet Verilen Ülke",
+      "satisfactionRate": "Memnuniyet Oranı"
+    },
+    "cta": {
+      "eyebrow": "Başlamaya hazır mısınız?",
+      "title": "Ücretsiz Danışmanlığınızı Alın",
+      "subtitle": "Hedeflerinizi ekibimizle görüşün ve kişiselleştirilmiş bir tedavi planı alın. Güvenle gülümsemeniz için buradayız."
+    },
+    "categories": {
+      "cosmetic": { "title": "Kozmetik Diş Hekimliği", "description": "Hollywood gülüş yenilemelerinden hassas kaplamalara ve profesyonel beyazlatmaya kadar kozmetik tedavilerimizle hayalinizdeki gülüşe kavuşun." },
+      "restorative": { "title": "Restoratif ve Yeniden Yapılandırıcı Diş Hekimliği", "description": "Kalıcı implant çözümleri, ileri tam ark restorasyonları ve dayanıklı kron ve köprü çalışmalarıyla işlev ve güzelliği yeniden inşa edin." },
+      "general": { "title": "Genel ve Önleyici Diş Hekimliği", "description": "Kapsamlı kontroller, ileri tanı görüntüleme ve uzman periodontal bakımla optimal ağız sağlığınızı koruyun." },
+      "surgical": { "title": "Özelleşmiş ve Cerrahi Hizmetler", "description": "Daha hızlı iyileşme için en son minimal invaziv teknikler kullanan deneyimli ağız cerrahları tarafından gerçekleştirilen karmaşık işlemler." },
+      "digital": { "title": "Dijital ve Teknoloji Destekli Diş Hekimliği", "description": "3D gülüş önizlemeleri, bilgisayar destekli implant yerleşimi ve hassas lazer tedavileriyle diş hekimliğinin geleceğini deneyimleyin." },
+      "tourism": { "title": "Sağlık Turizmi ve Hasta Desteği", "description": "İlk sanal danışmanlığınızdan VIP havalimanı transferlerine, lüks konaklamaya ve sonrası bakıma kesintisiz bir diş turizmi deneyimi." }
+    },
+    "items": {
+      "hollywood-smile": { "title": "Hollywood Gülüş Yenileme", "shortDescription": "Özel kaplamalar, profesyonel beyazlatma ve dijital gülüş tasarımını bir araya getiren, dikkat çekici doğal bir sonuç için tam gülüş dönüşümü." },
+      "dental-veneers": { "title": "Diş Kaplamaları (Zirkonya, E-max, Porselen)", "shortDescription": "Renk, şekil ve simetriyi mükemmelleştirmek için dişlerinize yapıştırılan ultra ince, özel üretim kabuklar — birinci sınıf zirkonya, E-max veya porselen seçenekleri." },
+      "teeth-whitening": { "title": "Diş Beyazlatma", "shortDescription": "Tek bir ziyarette gülüşünüzü 8 tona kadar açan, seveceğiniz kalıcı sonuçlar sunan profesyonel muayenehane içi lazer beyazlatma." },
+      "composite-bonding": { "title": "Kompozit Bonding", "shortDescription": "Küçük çatlakları onarın, boşlukları kapatın veya diş rengi kompozit reçine ile tek bir ağrısız ziyarette düzensiz dişleri yeniden şekillendirin." },
+      "dental-implants": { "title": "Diş İmplantları", "shortDescription": "Kalıcı diş değişiminde altın standart — %98 başarı oranıyla doğal dişleriniz gibi görünen, hissedilen ve işlev gören titanyum implantlar." },
+      "all-on-4-6": { "title": "All-on-4 ve All-on-6 İmplantlar", "shortDescription": "Sadece 4–6 stratejik yerleştirilmiş implant üzerinde tam ark sabit protezler — tek günde anında işlev ve estetik ile eksiksiz diş seti." },
+      "zygomatic-implants": { "title": "Zigomatik İmplantlar", "shortDescription": "Şiddetli kemik kaybı olan hastalar için kemik grefti işlemlerine gerek kalmadan yanak kemiğine ankrajlı ileri implant çözümü." },
+      "crowns-bridges": { "title": "Diş Kronları ve Köprüler", "shortDescription": "Doğal dişlerinizle güç, renk ve şekilde eşleşen özel üretim kron ve köprülerle hasarlı veya eksik dişleri onarın." },
+      "full-mouth-restoration": { "title": "Tam Ağız Restorasyonu", "shortDescription": "İşlevi, estetiği ve ağız sağlığını uzun vadeli sonuçlar için tam olarak geri kazanmak üzere birden fazla tedaviyi bir araya getiren kapsamlı yeniden yapılandırma planı." },
+      "checkups": { "title": "Rutin Diş Kontrolleri ve Danışmanlık", "shortDescription": "Dijital görüntüleme, kişiselleştirilmiş tedavi planlaması ve gülüşünüzü sağlıklı tutmak için uzman rehberliği ile kapsamlı ağız sağlığı değerlendirmesi." },
+      "xray-cbct": { "title": "Diş Röntgenleri / 3D CBCT Görüntüleme", "shortDescription": "Minimal radyasyon maruziyeti ile kesin teşhis, implant planlaması ve karmaşık tedavi tasarımı için son teknoloji 3D konik ışın görüntüleme." },
+      "gum-periodontal": { "title": "Diş Eti ve Periodontal Tedaviler", "shortDescription": "Dişlerinizi korumak ve kalıcı ağız sağlığı temellerini sağlamak için diş eti hastalığı, derin temizlik ve periodontal terapi konusunda uzman tedavi." },
+      "oral-surgery": { "title": "Ağız Cerrahisi", "shortDescription": "Yirmi yaş dişi çekimlerinden karmaşık cerrahi işlemlere — minimal invaziv teknikler ve hızlı iyileşme ile deneyimli ağız cerrahları tarafından gerçekleştirilir." },
+      "sinus-lift-bone-graft": { "title": "Sinüs Kaldırma ve Kemik Grefti", "shortDescription": "Başarılı implant yerleşimi için gereken temeli oluşturmak üzere birinci sınıf greft malzemeleri kullanan ileri kemik artırma işlemleri." },
+      "root-canal": { "title": "Kanal Tedavisi", "shortDescription": "Doğal dişinizi hassas endodontik tedavi ile koruyun — modern teknikler ve anestezi rahat, neredeyse ağrısız bir deneyim sağlar." },
+      "digital-smile-design": { "title": "Dijital Gülüş Tasarımı (DSD)", "shortDescription": "İleri 3D dijital planlama ile tedavi başlamadan önce yeni gülüşünüzü görselleştirin — dönüşümünüzün her açıdan nasıl görüneceğini görün." },
+      "laser-dentistry": { "title": "Lazer Diş Hekimliği", "shortDescription": "Daha hızlı iyileşme ve üstün konfor için son teknoloji lazer teknolojisi kullanan hassas, minimal invaziv yumuşak ve sert doku tedavileri." },
+      "online-consultation": { "title": "Online Danışmanlık ve Tedavi Planlaması", "shortDescription": "Diş yolculuğunuza evinizden başlayın — fotoğrafları paylaşın, ayrıntılı sanal değerlendirme alın ve şeffaf fiyatlandırmalı kişiselleştirilmiş tedavi planı alın." },
+      "airport-transfers": { "title": "VIP Havalimanı Transferleri", "shortDescription": "İstanbul Havalimanı'ndan ücretsiz VIP alma ile rahatça varın — özel bir sürücü sizi doğrudan otelinize veya kliniğe götürür." },
+      "accommodation": { "title": "Lüks Konaklama Düzenlemeleri", "shortDescription": "Tedavi programınıza ve kişisel tercihlerinize mükemmel uyumlu, kliniğe yakın özenle seçilmiş birinci sınıf otellerde konaklayın." },
+      "multilingual-coordinators": { "title": "Çok Dilli Hasta Koordinatörleri", "shortDescription": "İngilizce, Arapça, Türkçe ve daha fazlasında akıcı özel koordinatörler — tedavi yolculuğunuzun her adımında size rehberlik eder." },
+      "tour-addons": { "title": "Tur ve Deneyim Eklentileri", "shortDescription": "Diş ziyaretinizi özenle seçilmiş İstanbul deneyimleriyle birleştirin — tarihi turlar, Boğaz gezileri, alışveriş ve kültürel öne çıkanlar." }
+    },
+    "learnMore": "Daha fazla"
   },
   "whyUs": {
     "title": "Neden Biz",
-    "description": "Online danışmanlık, VIP havalimanı transferi, lüks konaklama, çok dilli koordinatörler ve diş tedavinizle birlikte İstanbul kültür turları."
+    "description": "Online danışmanlık, VIP havalimanı transferi, lüks konaklama, çok dilli koordinatörler ve diş tedavinizle birlikte İstanbul kültür turları.",
+    "pageHeader": {
+      "eyebrow": "Neden Linova Clinic",
+      "title": "Dünya Standartlarında Diş Hekimliği",
+      "titleHighlight": "Olağanüstü Bakımla Buluşuyor",
+      "subtitle": "Uluslararası sertifikalı diş uzmanlığını birinci sınıf sağlık turizmi deneyimiyle bir araya getiriyoruz — ilk sanal danışmanlığınızdan VIP transferlere, lüks konaklamalara ve ömür boyu sonrası bakıma. Her şey konforunuz, güvenliğiniz ve gülüşünüz için tasarlandı.",
+      "highlights": {
+        "iso": { "title": "ISO Sertifikalı", "desc": "Avrupa kalite standartları" },
+        "years": { "title": "15+ Yıl", "desc": "Uzman diş bakımı" },
+        "savings": { "title": "%70'e Varan Tasarruf", "desc": "İngiltere ve ABD fiyatlarına kıyasla" },
+        "warranty": { "title": "Ömür Boyu Garanti", "desc": "Tüm tedavilerde" }
+      }
+    },
+    "stats": [
+      { "value": "10,000+", "label": "Tedavi Edilen Hasta", "detail": "50'den fazla ülkeden" },
+      { "value": "15+", "label": "Yıllık Deneyim", "detail": "İleri diş bakımında" },
+      { "value": "70%", "label": "Ortalama Tasarruf", "detail": "İngiltere ve ABD fiyatlarına kıyasla" },
+      { "value": "98%", "label": "Memnuniyet Oranı", "detail": "Hasta yorumlarına göre" },
+      { "value": "24/7", "label": "Hasta Desteği", "detail": "Çok dilli koordinatörler" },
+      { "value": "5★", "label": "Google Puanı", "detail": "Doğrulanmış hasta yorumları" }
+    ],
+    "reasons": {
+      "eyebrow": "Farkımız",
+      "sectionTitle": "İstanbul'da Güvenilir Diş Partneriniz",
+      "sectionSubtitle": "Bizi öne çıkaran altı temel — dünya standartlarında diş uzmanlığını binlerce kişinin geri dönmesini sağlayan olağanüstü hasta deneyimiyle birleştiriyoruz.",
+      "items": [
+        { "title": "Uluslararası Standartlar ve Sertifikalar", "description": "ISO sertifikalı kliniğimiz katı Avrupa kalite protokollerini, son teknoloji sterilizasyon standartlarını takip eder ve önde gelen küresel markalardan yalnızca FDA onaylı malzemeler kullanır.", "highlight": "ISO 9001 Sertifikalı", "cta": "Daha Fazla", "blogSlug": "why-istanbul-top-destination-dental-tourism" },
+        { "title": "Uzman Diş Ekibi", "description": "Diş hekimlerimiz kozmetik ve restoratif diş hekimliğinde 15 yılı aşkın deneyime sahip uluslararası niteliklere sahiptir. Birçoğu önde gelen Avrupa ve Amerikan üniversitelerinde eğitim aldı.", "highlight": "15+ Yıl Deneyim", "cta": "Ekiple Tanışın", "blogSlug": "hollywood-smile-complete-guide-2026" },
+        { "title": "Şeffaf ve Uygun Fiyatlı", "description": "İngiltere, ABD ve Avrupa fiyatlarına kıyasla %70'e varan tasarruf — gizli ücret yok. Her tedavi planı taahhüt etmeden önce ayrıntılı, ön maliyet dökümü içerir.", "highlight": "%70'e Varan Tasarruf", "cta": "Fiyatları Görün", "blogSlug": "save-up-to-70-percent-dental-costs-turkey" },
+        { "title": "Eksiksiz Sağlık Turizmi Paketi", "description": "VIP havalimanı transferlerinden lüks otel konaklamalarına, çok dilli koordinasyondan İstanbul şehir turlarına — gülüşünüze odaklanabilmeniz için her ayrıntıyı biz hallederiz.", "highlight": "Her Şey Dahil Paketler", "cta": "Ziyaretinizi Planlayın", "blogSlug": "what-to-expect-dental-trip-turkey" },
+        { "title": "Ömür Boyu Garanti ve Sonrası Bakım", "description": "Tüm büyük tedavilerde uzatılmış garantilerle işimizin arkasındayız. Sonrası bakım programımız eve döndükten sonra bile takip danışmanlıklarını içerir.", "highlight": "Ömür Boyu Garanti", "cta": "Daha Fazla", "blogSlug": "how-to-maintain-dental-implants-long-term" },
+        { "title": "7/24 Çok Dilli Destek", "description": "İngilizce, Arapça, Türkçe, Almanca ve daha fazlasında saat başı mevcut özel hasta koordinatörleri — ilk soruşturmanızdan tedavi sonrası takiplere kadar.", "highlight": "Her Zaman Ulaşılabilir", "cta": "Bize Ulaşın", "blogSlug": "what-to-expect-dental-trip-turkey" }
+      ]
+    },
+    "support": {
+      "eyebrow": "Sağlık Turizmi Mükemmelliği",
+      "sectionTitle": "Eksiksiz Bakım Paketiniz",
+      "sectionSubtitle": "Diş tedavinizin ötesinde her şeyle biz ilgileniyoruz — rezervasyonunuzdan eve dönüşünüzden çok sonrasına kadar. Tek işiniz gülümsemek.",
+      "bannerText": "Diş Destinasyonunuz: İstanbul, Türkiye",
+      "services": [
+        { "title": "Ücretsiz Online Danışmanlık", "description": "Evinizin konforundan başlayın. Fotoğraf veya röntgen paylaşın, hedeflerinizi diş hekimlerimizle görüşün ve şeffaf fiyatlandırmalı ayrıntılı bir tedavi planı alın — hepsi video görüşme ile.", "stat": "24 saat içinde", "statLabel": "yanıt süresi" },
+        { "title": "VIP Havalimanı Transferleri", "description": "Özel bir sürücü İstanbul Havalimanı varışlarında isim tabelasıyla sizi karşılar. Otelinize veya kliniğe doğrudan özel, rahat bir yolculuğun keyfini çıkarın — her pakette dahil.", "stat": "Ücretsiz", "statLabel": "tüm hastalar için" },
+        { "title": "Birinci Sınıf Konaklama", "description": "Kliniğe yakın özenle seçilmiş 4 ve 5 yıldızlı otellerle çalışıyoruz. Konaklamanız tedavi programınıza göre düzenlenir, özel sağlık turizmi oranlarıyla.", "stat": "4-5★", "statLabel": "iş ortağı oteller" },
+        { "title": "Çok Dilli Koordinatörler", "description": "İngilizce, Arapça, Türkçe, Almanca, Fransızca ve daha fazlasında akıcı özel hasta koordinatörleri. Rezervasyondan sonrası bakıma kadar her adımda size rehberlik ederler.", "stat": "6+", "statLabel": "konuşulan dil" },
+        { "title": "İstanbul Turları ve Deneyimler", "description": "Özenle seçilmiş deneyimlerle ziyaretinizin tadını çıkarın — Boğaz tekne turları, Kapalıçarşı alışverişi, tarihi mekan ziyaretleri ve otantik Türk mutfağı deneyimleri.", "stat": "10+", "statLabel": "özenle seçilmiş deneyimler" }
+      ]
+    },
+    "journey": {
+      "eyebrow": "Nasıl İşliyor",
+      "sectionTitle": "5 Basit Adımda Hasta Yolculuğunuz",
+      "sectionSubtitle": "İlk temastan ömür boyu sonrası bakıma — diş dönüşümünüzün her adımında özel destekle size rehberlik ediyoruz.",
+      "badgeValue": "10,000+",
+      "badgeLabel": "Dünya genelinde mutlu hasta",
+      "steps": [
+        { "label": "Online Danışmanlık", "description": "Diş endişelerinizi, fotoğraflarınızı ve röntgenlerinizi paylaşın. Ekibimiz evinizin konforundan şeffaf fiyatlandırmalı ayrıntılı, kişiselleştirilmiş bir tedavi planı oluşturur.", "duration": "1–2 gün" },
+        { "label": "Rezervasyon ve Seyahatinizi Planlayın", "description": "Tedavi programınızı onaylayın, geri kalanı biz hallederiz — uçuş koordinasyonu, otel rezervasyonu ve ihtiyaç ve tercihlerinize uyarlanmış eksiksiz bir program.", "duration": "1–2 hafta önce" },
+        { "label": "Varış ve VIP Transfer", "description": "Özel bir sürücü İstanbul Havalimanı'nda sizi otelinize özel transfer için karşılar. Hasta koordinatörünüz ertesi gün randevularını onaylamak için sizinle iletişime geçer.", "duration": "Gün 1" },
+        { "label": "Tedaviniz", "description": "Son teknoloji kullanan modern İstanbul kliniğimizde uzman diş bakımı. Ziyaret sürenizi en aza indirmek için birden fazla tedavi verimli şekilde birleştirilebilir.", "duration": "Gün 2–5" },
+        { "label": "Sonrası Bakım ve Takip", "description": "Eksiksiz bir sonrası bakım rehberi ile eve dönün. Ekibimiz devam eden uzaktan takipler sağlar, soruları yanıtlar ve gerekirse yerel kontrolleri koordine eder.", "duration": "Devam eden" }
+      ]
+    },
+    "cta": {
+      "eyebrow": "Yolculuğunuza Başlayın",
+      "title": "Gülüşünüzü Dönüştürmeye Hazır mısınız?",
+      "subtitle": "50'den fazla ülkeden 10.000'den fazla mutlu hasta Linova Clinic'e gülüşleriyle güvendi. Bugün ücretsiz danışmanlığınızı alın ve şeffaf fiyatlandırmalı kişiselleştirilmiş bir tedavi planı alın.",
+      "buttonConsultation": "Ücretsiz Danışmanlık Al",
+      "buttonCall": "Bizi Arayın",
+      "note": "Ücretsiz danışmanlık, taahhüt yok. 2 saat içinde yanıt."
+    }
   },
   "chat": {
     "title": "Bizimle Sohbet Edin",

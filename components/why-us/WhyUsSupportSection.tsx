@@ -7,68 +7,37 @@ import {
   IconVideo,
   IconMapPin,
 } from "@tabler/icons-react";
+import { getTranslations } from "next-intl/server";
 import { SectionReveal, StaggerContainer, StaggerItem } from "@/components/ui/Animate";
 import istanbulImage from "@/public/istanbul.jpg";
 import styles from "./WhyUsSupportSection.module.css";
 
-const SERVICES = [
-  {
-    icon: IconVideo,
-    title: "Free Online Consultation",
-    description:
-      "Start from the comfort of your home. Share photos or X-rays, discuss your goals with our dentists, and receive a detailed treatment plan with transparent pricing — all via video call.",
-    stat: "Within 24h",
-    statLabel: "response time",
-  },
-  {
-    icon: IconPlane,
-    title: "VIP Airport Transfers",
-    description:
-      "A dedicated driver meets you at Istanbul Airport arrivals with a name sign. Enjoy a private, comfortable ride directly to your hotel or the clinic — included in every package.",
-    stat: "Complimentary",
-    statLabel: "for all patients",
-  },
-  {
-    icon: IconHotelService,
-    title: "Premium Accommodation",
-    description:
-      "We partner with hand-picked 4 and 5-star hotels near the clinic. Your stay is coordinated around your treatment schedule, with special medical tourism rates.",
-    stat: "4-5★",
-    statLabel: "partner hotels",
-  },
-  {
-    icon: IconLanguage,
-    title: "Multilingual Coordinators",
-    description:
-      "Dedicated patient coordinators fluent in English, Arabic, Turkish, German, French, and more. They guide you through every step — from booking to aftercare.",
-    stat: "6+",
-    statLabel: "languages spoken",
-  },
-  {
-    icon: IconMapPin,
-    title: "Istanbul Tours & Experiences",
-    description:
-      "Make the most of your visit with curated experiences — Bosphorus boat tours, Grand Bazaar shopping, historical site visits, and authentic Turkish cuisine experiences.",
-    stat: "10+",
-    statLabel: "curated experiences",
-  },
+const SERVICE_ICONS = [
+  IconVideo,
+  IconPlane,
+  IconHotelService,
+  IconLanguage,
+  IconMapPin,
 ];
 
-export function WhyUsSupportSection() {
+type ServiceItem = { title: string; description: string; stat: string; statLabel: string };
+
+export async function WhyUsSupportSection() {
+  const t = await getTranslations("whyUs");
+  const services = t.raw("support.services") as ServiceItem[];
   return (
     <SectionReveal delay={0.03} amount={0.08}>
       <Box component="section" id="support" className={styles.section} aria-labelledby="support-heading">
         <Container size="xl">
           <Stack gap="xs" mb="xl" ta="center">
             <Text size="sm" fw={600} tt="uppercase" className={styles.eyebrow}>
-              Medical Tourism Excellence
+              {t("support.eyebrow")}
             </Text>
             <Title id="support-heading" order={2} className={styles.sectionTitle}>
-              Your Complete Care Package
+              {t("support.sectionTitle")}
             </Title>
             <Text className={styles.sectionSubtitle}>
-              We take care of everything beyond your dental treatment — from the moment you book
-              until long after you return home. Your only job is to smile.
+              {t("support.sectionSubtitle")}
             </Text>
           </Stack>
 
@@ -84,34 +53,37 @@ export function WhyUsSupportSection() {
             />
             <div className={styles.bannerOverlay}>
               <Text className={styles.bannerText}>
-                Your Dental Destination: Istanbul, Turkey
+                {t("support.bannerText")}
               </Text>
             </div>
           </div>
 
           <StaggerContainer staggerChildren={0.06} delayChildren={0.05}>
             <div className={styles.grid}>
-              {SERVICES.map((service) => (
-                <StaggerItem key={service.title}>
-                  <div className={styles.card}>
-                    <div className={styles.cardHeader}>
-                      <div className={styles.iconWrap}>
-                        <service.icon size={28} stroke={1.8} />
+              {services.map((service, i) => {
+                const Icon = SERVICE_ICONS[i];
+                return (
+                  <StaggerItem key={service.title}>
+                    <div className={styles.card}>
+                      <div className={styles.cardHeader}>
+                        <div className={styles.iconWrap}>
+                          <Icon size={28} stroke={1.8} />
+                        </div>
+                        <div className={styles.statBadge}>
+                          <span className={styles.statValue}>{service.stat}</span>
+                          <span className={styles.statLabel}>{service.statLabel}</span>
+                        </div>
                       </div>
-                      <div className={styles.statBadge}>
-                        <span className={styles.statValue}>{service.stat}</span>
-                        <span className={styles.statLabel}>{service.statLabel}</span>
+                      <div className={styles.cardContent}>
+                        <h3 className={styles.cardTitle}>{service.title}</h3>
+                        <Text size="sm" className={styles.cardDesc}>
+                          {service.description}
+                        </Text>
                       </div>
                     </div>
-                    <div className={styles.cardContent}>
-                      <h3 className={styles.cardTitle}>{service.title}</h3>
-                      <Text size="sm" className={styles.cardDesc}>
-                        {service.description}
-                      </Text>
-                    </div>
-                  </div>
-                </StaggerItem>
-              ))}
+                  </StaggerItem>
+                );
+              })}
             </div>
           </StaggerContainer>
         </Container>

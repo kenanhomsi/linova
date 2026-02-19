@@ -14,7 +14,7 @@ export interface Treatment {
   title: string;
   shortDescription: string;
   category: TreatmentCategory;
-  image?: StaticImageData;
+  image?: string | StaticImageData;
 }
 
 export interface TreatmentCategoryInfo {

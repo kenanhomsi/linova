@@ -1,14 +1,17 @@
 import type { Treatment, TreatmentCategoryInfo } from "@/types";
 
-import hollywoodSmile from "@/public/HollywoodSmile.jpg";
-import dentalVeneers from "@/public/Dental Veneers.jpg";
-import teethWhitening from "@/public/Teeth Whitening.jpg";
-import dentalImplants from "@/public/DentalImplants.jpg";
-import allOn4 from "@/public/All-on-4.jpg";
-import dentalCrowns from "@/public/Dental Crowns.jpg";
-import digitalSmileDesign from "@/public/Digital Smile Design.jpg";
 import laserDentistry from "@/public/Laser Dentistry.jpg";
-import cbctImaging from "@/public/3DCBCTImaging.jpg";
+
+const IMAGES = {
+  hollywoodSmile: "/images/hollywood-smile/pic1.jpeg",
+  dentalVeneers: "/images/dental-veneers/pic1.jpeg",
+  teethWhitening: "/images/teeth-whitening/pic1.jpeg",
+  dentalImplants: "/images/dental-implants/pic1.jpeg",
+  allOn4: "/images/all-on-4-6/pic1.jpeg",
+  dentalCrowns: "/images/dental-crowns-bridges/pic1.jpeg",
+  digitalSmileDesign: "/images/digital-smile-design/pic1.jpeg",
+  cbctImaging: "/images/xray-cbct.jpeg",
+} as const;
 
 export const CATEGORIES: TreatmentCategoryInfo[] = [
   {
@@ -64,7 +67,7 @@ export const TREATMENTS: Treatment[] = [
     shortDescription:
       "A complete smile transformation combining custom veneers, professional whitening, and digital smile design for a stunning, natural-looking result that turns heads.",
     category: "cosmetic",
-    image: hollywoodSmile,
+    image: IMAGES.hollywoodSmile,
   },
   {
     id: "dental-veneers",
@@ -73,7 +76,7 @@ export const TREATMENTS: Treatment[] = [
     shortDescription:
       "Ultra-thin, custom-crafted shells bonded to your teeth to perfect color, shape, and symmetry — choose from premium zirconia, E-max, or porcelain options.",
     category: "cosmetic",
-    image: dentalVeneers,
+    image: IMAGES.dentalVeneers,
   },
   {
     id: "teeth-whitening",
@@ -82,7 +85,7 @@ export const TREATMENTS: Treatment[] = [
     shortDescription:
       "Professional in-office laser whitening that brightens your smile up to 8 shades in a single visit, with long-lasting results you'll love.",
     category: "cosmetic",
-    image: teethWhitening,
+    image: IMAGES.teethWhitening,
   },
   {
     id: "composite-bonding",
@@ -100,7 +103,7 @@ export const TREATMENTS: Treatment[] = [
     shortDescription:
       "The gold standard in permanent tooth replacement — titanium implants that look, feel, and function exactly like your natural teeth with a 98% success rate.",
     category: "restorative",
-    image: dentalImplants,
+    image: IMAGES.dentalImplants,
   },
   {
     id: "all-on-4-6",
@@ -109,7 +112,7 @@ export const TREATMENTS: Treatment[] = [
     shortDescription:
       "Full-arch fixed prosthetics on just 4–6 strategically placed implants — a complete set of teeth in a single day with immediate function and aesthetics.",
     category: "restorative",
-    image: allOn4,
+    image: IMAGES.allOn4,
   },
   {
     id: "zygomatic-implants",
@@ -126,7 +129,7 @@ export const TREATMENTS: Treatment[] = [
     shortDescription:
       "Restore damaged or missing teeth with custom-crafted crowns and bridges that match your natural teeth in strength, color, and shape.",
     category: "restorative",
-    image: dentalCrowns,
+    image: IMAGES.dentalCrowns,
   },
   {
     id: "full-mouth-restoration",
@@ -152,7 +155,7 @@ export const TREATMENTS: Treatment[] = [
     shortDescription:
       "State-of-the-art 3D cone-beam imaging for precise diagnosis, implant planning, and complex treatment design with minimal radiation exposure.",
     category: "general",
-    image: cbctImaging,
+    image: IMAGES.cbctImaging,
   },
   {
     id: "gum-periodontal",
@@ -195,7 +198,7 @@ export const TREATMENTS: Treatment[] = [
     shortDescription:
       "Visualize your new smile before treatment begins with advanced 3D digital planning — see exactly how your transformation will look from every angle.",
     category: "digital",
-    image: digitalSmileDesign,
+    image: IMAGES.digitalSmileDesign,
   },
   {
     id: "laser-dentistry",

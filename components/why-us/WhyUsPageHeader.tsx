@@ -6,34 +6,20 @@ import {
   IconPigMoney,
   IconShieldCheck,
 } from "@tabler/icons-react";
+import { getTranslations } from "next-intl/server";
 import { FadeInUp, StaggerContainer, StaggerItem } from "@/components/ui/Animate";
 import heroImage from "@/public/heroSection.jpg";
 import styles from "./WhyUsPageHeader.module.css";
 
-const HIGHLIGHTS = [
-  {
-    icon: IconCertificate,
-    title: "ISO Certified",
-    desc: "European quality standards",
-  },
-  {
-    icon: IconHeartHandshake,
-    title: "15+ Years",
-    desc: "Expert dental care",
-  },
-  {
-    icon: IconPigMoney,
-    title: "Up to 70% Savings",
-    desc: "Vs. UK & US prices",
-  },
-  {
-    icon: IconShieldCheck,
-    title: "Lifetime Warranty",
-    desc: "On all treatments",
-  },
+const HIGHLIGHT_KEYS = [
+  { icon: IconCertificate, key: "iso" as const },
+  { icon: IconHeartHandshake, key: "years" as const },
+  { icon: IconPigMoney, key: "savings" as const },
+  { icon: IconShieldCheck, key: "warranty" as const },
 ];
 
-export function WhyUsPageHeader() {
+export async function WhyUsPageHeader() {
+  const t = await getTranslations("whyUs");
   return (
     <Box className={styles.hero}>
       <Image
@@ -50,29 +36,27 @@ export function WhyUsPageHeader() {
         <FadeInUp>
           <Stack gap="md" className={styles.wrapper}>
             <Text size="sm" fw={600} tt="uppercase" className={styles.eyebrow}>
-              Why Choose Linova Clinic
+              {t("pageHeader.eyebrow")}
             </Text>
             <Title order={1} className={styles.title}>
-              Where World-Class Dentistry{" "}
-              <span className={styles.titleHighlight}>Meets Exceptional Care</span>
+              {t("pageHeader.title")}{" "}
+              <span className={styles.titleHighlight}>{t("pageHeader.titleHighlight")}</span>
             </Title>
             <Text size="lg" lh={1.7} className={styles.subtitle}>
-              We combine internationally certified dental expertise with a premium medical tourism
-              experience — from your first virtual consultation to VIP transfers, luxury stays,
-              and lifelong aftercare. Everything is designed around your comfort, safety, and smile.
+              {t("pageHeader.subtitle")}
             </Text>
           </Stack>
         </FadeInUp>
 
         <StaggerContainer staggerChildren={0.08} delayChildren={0.2}>
           <div className={styles.highlightsRow}>
-            {HIGHLIGHTS.map((item) => (
-              <StaggerItem key={item.title}>
+            {HIGHLIGHT_KEYS.map((item) => (
+              <StaggerItem key={item.key}>
                 <div className={styles.highlightCard}>
                   <item.icon size={28} className={styles.highlightIcon} />
                   <div>
-                    <Text className={styles.highlightTitle}>{item.title}</Text>
-                    <Text className={styles.highlightDesc}>{item.desc}</Text>
+                    <Text className={styles.highlightTitle}>{t(`pageHeader.highlights.${item.key}.title`)}</Text>
+                    <Text className={styles.highlightDesc}>{t(`pageHeader.highlights.${item.key}.desc`)}</Text>
                   </div>
                 </div>
               </StaggerItem>

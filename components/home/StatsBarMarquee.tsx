@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { Text, Box, Container, SimpleGrid } from "@mantine/core";
+import { Text, Box, Container } from "@mantine/core";
 import styles from "./StatsBar.module.css";
 
 export type StatItem = { value: string; label: string };
@@ -72,22 +72,33 @@ export function StatsBarMarquee({ stats }: { stats: StatItem[] }) {
   }, [hasAnimated]);
 
   return (
-    <Box ref={containerRef} py="xl" className={styles.steadyWrap}>
+    <Box
+      ref={containerRef}
+      py="xl"
+      className={`${styles.steadyWrap} ${hasAnimated ? styles.visible : ""}`}
+    >
       <Container size="xl">
-        <SimpleGrid cols={{ base: 2, sm: 4 }} spacing="xl">
+        <Box className={styles.grid}>
           {stats.map((stat, i) => (
-            <Box key={stat.label} ta="center">
-              <Text fw={800} size="clamp(1.5rem, 4vw, 2.5rem)" lh={1.1} c="white">
+            <Box key={stat.label} className={styles.statPart}>
+              <Text
+                component="span"
+                className={styles.value}
+                fw={800}
+                size="clamp(1.5rem, 4vw, 2.5rem)"
+                lh={1.1}
+                c="white"
+              >
                 {parsed[i].prefix}
                 {counts[i]}
                 {parsed[i].suffix}
               </Text>
-              <Text size="sm" c="teal.1" fw={500} mt={4}>
+              <Text size="sm" c="teal.1" fw={500} mt={4} className={styles.label}>
                 {stat.label}
               </Text>
             </Box>
           ))}
-        </SimpleGrid>
+        </Box>
       </Container>
     </Box>
   );
