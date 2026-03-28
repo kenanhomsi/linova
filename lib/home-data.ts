@@ -258,29 +258,22 @@ export const TRANSFORMATIONS: Array<{
     title: "Hollywood Smile Transformation",
     detail: "16 Zirconia Veneers",
     category: "Hollywood Smile",
-    before: "WhatsApp Image 2026-01-27 at 12.47.08 PM (1).jpeg",
-    after: "WhatsApp Image 2026-01-27 at 12.47.08 PM (2).jpeg",
+    before: "h-smily-befor.jpeg",
+    after: "h-smily-after.jpeg",
   },
   {
     title: "Dental Implant Success",
     detail: "4 Dental Implants",
     category: "Implants",
-    before: "WhatsApp Image 2026-01-27 at 12.47.08 PM (3).jpeg",
-    after: "WhatsApp Image 2026-01-27 at 12.47.08 PM (4).jpeg",
+    before: "implant-befor.jpeg",
+    after: "implant-after.jpeg",
   },
   {
     title: "Veneer Perfection",
     detail: "8 E-max Veneers",
     category: "Veneers",
-    before: "WhatsApp Image 2026-01-27 at 12.47.09 PM (1).jpeg",
-    after: "WhatsApp Image 2026-01-27 at 12.47.09 PM (2).jpeg",
-  },
-  {
-    title: "Complete Smile Makeover",
-    detail: "20 Veneers + Whitening",
-    category: "Veneers",
-    before: "WhatsApp Image 2026-01-27 at 12.47.09 PM (3).jpeg",
-    after: "WhatsApp Image 2026-01-27 at 12.47.10 PM (1).jpeg",
+    before: "Veneer-befor1.jpeg",
+    after: "Veneer-after1.jpeg",
   },
   {
     title: "Laser Whitening Results",
@@ -296,27 +289,7 @@ export const TRANSFORMATIONS: Array<{
     before: "WhatsApp Image 2026-01-27 at 12.47.10 PM (4).jpeg",
     after: "WhatsApp Image 2026-01-27 at 12.47.11 PM (1).jpeg",
   },
-  // {
-  //   title: "Hollywood Smile Makeover",
-  //   detail: "Full Arch Zirconia",
-  //   category: "Hollywood Smile",
-  //   before: "WhatsApp Image 2026-01-27 at 12.47.11 PM (2).jpeg",
-  //   after: "WhatsApp Image 2026-01-27 at 12.47.11 PM (3).jpeg",
-  // },
-  // {
-  //   title: "Porcelain Veneers",
-  //   detail: "6 E-max Veneers",
-  //   category: "Veneers",
-  //   before: "WhatsApp Image 2026-01-27 at 12.47.11 PM (4).jpeg",
-  //   after: "WhatsApp Image 2026-01-27 at 12.47.12 PM (1).jpeg",
-  // },
-  // {
-  //   title: "Teeth Whitening",
-  //   detail: "In-Office Whitening",
-  //   category: "Whitening",
-  //   before: "WhatsApp Image 2026-01-27 at 12.47.12 PM (2).jpeg",
-  //   after: "WhatsApp Image 2026-01-27 at 12.47.12 PM (3).jpeg",
-  // },
+
 ];
 
 export const GALLERY_TABS = ["Before & After", "Our Clinic"] as const;
