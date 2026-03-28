@@ -88,7 +88,7 @@ export function Header() {
         <Group justify="space-between" wrap="nowrap" gap="md">
           <button onClick={() => router.push("/")} className={'cursor-pointer'}>
             {/* <Logo variant={"default"} /> */}
-            <Image src="/logo.svg" alt="Linova Clinic" width={100} height={100} />
+            <Image src="/logo-m.svg" alt="Linova Clinic" width={100} height={100} />
           </button>
 
           <div className={styles.centerNav}>
