@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import {
@@ -82,6 +83,19 @@ export function Footer() {
       </Box>
 
       <Container size="xl" py="xl">
+        <Box mb="xl">
+          <Link href="/" className={styles.footerLogoLink} aria-label={t("siteName")}>
+            <Image
+              src="/logo.svg"
+              alt=""
+              width={425}
+              height={186}
+              className={styles.footerLogo}
+              priority={false}
+            />
+          </Link>
+        </Box>
+
         <SimpleGrid cols={{ base: 1, sm: 2, lg: 4 }} spacing="xl" mb="xl">
           <Box>
             <Title order={3} size="h4" c="white" fw={700} mb="sm">
