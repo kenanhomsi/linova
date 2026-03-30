@@ -22,7 +22,7 @@ import Image from "next/image";
 import { useRouter } from "@/i18n/navigation";
 const NAV_CONFIG = [
   { href: "/", labelKey: "nav.home" },
-  { href: "/treatments", labelKey: "nav.services" },
+  { href: "/treatments", labelKey: "nav.Treatments" },
   { href: "/why-us", labelKey: "nav.whyChooseUs" },
   { href: "/#technology", labelKey: "nav.technology" },
   { href: "/blogs", labelKey: "nav.blog" },

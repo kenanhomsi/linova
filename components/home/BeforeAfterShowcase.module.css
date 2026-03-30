@@ -81,6 +81,7 @@
 
 .img {
   object-fit: cover;
+  object-position: center;
 }
 
 /* ── Corner labels ── */
@@ -358,6 +359,11 @@
   .viewport {
     aspect-ratio: 3 / 4;
     border-radius: 18px;
+  }
+
+  /* On mobile, prioritize showing the full photo (no crop) */
+  .img {
+    object-fit: contain;
   }
 
   .heading {

@@ -3,14 +3,18 @@ import type { Treatment, TreatmentCategoryInfo } from "@/types";
 import laserDentistry from "@/public/Laser Dentistry.jpg";
 
 const IMAGES = {
-  hollywoodSmile: "/images/hollywood-smile/pic1.jpeg",
-  dentalVeneers: "/images/dental-veneers/pic1.jpeg",
-  teethWhitening: "/images/teeth-whitening/pic1.jpeg",
+  hollywoodSmile: "/images/Hollywood Smile Makeover.jpeg",
+  compositeBonding: "/images/compositeBonding.jpeg",
+  dentalVeneers: "/images/Dental Veneers.jpeg",
+  teethWhitening: "/images/Teeth Whitening.jpeg",
   dentalImplants: "/images/dental-implants/pic1.jpeg",
-  allOn4: "/images/all-on-4-6/pic1.jpeg",
-  dentalCrowns: "/images/dental-crowns-bridges/pic1.jpeg",
+  allOn4: "/images/all-in-4-6.jpeg",
+  dentalCrowns: "/images/Dental Crowns.jpeg",
   digitalSmileDesign: "/images/digital-smile-design/pic1.jpeg",
   cbctImaging: "/images/xray-cbct.jpeg",
+  IntraoralScanning: "/images/Intraoral Scanning.jpeg",
+  zygomaticImplants: "/images/zygomatic-implants.jpeg",
+  gumtrutments: "/images/gum-trutments.jpeg",
 } as const;
 
 export const CATEGORIES: TreatmentCategoryInfo[] = [
@@ -94,6 +98,7 @@ export const TREATMENTS: Treatment[] = [
     shortDescription:
       "Fix minor chips, close gaps, or reshape uneven teeth in a single painless visit using tooth-colored composite resin for a seamless, natural finish.",
     category: "cosmetic",
+    image: IMAGES.compositeBonding,
   },
   // Restorative
   {
@@ -121,6 +126,7 @@ export const TREATMENTS: Treatment[] = [
     shortDescription:
       "An advanced implant solution for patients with severe bone loss, anchored in the cheekbone to avoid the need for bone grafting procedures.",
     category: "restorative",
+    image: IMAGES.zygomaticImplants,
   },
   {
     id: "crowns-bridges",
@@ -131,14 +137,7 @@ export const TREATMENTS: Treatment[] = [
     category: "restorative",
     image: IMAGES.dentalCrowns,
   },
-  {
-    id: "full-mouth-restoration",
-    slug: "full-mouth-restoration",
-    title: "Full Mouth Restoration",
-    shortDescription:
-      "A comprehensive reconstruction plan combining multiple treatments to fully restore function, aesthetics, and oral health for long-term results.",
-    category: "restorative",
-  },
+
   // General
   {
     id: "checkups",
@@ -164,6 +163,7 @@ export const TREATMENTS: Treatment[] = [
     shortDescription:
       "Expert treatment for gum disease, deep cleaning, and periodontal therapy to protect your teeth and ensure lasting oral health foundations.",
     category: "general",
+    image: IMAGES.gumtrutments,
   },
   // Surgical
   {

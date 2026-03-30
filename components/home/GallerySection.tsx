@@ -5,8 +5,8 @@ import styles from "./GallerySection.module.css";
 
 const PATIENT_VIDEOS = [
   "/images/WhatsApp Video 2026-01-27 at 1.29.29 PM.mp4",
-  "/images/WhatsApp Video 2026-02-03 at 12.50.04 AM.mp4",
-  "/images/WhatsApp Video 2026-02-03 at 12.51.02 AM.mp4",
+  "/images/user-story2.mp4",
+  "/images/user-story3.mp4",
 ];
 
 export async function GallerySection() {

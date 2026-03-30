@@ -5,6 +5,18 @@
   display: block;
 }
 
+.link:hover,
+.link:focus-visible {
+  text-decoration: none !important;
+}
+
+/* Some global `a:hover { text-decoration: underline; }` rules can "decorate" descendants.
+   Force-disable decoration for all text within the card link. */
+.link:hover *,
+.link:focus-visible * {
+  text-decoration: none !important;
+}
+
 .card {
   height: 100%;
   border-radius: var(--radius-lg);
@@ -23,11 +35,13 @@
   transform: translateY(-4px);
   box-shadow: var(--shadow-lg);
   border-color: var(--readdy-teal-pale);
+
 }
 
 [data-theme="dark"] .link:hover .card,
 [data-theme="dark"] .link:focus-visible .card {
   border-color: var(--readdy-teal-pale);
+
 }
 
 /* Image area */

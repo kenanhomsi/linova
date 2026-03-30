@@ -10,7 +10,7 @@
     "learnMore": "Learn more",
     "nav": {
       "home": "Home",
-      "services": "Services",
+      "Treatments": "Treatments",
       "whyChooseUs": "Why Choose Us",
       "technology": "Technology",
       "contact": "Contact",
@@ -336,17 +336,13 @@
           "cta": "Learn More"
         },
         {
-          "badge": "Latest Technology",
-          "title": "Laser Treatments",
-          "description": "Minimally invasive procedures with faster healing times, reduced discomfort, and superior precision for soft tissue treatments.",
+          "badge": "Intraoral Scanning",
+          "title": "Intraoral Scanning",
+          "description": "Digital impressions eliminate uncomfortable traditional molds while providing superior accuracy for crowns, veneers, and aligners.",
           "cta": "Learn More"
         }
       ],
       "bullets": [
-        {
-          "title": "Intraoral Scanning",
-          "description": "Digital impressions eliminate uncomfortable traditional molds while providing superior accuracy for crowns, veneers, and aligners."
-        },
         {
           "title": "CAD/CAM System",
           "description": "Same-day restorations designed and milled in-house, reducing treatment time and ensuring perfect fit and aesthetics."

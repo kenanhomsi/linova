@@ -2,14 +2,15 @@
 import laserDentistry from "@/public/Laser Dentistry.jpg";
 
 const IMAGES = {
-  hollywoodSmile: "/images/hollywood-smile/pic1.jpeg",
-  dentalVeneers: "/images/dental-veneers/pic1.jpeg",
-  teethWhitening: "/images/teeth-whitening/pic1.jpeg",
+  hollywoodSmile: "/images/Hollywood Smile Makeover.jpeg",
+  dentalVeneers: "/images/Dental Veneers.jpeg",
+  teethWhitening: "/images/Teeth Whitening.jpeg",
   dentalImplants: "/images/dental-implants/pic1.jpeg",
-  allOn4: "/images/all-on-4-6/pic1.jpeg",
-  dentalCrowns: "/images/dental-crowns-bridges/pic1.jpeg",
+  allOn4: "/images/all-in-4-6.jpeg",
+  dentalCrowns: "/images/Dental Crowns.jpeg",
   digitalSmileDesign: "/images/digital-smile-design/pic1.jpeg",
-  DCBCTImaging: "/images/xray-cbct.jpeg",
+  DCBCTImaging: "/images/xray-cbct2.jpeg",
+  IntraoralScanning:"/images/Intraoral Scanning.jpeg"
 } as const;
 
 
@@ -194,16 +195,7 @@ export const COMPLETE_DENTAL_SOLUTIONS_CARDS = [
     image: IMAGES.digitalSmileDesign,
     blogSlug: "digital-smile-design-technology-explained",
   },
-  {
-    category: "Advanced Technology",
-    categoryIcon: "laser" as const,
-    title: "Laser Dentistry",
-    description: "Precise, minimally invasive treatments with modern laser technology",
-    cta: "Learn More",
-    featured: false,
-    image: laserDentistry,
-    blogSlug: "3d-cbct-imaging-modern-dentistry",
-  },
+
 ];
 
 export const WHY_LINOVA = {
@@ -258,15 +250,15 @@ export const TRANSFORMATIONS: Array<{
     title: "Hollywood Smile Transformation",
     detail: "16 Zirconia Veneers",
     category: "Hollywood Smile",
-    before: "h-smily-befor.jpeg",
-    after: "h-smily-after.jpeg",
+    before: "h-smily-befor-new.jpeg",
+    after: "h-smily-after-new.jpeg",
   },
   {
     title: "Dental Implant Success",
     detail: "4 Dental Implants",
     category: "Implants",
-    before: "implant-befor.jpeg",
-    after: "implant-after.jpeg",
+    before: "implant-befor2.jpeg",
+    after: "implant-after2.jpeg",
   },
   {
     title: "Veneer Perfection",
@@ -275,20 +267,20 @@ export const TRANSFORMATIONS: Array<{
     before: "Veneer-befor1.jpeg",
     after: "Veneer-after1.jpeg",
   },
-  {
-    title: "Laser Whitening Results",
-    detail: "Professional Laser Whitening",
-    category: "Whitening",
-    before: "WhatsApp Image 2026-01-27 at 12.47.10 PM (2).jpeg",
-    after: "WhatsApp Image 2026-01-27 at 12.47.10 PM (3).jpeg",
-  },
-  {
-    title: "All-on-4 Full Restoration",
-    detail: "All-on-4 Implants",
-    category: "Implants",
-    before: "WhatsApp Image 2026-01-27 at 12.47.10 PM (4).jpeg",
-    after: "WhatsApp Image 2026-01-27 at 12.47.11 PM (1).jpeg",
-  },
+  // {
+  //   title: "Laser Whitening Results",
+  //   detail: "Professional Laser Whitening",
+  //   category: "Whitening",
+  //   before: "WhatsApp Image 2026-01-27 at 12.47.10 PM (2).jpeg",
+  //   after: "WhatsApp Image 2026-01-27 at 12.47.10 PM (3).jpeg",
+  // },
+  // {
+  //   title: "All-on-4 Full Restoration",
+  //   detail: "All-on-4 Implants",
+  //   category: "Implants",
+  //   before: "WhatsApp Image 2026-01-27 at 12.47.10 PM (4).jpeg",
+  //   after: "WhatsApp Image 2026-01-27 at 12.47.11 PM (1).jpeg",
+  // },
 
 ];
 
@@ -352,21 +344,16 @@ export const DIGITAL_DENTISTRY = {
       blogSlug: "3d-cbct-imaging-modern-dentistry",
     },
     {
-      badge: "Latest Technology",
-      title: "Laser Treatments",
+      badge: "Intraoral Scanning",
+      title: "Intraoral Scanning",
       description:
-        "Minimally invasive procedures with faster healing times, reduced discomfort, and superior precision for soft tissue treatments.",
+         "Digital impressions eliminate uncomfortable traditional molds while providing superior accuracy for crowns, veneers, and aligners.",
       cta: "Learn More",
-      image: laserDentistry,
+      image: IMAGES.IntraoralScanning,
       blogSlug: "3d-cbct-imaging-modern-dentistry",
     },
   ],
   bullets: [
-    {
-      title: "Intraoral Scanning",
-      description:
-        "Digital impressions eliminate uncomfortable traditional molds while providing superior accuracy for crowns, veneers, and aligners.",
-    },
     {
       title: "CAD/CAM System",
       description:
