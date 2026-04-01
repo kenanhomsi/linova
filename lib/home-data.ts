@@ -50,7 +50,7 @@ export const TREATMENT_CARDS = [
     featured: true,
     image: IMAGES.hollywoodSmile,
     badge: "Most Popular",
-    blogSlug: "hollywood-smile-complete-guide-2026",
+    blogSlug: "hollywood-smile-makeover",
   },
   {
     category: "Restorative Dentistry",
@@ -61,7 +61,7 @@ export const TREATMENT_CARDS = [
     featured: true,
     image: IMAGES.dentalImplants,
     badge: "Most Popular",
-    blogSlug: "dental-implants-vs-bridges-which-is-right",
+    blogSlug: "hollywood-smile-makeover",
   },
   {
     category: "Restorative Dentistry",
@@ -70,7 +70,7 @@ export const TREATMENT_CARDS = [
     cta: "Learn More",
     featured: false,
     image: IMAGES.allOn4,
-    blogSlug: "all-on-4-dental-implants-everything-you-need-to-know",
+    blogSlug: "hollywood-smile-makeover",
   },
   {
     category: "Cosmetic Dentistry",
@@ -79,7 +79,7 @@ export const TREATMENT_CARDS = [
     cta: "Learn More",
     featured: false,
     image: IMAGES.dentalVeneers,
-    blogSlug: "porcelain-veneers-vs-composite-veneers",
+    blogSlug: "hollywood-smile-makeover",
   },
   {
     category: "Cosmetic Dentistry",
@@ -88,7 +88,7 @@ export const TREATMENT_CARDS = [
     cta: "Learn More",
     featured: false,
     image: IMAGES.teethWhitening,
-    blogSlug: "teeth-whitening-professional-vs-at-home",
+    blogSlug: "hollywood-smile-makeover",
   },
   {
     category: "Restorative Dentistry",
@@ -97,7 +97,7 @@ export const TREATMENT_CARDS = [
     cta: "Learn More",
     featured: false,
     image: IMAGES.dentalCrowns,
-    blogSlug: "complete-guide-dental-crowns-bridges",
+    blogSlug: "hollywood-smile-makeover",
   },
   {
     category: "Digital Dentistry",
@@ -106,7 +106,7 @@ export const TREATMENT_CARDS = [
     cta: "Learn More",
     featured: false,
     image: IMAGES.digitalSmileDesign,
-    blogSlug: "digital-smile-design-technology-explained",
+    blogSlug: "hollywood-smile-makeover",
   },
   {
     category: "Advanced Technology",
@@ -115,7 +115,7 @@ export const TREATMENT_CARDS = [
     cta: "Learn More",
     featured: false,
     image: laserDentistry,
-    blogSlug: "3d-cbct-imaging-modern-dentistry",
+    blogSlug: "hollywood-smile-makeover",
   },
 ] as const;
 
@@ -131,7 +131,7 @@ export const COMPLETE_DENTAL_SOLUTIONS_CARDS = [
     featured: true,
     badge: "Most Popular",
     image: IMAGES.hollywoodSmile,
-    blogSlug: "hollywood-smile-complete-guide-2026",
+    blogSlug: "hollywood-smile-makeover",
   },
   {
     category: "Restorative Dentistry",
@@ -143,7 +143,7 @@ export const COMPLETE_DENTAL_SOLUTIONS_CARDS = [
     featured: true,
     badge: "Most Popular",
     image: IMAGES.dentalImplants,
-    blogSlug: "dental-implants-vs-bridges-which-is-right",
+    blogSlug: "hollywood-smile-makeover",
   },
   {
     category: "Restorative Dentistry",
@@ -153,7 +153,7 @@ export const COMPLETE_DENTAL_SOLUTIONS_CARDS = [
     cta: "Learn More",
     featured: false,
     image: IMAGES.allOn4,
-    blogSlug: "all-on-4-dental-implants-everything-you-need-to-know",
+    blogSlug: "hollywood-smile-makeover",
   },
   {
     category: "Cosmetic Dentistry",
@@ -163,7 +163,7 @@ export const COMPLETE_DENTAL_SOLUTIONS_CARDS = [
     cta: "Learn More",
     featured: false,
     image: IMAGES.dentalVeneers,
-    blogSlug: "porcelain-veneers-vs-composite-veneers",
+    blogSlug: "hollywood-smile-makeover",
   },
   {
     category: "Cosmetic Dentistry",
@@ -173,7 +173,7 @@ export const COMPLETE_DENTAL_SOLUTIONS_CARDS = [
     cta: "Learn More",
     featured: false,
     image: IMAGES.teethWhitening,
-    blogSlug: "teeth-whitening-professional-vs-at-home",
+    blogSlug: "hollywood-smile-makeover",
   },
   {
     category: "Restorative Dentistry",
@@ -183,7 +183,7 @@ export const COMPLETE_DENTAL_SOLUTIONS_CARDS = [
     cta: "Learn More",
     featured: false,
     image: IMAGES.dentalCrowns,
-    blogSlug: "complete-guide-dental-crowns-bridges",
+    blogSlug: "hollywood-smile-makeover",
   },
   {
     category: "Digital Dentistry",
@@ -193,7 +193,7 @@ export const COMPLETE_DENTAL_SOLUTIONS_CARDS = [
     cta: "Learn More",
     featured: false,
     image: IMAGES.digitalSmileDesign,
-    blogSlug: "digital-smile-design-technology-explained",
+    blogSlug: "hollywood-smile-makeover",
   },
 
 ];
@@ -341,7 +341,7 @@ export const DIGITAL_DENTISTRY = {
         "Three-dimensional imaging for precise implant planning and complex surgical procedures with minimal radiation exposure.",
       cta: "Learn More",
       image: IMAGES.DCBCTImaging,
-      blogSlug: "3d-cbct-imaging-modern-dentistry",
+      blogSlug: "hollywood-smile-makeover",
     },
     {
       badge: "Intraoral Scanning",
@@ -350,7 +350,7 @@ export const DIGITAL_DENTISTRY = {
          "Digital impressions eliminate uncomfortable traditional molds while providing superior accuracy for crowns, veneers, and aligners.",
       cta: "Learn More",
       image: IMAGES.IntraoralScanning,
-      blogSlug: "3d-cbct-imaging-modern-dentistry",
+      blogSlug: "hollywood-smile-makeover",
     },
   ],
   bullets: [

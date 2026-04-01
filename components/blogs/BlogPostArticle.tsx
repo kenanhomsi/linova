@@ -11,6 +11,7 @@ import {
   Stack,
   Group,
   Button,
+  Divider,
 } from "@mantine/core";
 import {
   IconClock,
@@ -29,32 +30,98 @@ interface BlogPostArticleProps {
   postIndex: number;
 }
 
+function renderInlineBold(text: string) {
+  const parts = text.split(/(\*\*[^*]+\*\*)/g).filter(Boolean);
+  return parts.map((part, i) => {
+    if (part.startsWith("**") && part.endsWith("**")) {
+      return <strong key={i}>{part.slice(2, -2)}</strong>;
+    }
+    return <span key={i}>{part}</span>;
+  });
+}
+
+function renderContentBlock(block: string, post: BlogPost, key: number) {
+  const trimmed = block.trim();
+  if (!trimmed) return null;
+
+  if (trimmed === "---") {
+    return <Divider key={key} my="sm" />;
+  }
+
+  const imageMatch = trimmed.match(/^\[IMAGE:(\d+)\]$/);
+  if (imageMatch) {
+    const idx = Number(imageMatch[1]) - 1;
+    const src = post.contentImages?.[idx];
+    if (!src) return null;
+    return (
+      <Box key={key} className={styles.contentImageWrap}>
+        {/* Using <img> here to preserve intrinsic aspect ratio without stretching */}
+        <img src={src} alt="" loading="lazy" className={styles.contentImage} />
+      </Box>
+    );
+  }
+
+  if (trimmed.startsWith("# ")) {
+    return (
+      <Title key={key} order={2} mt="md">
+        {trimmed.replace(/^#\s+/, "")}
+      </Title>
+    );
+  }
+
+  if (trimmed.startsWith("## ")) {
+    return (
+      <Title key={key} order={3} mt="md">
+        {trimmed.replace(/^##\s+/, "")}
+      </Title>
+    );
+  }
+
+  if (trimmed.startsWith("### ")) {
+    return (
+      <Title key={key} order={4} mt="sm">
+        {trimmed.replace(/^###\s+/, "")}
+      </Title>
+    );
+  }
+
+  const lines = trimmed.split("\n").map((l) => l.trim());
+  const listItems = lines.filter((l) => l.startsWith("* ")).map((l) => l.slice(2));
+  if (listItems.length > 0 && listItems.length === lines.length) {
+    return (
+      <Box key={key} component="ul" pl="lg" style={{ margin: 0 }}>
+        {listItems.map((item, i) => (
+          <li key={i}>
+            <Text size="md" lh={1.8} className={styles.paragraph}>
+              {renderInlineBold(item)}
+            </Text>
+          </li>
+        ))}
+      </Box>
+    );
+  }
+
+  return (
+    <Text key={key} size="md" lh={1.8} className={styles.paragraph}>
+      {renderInlineBold(trimmed)}
+    </Text>
+  );
+}
+
 export function BlogPostArticle({ post, postIndex }: BlogPostArticleProps) {
   const t = useTranslations("blogs");
-  const posts = t.raw("posts") as Array<{
-    title: string;
-    excerpt: string;
-    content: string;
-  }>;
 
-  const postTranslation = posts[postIndex];
-  if (!postTranslation) return null;
+  const formattedDate = post.date;
 
-  const formattedDate = new Date(post.date).toLocaleDateString("en-US", {
-    year: "numeric",
-    month: "long",
-    day: "numeric",
-  });
-
-  const paragraphs = postTranslation.content
+  const blocks = post.content
     .split("\n\n")
     .filter((p: string) => p.trim().length > 0);
 
   const prevPost = postIndex > 0 ? BLOG_POSTS[postIndex - 1] : null;
   const nextPost =
     postIndex < BLOG_POSTS.length - 1 ? BLOG_POSTS[postIndex + 1] : null;
-  const prevTitle = prevPost ? posts[postIndex - 1]?.title : null;
-  const nextTitle = nextPost ? posts[postIndex + 1]?.title : null;
+  const prevTitle = prevPost ? prevPost.title : null;
+  const nextTitle = nextPost ? nextPost.title : null;
 
   return (
     <Box className={styles.root}>
@@ -62,7 +129,7 @@ export function BlogPostArticle({ post, postIndex }: BlogPostArticleProps) {
       <Box className={styles.hero}>
         <Image
           src={post.image}
-          alt={postTranslation.title}
+          alt={post.title}
           fill
           priority
           className={styles.heroImage}
@@ -80,7 +147,7 @@ export function BlogPostArticle({ post, postIndex }: BlogPostArticleProps) {
                 {t(`categories.${post.categoryKey}`)}
               </Box>
               <Title order={1} className={styles.title}>
-                {postTranslation.title}
+                {post.title}
               </Title>
               <Group gap="lg" className={styles.meta}>
                 <Group gap={6} wrap="nowrap">
@@ -104,28 +171,24 @@ export function BlogPostArticle({ post, postIndex }: BlogPostArticleProps) {
       </Box>
 
       {/* Article Body */}
-      <Container size="sm" className={styles.articleWrap}>
+      <Container className={styles.articleWrap}>
         <FadeInUp delay={0.1}>
           <Box className={styles.excerpt}>
             <Text size="lg" fw={500} lh={1.7}>
-              {postTranslation.excerpt}
+              {post.excerpt}
             </Text>
           </Box>
         </FadeInUp>
 
-        <FadeInUp delay={0.15}>
-          <article className={styles.article}>
-            {paragraphs.map((paragraph: string, i: number) => (
-              <Text key={i} size="md" lh={1.8} className={styles.paragraph}>
-                {paragraph}
-              </Text>
-            ))}
-          </article>
-        </FadeInUp>
+        <article className={styles.article}>
+          {blocks.map((block: string, i: number) =>
+            renderContentBlock(block, post, i)
+          )}
+        </article>
 
         {/* CTA */}
         <FadeInUp delay={0.2}>
-          <Box className={styles.ctaBox}>
+          <Box className={styles.ctaBox} suppressHydrationWarning>
             <Title order={3} className={styles.ctaTitle}>
               Ready to Transform Your Smile?
             </Title>
@@ -134,7 +197,13 @@ export function BlogPostArticle({ post, postIndex }: BlogPostArticleProps) {
               journey today.
             </Text>
             <Link href="/contact" style={{ textDecoration: "none" }}>
-              <Button size="lg" radius="md" fw={600} className={styles.ctaBtn}>
+              <Button
+                size="lg"
+                radius="md"
+                fw={600}
+                className={styles.ctaBtn}
+                suppressHydrationWarning
+              >
                 Get Free Consultation
               </Button>
             </Link>

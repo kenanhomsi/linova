@@ -11,19 +11,11 @@ import styles from "./BlogCard.module.css";
 
 interface BlogCardProps {
   post: BlogPost;
-  index: number;
   featured?: boolean;
 }
 
-export function BlogCard({ post, index, featured = false }: BlogCardProps) {
+export function BlogCard({ post, featured = false }: BlogCardProps) {
   const t = useTranslations("blogs");
-  const posts = t.raw("posts") as Array<{
-    title: string;
-    excerpt: string;
-  }>;
-
-  const postTranslation = posts[index];
-  if (!postTranslation) return null;
 
   const formattedDate = new Date(post.date).toLocaleDateString("en-US", {
     year: "numeric",
@@ -45,7 +37,7 @@ export function BlogCard({ post, index, featured = false }: BlogCardProps) {
           <Box className={styles.imageWrap}>
             <Image
               src={post.image}
-              alt={postTranslation.title}
+              alt={post.title}
               fill
               sizes={featured ? "(max-width: 768px) 100vw, 50vw" : "(max-width: 576px) 100vw, (max-width: 992px) 50vw, 33vw"}
               className={styles.image}
@@ -73,9 +65,9 @@ export function BlogCard({ post, index, featured = false }: BlogCardProps) {
                 </Text>
               </Group>
             </Group>
-            <h3 className={styles.title}>{postTranslation.title}</h3>
+            <h3 className={styles.title}>{post.title}</h3>
             <Text size="sm" lh={1.65} className={styles.excerpt} lineClamp={featured ? 3 : 2}>
-              {postTranslation.excerpt}
+              {post.excerpt}
             </Text>
             <Group gap="xs" className={styles.footer}>
               <Text size="xs" className={styles.author}>

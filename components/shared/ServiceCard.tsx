@@ -7,16 +7,7 @@ import type { Treatment } from "@/types";
 import styles from "./ServiceCard.module.css";
 
 const TREATMENT_BLOG_MAP: Record<string, string> = {
-  "hollywood-smile": "hollywood-smile-complete-guide-2026",
-  "dental-veneers": "porcelain-veneers-vs-composite-veneers",
-  "teeth-whitening": "teeth-whitening-professional-vs-at-home",
-  "dental-implants": "dental-implants-vs-bridges-which-is-right",
-  "all-on-4-6": "all-on-4-dental-implants-everything-you-need-to-know",
-  "crowns-bridges": "complete-guide-dental-crowns-bridges",
-  "digital-smile-design": "digital-smile-design-technology-explained",
-  "laser-dentistry": "3d-cbct-imaging-modern-dentistry",
-  "xray-cbct": "3d-cbct-imaging-modern-dentistry",
-  "full-mouth-restoration": "dental-implants-vs-bridges-which-is-right",
+  "hollywood-smile": "hollywood-smile-makeover",
 };
 
 interface ServiceCardProps {
@@ -24,7 +15,7 @@ interface ServiceCardProps {
 }
 
 export async function ServiceCard({ treatment }: ServiceCardProps) {
-  const blogSlug = TREATMENT_BLOG_MAP[treatment.slug] || "hollywood-smile-complete-guide-2026";
+  const blogSlug = TREATMENT_BLOG_MAP[treatment.slug] || "hollywood-smile-makeover";
   const tTreatments = await getTranslations("treatments");
   const tCommon = await getTranslations("common");
   const title = tTreatments(`items.${treatment.slug}.title`);

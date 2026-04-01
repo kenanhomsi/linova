@@ -5,7 +5,7 @@
 /* ── Hero ── */
 .hero {
   position: relative;
-  min-height: 380px;
+  min-height: 440px;
   display: flex;
   align-items: flex-end;
   overflow: hidden;
@@ -66,7 +66,7 @@
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.06em;
-  color: #b8e8e2;
+  color: #b3dfe1;
   width: fit-content;
 }
 
@@ -85,7 +85,9 @@
 
 /* ── Article Body ── */
 .articleWrap {
-  margin-top: -1rem;
+  max-width: 860px;
+  margin: -1rem auto 0;
+  padding-inline: clamp(1rem, 5vw, 2rem);
   position: relative;
   z-index: 3;
 }
@@ -107,9 +109,22 @@
 }
 
 .paragraph {
-  color: var(--text-secondary, rgba(0, 0, 0, 0.75));
-  font-size: 1.0625rem;
-  line-height: 1.85;
+  color: var(--foreground);
+  font-size: clamp(0.9375rem, 1.5vw, 1.0625rem);
+  line-height: 1.9;
+}
+
+.contentImageWrap {
+  width: 100%;
+  border-radius: var(--radius-lg, 12px);
+  overflow: hidden;
+  box-shadow: 0 6px 22px rgba(0, 0, 0, 0.08);
+}
+
+.contentImage {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 /* ── CTA Box ── */

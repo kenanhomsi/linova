@@ -1,5 +1,5 @@
 import { notFound } from "next/navigation";
-import { setRequestLocale, getTranslations } from "next-intl/server";
+import { setRequestLocale } from "next-intl/server";
 import { routing } from "@/i18n/routing";
 import { BLOG_POSTS } from "@/lib/blog-data";
 import { BlogPostArticle } from "@/components/blogs/BlogPostArticle";
@@ -28,11 +28,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   if (postIndex === -1) return {};
 
-  const t = await getTranslations({ locale, namespace: "blogs" });
-  const posts = t.raw("posts") as Array<{ title: string; excerpt: string }>;
-  const postTranslation = posts[postIndex];
-
-  if (!postTranslation) return {};
+  const post = BLOG_POSTS[postIndex];
 
   const languages: Record<string, string> = {};
   for (const loc of routing.locales) {
@@ -41,15 +37,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   languages["x-default"] = `${BASE_URL}/en/blogs/${slug}`;
 
   return {
-    title: postTranslation.title,
-    description: postTranslation.excerpt,
+    title: post.title,
+    description: post.excerpt,
     alternates: {
       canonical: `${BASE_URL}/${locale}/blogs/${slug}`,
       languages,
     },
     openGraph: {
-      title: `${postTranslation.title} | Linova Clinic`,
-      description: postTranslation.excerpt,
+      title: `${post.title} | Linova Clinic`,
+      description: post.excerpt,
       url: `${BASE_URL}/${locale}/blogs/${slug}`,
     },
   };
@@ -70,7 +66,7 @@ export default async function BlogPostPage({ params }: Props) {
         items={[
           { name: "Home", url: `${BASE_URL}/${locale}` },
           { name: "Blog", url: `${BASE_URL}/${locale}/blogs` },
-          { name: post.slug, url: `${BASE_URL}/${locale}/blogs/${slug}` },
+          { name: post.title, url: `${BASE_URL}/${locale}/blogs/${slug}` },
         ]}
       />
       <BlogPostArticle post={post} postIndex={postIndex} />

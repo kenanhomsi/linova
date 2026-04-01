@@ -80,7 +80,11 @@ export function StatsBarMarquee({ stats }: { stats: StatItem[] }) {
       <Container size="xl">
         <Box className={styles.grid}>
           {stats.map((stat, i) => (
-            <Box key={stat.label} className={styles.statPart}>
+            <Box
+              key={`${stat.label}-${i}`}
+              className={styles.statPart}
+              style={{ ["--i" as any]: i }}
+            >
               <Text
                 component="span"
                 className={styles.value}

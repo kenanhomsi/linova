@@ -53,18 +53,11 @@ export function BlogsGrid() {
           {/* Blog Cards Grid */}
           <StaggerContainer staggerChildren={0.06} delayChildren={0.05}>
             <div className={styles.grid}>
-              {filteredPosts.map((post) => {
-                const globalIndex = BLOG_POSTS.findIndex((p) => p.id === post.id);
-                return (
-                  <StaggerItem key={post.id} className={styles.gridItem}>
-                    <BlogCard
-                      post={post}
-                      index={globalIndex}
-                      featured={post.featured}
-                    />
-                  </StaggerItem>
-                );
-              })}
+              {filteredPosts.map((post) => (
+                <StaggerItem key={post.id} className={styles.gridItem}>
+                  <BlogCard post={post} featured={post.featured} />
+                </StaggerItem>
+              ))}
             </div>
           </StaggerContainer>
         </Stack>

@@ -27,7 +27,9 @@
 .heroImage {
   object-fit: cover;
 }
-
+.heroImage:hover {
+  object-fit: fill;
+}
 .badge {
   background: var(--readdy-teal);
   border-radius: 20px;

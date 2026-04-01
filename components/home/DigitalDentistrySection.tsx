@@ -56,7 +56,7 @@ export async function DigitalDentistrySection() {
                 <Text className={styles.highlightDesc}>
                   {t("digitalDentistry.highlight.description")}
                 </Text>
-                <Link href="/blogs/digital-smile-design-technology-explained" className={styles.link}>
+                <Link href="/blogs/hollywood-smile-makeover" className={styles.link}>
                   <Button
                     fullWidth
                     size="md"

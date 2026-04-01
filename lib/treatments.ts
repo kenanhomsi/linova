@@ -10,7 +10,7 @@ const IMAGES = {
   dentalImplants: "/images/dental-implants/pic1.jpeg",
   allOn4: "/images/all-in-4-6.jpeg",
   dentalCrowns: "/images/Dental Crowns.jpeg",
-  digitalSmileDesign: "/images/digital-smile-design/pic1.jpeg",
+  digitalSmileDesign: "/images/digital-smile-design/pic12.jpeg",
   cbctImaging: "/images/xray-cbct.jpeg",
   IntraoralScanning: "/images/Intraoral Scanning.jpeg",
   zygomaticImplants: "/images/zygomatic-implants.jpeg",
