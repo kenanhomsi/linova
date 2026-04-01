@@ -531,7 +531,24 @@
       "multilingual-coordinators": { "title": "Multilingual Patient Coordinators", "shortDescription": "Dedicated coordinators fluent in English, Arabic, Turkish, and more — guiding you through every step of your treatment journey." },
       "tour-addons": { "title": "Tour & Experience Add-Ons", "shortDescription": "Combine your dental visit with curated Istanbul experiences — historic tours, Bosphorus cruises, shopping excursions, and cultural highlights." }
     },
-    "learnMore": "Learn more"
+    "learnMore": "Learn more",
+    "detail": {
+      "backToTreatments": "Back to Treatments",
+      "bookConsultation": "Book Free Consultation",
+      "whatsapp": "Chat on WhatsApp",
+      "articleGuideEyebrow": "Expert guide",
+      "articleGuideTitle": "Everything you need to know",
+      "ctaHint": "Free consultation · No obligation · Multilingual coordinators",
+      "relatedTreatments": "Related Treatments",
+      "whyLinovaEyebrow": "The Linova difference",
+      "whyLinova": "Why Choose Linova for This Treatment",
+      "benefits": [
+        { "title": "Expert Specialists", "desc": "15+ years of experience with internationally certified dentists." },
+        { "title": "Latest Technology", "desc": "State-of-the-art equipment and digital precision for every procedure." },
+        { "title": "Save Up to 70%", "desc": "World-class results at a fraction of UK & US prices, no hidden fees." },
+        { "title": "Lifetime Warranty", "desc": "We stand behind our work with extended warranties and aftercare support." }
+      ]
+    }
   },
   "whyUs": {
     "title": "Why Choose Us",

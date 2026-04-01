@@ -6,16 +6,11 @@ import { getTranslations } from "next-intl/server";
 import type { Treatment } from "@/types";
 import styles from "./ServiceCard.module.css";
 
-const TREATMENT_BLOG_MAP: Record<string, string> = {
-  "hollywood-smile": "hollywood-smile-makeover",
-};
-
 interface ServiceCardProps {
   treatment: Treatment;
 }
 
 export async function ServiceCard({ treatment }: ServiceCardProps) {
-  const blogSlug = TREATMENT_BLOG_MAP[treatment.slug] || "hollywood-smile-makeover";
   const tTreatments = await getTranslations("treatments");
   const tCommon = await getTranslations("common");
   const title = tTreatments(`items.${treatment.slug}.title`);
@@ -23,7 +18,7 @@ export async function ServiceCard({ treatment }: ServiceCardProps) {
 
   return (
     <Link
-      href={`/blogs/${blogSlug}`}
+      href={`/treatments/${treatment.slug}`}
       className={styles.link}
     >
       <Card padding={0} className={styles.card}>

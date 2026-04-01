@@ -19,7 +19,6 @@ import { ThemeToggle } from "./ThemeToggle";
 import { LanguageSwitcher } from "./LanguageSwitcher";
 import styles from "./Header.module.css";
 import Image from "next/image";
-import { useRouter } from "@/i18n/navigation";
 const NAV_CONFIG = [
   { href: "/", labelKey: "nav.home" },
   { href: "/treatments", labelKey: "nav.Treatments" },
@@ -30,7 +29,6 @@ const NAV_CONFIG = [
 ] as const;
 
 export function Header() {
-  const router = useRouter();
   const [opened, { toggle, close }] = useDisclosure(false);
   const pathname = usePathname();
   const { scrollY } = useScroll();
@@ -86,10 +84,10 @@ export function Header() {
     >
       <Container size="xl" py="md">
         <Group justify="space-between" wrap="nowrap" gap="md">
-          <button onClick={() => router.push("/")} className={'cursor-pointer'}>
+          <Link href="/" className={styles.logoLink}>
             {/* <Logo variant={"default"} /> */}
-            <Image src="/logo-m.svg" alt="Linova Clinic" width={100} height={100} />
-          </button>
+            <Image src="/logo-m2.svg" alt="Linova Clinic" width={100} height={100} />
+          </Link>
 
           <div className={styles.centerNav}>
             <nav className={styles.nav} aria-label="Main navigation">

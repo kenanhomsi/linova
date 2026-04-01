@@ -46,6 +46,16 @@
   flex-shrink: 0;
 }
 
+.logoLink {
+  flex-shrink: 0;
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+  display: inline-flex;
+  align-items: center;
+  line-height: 0;
+}
+
 .centerNav {
   flex: 1;
   display: flex;

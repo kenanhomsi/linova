@@ -29,7 +29,7 @@
 
 .ctaButton {
   background: var(--readdy-teal-light);
-  color: white;
+  color: var(--readdy-teal);
   border: none;
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
   transition: background var(--transition-fast), box-shadow var(--transition-fast);

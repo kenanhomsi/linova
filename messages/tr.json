@@ -442,7 +442,24 @@
       "multilingual-coordinators": { "title": "Çok Dilli Hasta Koordinatörleri", "shortDescription": "İngilizce, Arapça, Türkçe ve daha fazlasında akıcı özel koordinatörler — tedavi yolculuğunuzun her adımında size rehberlik eder." },
       "tour-addons": { "title": "Tur ve Deneyim Eklentileri", "shortDescription": "Diş ziyaretinizi özenle seçilmiş İstanbul deneyimleriyle birleştirin — tarihi turlar, Boğaz gezileri, alışveriş ve kültürel öne çıkanlar." }
     },
-    "learnMore": "Daha fazla"
+    "learnMore": "Daha fazla",
+    "detail": {
+      "backToTreatments": "Tedavilere dön",
+      "bookConsultation": "Ücretsiz danışmanlık alın",
+      "whatsapp": "WhatsApp'tan yazın",
+      "articleGuideEyebrow": "Uzman rehberi",
+      "articleGuideTitle": "Bu tedavi hakkında bilmeniz gerekenler",
+      "ctaHint": "Ücretsiz danışmanlık · Taahhütsüz · Çok dilli koordinatörler",
+      "relatedTreatments": "İlgili tedaviler",
+      "whyLinovaEyebrow": "Linova farkı",
+      "whyLinova": "Bu tedavi için neden Linova",
+      "benefits": [
+        { "title": "Uzman hekimler", "desc": "Uluslararası sertifikalı diş hekimleriyle 15+ yıl deneyim." },
+        { "title": "Son teknoloji", "desc": "Her işlemde son teknoloji ekipman ve dijital hassasiyet." },
+        { "title": "%70'e varan tasarruf", "desc": "İngiltere ve ABD fiyatlarına kıyasla dünya standartlarında sonuçlar, gizli ücret yok." },
+        { "title": "Ömür boyu garanti", "desc": "Genişletilmiş garantiler ve sonrası bakım desteğiyle işimizin arkasındayız." }
+      ]
+    }
   },
   "whyUs": {
     "title": "Neden Biz",

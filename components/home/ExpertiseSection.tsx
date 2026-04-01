@@ -84,7 +84,10 @@ export function ExpertiseSection() {
                         <Text size="sm" lh={1.6} className={styles.cardDesc}>
                           {card.description}
                         </Text>
-                        <Link href={`/blogs/${card.blogSlug}`} className={styles.link}>
+                        <Link
+                          href={`/treatments#${card.treatmentSlug}`}
+                          className={styles.link}
+                        >
                           {card.cta} →
                         </Link>
                       </Stack>
@@ -128,7 +131,10 @@ export function ExpertiseSection() {
                         <Text size="sm" lineClamp={2} className={styles.cardDesc}>
                           {card.description}
                         </Text>
-                        <Link href={`/blogs/${card.blogSlug}`} className={styles.link}>
+                        <Link
+                          href={`/treatments#${card.treatmentSlug}`}
+                          className={styles.link}
+                        >
                           Learn More →
                         </Link>
                       </Stack>

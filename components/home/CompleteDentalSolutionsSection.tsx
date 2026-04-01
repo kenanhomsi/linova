@@ -282,7 +282,7 @@ export function CompleteDentalSolutionsSection({ animated = true }: Props) {
 
                     <Box className={styles.ctaWrap}>
                       <Link
-                        href={`/blogs/${card.blogSlug}`}
+                        href={`/treatments#${card.treatmentSlug}`}
                         style={{ textDecoration: "none" }}
                       >
                         <Button
