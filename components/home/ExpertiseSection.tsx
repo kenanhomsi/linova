@@ -5,7 +5,7 @@ import Image from "next/image";
 import { Container, Title, Text, Stack, SimpleGrid, Card, Box, Group } from "@mantine/core";
 import { motion } from "framer-motion";
 import { IconStar, IconHeart, IconBolt } from "@tabler/icons-react";
-import { EXPERTISE, TREATMENT_CARDS } from "@/lib/home-data";
+import { EXPERTISE, TREATMENT_CARDS } from "@/lib/home-data-client";
 import { HERO_IMAGE } from "@/lib/constants";
 import { FadeInUp, StaggerContainer, StaggerItem } from "@/components/ui/Animate";
 import styles from "./ExpertiseSection.module.css";

@@ -3,7 +3,6 @@
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { Container, Title, Text, Stack, Group, Button, Box } from "@mantine/core";
-import { motion } from "framer-motion";
 import { IconPhone, IconMail, IconClock, IconAward } from "@tabler/icons-react";
 import { IconBrandWhatsapp } from "@tabler/icons-react";
 import { PHONE, PHONE_TEL, EMAIL, WHATSAPP_LINK, WORKING_HOURS } from "@/lib/constants";
@@ -81,9 +80,6 @@ export function ReadyCTA() {
                     size="lg"
                     radius="xl"
                     fw={600}
-                    component={motion.button}
-                    whileHover={{ scale: 1.03 }}
-                    whileTap={{ scale: 0.98 }}
                     className={styles.ctaPrimary}
                   >
                     {ready.ctaButton}
@@ -95,9 +91,6 @@ export function ReadyCTA() {
                     variant="outline"
                     radius="xl"
                     fw={600}
-                    component={motion.button}
-                    whileHover={{ scale: 1.03 }}
-                    whileTap={{ scale: 0.98 }}
                     leftSection={<IconBrandWhatsapp size={20} />}
                     className={styles.ctaSecondary}
                   >

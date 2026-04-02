@@ -5,7 +5,7 @@ import { useTranslations } from "next-intl";
 import Image from "next/image";
 import { Container, Title, Text, Stack, SimpleGrid, Card, Box, Button, Group } from "@mantine/core";
 import { motion } from "framer-motion";
-import { TRANSFORMATIONS } from "@/lib/home-data";
+import { TRANSFORMATIONS } from "@/lib/home-data-client";
 import { FadeInUp, StaggerContainer, StaggerItem } from "@/components/ui/Animate";
 import styles from "./SmileTransformations.module.css";
 

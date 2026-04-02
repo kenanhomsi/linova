@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import { motion } from "framer-motion";
 import styles from "./Logo.module.css";
 
 type LogoVariant = "default" | "light";
@@ -11,12 +10,7 @@ export function Logo({ variant = "default" }: { variant?: LogoVariant }) {
 
   return (
     <Link href="/" className={styles.link} aria-label="Linova Dental – Home">
-      <motion.span
-        className={styles.wrapper}
-        whileHover={{ scale: 1.02 }}
-        whileTap={{ scale: 0.98 }}
-        transition={{ duration: 0.2 }}
-      >
+      <span className={styles.wrapper}>
         <span className={`${styles.icon} ${isLight ? styles.iconLight : styles.iconDefault}`}>
           <svg
             width="22"
@@ -47,7 +41,7 @@ export function Logo({ variant = "default" }: { variant?: LogoVariant }) {
             Dental
           </span>
         </span>
-      </motion.span>
+      </span>
     </Link>
   );
 }

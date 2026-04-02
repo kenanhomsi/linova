@@ -2,7 +2,7 @@ import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { Container, Title, Text, Stack, SimpleGrid, Card, Button, Box } from "@mantine/core";
 import { IconScan, IconPrinter, IconStar } from "@tabler/icons-react";
-import { DIGITAL_DENTISTRY } from "@/lib/home-data";
+import { DIGITAL_DENTISTRY } from "@/lib/home-data-client";
 import { FadeInUp, StaggerContainer } from "@/components/ui/Animate";
 import styles from "./DigitalDentistrySection.module.css";
 import Image from "next/image";

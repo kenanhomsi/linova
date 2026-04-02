@@ -55,8 +55,14 @@ function renderContentBlock(block: string, post: BlogPost, key: number) {
     if (!src) return null;
     return (
       <Box key={key} className={styles.contentImageWrap}>
-        {/* Using <img> here to preserve intrinsic aspect ratio without stretching */}
-        <img src={src} alt="" loading="lazy" className={styles.contentImage} />
+        <Image
+          src={src}
+          alt=""
+          width={1200}
+          height={800}
+          className={styles.contentImage}
+          sizes="(max-width: 860px) 100vw, 860px"
+        />
       </Box>
     );
   }

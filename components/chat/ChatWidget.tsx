@@ -5,7 +5,7 @@ import { useLocale, useTranslations } from "next-intl";
 import { detectIntent, getResponse, detectLanguage } from "@/lib/chatKnowledge";
 import { WHATSAPP_LINK } from "@/lib/constants";
 import styles from "./ChatWidget.module.css";
-
+import Image from "next/image";
 type Message = {
   id: string;
   text: string;
@@ -216,7 +216,9 @@ export function ChatWidget() {
       >
         {/* Header */}
         <div className={styles.chatHeader}>
-          <div className={styles.chatHeaderAvatar}>🦷</div>
+          <div className={styles.chatHeaderAvatar} aria-hidden>
+            <Image src="/logo-m2.svg" alt="Linova Clinic" width={32} height={32} />
+          </div>
           <div className={styles.chatHeaderInfo}>
             <p className={styles.chatHeaderTitle}>{t("title")}</p>
             <p className={styles.chatHeaderSubtitle}>
@@ -250,9 +252,8 @@ export function ChatWidget() {
           {messages.map((msg) => (
             <div
               key={msg.id}
-              className={`${styles.message} ${
-                msg.sender === "bot" ? styles.botMessage : styles.userMessage
-              }`}
+              className={`${styles.message} ${msg.sender === "bot" ? styles.botMessage : styles.userMessage
+                }`}
               {...(msg.sender === "bot"
                 ? { dangerouslySetInnerHTML: { __html: formatMessage(msg.text) } }
                 : { children: msg.text })}

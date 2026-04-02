@@ -1,6 +1,7 @@
 import { getTranslations } from "next-intl/server";
 import { Container, Title, Box } from "@mantine/core";
 import { FadeInUp } from "@/components/ui/Animate";
+import { GalleryStripClient } from "./GalleryStripClient";
 import styles from "./GallerySection.module.css";
 
 const PATIENT_VIDEOS = [
@@ -20,24 +21,7 @@ export async function GallerySection() {
             {t("gallery.sectionTitle")}
           </Title>
         </FadeInUp>
-        <Box className={styles.stripWrapper}>
-          <ul className={styles.imageStrip} role="list">
-            {PATIENT_VIDEOS.map((src, i) => (
-              <li key={i} className={styles.stripItem}>
-                <Box className={styles.videoWrapper}>
-                  <video
-                    src={src}
-                    autoPlay
-                    loop
-                    muted
-                    playsInline
-                    className={styles.stripVideo}
-                  />
-                </Box>
-              </li>
-            ))}
-          </ul>
-        </Box>
+        <GalleryStripClient videos={PATIENT_VIDEOS} />
       </Container>
     </Box>
   );

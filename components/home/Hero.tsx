@@ -2,25 +2,17 @@
 
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
-import Image from "next/image";
-import { useEffect, useState, useCallback } from "react";
+import { LazyVideo } from "@/components/media/LazyVideo";
 import { Container, Text, Button, Stack, Box, Group } from "@mantine/core";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import { IconChevronRight, IconStar } from "@tabler/icons-react";
 import styles from "./Hero.module.css";
 
 /** Left: clinic video; right: rotating Istanbul sea/landmarks */
 const HERO_VIDEO = "/images/video2.mp4";
 const HERO_VIDEO1 = "/images/video1.mp4";
-
-
-const ISTANBUL_IMAGES = [
-  "/images/hero-istanbul-1.jpg",
-  "/images/hero-istanbul-2.jpg",
-  "/images/hero-istanbul-3.jpg",
-];
-
-const SLIDE_INTERVAL = 4000; // ms
+const HERO_POSTER = "/images/video2-poster.webp";
+const HERO_POSTER1 = "/images/video1-poster.webp";
 
 const container = {
   hidden: { opacity: 0 },
@@ -42,27 +34,10 @@ const item = {
   },
 };
 
-const fadeVariants = {
-  enter: { opacity: 0 },
-  center: { opacity: 1 },
-  exit: { opacity: 0 },
-};
-
 export function Hero() {
   const t = useTranslations("home");
   const heroTitle = t("hero.title");
   const heroTitleHighlight = t("hero.titleHighlight");
-
-  const [istanbulIdx, setIstanbulIdx] = useState(0);
-
-  const nextSlide = useCallback(() => {
-    setIstanbulIdx((prev) => (prev + 1) % ISTANBUL_IMAGES.length);
-  }, []);
-
-  useEffect(() => {
-    const timer = setInterval(nextSlide, SLIDE_INTERVAL);
-    return () => clearInterval(timer);
-  }, [nextSlide]);
 
   return (
     <Box pos="relative" className={`${styles.root} hero-bg-pulse`}>
@@ -77,12 +52,12 @@ export function Hero() {
           {/* Left: Clinic video */}
           <div className={styles.heroLeft}>
             <div className={styles.slideWrapper}>
-              <video
+              <LazyVideo
                 src={HERO_VIDEO}
+                poster={HERO_POSTER}
+                eager
                 autoPlay
                 loop
-                muted
-                playsInline
                 aria-label="Linova Clinic — premium dental care"
                 className={styles.heroVideo}
               />
@@ -90,36 +65,14 @@ export function Hero() {
           </div>
 
           {/* Right: Istanbul sea & landmarks */}
-          {/* <div className={styles.heroRight}>
-            <AnimatePresence mode="popLayout">
-              <motion.div
-                key={`istanbul-${istanbulIdx}`}
-                variants={fadeVariants}
-                initial="enter"
-                animate="center"
-                exit="exit"
-                transition={{ duration: 1, ease: "easeInOut" }}
-                className={styles.slideWrapper}
-              >
-                <Image
-                  src={ISTANBUL_IMAGES[istanbulIdx]}
-                  alt="Istanbul — Bosphorus sea, mosques, and skyline at golden hour"
-                  fill
-                  priority={istanbulIdx === 0}
-                  className={styles.heroImage}
-                  sizes="50vw"
-                />
-              </motion.div>
-            </AnimatePresence>
-          </div> */}
           <div className={styles.heroRight}>
             <div className={styles.slideWrapper}>
-              <video
+              <LazyVideo
                 src={HERO_VIDEO1}
+                poster={HERO_POSTER1}
+                eager
                 autoPlay
                 loop
-                muted
-                playsInline
                 aria-label="Linova Clinic — premium dental care"
                 className={styles.heroVideo}
               />

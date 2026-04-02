@@ -2,4 +2,13 @@
   background: var(--readdy-teal);
   color: white;
   border: none;
+  transition: transform var(--transition-fast);
+}
+
+.submitBtn:hover {
+  transform: scale(1.02);
+}
+
+.submitBtn:active {
+  transform: scale(0.98);
 }

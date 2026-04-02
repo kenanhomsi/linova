@@ -1,5 +1,6 @@
 import { Fragment, type ReactNode } from "react";
 import { Box, Title, Text } from "@mantine/core";
+import Image from "next/image";
 import styles from "./TreatmentDetailContent.module.css";
 
 interface TreatmentLongFormBodyProps {
@@ -38,12 +39,13 @@ function renderContentBlock(
     if (!src) return null;
     return (
       <figure key={blockKey} className={styles.proseFigure}>
-        <img
+        <Image
           src={src}
           alt=""
-          loading="lazy"
+          width={1200}
+          height={800}
           className={styles.proseImg}
-          decoding="async"
+          sizes="(max-width: 900px) 100vw, 860px"
         />
       </figure>
     );

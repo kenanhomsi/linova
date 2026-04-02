@@ -31,7 +31,7 @@ const theme = createTheme({
       },
       styles: {
         root: {
-          "&:focus-visible": {
+          "&:focusVisible": {
             outline: "2px solid var(--mantine-color-teal-6)",
             outlineOffset: 2,
           },

@@ -19,7 +19,7 @@ import {
   IconChevronLeft,
   IconChevronRight,
 } from "@tabler/icons-react";
-import { TRANSFORMATIONS } from "@/lib/home-data";
+import { TRANSFORMATIONS } from "@/lib/home-data-client";
 import { FadeInUp } from "@/components/ui/Animate";
 import { Link } from "@/i18n/navigation";
 import styles from "./BeforeAfterShowcase.module.css";

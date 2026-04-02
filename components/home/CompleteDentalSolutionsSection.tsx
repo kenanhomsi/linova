@@ -26,7 +26,7 @@ import {
   IconCheck,
   IconChevronRight,
 } from "@tabler/icons-react";
-import { COMPLETE_DENTAL_SOLUTIONS_CARDS } from "@/lib/home-data";
+import { COMPLETE_DENTAL_SOLUTIONS_CARDS } from "@/lib/home-data-client";
 import { FadeInUp } from "@/components/ui/Animate";
 import styles from "./CompleteDentalSolutionsSection.module.css";
 

@@ -3,7 +3,6 @@
 import { useTranslations } from "next-intl";
 import { TextInput, Textarea, Button, Stack, Select, SimpleGrid, Box, Text } from "@mantine/core";
 import { useForm } from "@mantine/form";
-import { motion } from "framer-motion";
 import { IconSend } from "@tabler/icons-react";
 import { WHATSAPP_LINK } from "@/lib/constants";
 import styles from "./FooterForm.module.css";
@@ -98,9 +97,6 @@ export function FooterForm() {
           type="submit"
           size="md"
           fw={600}
-          component={motion.button}
-          whileHover={{ scale: 1.02 }}
-          whileTap={{ scale: 0.98 }}
           leftSection={<IconSend size={18} />}
           className={styles.submitBtn}
         >

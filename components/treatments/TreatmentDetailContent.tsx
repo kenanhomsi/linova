@@ -168,6 +168,26 @@ export async function TreatmentDetailContent({
                 contentImages={longArticle.contentImages}
               />
             </div>
+
+            <Box className={styles.articleCtaBox}>
+              <Title order={3} className={styles.articleCtaTitle}>
+                Ready to Transform Your Smile?
+              </Title>
+              <Text size="md" className={styles.articleCtaText}>
+                Book a free consultation with our expert team and start your journey
+                today.
+              </Text>
+              <Link href="/contact" className={styles.articleCtaLink}>
+                <Button
+                  size="lg"
+                  radius="md"
+                  fw={700}
+                  className={styles.articleCtaBtn}
+                >
+                  Get Free Consultation
+                </Button>
+              </Link>
+            </Box>
           </section>
         ) : null}
 

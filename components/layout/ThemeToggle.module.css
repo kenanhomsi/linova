@@ -1,4 +1,13 @@
 .button {
   color: var(--header-fg);
   background: var(--header-bg-soft);
+  transition: transform var(--transition-fast);
+}
+
+.button:hover {
+  transform: scale(1.05);
+}
+
+.button:active {
+  transform: scale(0.95);
 }

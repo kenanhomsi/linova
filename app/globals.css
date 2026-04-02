@@ -104,7 +104,7 @@
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
 html {
@@ -298,11 +298,6 @@ button:active:not(:disabled), [role="button"]:active {
   0%, 100% { box-shadow: 0 0 20px rgba(14, 156, 140, 0.15); }
   50% { box-shadow: 0 0 32px rgba(14, 156, 140, 0.25); }
 }
-@keyframes fade-in-up {
-  from { opacity: 0; transform: translateY(12px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
 /* Hero background subtle pulse */
 .hero-bg-pulse {
   animation: hero-gradient-pulse 8s ease-in-out infinite;
@@ -311,12 +306,6 @@ button:active:not(:disabled), [role="button"]:active {
 /* Floating badge / icon (use sparingly) */
 .animate-float {
   animation: float-soft 4s ease-in-out infinite;
-}
-
-/* Shine on CTA (optional – add .animate-shine to a button) */
-.animate-shine {
-  background-size: 200% 100%;
-  animation: shine-sweep 3s ease-in-out infinite;
 }
 
 /* Soft glow on focus/hover cards */

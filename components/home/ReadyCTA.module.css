@@ -69,12 +69,24 @@
   color: white;
   border: none;
   box-shadow: var(--shadow-lg);
+  transition: transform var(--transition-fast);
 }
 
 .ctaSecondary {
   background: var(--background);
   border-color: var(--readdy-border);
   color: var(--foreground);
+  transition: transform var(--transition-fast);
+}
+
+.ctaPrimary:hover,
+.ctaSecondary:hover {
+  transform: scale(1.03);
+}
+
+.ctaPrimary:active,
+.ctaSecondary:active {
+  transform: scale(0.98);
 }
 
 .rightGrid {

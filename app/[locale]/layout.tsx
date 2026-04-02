@@ -9,7 +9,7 @@ import { SyncColorScheme } from "@/components/providers/SyncColorScheme";
 import { SyncDir } from "@/components/providers/SyncDir";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
-import { ChatWidget } from "@/components/chat/ChatWidget";
+import { ChatWidgetLoader } from "@/components/chat/ChatWidgetLoader";
 import { routing } from "@/i18n/routing";
 
 export const metadata: Metadata = {
@@ -49,7 +49,16 @@ export default async function LocaleLayout({ children, params }: Props) {
   const direction = locale === "ar" ? "rtl" : "ltr";
 
   return (
-    <NextIntlClientProvider locale={locale} messages={messages}>
+    <NextIntlClientProvider
+      locale={locale}
+      messages={{
+        common: messages.common,
+        home: messages.home,
+        blogs: messages.blogs,
+        whyUs: messages.whyUs,
+        chat: messages.chat,
+      }}
+    >
       <MantineProvider direction={direction}>
         <ThemeProvider>
           <SyncColorScheme />
@@ -69,7 +78,7 @@ export default async function LocaleLayout({ children, params }: Props) {
               {children}
             </main>
             <Footer />
-            <ChatWidget />
+            <ChatWidgetLoader />
           </div>
         </ThemeProvider>
       </MantineProvider>
