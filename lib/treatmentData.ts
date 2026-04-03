@@ -4,6 +4,9 @@
 
 import { dentalVeneersLongArticle } from "./dentalVeneersArticle";
 import { dentalImplantsLongArticle } from "./dentalImplantsArticle";
+import { allOn46LongArticle } from "./allOn46Article";
+import { teethWhiteningLongArticle } from "./teethWhiteningArticle";
+import { compositeBondingLongArticle } from "./compositeBondingArticle";
 
 export interface TreatmentLongArticle {
   content: string;
@@ -29,6 +32,18 @@ const bySlug: Partial<Record<string, TreatmentLongArticle>> = {
   "dental-implants": {
     contentImages: [...dentalImplantsLongArticle.contentImages],
     content: dentalImplantsLongArticle.content,
+  },
+  "all-on-4-6": {
+    contentImages: [...allOn46LongArticle.contentImages],
+    content: allOn46LongArticle.content,
+  },
+  "teeth-whitening": {
+    contentImages: [...teethWhiteningLongArticle.contentImages],
+    content: teethWhiteningLongArticle.content,
+  },
+  "composite-bonding": {
+    contentImages: [...compositeBondingLongArticle.contentImages],
+    content: compositeBondingLongArticle.content,
   },
 };
 

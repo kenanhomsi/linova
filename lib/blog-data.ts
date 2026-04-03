@@ -1,6 +1,9 @@
 import { hollywoodSmileLongArticle } from "./treatmentData";
 import { dentalVeneersLongArticle } from "./dentalVeneersArticle";
 import { dentalImplantsLongArticle } from "./dentalImplantsArticle";
+import { allOn46LongArticle } from "./allOn46Article";
+import { teethWhiteningLongArticle } from "./teethWhiteningArticle";
+import { compositeBondingLongArticle } from "./compositeBondingArticle";
 
 export interface BlogPost {
   id: string;
@@ -77,5 +80,53 @@ export const BLOG_POSTS: BlogPost[] = [
       "Dental implants are titanium posts placed in the jaw to replace missing tooth roots—restoring function, aesthetics, and helping preserve jawbone structure over time.",
     contentImages: [...dentalImplantsLongArticle.contentImages],
     content: dentalImplantsLongArticle.content,
+  },
+  {
+    id: "4",
+    slug: "all-on-4-6",
+    category: "dentalImplants",
+    categoryKey: "dentalImplants",
+    image: "/images/all-in-4-6.jpeg",
+    readTime: 11,
+    date: "2026-04-01",
+    author: "LINOVA Dental Team",
+    featured: false,
+    title: "All-on-4 & All-on-6 Dental Implants",
+    excerpt:
+      "Evidence-based full-arch implant rehabilitation: how All-on-4 and All-on-6 restore a complete arch with fixed, implant-supported teeth and high long-term survival rates.",
+    contentImages: [...allOn46LongArticle.contentImages],
+    content: allOn46LongArticle.content,
+  },
+  {
+    id: "5",
+    slug: "teeth-whitening",
+    category: "cosmeticDentistry",
+    categoryKey: "cosmeticDentistry",
+    image: "/images/Teeth Whitening.jpeg",
+    readTime: 6,
+    date: "2026-04-01",
+    author: "LINOVA Dental Team",
+    featured: false,
+    title: "Teeth Whitening",
+    excerpt:
+      "How professional teeth whitening lightens natural teeth safely, what causes discoloration, and what to expect from treatment at the clinic.",
+    contentImages: [...teethWhiteningLongArticle.contentImages],
+    content: teethWhiteningLongArticle.content,
+  },
+  {
+    id: "6",
+    slug: "composite-bonding",
+    category: "cosmeticDentistry",
+    categoryKey: "cosmeticDentistry",
+    image: "/images/compositeBonding.jpeg",
+    readTime: 7,
+    date: "2026-04-01",
+    author: "LINOVA Dental Team",
+    featured: false,
+    title: "Composite Bonding",
+    excerpt:
+      "Composite bonding uses tooth-colored resin to fix chips, gaps, and minor shape issues—often in one visit, with minimal removal of natural enamel.",
+    contentImages: [...compositeBondingLongArticle.contentImages],
+    content: compositeBondingLongArticle.content,
   },
 ];
