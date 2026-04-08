@@ -1,0 +1,52 @@
+.section {
+  padding: clamp(3rem, 8vw, 4.5rem) 1rem;
+  background: linear-gradient(135deg, var(--footer-bg) 0%, #1a2838 100%);
+}
+
+.inner {
+  text-align: center;
+  max-width: 560px;
+  margin: 0 auto;
+}
+
+.title {
+  color: #fff;
+  font-size: clamp(1.75rem, 4vw, 2.25rem);
+  font-weight: 800;
+  margin-bottom: 0.75rem;
+}
+
+.subtitle {
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 1.05rem;
+  line-height: 1.65;
+  margin-bottom: 1.75rem;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.linkPlain {
+  text-decoration: none;
+  color: inherit;
+}
+
+.btnPrimary {
+  background: var(--readdy-teal) !important;
+  color: #fff !important;
+  font-weight: 700;
+}
+
+.btnOutline {
+  border-color: rgba(255, 255, 255, 0.5) !important;
+  color: #fff !important;
+  font-weight: 600;
+}
+
+.btnOutline:hover {
+  background: rgba(255, 255, 255, 0.08) !important;
+}

@@ -11,7 +11,9 @@
     "nav": {
       "home": "Home",
       "Treatments": "Treatments",
+      "packages": "Packages",
       "whyChooseUs": "Why Choose Us",
+      "istanbulExperience": "Istanbul",
       "technology": "Technology",
       "contact": "Contact",
       "blog": "Blog"
@@ -38,6 +40,8 @@
     "footerServices": {
       "cosmeticDentistry": "Cosmetic Dentistry",
       "dentalImplants": "Dental Implants",
+      "dentalPackages": "Dental Packages",
+      "istanbulExperience": "Istanbul Experience",
       "medicalTourism": "Medical Tourism",
       "technology": "Technology"
     },
@@ -659,5 +663,253 @@
     "minRead": "min read",
     "featuredBadge": "Featured",
     "byAuthor": "By"
+  },
+  "packages": {
+    "title": "Dental Tourism Packages",
+    "description": "Compare all-inclusive dental packages in Istanbul: treatment, hotel nights, transfers, and curated experiences — with transparent savings vs UK and US prices.",
+    "hero": {
+      "eyebrow": "All-inclusive in Istanbul",
+      "title": "Packages built around",
+      "titleHighlight": "your smile & stay",
+      "subtitle": "Choose a tier that matches your treatment length and how much of Istanbul you want to experience. Every package includes coordination, quality care, and clear pricing."
+    },
+    "tiersSection": {
+      "title": "Three ways to experience Linova",
+      "subtitle": "Treatment is always personalized; packages add the right level of hotel nights, transfers, and Istanbul experiences."
+    },
+    "tiers": {
+      "essential": {
+        "name": "Essential",
+        "nights": "3 nights",
+        "description": "Ideal for shorter treatments or quick veneer visits.",
+        "features": [
+          "Dental treatment as per your plan",
+          "3 nights in a 4★ partner hotel (Nişantaşı area)",
+          "Airport ↔ hotel/clinic transfers",
+          "Treatment schedule coordination",
+          "Multilingual patient coordinator"
+        ]
+      },
+      "premium": {
+        "name": "Premium",
+        "badge": "Most popular",
+        "nights": "5 nights",
+        "description": "Our balanced package: comfort, recovery time, and a taste of the city.",
+        "features": [
+          "Everything in Essential",
+          "5 nights in a 4–5★ partner hotel",
+          "Half-day Istanbul highlights tour",
+          "Welcome dinner at a partner restaurant",
+          "Priority appointment scheduling"
+        ]
+      },
+      "vip": {
+        "name": "VIP Experience",
+        "nights": "7 nights",
+        "description": "Maximum comfort, privacy, and curated Istanbul moments between sessions.",
+        "features": [
+          "Everything in Premium",
+          "7 nights in a 5★ partner hotel",
+          "Private VIP airport transfer",
+          "Private Bosphorus cruise or custom tour",
+          "Concierge for dining & experiences",
+          "Extended aftercare follow-up"
+        ]
+      }
+    },
+    "savings": {
+      "title": "Typical savings vs UK & US",
+      "subtitle": "Illustrative comparison for full treatments; your quote is personalized after consultation.",
+      "columns": {
+        "treatment": "Treatment",
+        "uk": "UK (from)",
+        "us": "US (from)",
+        "linova": "Linova (from)",
+        "savings": "You save (approx.)"
+      },
+      "rows": [
+        {
+          "treatment": "Hollywood Smile (20 zirconia crowns)",
+          "uk": "£7,500 – £12,000",
+          "us": "$10,000 – $18,000",
+          "linova": "from €2,800",
+          "savings": "up to ~70%"
+        },
+        {
+          "treatment": "Single dental implant + crown",
+          "uk": "£2,500 – £4,000",
+          "us": "$3,500 – $6,000",
+          "linova": "from €900",
+          "savings": "up to ~65%"
+        },
+        {
+          "treatment": "Porcelain veneers (per tooth)",
+          "uk": "£800 – £1,200",
+          "us": "$1,200 – $2,000",
+          "linova": "from €250",
+          "savings": "up to ~70%"
+        },
+        {
+          "treatment": "Full mouth restoration (complex)",
+          "uk": "£15,000+",
+          "us": "$25,000+",
+          "linova": "Personalized quote",
+          "savings": "Often 60–70%"
+        }
+      ],
+      "footnote": "Prices vary by case complexity and materials. Contact us for a detailed plan and package price."
+    },
+    "includes": {
+      "title": "What every patient receives",
+      "subtitle": "Beyond the chair — the Linova standard for international patients.",
+      "items": [
+        { "title": "Transparent treatment plan", "description": "Written plan, timeline, and pricing before you travel." },
+        { "title": "Warranty & aftercare", "description": "Clinical warranty on major work and remote follow-up." },
+        { "title": "English, Arabic & more", "description": "Coordinators and clinical team used to international patients." },
+        { "title": "Modern Istanbul clinic", "description": "Digital workflows, hygiene, and comfort-focused care." }
+      ]
+    },
+    "cta": {
+      "title": "Get a personalized package quote",
+      "subtitle": "Tell us your goals and travel dates — we’ll match you to the right tier and hotel partners.",
+      "buttonContact": "Request quote",
+      "buttonWhatsapp": "WhatsApp us"
+    }
+  },
+  "istanbulExperience": {
+    "title": "Your Istanbul Experience",
+    "description": "Where to stay, what to do between appointments, sample itineraries, and travel FAQs for dental tourists visiting Linova Clinic.",
+    "hero": {
+      "eyebrow": "More than a clinic visit",
+      "title": "Discover Istanbul",
+      "titleHighlight": "between appointments",
+      "subtitle": "Pair world-class dental care with one of the world’s great cities — historic sites, Bosphorus views, food, and culture, all woven around your treatment schedule.",
+      "imageAlt": "Istanbul skyline and the Bosphorus — historic city view"
+    },
+    "areas": {
+      "title": "Best areas to stay",
+      "subtitle": "Neighborhoods our patients love — close to the clinic or a short transfer away.",
+      "items": [
+        {
+          "imageKey": "nisantasi",
+          "name": "Nişantaşı",
+          "distance": "~5–15 min to clinic",
+          "vibe": "Upscale shopping, cafés, and calm streets — closest to many dental schedules.",
+          "price": "$$$"
+        },
+        {
+          "imageKey": "taksim",
+          "name": "Taksim & Beyoğlu",
+          "distance": "~15–25 min",
+          "vibe": "Energetic, Istiklal Avenue, nightlife, and easy metro links.",
+          "price": "$$–$$$"
+        },
+        {
+          "imageKey": "sultanahmet",
+          "name": "Sultanahmet",
+          "distance": "~25–40 min",
+          "vibe": "Hagia Sophia, Blue Mosque, and historic core — perfect for sightseeing days.",
+          "price": "$$–$$$"
+        },
+        {
+          "imageKey": "besiktas",
+          "name": "Beşiktaş & Ortaköy",
+          "distance": "~20–35 min",
+          "vibe": "Bosphorus views, ferries, and seafood by the water.",
+          "price": "$$–$$$"
+        }
+      ]
+    },
+    "activities": {
+      "title": "Between sessions",
+      "subtitle": "Easy wins for rest days — we can help you book trusted partners.",
+      "items": [
+        { "imageKey": "bosphorus", "title": "Bosphorus cruise", "time": "2–3 hours", "distance": "Various docks", "description": "Classic skyline and waterfront mansions from the water." },
+        { "imageKey": "bazaar", "title": "Grand Bazaar & Spice Bazaar", "time": "Half day", "distance": "Old City", "description": "Spices, teas, and crafts — go with comfortable shoes." },
+        { "imageKey": "hagia", "title": "Hagia Sophia & Blue Mosque", "time": "2–4 hours", "distance": "Sultanahmet", "description": "Iconic landmarks; check visiting hours and dress code." },
+        { "imageKey": "istiklal", "title": "Istiklal Avenue", "time": "2–3 hours", "distance": "Beyoğlu", "description": "Walk, tram, street food, and galleries." },
+        { "imageKey": "hamam", "title": "Turkish bath (hamam)", "time": "1.5–2 hours", "distance": "Citywide", "description": "Relaxing tradition — ask us for hygienic, trusted options." },
+        { "imageKey": "galata", "title": "Galata Tower & Karaköy", "time": "2 hours", "distance": "Golden Horn", "description": "Panoramic views and coffee culture." }
+      ]
+    },
+    "seasons": {
+      "title": "Best time to visit",
+      "subtitle": "Istanbul is a year-round city — here’s how seasons feel for travelers.",
+      "items": [
+        { "imageKey": "spring", "name": "Spring (Apr–Jun)", "detail": "Mild weather, blooming city — ideal for walking and outdoor dining." },
+        { "imageKey": "summer", "name": "Summer (Jul–Aug)", "detail": "Warm and busy; seasides and islands are popular for extra days." },
+        { "imageKey": "autumn", "name": "Autumn (Sep–Nov)", "detail": "Often the sweet spot: comfortable temperatures and fewer crowds than peak summer." },
+        { "imageKey": "winter", "name": "Winter (Dec–Mar)", "detail": "Cooler and quieter; great for shorter treatment trips and indoor culture." }
+      ]
+    },
+    "itineraries": {
+      "title": "Sample itineraries",
+      "subtitle": "Examples only — your clinical plan always comes first.",
+      "timeLabels": {
+        "morning": "Morning",
+        "afternoon": "Afternoon",
+        "evening": "Evening"
+      },
+      "items": [
+        {
+          "name": "5-Day Hollywood Smile",
+          "days": [
+            { "label": "Day 1", "morning": "Arrival, VIP transfer to hotel, rest", "afternoon": "Light walk in Nişantaşı", "evening": "Easy dinner near the hotel" },
+            { "label": "Day 2", "morning": "Clinic: consultation & prep", "afternoon": "Rest / soft foods", "evening": "Optional short Bosphorus sunset boat" },
+            { "label": "Day 3", "morning": "Clinic: main treatment session", "afternoon": "Rest at hotel", "evening": "Quiet evening — recovery first" },
+            { "label": "Day 4", "morning": "Clinic: adjustments & fit check", "afternoon": "Grand Bazaar or Spice Bazaar (easy pace)", "evening": "Traditional dinner" },
+            { "label": "Day 5", "morning": "Final check-up", "afternoon": "Transfer to airport", "evening": "Departure" }
+          ]
+        },
+        {
+          "name": "7-Day Treatment + Tourism",
+          "days": [
+            { "label": "Day 1", "morning": "Arrival & transfer", "afternoon": "Settle in, coordinator briefing", "evening": "Neighborhood dinner" },
+            { "label": "Day 2", "morning": "Clinic session", "afternoon": "Rest", "evening": "Free evening" },
+            { "label": "Day 3", "morning": "Clinic session", "afternoon": "Hamam or hotel spa", "evening": "Early night" },
+            { "label": "Day 4", "morning": "Rest day — Sultanahmet highlights", "afternoon": "Hagia Sophia area", "evening": "Rooftop tea with views" },
+            { "label": "Day 5", "morning": "Clinic session", "afternoon": "Rest", "evening": "Istiklal stroll" },
+            { "label": "Day 6", "morning": "Bosphorus cruise", "afternoon": "Ortaköy or Beşiktaş", "evening": "Farewell dinner" },
+            { "label": "Day 7", "morning": "Final visit & documents", "afternoon": "Airport transfer", "evening": "Departure" }
+          ]
+        },
+        {
+          "name": "3-Day Quick Veneer Visit",
+          "days": [
+            { "label": "Day 1", "morning": "Arrival", "afternoon": "Clinic: records & planning", "evening": "Rest" },
+            { "label": "Day 2", "morning": "Clinic: primary treatment", "afternoon": "Hotel rest", "evening": "Light activity only if you feel well" },
+            { "label": "Day 3", "morning": "Clinic: finish & check", "afternoon": "Departure", "evening": "—" }
+          ]
+        }
+      ]
+    },
+    "travelFaq": {
+      "title": "Travel FAQ",
+      "subtitle": "Practical answers for patients flying to Istanbul.",
+      "items": [
+        { "question": "Is Istanbul safe for tourists?", "answer": "Like any large city, use normal precautions: licensed taxis or apps, keep valuables secure, and follow local advice. Millions of tourists visit yearly; our coordinators share up-to-date tips for your stay." },
+        { "question": "What languages are spoken at the clinic?", "answer": "We regularly serve patients in English, Arabic, Turkish, and other languages via coordinators — tell us your preference when you book." },
+        { "question": "Do I need a visa?", "answer": "Many nationalities can use Turkey’s e-Visa or enter visa-free for tourism. Rules change — check the official Republic of Turkey e-Visa site for your passport before booking flights." },
+        { "question": "What currency should I bring?", "answer": "Turkish Lira (TRY) is used locally; cards work widely in hotels and malls. Your package pricing is agreed in advance in the currency we quote." },
+        { "question": "How do I get from the airport?", "answer": "Our packages include coordinated transfers. You’ll be met at the airport or picked up from your hotel for clinic visits as per your tier." },
+        { "question": "What should I wear — especially as a Muslim patient?", "answer": "Dress modestly if you plan to visit mosques (shoulders/knees covered; women may need a headscarf). In daily life and at the clinic, comfortable casual dress is fine. Our team can advise per season." },
+        { "question": "How far in advance should I book?", "answer": "We suggest at least 2–3 weeks for simpler cases and more for complex full-mouth work, so we can align hotel and lab timing. Rush cases may be possible — ask us." }
+      ]
+    },
+    "tourismTestimonials": {
+      "title": "The full Istanbul experience",
+      "subtitle": "What patients say about treatment and the city together.",
+      "items": [
+        { "quote": "I came for veneers but left with the best week of my life — the clinic was flawless and Istanbul stole my heart.", "name": "Sarah M.", "country": "UK", "highlight": "5-night stay" },
+        { "quote": "Between appointments we did the Bosphorus and the Grand Bazaar. Professional dentistry and a real holiday.", "name": "Omar K.", "country": "UAE", "highlight": "Premium package" },
+        { "quote": "Nişantaşı was perfect for recovery walks. The team scheduled everything so I never felt rushed.", "name": "Lea D.", "country": "France", "highlight": "Hollywood smile trip" }
+      ]
+    },
+    "cta": {
+      "title": "Ready to plan your trip?",
+      "subtitle": "Combine your treatment plan with hotels, transfers, and Istanbul experiences — start with a free online consultation.",
+      "buttonContact": "Contact us",
+      "buttonPackages": "View packages"
+    }
   }
 }

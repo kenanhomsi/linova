@@ -1,0 +1,128 @@
+.section {
+  padding: clamp(3.5rem, 9vw, 6rem) 1rem;
+  background: var(--background);
+}
+
+.header {
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto 2.75rem;
+}
+
+.title {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.85rem, 4.5vw, 2.65rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  color: var(--foreground);
+  margin-bottom: 0.65rem;
+}
+
+.subtitle {
+  line-height: 1.65;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+}
+
+@media (min-width: 48em) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+@media (min-width: 75em) {
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.25rem;
+  }
+}
+
+.card {
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--readdy-border);
+  background: var(--background);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition:
+    box-shadow 0.3s ease,
+    border-color 0.25s ease,
+    transform 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.card:hover {
+  border-color: color-mix(in srgb, var(--readdy-teal) 35%, var(--readdy-border));
+  box-shadow: 0 12px 32px rgba(14, 156, 140, 0.1);
+  transform: translateY(-2px);
+}
+
+.thumb {
+  position: relative;
+  z-index: 0;
+  aspect-ratio: 21 / 9;
+  background: var(--readdy-gray-100);
+  isolation: isolate;
+  overflow: hidden;
+}
+
+.thumbImage {
+  object-fit: cover;
+  transition: transform 0.45s ease;
+}
+
+.card:hover .thumbImage {
+  transform: scale(1.04);
+}
+
+.thumbFallback {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, var(--readdy-teal-pale), var(--readdy-gray-100));
+}
+
+.thumbOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.25), transparent 60%);
+  pointer-events: none;
+}
+
+.cardText {
+  position: relative;
+  z-index: 1;
+  padding: 1.1rem 1.2rem 1.35rem;
+  border-top: 3px solid var(--readdy-teal);
+  flex: 1;
+  background: var(--background);
+}
+
+.season {
+  font-weight: 800;
+  font-size: 0.95rem;
+  margin: 0 0 0.5rem;
+  color: var(--foreground);
+  line-height: 1.35;
+}
+
+.detail {
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: var(--readdy-gray-700);
+  margin: 0;
+}
+
+[data-theme="dark"] .detail {
+  color: var(--readdy-gray-400);
+}
+
+[data-theme="dark"] .card:hover {
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.3);
+}

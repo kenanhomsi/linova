@@ -1,7 +1,10 @@
 import type { Metadata } from "next";
 import { Geist } from "next/font/google";
+import { headers } from "next/headers";
 import "@mantine/core/styles.css";
 import "./globals.css";
+import { routing } from "@/i18n/routing";
+import { getTextDirection, isAppLocale } from "@/i18n/locale-direction";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -81,13 +84,20 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
+const LOCALE_HEADER = "x-next-intl-locale";
+
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const headerLocale = (await headers()).get(LOCALE_HEADER);
+  const locale =
+    headerLocale && isAppLocale(headerLocale) ? headerLocale : routing.defaultLocale;
+  const dir = getTextDirection(locale);
+
   return (
-    <html lang="en" dir="ltr" suppressHydrationWarning>
+    <html lang={locale} dir={dir} suppressHydrationWarning>
       <body
         className={`${geistSans.variable} antialiased`}
         suppressHydrationWarning

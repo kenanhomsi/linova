@@ -2,6 +2,7 @@
 
 import { useEffect } from "react";
 import { useLocale } from "next-intl";
+import { getTextDirection } from "@/i18n/locale-direction";
 
 /**
  * Syncs document direction (RTL/LTR) and lang with the active locale.
@@ -11,8 +12,7 @@ export function SyncDir() {
   const locale = useLocale();
 
   useEffect(() => {
-    const dir = locale === "ar" ? "rtl" : "ltr";
-    document.documentElement.dir = dir;
+    document.documentElement.dir = getTextDirection(locale);
     document.documentElement.lang = locale;
   }, [locale]);
 

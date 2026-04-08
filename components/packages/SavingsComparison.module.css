@@ -1,0 +1,88 @@
+.section {
+  padding: clamp(3rem, 8vw, 5rem) 1rem;
+  background: linear-gradient(
+    180deg,
+    var(--readdy-teal-pale) 0%,
+    var(--background) 45%
+  );
+}
+
+.header {
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto 2rem;
+}
+
+.scroll {
+  overflow-x: auto;
+  margin: 0 -0.5rem;
+  padding: 0 0.5rem;
+}
+
+.table {
+  width: 100%;
+  min-width: 640px;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+  border: 1px solid var(--readdy-border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background: var(--background);
+}
+
+.table th,
+.table td {
+  padding: 0.85rem 1rem;
+  text-align: start;
+  border-bottom: 1px solid var(--readdy-border);
+}
+
+.table thead th {
+  font-weight: 700;
+  color: var(--foreground);
+  background: var(--readdy-gray-50);
+}
+
+.table tbody tr:nth-child(even) td {
+  background: rgba(14, 156, 140, 0.04);
+}
+
+.table tbody tr:hover td {
+  background: rgba(14, 156, 140, 0.08);
+}
+
+.table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+[data-theme="dark"] .table thead th {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.colTreatment {
+  min-width: 200px;
+}
+
+.colSavings {
+  font-weight: 700;
+  color: var(--section-green);
+  white-space: nowrap;
+}
+
+.footnote {
+  margin-top: 1.25rem;
+  font-size: 0.85rem;
+  color: var(--readdy-gray-600);
+  text-align: center;
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+[data-theme="dark"] .section {
+  background: linear-gradient(180deg, rgba(14, 156, 140, 0.08) 0%, var(--background) 50%);
+}
+
+[data-theme="dark"] .colSavings {
+  color: var(--readdy-teal);
+}

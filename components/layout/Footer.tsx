@@ -30,6 +30,8 @@ import styles from "./Footer.module.css";
 const FOOTER_SERVICES_CONFIG = [
   { href: "/treatments", labelKey: "footerServices.cosmeticDentistry" },
   { href: "/treatments", labelKey: "footerServices.dentalImplants" },
+  { href: "/packages", labelKey: "footerServices.dentalPackages" },
+  { href: "/istanbul-experience", labelKey: "footerServices.istanbulExperience" },
   { href: "/why-us", labelKey: "footerServices.medicalTourism" },
   { href: "/#technology", labelKey: "footerServices.technology" },
 ] as const;

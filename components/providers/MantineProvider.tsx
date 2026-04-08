@@ -86,13 +86,6 @@ const theme = createTheme({
         shadow: "sm",
       },
     },
-    Drawer: {
-      styles: {
-        content: {
-          borderRadius: "18px 0 0 18px",
-        },
-      },
-    },
   },
 });
 

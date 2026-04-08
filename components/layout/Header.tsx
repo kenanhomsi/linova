@@ -10,6 +10,7 @@ import {
   Button,
   Drawer,
   Stack,
+  useDirection,
 } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 import { IconBrandWhatsapp } from "@tabler/icons-react";
@@ -22,14 +23,36 @@ import logo from "@/public/logo-m2.svg";
 const NAV_CONFIG = [
   { href: "/", labelKey: "nav.home" },
   { href: "/treatments", labelKey: "nav.Treatments" },
+  { href: "/packages", labelKey: "nav.packages" },
   { href: "/why-us", labelKey: "nav.whyChooseUs" },
+  { href: "/istanbul-experience", labelKey: "nav.istanbulExperience" },
   { href: "/#technology", labelKey: "nav.technology" },
   { href: "/blogs", labelKey: "nav.blog" },
   { href: "/contact", labelKey: "nav.contact" },
 ] as const;
 
+function normalizePath(path: string) {
+  // Keep root as-is; remove trailing slashes for stable comparisons.
+  if (path === "/") return "/";
+  return path.replace(/\/+$/, "");
+}
+
+function isNavItemActive(currentPathname: string, href: string) {
+  const current = normalizePath(currentPathname);
+  const linkPath = normalizePath(href.split("#")[0]);
+
+  // Exact match.
+  if (current === linkPath) return true;
+
+  // Nested routes match only on a segment boundary.
+  if (linkPath !== "/" && current.startsWith(`${linkPath}/`)) return true;
+
+  return false;
+}
+
 export function Header() {
   const [opened, { toggle, close }] = useDisclosure(false);
+  const { dir } = useDirection();
   const pathname = usePathname();
   const { scrollY } = useScroll();
   const t = useTranslations("common");
@@ -48,14 +71,12 @@ export function Header() {
   const navItems = (
     <Group gap="xl" wrap="nowrap" className={styles.navGroup}>
       {NAV_CONFIG.map(({ href, labelKey }) => {
-        const linkPath = href.split("#")[0];
-        const isActive =
-          pathname === href ||
-          (linkPath !== "/" && pathname.startsWith(linkPath));
+        const isActive = isNavItemActive(pathname, href);
         return (
           <Link key={href} href={href} className={styles.link}>
             <motion.span
               className={`${styles.navLink} ${isActive ? styles.navLinkActive : ""}`}
+              aria-current={isActive ? "page" : undefined}
               whileHover={{ color: "var(--readdy-teal)" }}
               transition={{ duration: 0.2 }}
             >
@@ -160,8 +181,16 @@ export function Header() {
             />
           </Link>
         }
-        position="right"
+        position={dir === "rtl" ? "left" : "right"}
         size="sm"
+        styles={{
+          content: {
+            borderTopLeftRadius: dir === "rtl" ? 0 : 18,
+            borderBottomLeftRadius: dir === "rtl" ? 0 : 18,
+            borderTopRightRadius: dir === "rtl" ? 18 : 0,
+            borderBottomRightRadius: dir === "rtl" ? 18 : 0,
+          },
+        }}
         classNames={{
           header: styles.drawerHeader,
           body: styles.drawerBody,
@@ -169,16 +198,14 @@ export function Header() {
       >
         <Stack gap={4}>
           {NAV_CONFIG.map(({ href, labelKey }) => {
-            const linkPath = href.split("#")[0];
-            const isActive =
-              pathname === href ||
-              (linkPath !== "/" && pathname.startsWith(linkPath));
+            const isActive = isNavItemActive(pathname, href);
             return (
               <Link
                 key={href}
                 href={href}
                 onClick={close}
                 className={`${styles.drawerLink} ${isActive ? styles.drawerLinkActive : ""}`}
+                aria-current={isActive ? "page" : undefined}
               >
                 {t(labelKey)}
               </Link>

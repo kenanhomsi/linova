@@ -16,6 +16,7 @@ export async function DigitalDentistrySection() {
     ...meta,
     ...(digital.tech[i] ?? {}),
   }));
+  const titleLines = (digital.title ?? t("digitalDentistry.title"))
 
   return (
     <Box id="technology" className={`section-spacing   ${styles.root}`}>
@@ -24,9 +25,9 @@ export async function DigitalDentistrySection() {
           <FadeInUp>
             <Box className={styles.header}>
               <Title order={2} className={styles.title}>
-                <Box component="span" className={styles.titleLine}>Advanced</Box>
-                <Box component="span" className={styles.titleLine}>Digital</Box>
-                <Box component="span" className={styles.titleLine}>Dentistry</Box>
+                <Box component="span" className={styles.titleLine}>
+                  {titleLines}
+                </Box>
               </Title>
               <Text size="lg" lh={1.7} className={styles.intro}>
                 {t("digitalDentistry.intro")}
@@ -39,12 +40,12 @@ export async function DigitalDentistrySection() {
               <Card radius="xl" className={styles.highlightCard} withBorder>
                 <span className={styles.latestBadge}>
                   <IconStar size={12} stroke={2} className={styles.badgeStar} />
-                  Latest Technology
+                  {digital.tech?.[0]?.badge ?? t("digitalDentistry.tech.0.badge")}
                 </span>
                 <Box className={styles.highlightImageBox}>
                   <Image
                     src={DIGITAL_SMILE_HIGHLIGHT_IMAGE}
-                    alt="Digital Smile Design"
+                    alt={t("digitalDentistry.highlight.title")}
                     width={500}
                     height={280}
                     className={styles.highlightImg}

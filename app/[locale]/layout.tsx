@@ -11,6 +11,7 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { ChatWidgetLoader } from "@/components/chat/ChatWidgetLoader";
 import { routing } from "@/i18n/routing";
+import { getTextDirection } from "@/i18n/locale-direction";
 
 export const metadata: Metadata = {
   title: {
@@ -46,19 +47,10 @@ export default async function LocaleLayout({ children, params }: Props) {
   const messages = await getMessages();
   const tCommon = await getTranslations("common");
 
-  const direction = locale === "ar" ? "rtl" : "ltr";
+  const direction = getTextDirection(locale);
 
   return (
-    <NextIntlClientProvider
-      locale={locale}
-      messages={{
-        common: messages.common,
-        home: messages.home,
-        blogs: messages.blogs,
-        whyUs: messages.whyUs,
-        chat: messages.chat,
-      }}
-    >
+    <NextIntlClientProvider locale={locale} messages={messages}>
       <MantineProvider direction={direction}>
         <ThemeProvider>
           <SyncColorScheme />
