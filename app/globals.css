@@ -110,6 +110,8 @@
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 80px;
+  overflow-x: clip;
+  max-width: 100%;
 }
 
 /* RTL: direction is set by root layout and SyncDir; Mantine uses direction prop */
@@ -129,6 +131,15 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   line-height: 1.6;
+  overflow-x: clip;
+  max-width: 100%;
+}
+
+/* Flex page wrapper: prevents min-content width from forcing horizontal scroll */
+.site-shell {
+  min-width: 0;
+  max-width: 100%;
+  overflow-x: clip;
 }
 
 /* Skip to main content (accessibility) */
@@ -201,6 +212,12 @@ main a:not([class*="Button"]):not([class*="button"]):hover {
 /* Button press */
 button:active:not(:disabled), [role="button"]:active {
   transform: scale(0.98);
+}
+
+/* Prevent horizontal scroll from wide cards/grids (esp. RTL + long words) */
+#main-content {
+  overflow-x: clip;
+  max-width: 100%;
 }
 
 /* Section spacing utility */

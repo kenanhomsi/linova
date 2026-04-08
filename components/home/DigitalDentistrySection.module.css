@@ -1,6 +1,9 @@
 .root {
   background: #FAFAF9;
   padding: clamp(3rem, 8vw, 7.5rem) 20px;
+  max-width: 100%;
+  overflow-x: clip;
+  box-sizing: border-box;
 }
 
 [data-theme="dark"] .root {
@@ -50,6 +53,8 @@
   grid-template-columns: 0.7fr 1.3fr;
   gap: 1.5rem;
   align-items: stretch;
+  min-width: 0;
+  max-width: 100%;
 }
 
 @media (max-width: 900px) {
@@ -67,6 +72,9 @@
   flex-direction: column;
   box-shadow: var(--shadow-md);
   overflow: hidden;
+  min-width: 0;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .latestBadge {
@@ -151,6 +159,8 @@
 .rightCol {
   display: flex;
   flex-direction: column;
+  min-width: 0;
+  max-width: 100%;
 }
 
 .grid2x2 {

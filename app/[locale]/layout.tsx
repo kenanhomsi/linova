@@ -64,6 +64,7 @@ export default async function LocaleLayout({ children, params }: Props) {
           <SyncColorScheme />
           <SyncDir />
           <div
+            className="site-shell"
             style={{
               display: "flex",
               flexDirection: "column",

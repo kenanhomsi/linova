@@ -8,7 +8,7 @@ import { motion } from "framer-motion";
 import { IconChevronRight, IconStar } from "@tabler/icons-react";
 import styles from "./Hero.module.css";
 
-/** Left: clinic video; right: rotating Istanbul sea/landmarks */
+/** Desktop: diagonal split (clinic + Istanbul). Mobile (CSS): right panel hidden — one video only. */
 const HERO_VIDEO = "/images/video2.mp4";
 const HERO_VIDEO1 = "/images/video1.mp4";
 const HERO_POSTER = "/images/video2-poster.webp";
@@ -41,7 +41,6 @@ export function Hero() {
 
   return (
     <Box pos="relative" className={`${styles.root} hero-bg-pulse`}>
-      {/* Background composite: left patient + right Istanbul, both rotating */}
       <motion.div
         initial={{ opacity: 0, scale: 1.08 }}
         animate={{ opacity: 1, scale: 1 }}
@@ -49,7 +48,6 @@ export function Hero() {
         className={styles.bgLayer}
       >
         <div className={styles.bgComposite}>
-          {/* Left: Clinic video */}
           <div className={styles.heroLeft}>
             <div className={styles.slideWrapper}>
               <LazyVideo
@@ -64,26 +62,23 @@ export function Hero() {
             </div>
           </div>
 
-          {/* Right: Istanbul sea & landmarks */}
           <div className={styles.heroRight}>
             <div className={styles.slideWrapper}>
               <LazyVideo
                 src={HERO_VIDEO1}
                 poster={HERO_POSTER1}
-                eager
+                eager={false}
                 autoPlay
                 loop
-                aria-label="Linova Clinic — premium dental care"
+                aria-label="Linova Clinic — Istanbul"
                 className={styles.heroVideo}
               />
             </div>
           </div>
-          {/* Diagonal blend seam */}
           <div className={styles.heroBlend} aria-hidden />
         </div>
       </motion.div>
 
-      {/* Content overlay */}
       <Container size="lg" className={styles.container}>
         <motion.div
           variants={container}

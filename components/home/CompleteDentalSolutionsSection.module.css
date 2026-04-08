@@ -1,6 +1,8 @@
 /* ─── Section Root ─── */
 .root {
   background: var(--section-beige);
+  max-width: 100%;
+  overflow-x: clip;
 }
 
 /* ─── Header ─── */
@@ -131,12 +133,16 @@
   box-shadow: var(--shadow-lg);
   overflow: hidden;
   border: 1px solid var(--readdy-border);
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   min-height: 440px;
+  min-width: 0;
+  max-width: 100%;
 }
 
 @media (max-width: 768px) {
@@ -151,6 +157,8 @@
   position: relative;
   min-height: 340px;
   overflow: hidden;
+  min-width: 0;
+  max-width: 100%;
 }
 
 @media (max-width: 768px) {
@@ -197,6 +205,10 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  min-width: 0;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 @media (max-width: 768px) {
@@ -221,6 +233,7 @@
   font-size: 1.6rem;
   font-weight: 700;
   line-height: 1.25;
+  overflow-wrap: anywhere;
 }
 
 @media (min-width: 769px) {

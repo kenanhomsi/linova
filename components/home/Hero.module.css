@@ -1,5 +1,8 @@
 .root {
   min-height: 90vh;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: clip;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -13,12 +16,6 @@
   overflow: hidden;
 }
 
-.bgInner {
-  position: absolute;
-  inset: 0;
-}
-
-/* ── Patient Journey composite: diagonal split with rotating images ── */
 .bgComposite {
   position: absolute;
   inset: 0;
@@ -27,27 +24,23 @@
   isolation: isolate;
 }
 
-/* Left panel: smiling patients */
 .heroLeft {
   position: relative;
   overflow: hidden;
   clip-path: polygon(0 0, 100% 0, 70% 100%, 0 100%);
 }
 
-/* Right panel: Istanbul landmarks & sea */
 .heroRight {
   position: relative;
   overflow: hidden;
   clip-path: polygon(30% 0, 100% 0, 100% 100%, 0% 100%);
 }
 
-/* Wrapper for each slide so AnimatePresence can crossfade */
 .slideWrapper {
   position: absolute;
   inset: 0;
 }
 
-/* Diagonal blend seam overlay */
 .heroBlend {
   position: absolute;
   inset: 0;
@@ -63,17 +56,6 @@
   pointer-events: none;
 }
 
-/* Hero images */
-.heroImage {
-  object-fit: cover;
-  opacity: 0.5;
-}
-
-.bgComposite .heroImage {
-  opacity: 0.6;
-}
-
-/* Hero left-panel video */
 .heroVideo {
   position: absolute;
   inset: 0;
@@ -83,7 +65,6 @@
   opacity: 0.6;
 }
 
-/* ── Content overlay ── */
 .container {
   position: relative;
   z-index: 1;
@@ -169,7 +150,6 @@
   box-shadow: 0 2px 12px rgba(61, 212, 196, 0.15);
 }
 
-/* ── RTL overrides: mirror the diagonal split ── */
 [dir="rtl"] .heroLeft {
   clip-path: polygon(30% 0, 100% 0, 100% 100%, 0 100%);
 }
@@ -189,7 +169,7 @@
   );
 }
 
-/* ── Mobile responsive ── */
+/* Small screens: only video2 (heroLeft). Second video hidden + not eagerly loaded. */
 @media (max-width: 768px) {
   .root {
     min-height: 80vh;
@@ -199,16 +179,26 @@
     grid-template-columns: 1fr;
   }
 
-  .heroLeft {
+  /* Full-bleed single panel — no diagonal clip (fixes RTL: [dir=rtl] rules must be reset here). */
+  .heroLeft,
+  [dir="rtl"] .heroLeft {
+    grid-column: 1 / -1;
+    width: 100%;
+    min-height: 100%;
     clip-path: none;
   }
 
-  .heroRight {
-    display: none;
+  .heroRight,
+  [dir="rtl"] .heroRight {
+    display: none !important;
+    visibility: hidden;
+    pointer-events: none;
+    clip-path: none;
   }
 
-  .heroBlend {
-    display: none;
+  .heroBlend,
+  [dir="rtl"] .heroBlend {
+    display: none !important;
   }
 
   .content {

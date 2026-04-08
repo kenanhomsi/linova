@@ -59,10 +59,10 @@ export function Footer() {
 
   return (
     <footer className={styles.footer}>
-      <Box component="section" py="lg" className={styles.ctaBar}>
+      <Box component="section" py={{ base: "sm", sm: "lg" }} className={styles.ctaBar}>
         <Container size="xl">
-          <Group justify="space-between" wrap="wrap" gap="md">
-            <Text size="lg" fw={600} c="white">
+          <Group justify="space-between" wrap="wrap" gap="md" className={styles.ctaGroup}>
+            <Text size="lg" fw={600} c="white" className={styles.ctaText}>
               {t("footer.doYouWantAppointment")}
             </Text>
             <Link href="/contact" className={styles.ctaLink}>
@@ -82,8 +82,8 @@ export function Footer() {
         </Container>
       </Box>
 
-      <Container size="xl" py="xl">
-        <Box mb="xl">
+      <Container size="xl" py={{ base: "md", sm: "xl" }} className={styles.footerMain}>
+        <Box mb={{ base: "md", sm: "xl" }}>
           <Link href="/" className={styles.footerLogoLink} aria-label={t("siteName")}>
             <Image
               src="/logo.svg"
@@ -96,12 +96,16 @@ export function Footer() {
           </Link>
         </Box>
 
-        <SimpleGrid cols={{ base: 1, sm: 2, lg: 4 }} spacing="xl" mb="xl">
+        <SimpleGrid
+          cols={{ base: 1, sm: 2, lg: 4 }}
+          spacing={{ base: "sm", md: "lg", lg: "xl" }}
+          mb={{ base: "md", sm: "xl" }}
+        >
           <Box>
-            <Title order={3} size="h4" c="white" fw={700} mb="sm">
+            <Title order={3} size="h4" c="white" fw={700} mb="sm" className={styles.sectionTitle}>
               {t("siteName")}
             </Title>
-            <Stack gap="xs">
+            <Stack gap="xs" className={styles.footerLinkStack}>
               <Link href="/why-us" className={styles.footerLink}>
                 {t("footer.aboutUs")}
               </Link>
@@ -124,10 +128,10 @@ export function Footer() {
           </Box>
 
           <Box>
-            <Title order={3} size="h4" c="white" fw={700} mb="sm">
+            <Title order={3} size="h4" c="white" fw={700} mb="sm" className={styles.sectionTitle}>
               {t("footer.services")}
             </Title>
-            <Stack gap="xs">
+            <Stack gap="xs" className={styles.footerLinkStack}>
               {FOOTER_SERVICES_CONFIG.map(({ href, labelKey }) => (
                 <Link key={labelKey} href={href} className={styles.footerLink}>
                   {t(labelKey)}
@@ -137,10 +141,10 @@ export function Footer() {
           </Box>
 
           <Box>
-            <Title order={3} size="h4" c="white" fw={700} mb="sm">
+            <Title order={3} size="h4" c="white" fw={700} mb="sm" className={styles.sectionTitle}>
               {t("footer.popularTreatments")}
             </Title>
-            <Stack gap="xs">
+            <Stack gap="xs" className={styles.footerLinkStack}>
               {FOOTER_TREATMENTS_CONFIG.map(({ href, labelKey }) => (
                 <Link key={labelKey} href={href} className={styles.footerLink}>
                   {t(labelKey)}
@@ -150,10 +154,10 @@ export function Footer() {
           </Box>
 
           <Box>
-            <Title order={3} size="h4" c="white" fw={700} mb="sm">
+            <Title order={3} size="h4" c="white" fw={700} mb="sm" className={styles.sectionTitle}>
               {t("footer.getInTouch")}
             </Title>
-            <Stack gap="sm" mb="lg">
+            <Stack gap="sm" mb="lg" className={styles.footerContactStack}>
               <a href={PHONE_TEL} className={styles.contactLink}>
                 <IconPhone size={18} stroke={2} />
                 {PHONE}
@@ -163,7 +167,7 @@ export function Footer() {
                 {EMAIL}
               </a>
             </Stack>
-            <Title order={3} size="h4" c="white" fw={700} mb="sm">
+            <Title order={3} size="h4" c="white" fw={700} mb="sm" className={styles.sectionTitle}>
               {t("footer.visitUs")}
             </Title>
             <Group gap="sm" align="flex-start">
@@ -180,9 +184,9 @@ export function Footer() {
           </Box>
         </SimpleGrid>
 
-        <Divider color="rgba(255,255,255,0.15)" mb="lg" />
+        <Divider color="rgba(255,255,255,0.15)" mb="lg" className={styles.footerDivider} />
 
-        <Group justify="space-between" wrap="wrap" gap="md">
+        <Group justify="space-between" wrap="wrap" gap="md" className={styles.footerBottomGroup}>
           <Group gap="sm">
             {socialLinks.map(({ labelKey, href, Icon }) => (
               <a

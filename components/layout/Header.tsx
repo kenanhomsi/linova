@@ -2,6 +2,7 @@
 
 import { useTranslations } from "next-intl";
 import { Link, usePathname } from "@/i18n/navigation";
+import Image from "next/image";
 import {
   Container,
   Group,
@@ -14,11 +15,10 @@ import { useDisclosure } from "@mantine/hooks";
 import { IconBrandWhatsapp } from "@tabler/icons-react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { WHATSAPP_LINK } from "@/lib/constants";
-import { Logo } from "./Logo";
 import { ThemeToggle } from "./ThemeToggle";
 import { LanguageSwitcher } from "./LanguageSwitcher";
 import styles from "./Header.module.css";
-import Image from "next/image";
+import logo from "@/public/logo-m2.svg";
 const NAV_CONFIG = [
   { href: "/", labelKey: "nav.home" },
   { href: "/treatments", labelKey: "nav.Treatments" },
@@ -82,11 +82,18 @@ export function Header() {
         ["--nav-hover" as string]: "var(--readdy-teal-hover)",
       }}
     >
-      <Container size="xl" py="md">
-        <Group justify="space-between" wrap="nowrap" gap="md">
+      <Container size="xl" py="md" px={{ base: "xs", sm: "md" }}>
+        <Group justify="space-between" wrap="nowrap" gap="sm" className={styles.headerInner}>
           <Link href="/" className={styles.logoLink}>
-            {/* <Logo variant={"default"} /> */}
-            <Image src="/logo-m2.svg" alt="Linova Clinic" width={100} height={100} />
+            {/* <img> avoids Next/Image quirks with styled SVGs (logo must stay visible in RTL). */}
+            <img
+              src="/logo-m2.svg"
+              alt="Linova Clinic"
+              width={160}
+              height={61}
+              className={styles.headerLogo}
+              decoding="async"
+            />
           </Link>
 
           <div className={styles.centerNav}>
@@ -105,7 +112,7 @@ export function Header() {
                 size="sm"
                 fw={600}
                 leftSection={<IconBrandWhatsapp size={18} />}
-                visibleFrom="sm"
+                visibleFrom="lg"
                 component={motion.button}
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
@@ -118,7 +125,7 @@ export function Header() {
               <Button
                 size="sm"
                 fw={600}
-                visibleFrom="sm"
+                visibleFrom="lg"
                 component={motion.button}
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
@@ -130,7 +137,7 @@ export function Header() {
             <Burger
               opened={opened}
               onClick={toggle}
-              hiddenFrom="sm"
+              hiddenFrom="lg"
               size="sm"
               color={"var(--header-fg)"}
               aria-label="Toggle navigation"
@@ -142,7 +149,17 @@ export function Header() {
       <Drawer
         opened={opened}
         onClose={close}
-        title={<Logo />}
+        title={
+          <Link href="/" onClick={close} className={styles.drawerLogoLink}>
+            <Image
+              src={logo}
+              alt="Linova Clinic"
+              width={90}
+              height={61}
+              decoding="async"
+            />
+          </Link>
+        }
         position="right"
         size="sm"
         classNames={{

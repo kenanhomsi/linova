@@ -5,6 +5,8 @@
   z-index: 100;
   background: var(--header-bg);
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  max-width: 100%;
+  overflow-x: clip;
 }
 
 .header[data-hero="true"] {
@@ -15,6 +17,18 @@
 
 .headerScrolled {
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+}
+
+.headerInner {
+  width: 100%;
+  align-items: center;
+  min-width: 0;
+}
+
+@media (max-width: 380px) {
+  .headerInner {
+    gap: 6px !important;
+  }
 }
 
 .navGroup {
@@ -54,6 +68,43 @@
   display: inline-flex;
   align-items: center;
   line-height: 0;
+  position: relative;
+  z-index: 2;
+}
+
+/* Sized display; keep intrinsic ratio from SVG */
+.headerLogo {
+  display: block;
+  width: auto;
+  height: auto;
+  max-height: 52px;
+  max-width: min(200px, 46vw);
+  min-width: 96px;
+  object-fit: contain;
+}
+
+@media (max-width: 380px) {
+  .headerLogo {
+    min-width: 0;
+    max-width: min(132px, 36vw);
+    max-height: 44px;
+  }
+}
+
+.drawerLogoLink {
+  display: inline-flex;
+  align-items: center;
+  line-height: 0;
+  text-decoration: none;
+}
+
+.drawerLogo {
+  display: block;
+  width: auto;
+  height: auto;
+  max-height: 44px;
+  max-width: 180px;
+  object-fit: contain;
 }
 
 .centerNav {
@@ -64,7 +115,8 @@
   min-width: 0;
 }
 
-@media (max-width: 767px) {
+/* Match Mantine default lg (75em): hide inline nav when burger menu is shown */
+@media (max-width: 74.99em) {
   .centerNav {
     display: none !important;
   }

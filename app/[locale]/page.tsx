@@ -10,6 +10,8 @@ import { SectionReveal } from "@/components/ui/Animate";
 import { BackToTop } from "@/components/layout/BackToTop";
 import { FAQJsonLd, BreadcrumbJsonLd } from "@/lib/structured-data";
 import { HomeBelowFoldClient } from "@/components/home/HomeBelowFoldClient";
+import { BeforeAfterShowcase } from "@/components/home/BeforeAfterShowcase";
+import { HomeFoldClient } from "@/components/home/HomeFoldClient";
 
 const BASE_URL = "https://linovaclinic.com";
 
@@ -64,10 +66,10 @@ export default async function Home({ params }: Props) {
       />
       <Hero />
       <StatsBar />
-
       <SectionReveal>
         <CompleteDentalSolutionsSection animated />
       </SectionReveal>
+      <HomeFoldClient />
       <SectionReveal delay={0.05}>
         <GallerySection />
       </SectionReveal>

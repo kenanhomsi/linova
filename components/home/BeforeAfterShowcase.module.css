@@ -47,19 +47,24 @@
 /* ── Showcase wrapper ── */
 .showcaseWrapper {
   position: relative;
-  max-width: 780px;
+  width: 100%;
+  max-width: min(780px, 100%);
   margin: 0 auto;
+  box-sizing: border-box;
 }
 
 /* ── Comparison viewport ── */
 .viewport {
   position: relative;
+  width: 100%;
+  max-width: 100%;
   aspect-ratio: 3 / 2;
   border-radius: 24px;
   overflow: hidden;
   cursor: ew-resize;
   user-select: none;
   touch-action: none;
+  box-sizing: border-box;
   box-shadow:
     0 25px 50px -12px rgba(0, 0, 0, 0.15),
     0 12px 24px -8px rgba(0, 0, 0, 0.1);
