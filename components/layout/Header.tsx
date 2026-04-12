@@ -38,10 +38,12 @@ function normalizePath(path: string) {
 }
 
 function isNavItemActive(currentPathname: string, href: string) {
-  const current = normalizePath(currentPathname);
-  const linkPath = normalizePath(href.split("#")[0]);
+  // Hash anchors (e.g. /#technology) are section links, not pages — never mark active.
+  if (href.includes("#")) return false;
 
-  // Exact match.
+  const current = normalizePath(currentPathname);
+  const linkPath = normalizePath(href);
+
   if (current === linkPath) return true;
 
   // Nested routes match only on a segment boundary.
@@ -74,14 +76,12 @@ export function Header() {
         const isActive = isNavItemActive(pathname, href);
         return (
           <Link key={href} href={href} className={styles.link}>
-            <motion.span
+            <span
               className={`${styles.navLink} ${isActive ? styles.navLinkActive : ""}`}
               aria-current={isActive ? "page" : undefined}
-              whileHover={{ color: "var(--readdy-teal)" }}
-              transition={{ duration: 0.2 }}
             >
               {t(labelKey)}
-            </motion.span>
+            </span>
           </Link>
         );
       })}

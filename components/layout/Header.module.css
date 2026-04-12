@@ -46,14 +46,16 @@
   position: relative;
   white-space: nowrap;
   color: var(--nav-color, var(--header-fg));
+  transition: color 0.2s ease;
 }
 
-/* .navLink:hover {
-} */
+.navLink:hover {
+  color: var(--readdy-teal);
+}
 
 .navLinkActive {
   font-weight: 600;
-  color:#0e9c8c;
+  color: var(--readdy-teal) !important;
 }
 
 .logoWrap {
