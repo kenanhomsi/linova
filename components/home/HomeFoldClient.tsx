@@ -9,10 +9,6 @@ const WhyLinovaSection = dynamic(
     () => import("./WhyLinovaSection").then((m) => ({ default: m.WhyLinovaSection })),
     { ssr: false }
 );
-const DentalJourneySection = dynamic(
-    () => import("./DentalJourneySection").then((m) => ({ default: m.DentalJourneySection })),
-    { ssr: false }
-);
 export function HomeFoldClient() {
     return (
         <>
@@ -22,9 +18,7 @@ export function HomeFoldClient() {
             <SectionReveal delay={0.05}>
                 <WhyLinovaSection />
             </SectionReveal>
-            <SectionReveal delay={0.05}>
-                <DentalJourneySection />
-            </SectionReveal>
+
         </>
     );
 }

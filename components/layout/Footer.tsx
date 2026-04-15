@@ -85,10 +85,11 @@ export function Footer() {
       </Box>
 
       <Container size="xl" py={{ base: "md", sm: "xl" }} className={styles.footerMain}>
-        <Box mb={{ base: "md", sm: "xl" }}>
+        <Box mb={{ base: "md", sm: "xl" }} >
           <Link href="/" className={styles.footerLogoLink} aria-label={t("siteName")}>
             <Image
-              src="/logo.svg"
+              // src="/logo.svg"
+              src='/logo-white.png'
               alt=""
               width={425}
               height={186}

@@ -49,6 +49,5 @@ export const NAV_LINKS = [
   { href: "/", label: "Home" },
   { href: "/treatments", label: "Services" },
   { href: "/why-us", label: "Why Choose Us" },
-  { href: "/#technology", label: "Technology" },
   { href: "/contact", label: "Contact" },
 ] as const;
