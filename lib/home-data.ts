@@ -250,8 +250,8 @@ export const TRANSFORMATIONS: Array<{
     title: "Hollywood Smile Transformation",
     detail: "16 Zirconia Veneers",
     category: "Hollywood Smile",
-    before: "h-smily-befor-new.jpeg",
-    after: "h-smily-after-new.jpeg",
+    before: "h-smily-befor-new-3.jpeg",
+    after: "h-smily-after-new-3.jpeg",
   },
   {
     title: "Dental Implant Success",

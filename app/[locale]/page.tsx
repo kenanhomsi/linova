@@ -10,7 +10,6 @@ import { SectionReveal } from "@/components/ui/Animate";
 import { BackToTop } from "@/components/layout/BackToTop";
 import { FAQJsonLd, BreadcrumbJsonLd } from "@/lib/structured-data";
 import { HomeBelowFoldClient } from "@/components/home/HomeBelowFoldClient";
-import { BeforeAfterShowcase } from "@/components/home/BeforeAfterShowcase";
 import { HomeFoldClient } from "@/components/home/HomeFoldClient";
 import { DentalJourneySection } from "@/components/home/DentalJourneySection";
 
