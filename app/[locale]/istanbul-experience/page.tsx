@@ -11,7 +11,7 @@ import { IstanbulCTA } from "@/components/istanbul-experience/IstanbulCTA";
 import { BackToTop } from "@/components/layout/BackToTop";
 import { BreadcrumbJsonLd } from "@/lib/structured-data";
 import type { Metadata } from "next";
-
+import DentalHoliday from './test.jsx'
 const BASE_URL = "https://linovaclinic.com";
 
 type Props = {
@@ -58,9 +58,10 @@ export default async function IstanbulExperiencePage({ params }: Props) {
         ]}
       />
       <IstanbulHero />
-      <AreasToStay />
+      {/* <AreasToStay />
       <ThingsToDo />
-      <BestTimeToVisit />
+      <BestTimeToVisit /> */}
+      <DentalHoliday />
       <SampleItineraries />
       <TravelFAQ />
       <TourismTestimonials />
