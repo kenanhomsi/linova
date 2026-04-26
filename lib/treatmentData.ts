@@ -15,8 +15,8 @@ export interface TreatmentLongArticle {
 
 export const hollywoodSmileLongArticle: TreatmentLongArticle = {
   contentImages: [
-    "/images/Hollywood Smile Makeover-blog1.jpeg",
-    "/images/Hollywood Smile Makeover-blog2.jpeg",
+    "/images/Hollywood Smile Makeover-blog1-2.jpeg",
+    "/images/Hollywood Smile Makeover-blog2-2.jpeg",
     "/images/Hollywood Smile Makeover-blog3.jpeg",
     "/images/Hollywood Smile Makeover-blog4.jpeg",
   ],

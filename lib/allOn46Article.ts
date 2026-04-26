@@ -4,7 +4,7 @@
  */
 export const allOn46LongArticle = {
   contentImages: [
-    "/images/All-on-4andAll-on-6-blog-1.jpeg",
+    "/images/All-on-4andAll-on-6-blog-1-2.jpeg",
     "/images/All-on-4andAll-on-6-blog-2.jpeg",
     "/images/All-on-4andAll-on-6-blog-3.jpeg",
     "/images/All-on-4andAll-on-6-blog-4.jpeg",
