@@ -7,7 +7,7 @@ import { FadeInUp, StaggerContainer } from "@/components/ui/Animate";
 import styles from "./DigitalDentistrySection.module.css";
 import Image from "next/image";
 
-const DIGITAL_SMILE_HIGHLIGHT_IMAGE = "/images/digital-smile-design/Designing a Natural Smile.jpeg";
+const DIGITAL_SMILE_HIGHLIGHT_IMAGE = "/images/digital-smile-design/pic1.jpeg";
 
 export async function DigitalDentistrySection() {
   const t = await getTranslations("home");

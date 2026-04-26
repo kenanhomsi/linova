@@ -3,13 +3,13 @@
 import laserDentistry from "@/public/Laser Dentistry.jpg";
 
 const IMAGES = {
-  hollywoodSmile: "/images/Hollywood Smile Makeover-2.jpeg",
+  hollywoodSmile: "/images/Hollywood Smile Makeover.jpeg",
   dentalVeneers: "/images/Dental Veneers.jpeg",
   teethWhitening: "/images/Teeth Whitening.jpeg",
   dentalImplants: "/images/dental-implants/pic1.jpeg",
-  allOn4: "/images/all-in-4-6_2.jpeg",
+  allOn4: "/images/all-in-4-6.jpeg",
   dentalCrowns: "/images/Dental Crowns.jpeg",
-  digitalSmileDesign: "/images/digital-smile-design/Designing a Natural Smile.jpeg",
+  digitalSmileDesign: "/images/digital-smile-design/pic1.jpeg",
   DCBCTImaging: "/images/xray-cbct2.jpeg",
   IntraoralScanning: "/images/Intraoral Scanning.jpeg",
 } as const;
