@@ -8,7 +8,6 @@ const PATIENT_VIDEOS = [
   "/images/WhatsApp Video 2026-01-27 at 1.29.29 PM.mp4",
   // "/images/user-story2.mp4",
   "/images/video4.mp4",
-
   "/images/user-story3.mp4",
 ];
 
