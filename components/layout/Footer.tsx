@@ -88,13 +88,14 @@ export function Footer() {
         <Box mb={{ base: "md", sm: "xl" }} >
           <Link href="/" className={styles.footerLogoLink} aria-label={t("siteName")}>
             <Image
-              // src="/logo.svg"
-              src='/logo-white.png'
-              alt=""
+              src="/logo-white.png"
+              alt="Linova Clinic"
               width={425}
               height={186}
               className={styles.footerLogo}
               priority={false}
+              quality={80}
+              sizes="(max-width: 768px) 300px, 425px"
             />
           </Link>
         </Box>

@@ -49,6 +49,8 @@ export async function DigitalDentistrySection() {
                     width={500}
                     height={280}
                     className={styles.highlightImg}
+                    quality={75}
+                    sizes="(max-width: 768px) 100vw, 500px"
                   />
                 </Box>
                 <Title order={3} className={styles.highlightTitle}>

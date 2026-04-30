@@ -105,14 +105,14 @@ export function Header() {
       <Container size="xl" py="md" px={{ base: "xs", sm: "md" }}>
         <Group justify="space-between" wrap="nowrap" gap="sm" className={styles.headerInner}>
           <Link href="/" className={styles.logoLink}>
-            {/* <img> avoids Next/Image quirks with styled SVGs (logo must stay visible in RTL). */}
-            <img
+            <Image
               src="/logo-m2.svg"
               alt="Linova Clinic"
               width={160}
               height={61}
               className={styles.headerLogo}
-              decoding="async"
+              priority
+              unoptimized={true} // SVG optimization can cause styling issues
             />
           </Link>
 
