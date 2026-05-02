@@ -39,7 +39,12 @@
   --header-backdrop: saturate(180%) blur(0px);
   --header-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
   /* Hero gradient (teal‑green overlay) */
-  --hero-overlay: linear-gradient(135deg, rgba(12, 70, 62, 0.92) 0%, rgba(10, 52, 46, 0.9) 50%, rgba(6, 38, 34, 0.88) 100%);
+  --hero-overlay: linear-gradient(
+    135deg,
+    rgba(12, 70, 62, 0.92) 0%,
+    rgba(10, 52, 46, 0.9) 50%,
+    rgba(6, 38, 34, 0.88) 100%
+  );
   --hero-badge-bg: #e8c547;
   --hero-badge-fg: #5c4a1a;
   --footer-bg: #151e2e;
@@ -78,7 +83,12 @@
   --shadow-md: 0 4px 20px rgba(0, 0, 0, 0.45);
   --shadow-lg: 0 12px 44px rgba(0, 0, 0, 0.5);
   --shadow-xl: 0 24px 56px rgba(0, 0, 0, 0.55);
-  --hero-overlay: linear-gradient(135deg, rgba(8, 40, 36, 0.94) 0%, rgba(6, 30, 28, 0.92) 50%, rgba(4, 22, 20, 0.9) 100%);
+  --hero-overlay: linear-gradient(
+    135deg,
+    rgba(8, 40, 36, 0.94) 0%,
+    rgba(6, 30, 28, 0.92) 50%,
+    rgba(4, 22, 20, 0.9) 100%
+  );
   --hero-badge-bg: #c9a227;
   --hero-badge-fg: #1a1508;
   --footer-bg: #0f1624;
@@ -104,7 +114,9 @@
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
-  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --font-mono:
+    ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
+    "Courier New", monospace;
 }
 
 html {
@@ -125,7 +137,11 @@ body {
   text-align: start;
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-geist-sans), system-ui, -apple-system, sans-serif;
+  font-family:
+    var(--font-geist-sans),
+    system-ui,
+    -apple-system,
+    sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   line-height: 1.6;
@@ -181,10 +197,19 @@ body {
 }
 
 /* Interactive elements */
-a, button, [role="button"], input, select, textarea {
-  transition: color var(--transition-fast), background-color var(--transition-fast),
-    border-color var(--transition-fast), box-shadow var(--transition-fast),
-    transform var(--transition-fast), opacity var(--transition-fast);
+a,
+button,
+[role="button"],
+input,
+select,
+textarea {
+  transition:
+    color var(--transition-fast),
+    background-color var(--transition-fast),
+    border-color var(--transition-fast),
+    box-shadow var(--transition-fast),
+    transform var(--transition-fast),
+    opacity var(--transition-fast);
 }
 
 /* In-content links */
@@ -199,7 +224,9 @@ main a:not([class*="Button"]):not([class*="button"]):hover {
 
 /* Card hover */
 .card-hover {
-  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+  transition:
+    transform var(--transition-normal),
+    box-shadow var(--transition-normal);
   border-radius: var(--radius-lg);
 }
 .card-hover:hover {
@@ -208,7 +235,8 @@ main a:not([class*="Button"]):not([class*="button"]):hover {
 }
 
 /* Button press */
-button:active:not(:disabled), [role="button"]:active {
+button:active:not(:disabled),
+[role="button"]:active {
   transform: scale(0.98);
 }
 
@@ -298,20 +326,39 @@ button:active:not(:disabled), [role="button"]:active {
 
 /* Keyframe animations – bring the app to life */
 @keyframes hero-gradient-pulse {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.92; }
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.92;
+  }
 }
 @keyframes float-soft {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-6px); }
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
 }
 @keyframes shine-sweep {
-  0% { background-position: -200% 0; }
-  100% { background-position: 200% 0; }
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
 }
 @keyframes glow-soft {
-  0%, 100% { box-shadow: 0 0 20px rgba(14, 156, 140, 0.15); }
-  50% { box-shadow: 0 0 32px rgba(14, 156, 140, 0.25); }
+  0%,
+  100% {
+    box-shadow: 0 0 20px rgba(14, 156, 140, 0.15);
+  }
+  50% {
+    box-shadow: 0 0 32px rgba(14, 156, 140, 0.25);
+  }
 }
 /* Hero background subtle pulse */
 .hero-bg-pulse {
@@ -330,7 +377,9 @@ button:active:not(:disabled), [role="button"]:active {
 
 /* Reduced motion */
 @media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after {
+  *,
+  *::before,
+  *::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
@@ -339,4 +388,3 @@ button:active:not(:disabled), [role="button"]:active {
     scroll-behavior: auto;
   }
 }
-
