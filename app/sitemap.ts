@@ -5,6 +5,7 @@ const BASE_URL = "https://linovaclinic.com";
 
 const pages = [
   { path: "", changeFrequency: "weekly" as const, priority: 1.0 },
+  { path: "/dental-clinic-turkey", changeFrequency: "weekly" as const, priority: 0.95 },
   { path: "/treatments", changeFrequency: "weekly" as const, priority: 0.9 },
   { path: "/packages", changeFrequency: "weekly" as const, priority: 0.9 },
   { path: "/istanbul-experience", changeFrequency: "weekly" as const, priority: 0.9 },

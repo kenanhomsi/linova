@@ -2,7 +2,7 @@
   "common": {
     "siteName": "Linova Clinic",
     "siteFullName": "Linova Clinic İstanbul",
-    "siteTagline": "Türkiye'de Diş İmplantı | Hollywood Gülüş Tasarımı",
+    "siteTagline": "Türkiye'de Diş Kliniği | İmplant, Kaplama ve Hollywood Gülüş",
     "skipToContent": "Ana içeriğe geç",
     "getAppointment": "Randevu Alın",
     "whatsapp": "WhatsApp",
@@ -62,10 +62,10 @@
   },
   "home": {
     "hero": {
-      "badge": "İstanbul'da Premium Diş Bakımı",
-      "title": "Hayalinizdeki Gülüşe Kavuşun",
-      "titleHighlight": "Hayalinizdeki Gülüşe",
-      "subtitle": "İstanbul'un kalbinde son teknolojiyi, uzman kadroyu ve benzersiz sağlık turizmi deneyimini bir arada sunan dünya standartlarında diş tedavileri",
+      "badge": "Türkiye'de Güvenilir Diş Kliniği",
+      "title": "İstanbul'da Linova Diş Kliniği",
+      "titleHighlight": "Linova Diş Kliniği",
+      "subtitle": "Türkiye'de diş implantı, kaplama, Hollywood gülüş tasarımı ve hasta dostu sağlık turizmi desteğini Linova Clinic'te keşfedin.",
       "ctaPrimary": "Ücretsiz Danışmanlık Alın",
       "ctaSecondary": "Hizmetlerimizi Keşfedin"
     },

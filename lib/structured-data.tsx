@@ -16,9 +16,10 @@ export function OrganizationJsonLd() {
     logo: "https://linovaclinic.com/icon-512.png",
     image: "https://linovaclinic.com/images/og-image.jpg",
     description:
-      "Premium dental clinic in Istanbul offering Hollywood Smile makeovers, dental implants, veneers, full mouth restoration, and comprehensive medical tourism packages. ISO-certified with 15+ years of experience.",
+      "Linova Clinic is a dental clinic in Turkey offering dental implants, veneers, Hollywood Smile, full mouth restoration, and complete dental tourism support in Istanbul.",
     telephone: PHONE,
     email: EMAIL,
+    availableLanguage: ["English", "Arabic", "Turkish"],
     address: {
       "@type": "PostalAddress",
       streetAddress: "Nişantaşı District",
@@ -183,6 +184,7 @@ export function MedicalBusinessJsonLd() {
     name: SITE_FULL_NAME,
     medicalSpecialty: "Dentistry",
     isAcceptingNewPatients: true,
+    availableLanguage: ["English", "Arabic", "Turkish"],
     availableService: [
       {
         "@type": "MedicalProcedure",
@@ -203,6 +205,29 @@ export function MedicalBusinessJsonLd() {
           "Full arch restoration with fixed implant-supported prosthetics in a single session.",
       },
     ],
+  };
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
+    />
+  );
+}
+
+export function WebSiteJsonLd() {
+  const data = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: SITE_FULL_NAME,
+    url: "https://linovaclinic.com",
+    description:
+      "Linova Clinic is a dental clinic in Turkey for dental implants, veneers, Hollywood Smile, and patient-friendly dental tourism in Istanbul.",
+    inLanguage: ["en", "tr", "ar"],
+    publisher: {
+      "@type": "Dentist",
+      name: SITE_FULL_NAME,
+    },
   };
 
   return (

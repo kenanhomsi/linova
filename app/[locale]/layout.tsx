@@ -15,15 +15,15 @@ import { getTextDirection } from "@/i18n/locale-direction";
 
 export const metadata: Metadata = {
   title: {
-    default: "Linova Clinic Istanbul | Dental Implants Turkey | Hollywood Smile Makeover",
+    default: "Linova Clinic | Dental Clinic in Turkey for Implants, Veneers & Hollywood Smile",
     template: "%s | Linova Clinic",
   },
   description:
-    "Premium dental care in Istanbul. World-class dental treatments, Hollywood Smile, implants, veneers, full mouth restoration. Free consultation & medical tourism support.",
+    "Linova Clinic is a dental clinic in Turkey offering dental implants, veneers, Hollywood Smile, and full mouth restoration in Istanbul with patient-friendly dental tourism support.",
   openGraph: {
-    title: "Linova Clinic Istanbul | Dental Implants Turkey | Hollywood Smile Makeover",
+    title: "Linova Clinic | Dental Clinic in Turkey for Implants, Veneers & Hollywood Smile",
     description:
-      "Premium dental care in Istanbul. Hollywood Smile, implants, veneers, and full mouth restoration.",
+      "Dental clinic in Turkey for implants, veneers, Hollywood Smile, and smile makeovers. Discover Linova Clinic in Istanbul.",
   },
 };
 

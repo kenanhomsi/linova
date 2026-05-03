@@ -8,10 +8,17 @@ import { GallerySection } from "@/components/home/GallerySection";
 import { DigitalDentistrySection } from "@/components/home/DigitalDentistrySection";
 import { SectionReveal } from "@/components/ui/Animate";
 import { BackToTop } from "@/components/layout/BackToTop";
-import { FAQJsonLd, BreadcrumbJsonLd } from "@/lib/structured-data";
+import {
+  FAQJsonLd,
+  BreadcrumbJsonLd,
+  OrganizationJsonLd,
+  MedicalBusinessJsonLd,
+  WebSiteJsonLd,
+} from "@/lib/structured-data";
 import { HomeBelowFoldClient } from "@/components/home/HomeBelowFoldClient";
 import { HomeFoldClient } from "@/components/home/HomeFoldClient";
 import { DentalJourneySection } from "@/components/home/DentalJourneySection";
+import { SeoContentSection } from "@/components/home/SeoContentSection";
 
 const BASE_URL = "https://linovaclinic.com";
 
@@ -32,7 +39,19 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: `${t("siteFullName")} | ${t("siteTagline")}`,
     description:
-      "Premium dental care in Istanbul. Hollywood Smile, dental implants, veneers, full mouth restoration. Save up to 70% vs UK & US prices. Free consultation.",
+      "Linova Clinic is a trusted dental clinic in Turkey for dental implants, veneers, Hollywood Smile, and full mouth restoration in Istanbul. Free consultation and patient-friendly treatment planning.",
+    keywords: [
+      "clinic in turkey",
+      "dental clinic in turkey",
+      "dental clinic istanbul",
+      "linova clinic",
+      "linova dental clinic",
+      "dental implants turkey",
+      "veneers turkey",
+      "hollywood smile turkey",
+      "clinic in turkey for dental implants",
+      "dentist in istanbul turkey",
+    ],
     alternates: {
       canonical: `${BASE_URL}/${locale}`,
       languages,
@@ -40,8 +59,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     openGraph: {
       title: `${t("siteFullName")} | ${t("siteTagline")}`,
       description:
-        "Premium dental care in Istanbul. Hollywood Smile, dental implants, veneers, full mouth restoration. Save up to 70%.",
+        "Dental clinic in Turkey for implants, veneers, Hollywood Smile, and smile makeovers. Discover Linova Clinic in Istanbul.",
       url: `${BASE_URL}/${locale}`,
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${t("siteFullName")} | ${t("siteTagline")}`,
+      description:
+        "Linova Clinic in Istanbul offers dental implants, veneers, Hollywood Smile, and dental tourism support in Turkey.",
     },
   };
 }
@@ -58,6 +83,9 @@ export default async function Home({ params }: Props) {
 
   return (
     <div>
+      <OrganizationJsonLd />
+      <MedicalBusinessJsonLd />
+      <WebSiteJsonLd />
       <FAQJsonLd items={faqItems} />
       <BreadcrumbJsonLd
         items={[
@@ -70,6 +98,7 @@ export default async function Home({ params }: Props) {
         <CompleteDentalSolutionsSection animated />
       </SectionReveal>
       <HomeFoldClient />
+      <SeoContentSection locale={locale} />
       <SectionReveal delay={0.05}>
         <GallerySection />
       </SectionReveal>

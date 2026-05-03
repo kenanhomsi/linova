@@ -2,7 +2,7 @@
   "common": {
     "siteName": "Linova Clinic",
     "siteFullName": "Linova Clinic Istanbul",
-    "siteTagline": "Dental Implants Turkey | Hollywood Smile Makeover",
+    "siteTagline": "Dental Clinic in Turkey | Implants, Veneers & Hollywood Smile",
     "skipToContent": "Skip to main content",
     "getAppointment": "Get Appointment",
     "whatsapp": "WhatsApp",
@@ -62,10 +62,10 @@
   },
   "home": {
     "hero": {
-      "badge": "Premium Dental Care in Istanbul",
-      "title": "Transform Your Smile Journey",
-      "titleHighlight": "Smile Journey",
-      "subtitle": "World-class dental treatments combining cutting-edge technology, expert care, and exceptional medical tourism experience in the heart of Istanbul",
+      "badge": "Trusted Dental Clinic in Turkey",
+      "title": "Linova Dental Clinic in Istanbul",
+      "titleHighlight": "in Istanbul",
+      "subtitle": "Discover dental implants, veneers, Hollywood Smile makeovers, and patient-friendly dental tourism support at Linova Clinic in Turkey.",
       "ctaPrimary": "Get Free Consultation",
       "ctaSecondary": "Explore Services"
     },
