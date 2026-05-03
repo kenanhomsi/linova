@@ -10,11 +10,8 @@ const IMAGES = {
   dentalCrowns: "/images/Dental Crowns.jpeg",
   digitalSmileDesign: "/images/digital-smile-design/pic1.jpeg",
   DCBCTImaging: "/images/xray-cbct2.jpeg",
-  IntraoralScanning:"/images/Intraoral Scanning.jpeg"
+  IntraoralScanning: "/images/Intraoral Scanning.jpeg",
 } as const;
-
-
-
 
 export const HERO = {
   badge: "Premium Dental Care in Istanbul",
@@ -46,7 +43,7 @@ export const TREATMENT_CARDS = [
     title: "Hollywood Smile Makeover",
     description:
       "Complete cosmetic transformation combining veneers, whitening, and smile design for a stunning, natural-looking result",
-    cta: "Book Consultation",
+    cta: "Learn More",
     featured: true,
     image: IMAGES.hollywoodSmile,
     badge: "Most Popular",
@@ -57,7 +54,7 @@ export const TREATMENT_CARDS = [
     title: "Dental Implants",
     description:
       "Permanent tooth replacement with titanium implants that look, feel, and function like natural teeth",
-    cta: "Book Consultation",
+    cta: "Learn More",
     featured: true,
     image: IMAGES.dentalImplants,
     badge: "Most Popular",
@@ -66,7 +63,8 @@ export const TREATMENT_CARDS = [
   {
     category: "Restorative Dentistry",
     title: "All-on-4 & All-on-6 Implants",
-    description: "Full arch fixed solutions for multiple missing teeth with immediate results",
+    description:
+      "Full arch fixed solutions for multiple missing teeth with immediate results",
     cta: "Learn More",
     featured: false,
     image: IMAGES.allOn4,
@@ -75,7 +73,8 @@ export const TREATMENT_CARDS = [
   {
     category: "Cosmetic Dentistry",
     title: "Dental Veneers",
-    description: "Ultra-thin zirconia, E-max, and porcelain shells for perfect teeth",
+    description:
+      "Ultra-thin zirconia, E-max, and porcelain shells for perfect teeth",
     cta: "Learn More",
     featured: false,
     image: IMAGES.dentalVeneers,
@@ -111,7 +110,8 @@ export const TREATMENT_CARDS = [
   {
     category: "Advanced Technology",
     title: "Laser Dentistry",
-    description: "Precise, minimally invasive treatments with modern laser technology",
+    description:
+      "Precise, minimally invasive treatments with modern laser technology",
     cta: "Learn More",
     featured: false,
     image: laserDentistry,
@@ -127,7 +127,7 @@ export const COMPLETE_DENTAL_SOLUTIONS_CARDS = [
     title: "Hollywood Smile Makeover",
     description:
       "Complete cosmetic transformation combining veneers, whitening, and smile design for a stunning, natural-looking result",
-    cta: "Book Consultation",
+    cta: "Learn More",
     featured: true,
     badge: "Most Popular",
     image: IMAGES.hollywoodSmile,
@@ -139,7 +139,7 @@ export const COMPLETE_DENTAL_SOLUTIONS_CARDS = [
     title: "Dental Implants",
     description:
       "Permanent tooth replacement with titanium implants that look, feel, and function like natural teeth",
-    cta: "Book Consultation",
+    cta: "Learn More",
     featured: true,
     badge: "Most Popular",
     image: IMAGES.dentalImplants,
@@ -149,7 +149,8 @@ export const COMPLETE_DENTAL_SOLUTIONS_CARDS = [
     category: "Restorative Dentistry",
     categoryIcon: "implant" as const,
     title: "All-on-4 & All-on-6",
-    description: "Full arch fixed solutions for multiple missing teeth with immediate results",
+    description:
+      "Full arch fixed solutions for multiple missing teeth with immediate results",
     cta: "Learn More",
     featured: false,
     image: IMAGES.allOn4,
@@ -159,7 +160,8 @@ export const COMPLETE_DENTAL_SOLUTIONS_CARDS = [
     category: "Cosmetic Dentistry",
     categoryIcon: "veneer" as const,
     title: "Dental Veneers",
-    description: "Ultra thin zirconia, E-max, and porcelain shells for perfect teeth",
+    description:
+      "Ultra thin zirconia, E-max, and porcelain shells for perfect teeth",
     cta: "Learn More",
     featured: false,
     image: IMAGES.dentalVeneers,
@@ -195,7 +197,6 @@ export const COMPLETE_DENTAL_SOLUTIONS_CARDS = [
     image: IMAGES.digitalSmileDesign,
     treatmentSlug: "digital-smile-design",
   },
-
 ];
 
 export const WHY_LINOVA = {
@@ -206,38 +207,48 @@ export const WHY_LINOVA = {
   cards: [
     {
       title: "International Standards",
-      description: "ISO-certified clinic with European quality protocols and sterilization standards",
+      description:
+        "ISO-certified clinic with European quality protocols and sterilization standards",
       cta: "Learn More",
     },
     {
       title: "Expert Team",
-      description: "Highly qualified dentists with international training and 15+ years experience",
+      description:
+        "Highly qualified dentists with international training and 15+ years experience",
       cta: "Learn More",
     },
     {
       title: "Transparent Pricing",
-      description: "Up to 70% savings compared to UK/US prices with no hidden costs",
+      description:
+        "Up to 70% savings compared to UK/US prices with no hidden costs",
       cta: "Learn More",
     },
     {
       title: "Medical Tourism",
-      description: "Complete travel assistance, airport transfers, and accommodation support",
+      description:
+        "Complete travel assistance, airport transfers, and accommodation support",
       cta: "Learn More",
     },
     {
       title: "Lifetime Warranty",
-      description: "Extended guarantees on all treatments with comprehensive aftercare",
+      description:
+        "Extended guarantees on all treatments with comprehensive aftercare",
       cta: "Learn More",
     },
     {
       title: "24/7 Support",
-      description: "Multilingual patient coordinators available around the clock",
+      description:
+        "Multilingual patient coordinators available around the clock",
       cta: "Learn More",
     },
   ],
 } as const;
 
-export type TransformationCategory = "Hollywood Smile" | "Implants" | "Veneers" | "Whitening";
+export type TransformationCategory =
+  | "Hollywood Smile"
+  | "Implants"
+  | "Veneers"
+  | "Whitening";
 
 export const TRANSFORMATIONS: Array<{
   title: string;
@@ -281,7 +292,6 @@ export const TRANSFORMATIONS: Array<{
   //   before: "WhatsApp Image 2026-01-27 at 12.47.10 PM (4).jpeg",
   //   after: "WhatsApp Image 2026-01-27 at 12.47.11 PM (1).jpeg",
   // },
-
 ];
 
 export const GALLERY_TABS = ["Before & After", "Our Clinic"] as const;
@@ -347,7 +357,7 @@ export const DIGITAL_DENTISTRY = {
       badge: "Intraoral Scanning",
       title: "Intraoral Scanning",
       description:
-         "Digital impressions eliminate uncomfortable traditional molds while providing superior accuracy for crowns, veneers, and aligners.",
+        "Digital impressions eliminate uncomfortable traditional molds while providing superior accuracy for crowns, veneers, and aligners.",
       cta: "Learn More",
       image: IMAGES.IntraoralScanning,
       treatmentSlug: "xray-cbct",
@@ -442,7 +452,8 @@ export const READY_CTA = {
 
 export const FOOTER_FORM = {
   title: "Start Your Smile Journey",
-  subtitle: "Book your free consultation and discover how we can transform your smile",
+  subtitle:
+    "Book your free consultation and discover how we can transform your smile",
   fullName: "Full Name",
   email: "Email",
   phone: "Phone Number",
@@ -475,26 +486,36 @@ export const FAQ = {
   subtitle: "frequently asked questions",
   items: [
     {
-      question: "How do patients save significantly on dental treatment by choosing Linova in Istanbul?",
-      answer: "Turkey's favorable economic structure — lower operating costs, advantageous exchange rates, and strong government investment in healthcare — means that world-class dental treatments can be offered at a fraction of Western prices. This is not a compromise in quality. Linova uses the same internationally certified implant brands, premium ceramic materials, and advanced digital technology as leading clinics in Europe and the USA. Patients consistently find that the savings are substantial enough to cover their entire trip — flights, accommodation, and treatment — and still pay less than they would at home."    },
+      question:
+        "How do patients save significantly on dental treatment by choosing Linova in Istanbul?",
+      answer:
+        "Turkey's favorable economic structure — lower operating costs, advantageous exchange rates, and strong government investment in healthcare — means that world-class dental treatments can be offered at a fraction of Western prices. This is not a compromise in quality. Linova uses the same internationally certified implant brands, premium ceramic materials, and advanced digital technology as leading clinics in Europe and the USA. Patients consistently find that the savings are substantial enough to cover their entire trip — flights, accommodation, and treatment — and still pay less than they would at home.",
+    },
     {
       question: "Is it really safe to have dental treatment in Turkey?",
-      answer: "Absolutely. Turkey welcomes over 500,000 international dental patients every year — and for good reason. Linova Clinic operates under Turkish Ministry of Health standards, and our dentists hold internationally recognized certifications. We use only EU and FDA-approved implant systems and materials. Every procedure follows strict sterile surgical protocols, and all treatments come with a written warranty. Thousands of patients from the UK, Europe, the Gulf, and Russia have trusted Linova — and left with smiles that speak for themselves."    },
+      answer:
+        "Absolutely. Turkey welcomes over 500,000 international dental patients every year — and for good reason. Linova Clinic operates under Turkish Ministry of Health standards, and our dentists hold internationally recognized certifications. We use only EU and FDA-approved implant systems and materials. Every procedure follows strict sterile surgical protocols, and all treatments come with a written warranty. Thousands of patients from the UK, Europe, the Gulf, and Russia have trusted Linova — and left with smiles that speak for themselves.",
+    },
     {
-      question: "How does Linova take care of me from the moment I land in Istanbul?",
+      question:
+        "How does Linova take care of me from the moment I land in Istanbul?",
       answer: `From your first message to your flight home, we handle everything:
 Before you arrive: Free online consultation, personalized treatment plan, and full cost breakdown — within 24 hours.
 When you land: VIP airport transfer directly to your hotel or clinic — no stress, no confusion.
 During treatment: Dedicated multilingual coordinator (English, Arabic, Russian) with you every step of the way.
 Free time: Curated Istanbul experiences between appointments — the Bosphorus, historic sites, world-class dining.
-When you leave: Full treatment records, aftercare kit, and ongoing WhatsApp support.`    },
+When you leave: Full treatment records, aftercare kit, and ongoing WhatsApp support.`,
+    },
     {
-      question: "How do I get started — do I need to fly to Istanbul just for a consultation?",
-      answer: "Not at all. Your journey starts from home, for free. Simply send us photos of your teeth and any existing X-rays via WhatsApp or our contact form. Our specialist team will assess your case and send you a detailed treatment plan with transparent pricing — usually within 24 hours. Once you are happy with the plan, we help you coordinate your travel dates, hotel, and airport transfer. Most treatments are completed in one or two visits, and we make sure every day counts.",
+      question:
+        "How do I get started — do I need to fly to Istanbul just for a consultation?",
+      answer:
+        "Not at all. Your journey starts from home, for free. Simply send us photos of your teeth and any existing X-rays via WhatsApp or our contact form. Our specialist team will assess your case and send you a detailed treatment plan with transparent pricing — usually within 24 hours. Once you are happy with the plan, we help you coordinate your travel dates, hotel, and airport transfer. Most treatments are completed in one or two visits, and we make sure every day counts.",
     },
     {
       question: "What happens if I have a problem after I return home?",
-      answer: "Your care does not end when your flight takes off. Every Linova patient receives a written warranty on their treatment, complete digital records and X-rays, and direct access to their patient coordinator via WhatsApp for any questions. For minor concerns, our team provides remote guidance and video consultations at no extra charge. If in-person follow-up is ever needed, we coordinate with trusted partner clinics internationally — so no matter where you are in the world, you are never left without support.",
+      answer:
+        "Your care does not end when your flight takes off. Every Linova patient receives a written warranty on their treatment, complete digital records and X-rays, and direct access to their patient coordinator via WhatsApp for any questions. For minor concerns, our team provides remote guidance and video consultations at no extra charge. If in-person follow-up is ever needed, we coordinate with trusted partner clinics internationally — so no matter where you are in the world, you are never left without support.",
     },
   ],
 } as const;

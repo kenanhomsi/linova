@@ -27,7 +27,7 @@ export const TREATMENT_CARDS = [
     title: "Hollywood Smile Makeover",
     description:
       "Complete cosmetic transformation combining veneers, whitening, and smile design for a stunning, natural-looking result",
-    cta: "Book Consultation",
+    cta: "Learn More",
     featured: true,
     image: IMAGES.hollywoodSmile,
     badge: "Most Popular",
@@ -38,7 +38,7 @@ export const TREATMENT_CARDS = [
     title: "Dental Implants",
     description:
       "Permanent tooth replacement with titanium implants that look, feel, and function like natural teeth",
-    cta: "Book Consultation",
+    cta: "Learn More",
     featured: true,
     image: IMAGES.dentalImplants,
     badge: "Most Popular",
@@ -47,7 +47,8 @@ export const TREATMENT_CARDS = [
   {
     category: "Restorative Dentistry",
     title: "All-on-4 & All-on-6 Implants",
-    description: "Full arch fixed solutions for multiple missing teeth with immediate results",
+    description:
+      "Full arch fixed solutions for multiple missing teeth with immediate results",
     cta: "Learn More",
     featured: false,
     image: IMAGES.allOn4,
@@ -56,7 +57,8 @@ export const TREATMENT_CARDS = [
   {
     category: "Cosmetic Dentistry",
     title: "Dental Veneers",
-    description: "Ultra-thin zirconia, E-max, and porcelain shells for perfect teeth",
+    description:
+      "Ultra-thin zirconia, E-max, and porcelain shells for perfect teeth",
     cta: "Learn More",
     featured: false,
     image: IMAGES.dentalVeneers,
@@ -92,7 +94,8 @@ export const TREATMENT_CARDS = [
   {
     category: "Advanced Technology",
     title: "Laser Dentistry",
-    description: "Precise, minimally invasive treatments with modern laser technology",
+    description:
+      "Precise, minimally invasive treatments with modern laser technology",
     cta: "Learn More",
     featured: false,
     image: laserDentistry,
@@ -107,7 +110,7 @@ export const COMPLETE_DENTAL_SOLUTIONS_CARDS = [
     title: "Hollywood Smile Makeover",
     description:
       "Complete cosmetic transformation combining veneers, whitening, and smile design for a stunning, natural-looking result",
-    cta: "Book Consultation",
+    cta: "Learn More",
     featured: true,
     badge: "Most Popular",
     image: IMAGES.hollywoodSmile,
@@ -119,7 +122,7 @@ export const COMPLETE_DENTAL_SOLUTIONS_CARDS = [
     title: "Dental Implants",
     description:
       "Permanent tooth replacement with titanium implants that look, feel, and function like natural teeth",
-    cta: "Book Consultation",
+    cta: "Learn More",
     featured: true,
     badge: "Most Popular",
     image: IMAGES.dentalImplants,
@@ -129,7 +132,8 @@ export const COMPLETE_DENTAL_SOLUTIONS_CARDS = [
     category: "Restorative Dentistry",
     categoryIcon: "implant" as const,
     title: "All-on-4 & All-on-6",
-    description: "Full arch fixed solutions for multiple missing teeth with immediate results",
+    description:
+      "Full arch fixed solutions for multiple missing teeth with immediate results",
     cta: "Learn More",
     featured: false,
     image: IMAGES.allOn4,
@@ -139,7 +143,8 @@ export const COMPLETE_DENTAL_SOLUTIONS_CARDS = [
     category: "Cosmetic Dentistry",
     categoryIcon: "veneer" as const,
     title: "Dental Veneers",
-    description: "Ultra thin zirconia, E-max, and porcelain shells for perfect teeth",
+    description:
+      "Ultra thin zirconia, E-max, and porcelain shells for perfect teeth",
     cta: "Learn More",
     featured: false,
     image: IMAGES.dentalVeneers,
@@ -177,7 +182,11 @@ export const COMPLETE_DENTAL_SOLUTIONS_CARDS = [
   },
 ] as const;
 
-export type TransformationCategory = "Hollywood Smile" | "Implants" | "Veneers" | "Whitening";
+export type TransformationCategory =
+  | "Hollywood Smile"
+  | "Implants"
+  | "Veneers"
+  | "Whitening";
 
 export const TRANSFORMATIONS: Array<{
   title: string;
@@ -248,4 +257,3 @@ export const DIGITAL_DENTISTRY = {
     },
   ],
 } as const;
-

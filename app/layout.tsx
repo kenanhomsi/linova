@@ -34,9 +34,14 @@ export async function generateMetadata(): Promise<Metadata> {
     ...baseMetadata,
     metadataBase: baseUrl,
     icons: {
-      icon: [{ url: "/favicon.ico" }],
-      shortcut: [{ url: "/favicon.ico" }],
+      icon: "/tab-logo3.svg",
+      shortcut: "/tab-logo3.svg",
+      apple: "/tab-logo3.svg",
     },
+    // icons: {
+    //   icon: [{ url: "/favicon.ico" }],
+    //   shortcut: [{ url: "/favicon.ico" }],
+    // },
     keywords: [
       "dental implants Turkey",
       "Hollywood smile Istanbul",
