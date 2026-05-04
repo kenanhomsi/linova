@@ -34,14 +34,13 @@ export async function generateMetadata(): Promise<Metadata> {
     ...baseMetadata,
     metadataBase: baseUrl,
     icons: {
-      icon: "/tab-logo3.svg",
-      shortcut: "/tab-logo3.svg",
+      icon: [
+        { url: "/favicon.ico", sizes: "48x48", type: "image/x-icon" },
+        { url: "/tab-logo3.svg", type: "image/svg+xml" },
+      ],
+      shortcut: "/favicon.ico",
       apple: "/tab-logo3.svg",
     },
-    // icons: {
-    //   icon: [{ url: "/favicon.ico" }],
-    //   shortcut: [{ url: "/favicon.ico" }],
-    // },
     keywords: [
       "clinic in turkey",
       "dental clinic in turkey",

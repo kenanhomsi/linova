@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "eslint . --max-warnings=0",
     "lint:fix": "eslint . --fix",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "generate-favicon": "node scripts/generate-favicon.mjs"
   },
   "dependencies": {
     "@mantine/core": "^8.3.13",
@@ -32,7 +33,9 @@
     "eslint-config-next": "16.1.6",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-prettier": "^5.5.5",
+    "sharp": "^0.34.5",
     "tailwindcss": "^4",
+    "to-ico": "^1.1.5",
     "typescript": "^5"
   }
 }
