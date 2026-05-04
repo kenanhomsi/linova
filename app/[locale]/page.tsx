@@ -98,7 +98,7 @@ export default async function Home({ params }: Props) {
         <CompleteDentalSolutionsSection animated />
       </SectionReveal>
       <HomeFoldClient />
-      <SeoContentSection locale={locale} />
+      {/* <SeoContentSection locale={locale} /> */}
       <SectionReveal delay={0.05}>
         <GallerySection />
       </SectionReveal>
