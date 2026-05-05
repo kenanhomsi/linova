@@ -61,6 +61,8 @@
     "workingHoursFooter": "Mon - Fri: 9:00 AM - 6:00 PM\nSat: 10:00 AM - 4:00 PM"
   },
   "home": {
+    "seoDescription": "Linova Clinic is a trusted dental clinic in Turkey for dental implants, veneers, Hollywood Smile, and full mouth restoration in Istanbul. Free consultation and patient-friendly medical tourism treatment planning.",
+    "seoKeywords": "linova, linova dental, linova clinic, linova turkey, clinic turkey, dental treatment turkey, medical tourism turkey, dental clinic in turkey, dental clinic istanbul, dental implants turkey, veneers turkey, hollywood smile turkey, best dentist in istanbul",
     "hero": {
       "badge": "Trusted Dental Clinic in Turkey",
       "title": "Linova Dental Clinic in Istanbul",
@@ -511,6 +513,7 @@
     "description": "Get a free consultation. Contact Linova Clinic in Istanbul for dental treatments, WhatsApp, or send a message."
   },
   "treatments": {
+    "seoKeywords": "dental treatments turkey, dental implants istanbul, veneers turkey, hollywood smile, all-on-4 implants, teeth whitening, root canal turkey, cosmetic dentistry istanbul, dental crowns, smile makeover",
     "title": "Treatments",
     "description": "Comprehensive dental treatments: cosmetic, restorative, implants, veneers, full mouth restoration, and medical tourism support in Istanbul.",
     "pageHeader": {
@@ -902,6 +905,7 @@
     "byAuthor": "By"
   },
   "packages": {
+    "seoKeywords": "dental packages turkey, dental holiday turkey, all inclusive dental turkey, dental implants package, hollywood smile package, full mouth restoration turkey, cheap dental turkey, dental tourism packages",
     "title": "Dental Tourism Packages",
     "description": "Compare all-inclusive dental packages in Istanbul: treatment, hotel nights, transfers, and curated experiences — with transparent savings vs UK and US prices.",
     "hero": {

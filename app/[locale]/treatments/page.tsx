@@ -26,6 +26,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: t("title"),
     description: t("description"),
+    keywords: t("seoKeywords")?.split(",").map((k) => k.trim()),
     alternates: {
       canonical: `${BASE_URL}/${locale}/treatments`,
       languages,

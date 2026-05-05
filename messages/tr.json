@@ -61,6 +61,8 @@
     "workingHoursFooter": "Pzt - Cum: 09:00 - 18:00\nCmt: 10:00 - 16:00"
   },
   "home": {
+    "seoDescription": "Linova Clinic, İstanbul'da diş implantları, kaplamalar, Hollywood Gülüşü ve tam ağız restorasyonu için Türkiye'de güvenilir bir diş kliniğidir. Ücretsiz danışmanlık ve hasta dostu sağlık turizmi tedavi planlaması.",
+    "seoKeywords": "linova, linova dental, linova klinik, linova türkiye, türkiye klinik, türkiye diş tedavisi, türkiye sağlık turizmi, türkiye'de diş kliniği, istanbul diş kliniği, türkiye diş implantı, türkiye zirkonyum kaplama, türkiye hollywood gülüşü, istanbul en iyi diş hekimi",
     "hero": {
       "badge": "Türkiye'de Güvenilir Diş Kliniği",
       "title": "İstanbul'da Linova Diş Kliniği",
@@ -334,10 +336,7 @@
     "gallery": {
       "sectionTitle": "Hastalarımızın Başarı Hikayeleri"
     },
-    "galleryTabs": [
-      "Önce ve Sonra",
-      "Kliniğimiz"
-    ],
+    "galleryTabs": ["Önce ve Sonra", "Kliniğimiz"],
     "galleryItems": [
       {
         "title": "Hollywood Gülüş",
@@ -524,20 +523,20 @@
           "answer": "Türkiye'nin elverişli ekonomik yapısı - düşük işletme maliyetleri, avantajlı döviz kurları ve sağlık hizmetlerine yapılan güçlü devlet yatırımı - dünya standartlarında diş tedavilerinin Batı fiyatlarının çok altında sunulabileceği anlamına geliyor. Bu, kaliteden ödün vermek anlamına gelmiyor. Linova, Avrupa ve ABD'deki önde gelen klinikler gibi aynı uluslararası sertifikalı implant markalarını, birinci sınıf seramik malzemeleri ve gelişmiş dijital teknolojiyi kullanıyor. Hastalar sürekli olarak tasarrufların tüm seyahat masraflarını - uçak biletleri, konaklama ve tedavi - karşılayacak kadar önemli olduğunu ve yine de kendi ülkelerinde ödeyeceklerinden daha az ödediklerini görüyorlar."
         },
         {
-          "question":"Türkiye'de diş tedavisi yaptırmak gerçekten güvenli mi?",
+          "question": "Türkiye'de diş tedavisi yaptırmak gerçekten güvenli mi?",
           "answer": "Kesinlikle. Türkiye her yıl 500.000'den fazla uluslararası diş hastasını ağırlıyor - ve bunun iyi bir nedeni var. Linova Kliniği, Türkiye Sağlık Bakanlığı standartlarına göre faaliyet göstermekte olup, diş hekimlerimiz uluslararası kabul görmüş sertifikalara sahiptir. Sadece AB ve FDA onaylı implant sistemleri ve malzemeleri kullanıyoruz. Her işlem, sıkı steril cerrahi protokollerine uygun olarak gerçekleştirilir ve tüm tedaviler yazılı garanti kapsamındadır. İngiltere, Avrupa, Körfez ve Rusya'dan binlerce hasta Linova'ya güvendi ve kendilerini anlatan gülüşlerle ayrıldı."
         },
         {
           "question": "Linova, İstanbul'a indiğim andan itibaren benimle nasıl ilgileniyor?",
-          "answer":  "İlk mesajınızdan eve dönüş uçuşunuza kadar her şeyi biz hallediyoruz:\n Varışınızdan önce: Ücretsiz online konsültasyon, kişiselleştirilmiş tedavi planı ve tam maliyet dökümü — 24 saat içinde. İndiğinizde: Doğrudan otelinize veya kliniğinize VIP havaalanı transferi — stres yok, kafa karışıklığı yok. Tedavi sırasında: Her adımda size eşlik eden özel çok dilli koordinatör (İngilizce, Arapça, Rusça). Boş zaman: Randevular arasında özenle seçilmiş İstanbul deneyimleri — Boğaz, tarihi yerler, dünya standartlarında yemek. Ayrıldığınızda: Tam tedavi kayıtları, bakım sonrası kiti ve sürekli WhatsApp desteği."
-       },
+          "answer": "İlk mesajınızdan eve dönüş uçuşunuza kadar her şeyi biz hallediyoruz:\n Varışınızdan önce: Ücretsiz online konsültasyon, kişiselleştirilmiş tedavi planı ve tam maliyet dökümü — 24 saat içinde. İndiğinizde: Doğrudan otelinize veya kliniğinize VIP havaalanı transferi — stres yok, kafa karışıklığı yok. Tedavi sırasında: Her adımda size eşlik eden özel çok dilli koordinatör (İngilizce, Arapça, Rusça). Boş zaman: Randevular arasında özenle seçilmiş İstanbul deneyimleri — Boğaz, tarihi yerler, dünya standartlarında yemek. Ayrıldığınızda: Tam tedavi kayıtları, bakım sonrası kiti ve sürekli WhatsApp desteği."
+        },
         {
           "question": "Nasıl başlayabilirim - sadece bir konsültasyon için İstanbul'a uçmam gerekiyor mu?",
           "answer": "Kesinlikle hayır. Yolculuğunuz evinizden, ücretsiz olarak başlıyor. Bize dişlerinizin fotoğraflarını ve mevcut röntgenlerinizi WhatsApp veya iletişim formumuz aracılığıyla göndermeniz yeterli. Uzman ekibimiz durumunuzu değerlendirecek ve genellikle 24 saat içinde şeffaf fiyatlandırma ile detaylı bir tedavi planı gönderecektir. Plandan memnun kaldığınızda, seyahat tarihleriniz, oteliniz ve havaalanı transferiniz konusunda size yardımcı oluyoruz. Çoğu tedavi bir veya iki ziyarette tamamlanır ve her günün önemli olduğundan emin oluruz."
         },
         {
-          "question":  "Eve döndükten sonra bir sorun yaşarsam ne olur?",
-          "answer": "Uçuşunuz kalktığında bakımınız sona ermez. Her Linova hastası, tedavileri için yazılı bir garanti, eksiksiz dijital kayıtlar ve röntgenler alır ve herhangi bir soru için WhatsApp üzerinden hasta koordinatörlerine doğrudan erişim imkanına sahiptir. Küçük sorunlar için ekibimiz, ek ücret ödemeden uzaktan rehberlik ve video görüşmeleri sağlar. Şahsen takip gerekirse, uluslararası alanda güvenilir ortak kliniklerimizle koordinasyon sağlıyoruz; böylece dünyanın neresinde olursanız olun, asla desteksiz kalmazsınız."        
+          "question": "Eve döndükten sonra bir sorun yaşarsam ne olur?",
+          "answer": "Uçuşunuz kalktığında bakımınız sona ermez. Her Linova hastası, tedavileri için yazılı bir garanti, eksiksiz dijital kayıtlar ve röntgenler alır ve herhangi bir soru için WhatsApp üzerinden hasta koordinatörlerine doğrudan erişim imkanına sahiptir. Küçük sorunlar için ekibimiz, ek ücret ödemeden uzaktan rehberlik ve video görüşmeleri sağlar. Şahsen takip gerekirse, uluslararası alanda güvenilir ortak kliniklerimizle koordinasyon sağlıyoruz; böylece dünyanın neresinde olursanız olun, asla desteksiz kalmazsınız."
         }
       ]
     }
@@ -547,6 +546,7 @@
     "description": "Ücretsiz danışmanlık alın. Diş tedavileri için İstanbul'daki Linova Clinic ile WhatsApp üzerinden veya doğrudan iletişime geçin."
   },
   "treatments": {
+    "seoKeywords": "türkiye diş tedavileri, istanbul diş implantı, türkiye zirkonyum kaplama, hollywood gülüşü, all-on-4 implant, diş beyazlatma, kanal tedavisi türkiye, estetik diş hekimliği istanbul, diş kaplama, gülüş tasarımı",
     "title": "Tedavilerimiz",
     "description": "Kapsamlı diş tedavileri: estetik diş hekimliği, restoratif tedaviler, implant, kaplama, tam ağız restorasyonu ve İstanbul'da sağlık turizmi desteği.",
     "pageHeader": {
@@ -941,6 +941,7 @@
     "byAuthor": "Yazar:"
   },
   "packages": {
+    "seoKeywords": "türkiye diş paketleri, türkiye diş tatili, her şey dahil diş tedavisi türkiye, implant paketi, hollywood gülüşü paketi, tam ağız restorasyonu türkiye, uygun fiyatlı diş tedavisi türkiye, diş turizmi paketleri",
     "title": "Dental Tourism Packages",
     "description": "Compare all-inclusive dental packages in Istanbul: treatment, hotel nights, transfers, and curated experiences — with transparent savings vs UK and US prices.",
     "hero": {

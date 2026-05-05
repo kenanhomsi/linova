@@ -41,6 +41,7 @@ type PageContent = {
   supportLinksText: string;
   metadataTitle: string;
   metadataDescription: string;
+  metadataKeywords?: string;
   breadcrumbName: string;
 };
 
@@ -100,27 +101,27 @@ const pageContent: Record<Locale, PageContent> = {
           "Linova Clinic focuses on dental implants, veneers, Hollywood Smile cases, restorative dentistry, and full smile rehabilitation supported by digital planning and international patient coordination.",
       },
       {
-        question: "Can I start remotely before traveling to Istanbul?",
+        question: "Is it easy to communicate with the team?",
         answer:
-          "Yes. Patients can start with an online consultation, share photos or X-rays, and receive an initial treatment direction before planning their trip.",
+          "Yes. Our team provides multilingual support (including English, Arabic, and Turkish) so international patients can discuss their plans clearly before and during their visit.",
       },
     ],
-    ctaTitle: "Start with a clearer treatment plan",
+    ctaTitle: "Plan your visit to Linova Clinic",
     ctaText:
-      "If you are comparing a dental clinic in Turkey, the best next step is to request a consultation, review the treatment options, and choose the plan that fits your goals.",
-    ctaPrimary: "Request Free Consultation",
-    ctaSecondary: "View Treatments",
-    learnMoreLabel: "Learn more",
-    packagesLabel: "Packages",
+      "Start with a free online assessment. Share your current dental status with our team, and receive a customized treatment plan.",
+    ctaPrimary: "Free Online Consultation",
+    ctaSecondary: "View Dental Packages",
+    learnMoreLabel: "Learn more about",
+    packagesLabel: "View Packages",
     homeLabel: "Home",
-    whyUsLabel: "Why Us",
-    contactLabel: "Contact",
-    supportLinksText:
-      "Packages, Why Us, and Contact help users move to the right next step faster.",
-    metadataTitle: "Dental Clinic in Turkey | Linova Clinic Istanbul",
+    whyUsLabel: "Why Choose Us",
+    contactLabel: "Contact Us",
+    supportLinksText: "Explore these links to learn more about the process:",
+    metadataTitle: "Dental Clinic in Turkey | Implants & Veneers | Linova Clinic",
     metadataDescription:
-      "Looking for a dental clinic in Turkey? Discover Linova Clinic in Istanbul for dental implants, veneers, Hollywood Smile, and patient-friendly dental tourism support.",
-    breadcrumbName: "Dental Clinic in Turkey",
+      "Looking for a dental clinic in Turkey? Linova Clinic in Istanbul offers dental implants, veneers, and Hollywood Smile makeovers with medical tourism support.",
+    metadataKeywords: "dental clinic in turkey, dental clinic istanbul, best dental clinic in turkey, dental implants turkey, veneers turkey, hollywood smile turkey, linova clinic, linova turkey, medical tourism turkey",
+    breadcrumbName: "Dental Clinic Turkey",
   },
   tr: {
     eyebrow: "Türkiye'de Diş Kliniği",
@@ -295,14 +296,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: content.metadataTitle,
     description: content.metadataDescription,
-    keywords: [
-      "clinic in turkey",
-      "dental clinic in turkey",
-      "linova clinic",
-      "dental implants turkey",
-      "veneers turkey",
-      "hollywood smile turkey",
-    ],
+    keywords: content.metadataKeywords?.split(",").map((k) => k.trim()),
     alternates: {
       canonical: `${BASE_URL}/${locale}${PAGE_PATH}`,
       languages,

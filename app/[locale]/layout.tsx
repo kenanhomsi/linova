@@ -19,11 +19,26 @@ export const metadata: Metadata = {
     template: "%s | Linova Clinic",
   },
   description:
-    "Linova Clinic is a dental clinic in Turkey offering dental implants, veneers, Hollywood Smile, and full mouth restoration in Istanbul with patient-friendly dental tourism support.",
+    "Linova Clinic is a premier dental clinic in Turkey offering dental implants, veneers, Hollywood Smile, and full mouth restoration in Istanbul with patient-friendly medical tourism support.",
+  keywords: [
+    "linova",
+    "linova dental",
+    "linova clinic",
+    "linova turkey",
+    "clinic turkey",
+    "dental treatment turkey",
+    "medical tourism turkey",
+    "best dental clinic istanbul",
+    "dental holiday turkey",
+    "affordable dental care turkey",
+    "dental implants turkey",
+    "veneers turkey",
+    "hollywood smile turkey"
+  ],
   openGraph: {
     title: "Linova Clinic | Dental Clinic in Turkey for Implants, Veneers & Hollywood Smile",
     description:
-      "Dental clinic in Turkey for implants, veneers, Hollywood Smile, and smile makeovers. Discover Linova Clinic in Istanbul.",
+      "Dental clinic in Turkey for implants, veneers, Hollywood Smile, and smile makeovers. Discover Linova Clinic in Istanbul for your medical tourism needs.",
   },
 };
 

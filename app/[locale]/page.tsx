@@ -28,7 +28,8 @@ type Props = {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: "common" });
+  const tCommon = await getTranslations({ locale, namespace: "common" });
+  const tHome = await getTranslations({ locale, namespace: "home" });
 
   const languages: Record<string, string> = {};
   for (const loc of routing.locales) {
@@ -37,36 +38,22 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   languages["x-default"] = `${BASE_URL}/en`;
 
   return {
-    title: `${t("siteFullName")} | ${t("siteTagline")}`,
-    description:
-      "Linova Clinic is a trusted dental clinic in Turkey for dental implants, veneers, Hollywood Smile, and full mouth restoration in Istanbul. Free consultation and patient-friendly treatment planning.",
-    keywords: [
-      "clinic in turkey",
-      "dental clinic in turkey",
-      "dental clinic istanbul",
-      "linova clinic",
-      "linova dental clinic",
-      "dental implants turkey",
-      "veneers turkey",
-      "hollywood smile turkey",
-      "clinic in turkey for dental implants",
-      "dentist in istanbul turkey",
-    ],
+    title: `${tCommon("siteFullName")} | ${tCommon("siteTagline")}`,
+    description: tHome("seoDescription"),
+    keywords: tHome("seoKeywords").split(",").map((k) => k.trim()),
     alternates: {
       canonical: `${BASE_URL}/${locale}`,
       languages,
     },
     openGraph: {
-      title: `${t("siteFullName")} | ${t("siteTagline")}`,
-      description:
-        "Dental clinic in Turkey for implants, veneers, Hollywood Smile, and smile makeovers. Discover Linova Clinic in Istanbul.",
+      title: `${tCommon("siteFullName")} | ${tCommon("siteTagline")}`,
+      description: tHome("seoDescription"),
       url: `${BASE_URL}/${locale}`,
     },
     twitter: {
       card: "summary_large_image",
-      title: `${t("siteFullName")} | ${t("siteTagline")}`,
-      description:
-        "Linova Clinic in Istanbul offers dental implants, veneers, Hollywood Smile, and dental tourism support in Turkey.",
+      title: `${tCommon("siteFullName")} | ${tCommon("siteTagline")}`,
+      description: tHome("seoDescription"),
     },
   };
 }
