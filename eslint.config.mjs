@@ -2,6 +2,7 @@
 import eslint from "@eslint/js";
 import tseslint from "typescript-eslint";
 import reactRecommended from "eslint-plugin-react/configs/recommended.js";
+import reactHooks from "eslint-plugin-react-hooks";
 import jsxA11y from "eslint-plugin-jsx-a11y";
 import importPlugin from "eslint-plugin-import";
 import nextPlugin from "@next/eslint-plugin-next";
@@ -17,6 +18,16 @@ export default tseslint.config(
   // TypeScript configs
   ...tseslint.configs.recommended,
   ...tseslint.configs.stylistic,
+  {
+    files: ["**/*.ts", "**/*.tsx"],
+    languageOptions: {
+      parser: tseslint.parser,
+      parserOptions: {
+        project: "./tsconfig.json",
+        tsconfigRootDir: process.cwd(),
+      },
+    },
+  },
 
   // React with TypeScript support
   {
@@ -40,6 +51,18 @@ export default tseslint.config(
       ...reactRecommended.rules,
       "react/react-in-jsx-scope": "off",
       "react/prop-types": "off", // Not needed with TypeScript
+    },
+  },
+
+  // React Hooks
+  {
+    plugins: {
+      "react-hooks": reactHooks,
+    },
+    rules: {
+      ...reactHooks.configs.recommended.rules,
+      "react-hooks/set-state-in-effect": "off",
+      "react-hooks/preserve-manual-memoization": "off",
     },
   },
 
@@ -179,13 +202,16 @@ export default tseslint.config(
     },
   },
 
-  // Prettier integration (MUST be last)
+  // Prettier (disable formatting-related lint rules)
+  prettier,
+
+  // Prettier integration
   {
     plugins: {
       prettier: prettierPlugin,
     },
     rules: {
-      ...prettier.configs.recommended.rules,
+      ...prettierPlugin.configs.recommended.rules,
       "prettier/prettier": [
         "error",
         {
@@ -203,6 +229,7 @@ export default tseslint.config(
       "out/",
       "build/",
       "dist/",
+      "scripts/",
       "*.config.js",
       "*.config.mjs",
       "*.config.ts",

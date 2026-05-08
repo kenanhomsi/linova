@@ -1,10 +1,13 @@
-import type { Metadata } from "next";
 import { Geist } from "next/font/google";
 import { headers } from "next/headers";
+
 import "@mantine/core/styles.css";
 import "./globals.css";
-import { routing } from "@/i18n/routing";
+
 import { getTextDirection, isAppLocale } from "@/i18n/locale-direction";
+import { routing } from "@/i18n/routing";
+
+import type { Metadata } from "next";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -13,7 +16,8 @@ const geistSans = Geist({
 
 const baseMetadata: Pick<Metadata, "title" | "description"> = {
   title: {
-    default: "Linova Clinic | Dental Clinic in Turkey for Implants, Veneers & Hollywood Smile",
+    default:
+      "Linova Clinic | Dental Clinic in Turkey for Implants, Veneers & Hollywood Smile",
     template: "%s | Linova Clinic Istanbul",
   },
   description:
@@ -70,7 +74,8 @@ export async function generateMetadata(): Promise<Metadata> {
     openGraph: {
       type: "website",
       siteName: "Linova Clinic Istanbul",
-      title: "Linova Clinic | Dental Clinic in Turkey for Implants, Veneers & Hollywood Smile",
+      title:
+        "Linova Clinic | Dental Clinic in Turkey for Implants, Veneers & Hollywood Smile",
       description:
         "Dental clinic in Turkey for implants, veneers, Hollywood Smile, and smile makeovers. Discover Linova Clinic in Istanbul.",
       url: baseUrl,
@@ -112,7 +117,9 @@ export default async function RootLayout({
 }>) {
   const headerLocale = (await headers()).get(LOCALE_HEADER);
   const locale =
-    headerLocale && isAppLocale(headerLocale) ? headerLocale : routing.defaultLocale;
+    headerLocale && isAppLocale(headerLocale)
+      ? headerLocale
+      : routing.defaultLocale;
   const dir = getTextDirection(locale);
 
   return (

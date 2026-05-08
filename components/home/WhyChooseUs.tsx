@@ -1,5 +1,20 @@
-import { Container, Title, Text, SimpleGrid, Stack, ThemeIcon, Group } from "@mantine/core";
-import { IconPlane, IconHotelService, IconLanguage, IconVideo, IconMapPin } from "@tabler/icons-react";
+import {
+  Container,
+  Title,
+  Text,
+  SimpleGrid,
+  Stack,
+  ThemeIcon,
+  Group,
+} from "@mantine/core";
+import {
+  IconPlane,
+  IconHotelService,
+  IconLanguage,
+  IconVideo,
+  IconMapPin,
+} from "@tabler/icons-react";
+
 import { getTreatmentsByCategory } from "@/lib/treatments";
 
 const TOURISM_ICONS: Record<string, React.ReactNode> = {

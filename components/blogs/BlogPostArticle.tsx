@@ -1,8 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import { useTranslations } from "next-intl";
-import { Link } from "@/i18n/navigation";
 import {
   Container,
   Title,
@@ -20,10 +18,15 @@ import {
   IconArrowLeft,
   IconArrowRight,
 } from "@tabler/icons-react";
+import { useTranslations } from "next-intl";
+
 import { FadeInUp } from "@/components/ui/Animate";
+import { Link } from "@/i18n/navigation";
 import { BLOG_POSTS } from "@/lib/blog-data";
-import type { BlogPost } from "@/lib/blog-data";
+
 import styles from "./BlogPostArticle.module.css";
+
+import type { BlogPost } from "@/lib/blog-data";
 
 interface BlogPostArticleProps {
   post: BlogPost;
@@ -57,7 +60,7 @@ function renderContentBlock(block: string, post: BlogPost, key: number) {
       <Box key={key} className={styles.contentImageWrap}>
         <Image
           src={src}
-          alt=""
+          alt={`${post.title} - image ${idx + 1}`}
           width={1200}
           height={800}
           className={styles.contentImage}
@@ -92,7 +95,9 @@ function renderContentBlock(block: string, post: BlogPost, key: number) {
   }
 
   const lines = trimmed.split("\n").map((l) => l.trim());
-  const listItems = lines.filter((l) => l.startsWith("* ")).map((l) => l.slice(2));
+  const listItems = lines
+    .filter((l) => l.startsWith("* "))
+    .map((l) => l.slice(2));
   if (listItems.length > 0 && listItems.length === lines.length) {
     return (
       <Box key={key} component="ul" pl="lg" style={{ margin: 0 }}>
@@ -188,7 +193,7 @@ export function BlogPostArticle({ post, postIndex }: BlogPostArticleProps) {
 
         <article className={styles.article}>
           {blocks.map((block: string, i: number) =>
-            renderContentBlock(block, post, i)
+            renderContentBlock(block, post, i),
           )}
         </article>
 
@@ -219,16 +224,18 @@ export function BlogPostArticle({ post, postIndex }: BlogPostArticleProps) {
         {/* Navigation */}
         <Box className={styles.navRow}>
           {prevPost ? (
-            <Link
-              href={`/blogs/${prevPost.slug}`}
-              className={styles.navLink}
-            >
+            <Link href={`/blogs/${prevPost.slug}`} className={styles.navLink}>
               <IconArrowLeft size={16} stroke={2} />
               <Box>
                 <Text size="xs" className={styles.navLabel}>
                   Previous
                 </Text>
-                <Text size="sm" fw={600} className={styles.navTitle} lineClamp={1}>
+                <Text
+                  size="sm"
+                  fw={600}
+                  className={styles.navTitle}
+                  lineClamp={1}
+                >
                   {prevTitle}
                 </Text>
               </Box>
@@ -245,7 +252,12 @@ export function BlogPostArticle({ post, postIndex }: BlogPostArticleProps) {
                 <Text size="xs" className={styles.navLabel}>
                   Next
                 </Text>
-                <Text size="sm" fw={600} className={styles.navTitle} lineClamp={1}>
+                <Text
+                  size="sm"
+                  fw={600}
+                  className={styles.navTitle}
+                  lineClamp={1}
+                >
                   {nextTitle}
                 </Text>
               </Box>

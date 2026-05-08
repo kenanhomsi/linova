@@ -151,7 +151,9 @@
   color: var(--readdy-gray-700);
   pointer-events: auto;
   cursor: ew-resize;
-  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease;
 }
 
 .handle:hover {
@@ -287,7 +289,11 @@
 
 .thumbActive {
   border-color: var(--readdy-teal);
-  background: color-mix(in srgb, var(--readdy-teal) 6%, var(--background, white));
+  background: color-mix(
+    in srgb,
+    var(--readdy-teal) 6%,
+    var(--background, white)
+  );
   box-shadow: 0 2px 12px color-mix(in srgb, var(--readdy-teal) 15%, transparent);
 }
 
@@ -336,7 +342,11 @@
 }
 
 [data-mantine-color-scheme="dark"] .viewport {
-  border-color: color-mix(in srgb, var(--readdy-teal) 25%, rgba(255, 255, 255, 0.1));
+  border-color: color-mix(
+    in srgb,
+    var(--readdy-teal) 25%,
+    rgba(255, 255, 255, 0.1)
+  );
 }
 
 [data-mantine-color-scheme="dark"] .heading,

@@ -2,6 +2,7 @@
 
 import { useEffect } from "react";
 import { useMantineColorScheme } from "@mantine/core";
+
 import { useTheme } from "./ThemeProvider";
 
 export function SyncColorScheme() {

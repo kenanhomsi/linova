@@ -1,15 +1,21 @@
 import { Container, Title, Text, Box } from "@mantine/core";
 import { getTranslations } from "next-intl/server";
-import { SectionReveal, StaggerContainer, StaggerItem } from "@/components/ui/Animate";
+
+import {
+  SectionReveal,
+  StaggerContainer,
+  StaggerItem,
+} from "@/components/ui/Animate";
+
 import styles from "./PackageCards.module.css";
 
-type Tier = {
+interface Tier {
   name: string;
   nights: string;
   description: string;
   features: string[];
   badge?: string;
-};
+}
 
 const TIER_KEYS = ["essential", "premium", "vip"] as const;
 
@@ -18,7 +24,11 @@ export async function PackageCards() {
 
   return (
     <SectionReveal>
-      <Box component="section" className={styles.section} aria-labelledby="packages-tiers-heading">
+      <Box
+        component="section"
+        className={styles.section}
+        aria-labelledby="packages-tiers-heading"
+      >
         <Container size="lg">
           <div className={styles.header}>
             <Title order={2} id="packages-tiers-heading" mb="sm" ta="center">
@@ -38,7 +48,9 @@ export async function PackageCards() {
                     <article
                       className={`${styles.card} ${recommended ? styles.cardRecommended : ""}`}
                     >
-                      {tier.badge ? <span className={styles.badge}>{tier.badge}</span> : null}
+                      {tier.badge ? (
+                        <span className={styles.badge}>{tier.badge}</span>
+                      ) : null}
                       <h3 className={styles.cardTitle}>{tier.name}</h3>
                       <div className={styles.nights}>{tier.nights}</div>
                       <p className={styles.desc}>{tier.description}</p>

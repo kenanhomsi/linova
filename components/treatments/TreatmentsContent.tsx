@@ -9,13 +9,23 @@ import {
   IconPlane,
 } from "@tabler/icons-react";
 import { getTranslations } from "next-intl/server";
-import { CATEGORIES, getTreatmentsByCategory } from "@/lib/treatments";
+
 import { ServiceCard } from "@/components/shared/ServiceCard";
-import { SectionReveal, StaggerContainer, StaggerItem } from "@/components/ui/Animate";
-import type { TreatmentCategory } from "@/types";
+import {
+  SectionReveal,
+  StaggerContainer,
+  StaggerItem,
+} from "@/components/ui/Animate";
+import { CATEGORIES, getTreatmentsByCategory } from "@/lib/treatments";
+
 import styles from "./TreatmentsContent.module.css";
 
-const CATEGORY_ICONS: Record<TreatmentCategory, React.ComponentType<{ size?: number; stroke?: number }>> = {
+import type { TreatmentCategory } from "@/types";
+
+const CATEGORY_ICONS: Record<
+  TreatmentCategory,
+  React.ComponentType<{ size?: number; stroke?: number }>
+> = {
   cosmetic: IconSparkles,
   restorative: IconTool,
   general: IconStethoscope,
@@ -43,7 +53,12 @@ export async function TreatmentsContent() {
               >
                 {Icon && <Icon size={16} stroke={2} />}
                 <span>{t(`categories.${category.id}.title`)}</span>
-                <Badge size="xs" variant="light" color="teal" className={styles.navBadge}>
+                <Badge
+                  size="xs"
+                  variant="light"
+                  color="teal"
+                  className={styles.navBadge}
+                >
                   {treatments.length}
                 </Badge>
               </Link>
@@ -89,7 +104,10 @@ export async function TreatmentsContent() {
               <StaggerContainer staggerChildren={0.06} delayChildren={0.05}>
                 <div className={styles.grid}>
                   {treatments.map((treatment) => (
-                    <StaggerItem key={treatment.id} className={styles.cardWrapper}>
+                    <StaggerItem
+                      key={treatment.id}
+                      className={styles.cardWrapper}
+                    >
                       <Box id={treatment.slug}>
                         <ServiceCard treatment={treatment} />
                       </Box>

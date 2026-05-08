@@ -1,8 +1,18 @@
-import type { Metadata } from "next";
-import { Box, Button, Card, Container, Group, SimpleGrid, Stack, Text, Title } from "@mantine/core";
+import {
+  Box,
+  Button,
+  Card,
+  Container,
+  Group,
+  SimpleGrid,
+  Stack,
+  Text,
+  Title,
+} from "@mantine/core";
 import { setRequestLocale } from "next-intl/server";
-import { routing } from "@/i18n/routing";
+
 import { Link } from "@/i18n/navigation";
+import { routing } from "@/i18n/routing";
 import {
   BreadcrumbJsonLd,
   FAQJsonLd,
@@ -11,12 +21,14 @@ import {
   WebSiteJsonLd,
 } from "@/lib/structured-data";
 
+import type { Metadata } from "next";
+
 const BASE_URL = "https://linovaclinic.com";
 const PAGE_PATH = "/dental-clinic-turkey";
 
 type Locale = "en" | "tr" | "ar";
 
-type PageContent = {
+interface PageContent {
   eyebrow: string;
   title: string;
   intro: string;
@@ -24,11 +36,11 @@ type PageContent = {
   whyTitle: string;
   reasons: string[];
   treatmentTitle: string;
-  treatments: Array<{ title: string; description: string; href: string }>;
+  treatments: { title: string; description: string; href: string }[];
   supportTitle: string;
   supportItems: string[];
   faqTitle: string;
-  faqs: Array<{ question: string; answer: string }>;
+  faqs: { question: string; answer: string }[];
   ctaTitle: string;
   ctaText: string;
   ctaPrimary: string;
@@ -43,12 +55,13 @@ type PageContent = {
   metadataDescription: string;
   metadataKeywords?: string;
   breadcrumbName: string;
-};
+}
 
 const pageContent: Record<Locale, PageContent> = {
   en: {
     eyebrow: "Dental Clinic in Turkey",
-    title: "Linova Clinic in Istanbul for Dental Implants, Veneers, and Smile Makeovers",
+    title:
+      "Linova Clinic in Istanbul for Dental Implants, Veneers, and Smile Makeovers",
     intro:
       "Linova Clinic is a patient-focused dental clinic in Turkey serving international visitors who want quality dentistry, clear planning, and a smoother treatment journey in Istanbul.",
     description:
@@ -117,15 +130,18 @@ const pageContent: Record<Locale, PageContent> = {
     whyUsLabel: "Why Choose Us",
     contactLabel: "Contact Us",
     supportLinksText: "Explore these links to learn more about the process:",
-    metadataTitle: "Dental Clinic in Turkey | Implants & Veneers | Linova Clinic",
+    metadataTitle:
+      "Dental Clinic in Turkey | Implants & Veneers | Linova Clinic",
     metadataDescription:
       "Looking for a dental clinic in Turkey? Linova Clinic in Istanbul offers dental implants, veneers, and Hollywood Smile makeovers with medical tourism support.",
-    metadataKeywords: "dental clinic in turkey, dental clinic istanbul, best dental clinic in turkey, dental implants turkey, veneers turkey, hollywood smile turkey, linova clinic, linova turkey, medical tourism turkey",
+    metadataKeywords:
+      "dental clinic in turkey, dental clinic istanbul, best dental clinic in turkey, dental implants turkey, veneers turkey, hollywood smile turkey, linova clinic, linova turkey, medical tourism turkey",
     breadcrumbName: "Dental Clinic Turkey",
   },
   tr: {
     eyebrow: "Türkiye'de Diş Kliniği",
-    title: "İstanbul'da Diş İmplantı, Kaplama ve Gülüş Tasarımı için Linova Clinic",
+    title:
+      "İstanbul'da Diş İmplantı, Kaplama ve Gülüş Tasarımı için Linova Clinic",
     intro:
       "Linova Clinic, İstanbul'da kaliteli diş tedavisi, net planlama ve daha rahat bir hasta yolculuğu arayan uluslararası hastalara hizmet veren kullanıcı odaklı bir diş kliniğidir.",
     description:
@@ -279,9 +295,9 @@ const pageContent: Record<Locale, PageContent> = {
   },
 };
 
-type Props = {
+interface Props {
   params: Promise<{ locale: string }>;
-};
+}
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
@@ -324,7 +340,10 @@ export default async function DentalClinicTurkeyPage({ params }: Props) {
       <BreadcrumbJsonLd
         items={[
           { name: content.homeLabel, url: `${BASE_URL}/${locale}` },
-          { name: content.breadcrumbName, url: `${BASE_URL}/${locale}${PAGE_PATH}` },
+          {
+            name: content.breadcrumbName,
+            url: `${BASE_URL}/${locale}${PAGE_PATH}`,
+          },
         ]}
       />
 
@@ -347,7 +366,13 @@ export default async function DentalClinicTurkeyPage({ params }: Props) {
               <Button component={Link} href="/contact" size="md" radius="md">
                 {content.ctaPrimary}
               </Button>
-              <Button component={Link} href="/treatments" variant="outline" size="md" radius="md">
+              <Button
+                component={Link}
+                href="/treatments"
+                variant="outline"
+                size="md"
+                radius="md"
+              >
                 {content.ctaSecondary}
               </Button>
             </Group>
@@ -378,8 +403,10 @@ export default async function DentalClinicTurkeyPage({ params }: Props) {
                   </Text>
                 ))}
                 <Text c="dimmed" style={{ lineHeight: 1.8 }}>
-                  <Link href="/packages">{content.packagesLabel}</Link>, <Link href="/why-us">{content.whyUsLabel}</Link>, and{" "}
-                  <Link href="/contact">{content.contactLabel}</Link> {content.supportLinksText}
+                  <Link href="/packages">{content.packagesLabel}</Link>,{" "}
+                  <Link href="/why-us">{content.whyUsLabel}</Link>, and{" "}
+                  <Link href="/contact">{content.contactLabel}</Link>{" "}
+                  {content.supportLinksText}
                 </Text>
               </Stack>
             </Card>
@@ -398,7 +425,9 @@ export default async function DentalClinicTurkeyPage({ params }: Props) {
                       {treatment.description}
                     </Text>
                     <Text fw={600}>
-                      <Link href={treatment.href}>{content.learnMoreLabel}</Link>
+                      <Link href={treatment.href}>
+                        {content.learnMoreLabel}
+                      </Link>
                     </Text>
                   </Stack>
                 </Card>
@@ -431,10 +460,20 @@ export default async function DentalClinicTurkeyPage({ params }: Props) {
                 {content.ctaText}
               </Text>
               <Group gap="md" wrap="wrap">
-                <Button component={Link} href="/contact" variant="white" c="#0f172a">
+                <Button
+                  component={Link}
+                  href="/contact"
+                  variant="white"
+                  c="#0f172a"
+                >
                   {content.ctaPrimary}
                 </Button>
-                <Button component={Link} href="/packages" variant="outline" color="gray">
+                <Button
+                  component={Link}
+                  href="/packages"
+                  variant="outline"
+                  color="gray"
+                >
                   {content.packagesLabel}
                 </Button>
               </Group>

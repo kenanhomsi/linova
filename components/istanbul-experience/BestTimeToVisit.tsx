@@ -1,11 +1,21 @@
 import Image from "next/image";
 import { Container, Title, Text, Box } from "@mantine/core";
 import { getTranslations } from "next-intl/server";
-import { SectionReveal, StaggerContainer, StaggerItem } from "@/components/ui/Animate";
+
+import {
+  SectionReveal,
+  StaggerContainer,
+  StaggerItem,
+} from "@/components/ui/Animate";
 import { istanbulImageSrc } from "@/lib/istanbul-experience-images";
+
 import styles from "./BestTimeToVisit.module.css";
 
-type Season = { imageKey?: string; name: string; detail: string };
+interface Season {
+  imageKey?: string;
+  name: string;
+  detail: string;
+}
 
 export async function BestTimeToVisit() {
   const t = await getTranslations("istanbulExperience");
@@ -13,13 +23,29 @@ export async function BestTimeToVisit() {
 
   return (
     <SectionReveal delay={0.04}>
-      <Box component="section" className={styles.section} aria-labelledby="seasons-heading">
+      <Box
+        component="section"
+        className={styles.section}
+        aria-labelledby="seasons-heading"
+      >
         <Container size="lg">
           <div className={styles.header}>
-            <Title order={2} id="seasons-heading" className={styles.title} ta="center">
+            <Title
+              order={2}
+              id="seasons-heading"
+              className={styles.title}
+              ta="center"
+            >
               {t("seasons.title")}
             </Title>
-            <Text c="dimmed" ta="center" size="md" maw={560} mx="auto" className={styles.subtitle}>
+            <Text
+              c="dimmed"
+              ta="center"
+              size="md"
+              maw={560}
+              mx="auto"
+              className={styles.subtitle}
+            >
               {t("seasons.subtitle")}
             </Text>
           </div>

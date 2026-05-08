@@ -1,10 +1,13 @@
-import { Link } from "@/i18n/navigation";
 import Image from "next/image";
 import { Card, Text } from "@mantine/core";
 import { IconArrowRight } from "@tabler/icons-react";
 import { getTranslations } from "next-intl/server";
-import type { Treatment } from "@/types";
+
+import { Link } from "@/i18n/navigation";
+
 import styles from "./ServiceCard.module.css";
+
+import type { Treatment } from "@/types";
 
 interface ServiceCardProps {
   treatment: Treatment;
@@ -14,13 +17,12 @@ export async function ServiceCard({ treatment }: ServiceCardProps) {
   const tTreatments = await getTranslations("treatments");
   const tCommon = await getTranslations("common");
   const title = tTreatments(`items.${treatment.slug}.title`);
-  const shortDescription = tTreatments(`items.${treatment.slug}.shortDescription`);
+  const shortDescription = tTreatments(
+    `items.${treatment.slug}.shortDescription`,
+  );
 
   return (
-    <Link
-      href={`/treatments/${treatment.slug}`}
-      className={styles.link}
-    >
+    <Link href={`/treatments/${treatment.slug}`} className={styles.link}>
       <Card padding={0} className={styles.card}>
         {treatment.image ? (
           <div className={styles.imageWrap}>
@@ -30,7 +32,9 @@ export async function ServiceCard({ treatment }: ServiceCardProps) {
               fill
               sizes="(max-width: 576px) 100vw, (max-width: 768px) 50vw, 33vw"
               className={styles.image}
-              {...(typeof treatment.image !== "string" ? { placeholder: "blur" as const } : {})}
+              {...(typeof treatment.image !== "string"
+                ? { placeholder: "blur" as const }
+                : {})}
             />
             <div className={styles.imageOverlay} />
           </div>

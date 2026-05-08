@@ -1,24 +1,41 @@
 import { notFound } from "next/navigation";
 import { setRequestLocale, getTranslations } from "next-intl/server";
-import { routing } from "@/i18n/routing";
-import { TREATMENTS, getTreatmentBySlug } from "@/lib/treatments";
-import { TreatmentDetailContent } from "@/components/treatments/TreatmentDetailContent";
+
 import { BackToTop } from "@/components/layout/BackToTop";
-import { BreadcrumbJsonLd } from "@/lib/structured-data";
+import { TreatmentDetailContent } from "@/components/treatments/TreatmentDetailContent";
+import { routing } from "@/i18n/routing";
+import {
+  BreadcrumbJsonLd,
+  MedicalProcedureJsonLd,
+} from "@/lib/structured-data";
+import { TREATMENTS, getTreatmentBySlug } from "@/lib/treatments";
+
 import type { Metadata } from "next";
 
 const BASE_URL = "https://linovaclinic.com";
 
-type Props = {
+interface Props {
   params: Promise<{ locale: string; slug: string }>;
-};
+}
+
+function toAbsoluteImageUrl(image?: unknown): string | undefined {
+  if (!image) return undefined;
+  const src =
+    typeof image === "string"
+      ? image
+      : typeof image === "object" && image && "src" in image
+        ? (image as { src: string }).src
+        : undefined;
+  if (!src) return undefined;
+  return src.startsWith("http") ? src : `${BASE_URL}${src}`;
+}
 
 export function generateStaticParams() {
   return TREATMENTS.flatMap((treatment) =>
     routing.locales.map((locale) => ({
       locale,
       slug: treatment.slug,
-    }))
+    })),
   );
 }
 
@@ -26,11 +43,17 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale, slug } = await params;
   const treatment = getTreatmentBySlug(slug);
 
-  if (!treatment) return {};
+  if (!treatment) {
+    return {
+      title: "Not found",
+      robots: { index: false, follow: false },
+    };
+  }
 
   const t = await getTranslations({ locale, namespace: "treatments" });
   const title = t(`items.${slug}.title`);
   const description = t(`items.${slug}.shortDescription`);
+  const absoluteOgImage = toAbsoluteImageUrl(treatment.image);
 
   const languages: Record<string, string> = {};
   for (const loc of routing.locales) {
@@ -46,9 +69,20 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       languages,
     },
     openGraph: {
+      type: "website",
+      siteName: "Linova Clinic Istanbul",
       title: `${title} | Linova Clinic Istanbul`,
       description,
       url: `${BASE_URL}/${locale}/treatments/${slug}`,
+      ...(absoluteOgImage
+        ? { images: [{ url: absoluteOgImage, alt: title }] }
+        : {}),
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${title} | Linova Clinic Istanbul`,
+      description,
+      ...(absoluteOgImage ? { images: [absoluteOgImage] } : {}),
     },
   };
 }
@@ -63,13 +97,26 @@ export default async function TreatmentDetailPage({ params }: Props) {
   const tCommon = await getTranslations("common");
   const tTreatments = await getTranslations("treatments");
   const itemTitle = tTreatments(`items.${slug}.title`);
+  const itemDescription = tTreatments(`items.${slug}.shortDescription`);
+  const absoluteUrl = `${BASE_URL}/${locale}/treatments/${slug}`;
+  const absoluteOgImage = toAbsoluteImageUrl(treatment.image);
 
   return (
     <main>
+      <MedicalProcedureJsonLd
+        url={absoluteUrl}
+        name={itemTitle}
+        description={itemDescription}
+        image={absoluteOgImage}
+        inLanguage={locale}
+      />
       <BreadcrumbJsonLd
         items={[
           { name: tCommon("nav.home"), url: `${BASE_URL}/${locale}` },
-          { name: tTreatments("title"), url: `${BASE_URL}/${locale}/treatments` },
+          {
+            name: tTreatments("title"),
+            url: `${BASE_URL}/${locale}/treatments`,
+          },
           { name: itemTitle, url: `${BASE_URL}/${locale}/treatments/${slug}` },
         ]}
       />

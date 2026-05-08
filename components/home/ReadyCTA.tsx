@@ -1,18 +1,48 @@
 "use client";
 
+import {
+  Container,
+  Title,
+  Text,
+  Stack,
+  Group,
+  Button,
+  Box,
+} from "@mantine/core";
+import {
+  IconPhone,
+  IconMail,
+  IconClock,
+  IconAward,
+  IconBrandWhatsapp,
+} from "@tabler/icons-react";
 import { useTranslations } from "next-intl";
-import { Link } from "@/i18n/navigation";
-import { Container, Title, Text, Stack, Group, Button, Box } from "@mantine/core";
-import { IconPhone, IconMail, IconClock, IconAward } from "@tabler/icons-react";
-import { IconBrandWhatsapp } from "@tabler/icons-react";
-import { PHONE, PHONE_TEL, EMAIL, WHATSAPP_LINK, WORKING_HOURS } from "@/lib/constants";
+
 import { FadeInUp } from "@/components/ui/Animate";
+import { Link } from "@/i18n/navigation";
+import {
+  PHONE,
+  PHONE_TEL,
+  EMAIL,
+  WHATSAPP_LINK,
+  WORKING_HOURS,
+} from "@/lib/constants";
+
 import styles from "./ReadyCTA.module.css";
 
 export function ReadyCTA() {
   const t = useTranslations("home");
   const tCommon = useTranslations("common");
-  const ready = t.raw("readyCta") as { eyebrow: string; title: string; subtitle: string; callLabel: string; emailLabel: string; hoursLabel: string; hours: string; ctaButton: string };
+  const ready = t.raw("readyCta") as {
+    eyebrow: string;
+    title: string;
+    subtitle: string;
+    callLabel: string;
+    emailLabel: string;
+    hoursLabel: string;
+    hours: string;
+    ctaButton: string;
+  };
 
   return (
     <Box className={`section-spacing ${styles.root}`}>
@@ -21,10 +51,20 @@ export function ReadyCTA() {
           <FadeInUp>
             <Stack gap="xl">
               <Stack gap="xs">
-                <Text size="xs" fw={700} tt="uppercase" className={styles.eyebrow}>
+                <Text
+                  size="xs"
+                  fw={700}
+                  tt="uppercase"
+                  className={styles.eyebrow}
+                >
                   {ready.eyebrow}
                 </Text>
-                <Title order={2} size="2.25rem" fw={700} className={styles.title}>
+                <Title
+                  order={2}
+                  size="2.25rem"
+                  fw={700}
+                  className={styles.title}
+                >
                   {ready.title}
                 </Title>
                 <Text size="lg" lh={1.6} maw={520} className={styles.subtitle}>
@@ -85,7 +125,12 @@ export function ReadyCTA() {
                     {ready.ctaButton}
                   </Button>
                 </Link>
-                <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className={styles.link}>
+                <a
+                  href={WHATSAPP_LINK}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.link}
+                >
                   <Button
                     size="lg"
                     variant="outline"

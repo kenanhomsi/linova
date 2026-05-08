@@ -170,7 +170,9 @@
   color: white;
   font-weight: 600;
   box-shadow: var(--shadow-md);
-  transition: background 0.2s, transform 0.2s;
+  transition:
+    background 0.2s,
+    transform 0.2s;
 }
 
 .ctaButton:hover {

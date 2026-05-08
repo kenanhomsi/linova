@@ -18,7 +18,8 @@
   position: absolute;
   inset: 0;
   z-index: 1;
-  background: linear-gradient(
+  background:
+    linear-gradient(
       120deg,
       rgba(25, 40, 55, 0.88) 0%,
       rgba(10, 70, 62, 0.82) 45%,

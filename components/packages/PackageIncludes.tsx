@@ -6,12 +6,21 @@ import {
   IconDental,
 } from "@tabler/icons-react";
 import { getTranslations } from "next-intl/server";
-import { SectionReveal, StaggerContainer, StaggerItem } from "@/components/ui/Animate";
+
+import {
+  SectionReveal,
+  StaggerContainer,
+  StaggerItem,
+} from "@/components/ui/Animate";
+
 import styles from "./PackageIncludes.module.css";
 
 const ICONS = [IconClipboardList, IconShieldCheck, IconLanguage, IconDental];
 
-type Item = { title: string; description: string };
+interface Item {
+  title: string;
+  description: string;
+}
 
 export async function PackageIncludes() {
   const t = await getTranslations("packages");
@@ -19,7 +28,11 @@ export async function PackageIncludes() {
 
   return (
     <SectionReveal delay={0.05}>
-      <Box component="section" className={styles.section} aria-labelledby="includes-heading">
+      <Box
+        component="section"
+        className={styles.section}
+        aria-labelledby="includes-heading"
+      >
         <Container size="lg">
           <div className={styles.header}>
             <Title order={2} id="includes-heading" mb="sm" ta="center">

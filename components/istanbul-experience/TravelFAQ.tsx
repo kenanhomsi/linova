@@ -1,10 +1,12 @@
 "use client";
 
 import { useState } from "react";
-import { useTranslations } from "next-intl";
 import { Container, Title, Text, Box } from "@mantine/core";
 import { IconPlus } from "@tabler/icons-react";
+import { useTranslations } from "next-intl";
+
 import { FadeInUp } from "@/components/ui/Animate";
+
 import styles from "./TravelFAQ.module.css";
 
 export function TravelFAQ() {
@@ -13,7 +15,7 @@ export function TravelFAQ() {
   const faq = t.raw("travelFaq") as {
     title: string;
     subtitle: string;
-    items: Array<{ question: string; answer: string }>;
+    items: { question: string; answer: string }[];
   };
 
   return (

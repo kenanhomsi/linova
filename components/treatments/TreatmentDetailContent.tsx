@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { Link } from "@/i18n/navigation";
 import {
   Container,
   Stack,
@@ -10,17 +9,28 @@ import {
   Box,
   Badge,
 } from "@mantine/core";
-import { IconArrowLeft, IconBrandWhatsapp, IconCalendarEvent } from "@tabler/icons-react";
+import {
+  IconArrowLeft,
+  IconBrandWhatsapp,
+  IconCalendarEvent,
+} from "@tabler/icons-react";
 import { getTranslations } from "next-intl/server";
-import { getTreatmentsByCategory } from "@/lib/treatments";
-import { WHATSAPP_LINK } from "@/lib/constants";
+
 import { ServiceCard } from "@/components/shared/ServiceCard";
-import { getTreatmentLongArticle } from "@/lib/treatmentData";
 import { TreatmentLongFormBody } from "@/components/treatments/TreatmentLongFormBody";
-import type { Treatment } from "@/types";
+import { Link } from "@/i18n/navigation";
+import { WHATSAPP_LINK } from "@/lib/constants";
+import { getTreatmentLongArticle } from "@/lib/treatmentData";
+import { getTreatmentsByCategory } from "@/lib/treatments";
+
 import styles from "./TreatmentDetailContent.module.css";
 
-type Benefit = { title: string; desc: string };
+import type { Treatment } from "@/types";
+
+interface Benefit {
+  title: string;
+  desc: string;
+}
 
 interface TreatmentDetailContentProps {
   treatment: Treatment;
@@ -32,18 +42,14 @@ export async function TreatmentDetailContent({
   const t = await getTranslations("treatments");
 
   const title = t(`items.${treatment.slug}.title`);
-  const shortDescription = t(
-    `items.${treatment.slug}.shortDescription`
-  );
+  const shortDescription = t(`items.${treatment.slug}.shortDescription`);
   const categoryTitle = t(`categories.${treatment.category}.title`);
-  const categoryDescription = t(
-    `categories.${treatment.category}.description`
-  );
+  const categoryDescription = t(`categories.${treatment.category}.description`);
   const benefits = t.raw("detail.benefits") as Benefit[];
 
-  const related = getTreatmentsByCategory(treatment.category).filter(
-    (item) => item.slug !== treatment.slug
-  ).slice(0, 3);
+  const related = getTreatmentsByCategory(treatment.category)
+    .filter((item) => item.slug !== treatment.slug)
+    .slice(0, 3);
 
   const longArticle = getTreatmentLongArticle(treatment.slug);
 
@@ -63,7 +69,7 @@ export async function TreatmentDetailContent({
             {treatment.image ? (
               <Image
                 src={treatment.image}
-                alt=""
+                alt={title}
                 fill
                 priority
                 sizes="(max-width: 1200px) 100vw, 1160px"
@@ -166,6 +172,7 @@ export async function TreatmentDetailContent({
               <TreatmentLongFormBody
                 content={longArticle.content}
                 contentImages={longArticle.contentImages}
+                contextTitle={title}
               />
             </div>
 
@@ -174,8 +181,8 @@ export async function TreatmentDetailContent({
                 Ready to Transform Your Smile?
               </Title>
               <Text size="md" className={styles.articleCtaText}>
-                Book a free consultation with our expert team and start your journey
-                today.
+                Book a free consultation with our expert team and start your
+                journey today.
               </Text>
               <Link href="/contact" className={styles.articleCtaLink}>
                 <Button
@@ -191,7 +198,10 @@ export async function TreatmentDetailContent({
           </section>
         ) : null}
 
-        <section className={styles.sectionWhy} aria-labelledby="why-linova-heading">
+        <section
+          className={styles.sectionWhy}
+          aria-labelledby="why-linova-heading"
+        >
           <div className={styles.whyHeader}>
             <Text className={styles.whyEyebrow} component="p">
               {t("detail.whyLinovaEyebrow")}

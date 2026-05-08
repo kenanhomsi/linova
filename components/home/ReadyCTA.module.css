@@ -142,7 +142,12 @@
 
 .yearsCard {
   grid-column: 1 / -1;
-  background: linear-gradient(135deg, var(--readdy-teal-light) 0%, var(--readdy-teal) 50%, var(--readdy-teal-dark) 100%);
+  background: linear-gradient(
+    135deg,
+    var(--readdy-teal-light) 0%,
+    var(--readdy-teal) 50%,
+    var(--readdy-teal-dark) 100%
+  );
   border-radius: var(--radius-xl);
   padding: 2rem 1.5rem;
   display: flex;

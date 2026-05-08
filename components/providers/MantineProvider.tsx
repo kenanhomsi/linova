@@ -6,10 +6,10 @@ import {
   MantineProvider as MantineProviderBase,
 } from "@mantine/core";
 
-type MantineProviderProps = {
+interface MantineProviderProps {
   children: React.ReactNode;
   direction?: "ltr" | "rtl";
-};
+}
 
 const theme = createTheme({
   primaryColor: "teal",
@@ -89,7 +89,10 @@ const theme = createTheme({
   },
 });
 
-export function MantineProvider({ children, direction = "ltr" }: MantineProviderProps) {
+export function MantineProvider({
+  children,
+  direction = "ltr",
+}: MantineProviderProps) {
   return (
     <DirectionProvider initialDirection={direction} detectDirection={false}>
       <MantineProviderBase theme={theme} defaultColorScheme="light">

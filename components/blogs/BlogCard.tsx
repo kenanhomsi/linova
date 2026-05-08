@@ -1,13 +1,16 @@
 "use client";
 
 import Image from "next/image";
-import { useTranslations } from "next-intl";
-import { Link } from "@/i18n/navigation";
 import { Card, Text, Box, Group } from "@mantine/core";
-import { motion } from "framer-motion";
 import { IconClock, IconArrowRight } from "@tabler/icons-react";
-import type { BlogPost } from "@/lib/blog-data";
+import { motion } from "framer-motion";
+import { useTranslations } from "next-intl";
+
+import { Link } from "@/i18n/navigation";
+
 import styles from "./BlogCard.module.css";
+
+import type { BlogPost } from "@/lib/blog-data";
 
 interface BlogCardProps {
   post: BlogPost;
@@ -39,7 +42,11 @@ export function BlogCard({ post, featured = false }: BlogCardProps) {
               src={post.image}
               alt={post.title}
               fill
-              sizes={featured ? "(max-width: 768px) 100vw, 50vw" : "(max-width: 576px) 100vw, (max-width: 992px) 50vw, 33vw"}
+              sizes={
+                featured
+                  ? "(max-width: 768px) 100vw, 50vw"
+                  : "(max-width: 576px) 100vw, (max-width: 992px) 50vw, 33vw"
+              }
               className={styles.image}
             />
             <div className={styles.imageOverlay} />
@@ -47,9 +54,7 @@ export function BlogCard({ post, featured = false }: BlogCardProps) {
               {t(`categories.${post.categoryKey}`)}
             </Box>
             {post.featured && (
-              <Box className={styles.featuredBadge}>
-                {t("featuredBadge")}
-              </Box>
+              <Box className={styles.featuredBadge}>{t("featuredBadge")}</Box>
             )}
           </Box>
           <Box className={styles.content}>
@@ -66,7 +71,12 @@ export function BlogCard({ post, featured = false }: BlogCardProps) {
               </Group>
             </Group>
             <h3 className={styles.title}>{post.title}</h3>
-            <Text size="sm" lh={1.65} className={styles.excerpt} lineClamp={featured ? 3 : 2}>
+            <Text
+              size="sm"
+              lh={1.65}
+              className={styles.excerpt}
+              lineClamp={featured ? 3 : 2}
+            >
               {post.excerpt}
             </Text>
             <Group gap="xs" className={styles.footer}>

@@ -1,18 +1,21 @@
-import { getTranslations } from "next-intl/server";
 import Image from "next/image";
 import { Container, Stack, Title, Text, Box } from "@mantine/core";
+import { getTranslations } from "next-intl/server";
+
 import { FadeInUp } from "@/components/ui/Animate";
 import heroImage from "@/public/images/hero-patient.jpg";
+
 import styles from "./BlogsPageHeader.module.css";
 
 export async function BlogsPageHeader() {
   const t = await getTranslations("blogs");
+  const heroAlt = `${t("pageHeader.title")} ${t("pageHeader.titleHighlight")} — ${t("description")}`;
 
   return (
     <Box className={styles.hero}>
       <Image
         src={heroImage}
-        alt=""
+        alt={heroAlt}
         fill
         priority
         placeholder="blur"

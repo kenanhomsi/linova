@@ -1,8 +1,10 @@
 import Image from "next/image";
 import { Container, Stack, Title, Text, Box } from "@mantine/core";
 import { getTranslations } from "next-intl/server";
+
 import { FadeInUp } from "@/components/ui/Animate";
 import heroImage from "@/public/heroSection.jpg";
+
 import styles from "./PackagesHero.module.css";
 
 export async function PackagesHero() {
@@ -27,7 +29,9 @@ export async function PackagesHero() {
             </Text>
             <Title order={1} className={styles.title}>
               {t("hero.title")}{" "}
-              <span className={styles.titleHighlight}>{t("hero.titleHighlight")}</span>
+              <span className={styles.titleHighlight}>
+                {t("hero.titleHighlight")}
+              </span>
             </Title>
             <Text size="lg" lh={1.7} className={styles.subtitle}>
               {t("hero.subtitle")}

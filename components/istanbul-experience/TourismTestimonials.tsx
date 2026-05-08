@@ -1,10 +1,21 @@
 import { Container, Title, Text, Box } from "@mantine/core";
 import { IconQuote } from "@tabler/icons-react";
 import { getTranslations } from "next-intl/server";
-import { SectionReveal, StaggerContainer, StaggerItem } from "@/components/ui/Animate";
+
+import {
+  SectionReveal,
+  StaggerContainer,
+  StaggerItem,
+} from "@/components/ui/Animate";
+
 import styles from "./TourismTestimonials.module.css";
 
-type Item = { quote: string; name: string; country: string; highlight: string };
+interface Item {
+  quote: string;
+  name: string;
+  country: string;
+  highlight: string;
+}
 
 function initialFromName(name: string): string {
   const t = name.trim();
@@ -22,10 +33,19 @@ export async function TourismTestimonials() {
 
   return (
     <SectionReveal delay={0.05}>
-      <Box component="section" className={styles.section} aria-labelledby="tourism-testimonials-heading">
+      <Box
+        component="section"
+        className={styles.section}
+        aria-labelledby="tourism-testimonials-heading"
+      >
         <Container size="lg">
           <div className={styles.header}>
-            <Title order={2} id="tourism-testimonials-heading" className={styles.title} ta="center">
+            <Title
+              order={2}
+              id="tourism-testimonials-heading"
+              className={styles.title}
+              ta="center"
+            >
               {block.title}
             </Title>
             <Text c="dimmed" ta="center" size="md" maw={520} mx="auto">
@@ -42,7 +62,11 @@ export async function TourismTestimonials() {
                         {initialFromName(item.name)}
                       </span>
                       <div className={styles.body}>
-                        <IconQuote size={22} className={styles.quoteIcon} aria-hidden />
+                        <IconQuote
+                          size={22}
+                          className={styles.quoteIcon}
+                          aria-hidden
+                        />
                         <p className={styles.quote}>{item.quote}</p>
                         <footer className={styles.footer}>
                           <div className={styles.name}>{item.name}</div>

@@ -34,7 +34,11 @@
 }
 
 .overlay {
-  background: linear-gradient(135deg, rgba(15, 23, 42, 0.5) 0%, rgba(13, 45, 35, 0.45) 100%);
+  background: linear-gradient(
+    135deg,
+    rgba(15, 23, 42, 0.5) 0%,
+    rgba(13, 45, 35, 0.45) 100%
+  );
 }
 
 .textureOverlay {
@@ -110,7 +114,9 @@
   border: 1px solid rgba(255, 255, 255, 0.2);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
   cursor: pointer;
-  transition: box-shadow var(--transition-normal), transform var(--transition-normal);
+  transition:
+    box-shadow var(--transition-normal),
+    transform var(--transition-normal);
 }
 
 @media (max-width: 768px) {

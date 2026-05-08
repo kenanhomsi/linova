@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+
 import styles from "./Logo.module.css";
 
 type LogoVariant = "default" | "light";
@@ -11,7 +12,9 @@ export function Logo({ variant = "default" }: { variant?: LogoVariant }) {
   return (
     <Link href="/" className={styles.link} aria-label="Linova Dental – Home">
       <span className={styles.wrapper}>
-        <span className={`${styles.icon} ${isLight ? styles.iconLight : styles.iconDefault}`}>
+        <span
+          className={`${styles.icon} ${isLight ? styles.iconLight : styles.iconDefault}`}
+        >
           <svg
             width="22"
             height="22"
@@ -34,10 +37,14 @@ export function Logo({ variant = "default" }: { variant?: LogoVariant }) {
           </svg>
         </span>
         <span className={styles.textWrap}>
-          <span className={`${styles.primary} ${isLight ? styles.primaryLight : styles.primaryDefault}`}>
+          <span
+            className={`${styles.primary} ${isLight ? styles.primaryLight : styles.primaryDefault}`}
+          >
             Linova
           </span>
-          <span className={`${styles.secondary} ${isLight ? styles.secondaryLight : styles.secondaryDefault}`}>
+          <span
+            className={`${styles.secondary} ${isLight ? styles.secondaryLight : styles.secondaryDefault}`}
+          >
             Dental
           </span>
         </span>

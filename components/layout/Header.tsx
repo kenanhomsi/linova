@@ -1,7 +1,5 @@
 "use client";
 
-import { useTranslations } from "next-intl";
-import { Link, usePathname } from "@/i18n/navigation";
 import Image from "next/image";
 import {
   Container,
@@ -15,11 +13,15 @@ import {
 import { useDisclosure } from "@mantine/hooks";
 import { IconBrandWhatsapp } from "@tabler/icons-react";
 import { motion, useScroll, useTransform } from "framer-motion";
+import { useTranslations } from "next-intl";
+
+import { Link, usePathname } from "@/i18n/navigation";
 import { WHATSAPP_LINK } from "@/lib/constants";
-import { ThemeToggle } from "./ThemeToggle";
-import { LanguageSwitcher } from "./LanguageSwitcher";
-import styles from "./Header.module.css";
 import logo from "@/public/logo-m2.svg";
+
+import styles from "./Header.module.css";
+import { LanguageSwitcher } from "./LanguageSwitcher";
+import { ThemeToggle } from "./ThemeToggle";
 const NAV_CONFIG = [
   { href: "/", labelKey: "nav.home" },
   { href: "/treatments", labelKey: "nav.Treatments" },
@@ -61,12 +63,12 @@ export function Header() {
   const headerShadow = useTransform(
     scrollY,
     [0, 80],
-    ["0 1px 3px rgba(0,0,0,0.05)", "0 4px 20px rgba(0,0,0,0.12)"]
+    ["0 1px 3px rgba(0,0,0,0.05)", "0 4px 20px rgba(0,0,0,0.12)"],
   );
   const backdropBlur = useTransform(
     scrollY,
     [0, 80],
-    ["saturate(100%) blur(0px)", "saturate(180%) blur(12px)"]
+    ["saturate(100%) blur(0px)", "saturate(180%) blur(12px)"],
   );
 
   const navItems = (
@@ -103,7 +105,12 @@ export function Header() {
       }}
     >
       <Container size="xl" py="md" px={{ base: "xs", sm: "md" }}>
-        <Group justify="space-between" wrap="nowrap" gap="sm" className={styles.headerInner}>
+        <Group
+          justify="space-between"
+          wrap="nowrap"
+          gap="sm"
+          className={styles.headerInner}
+        >
           <Link href="/" className={styles.logoLink}>
             <Image
               src="/logo-m2.svg"
@@ -125,7 +132,12 @@ export function Header() {
           <Group gap="sm" wrap="nowrap" className={styles.actions}>
             <LanguageSwitcher />
             <ThemeToggle />
-            <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className={styles.whatsappLink}>
+            <a
+              href={WHATSAPP_LINK}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.whatsappLink}
+            >
               <Button
                 variant="outline"
                 color="gray"
@@ -212,7 +224,12 @@ export function Header() {
           })}
         </Stack>
         <Stack gap="md" mt="xl" className={styles.drawerSection}>
-          <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className={styles.drawerWhatsApp}>
+          <a
+            href={WHATSAPP_LINK}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.drawerWhatsApp}
+          >
             <Button
               variant="outline"
               fullWidth
@@ -227,7 +244,11 @@ export function Header() {
               {t("whatsapp")}
             </Button>
           </a>
-          <Link href="/contact" className={styles.drawerWhatsApp} onClick={close}>
+          <Link
+            href="/contact"
+            className={styles.drawerWhatsApp}
+            onClick={close}
+          >
             <Button
               variant="filled"
               fullWidth

@@ -279,7 +279,9 @@
   border: none;
   font-weight: 600;
   letter-spacing: 0.01em;
-  transition: background var(--transition-fast), transform var(--transition-fast);
+  transition:
+    background var(--transition-fast),
+    transform var(--transition-fast);
 }
 
 .cta:hover {

@@ -1,8 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import { useTranslations } from "next-intl";
-import { Link } from "@/i18n/navigation";
 import {
   Container,
   Title,
@@ -14,7 +12,6 @@ import {
   Button,
   Divider,
 } from "@mantine/core";
-import { motion } from "framer-motion";
 import {
   IconPhone,
   IconMail,
@@ -24,14 +21,22 @@ import {
   IconBrandFacebook,
   IconBrandYoutube,
 } from "@tabler/icons-react";
+import { motion } from "framer-motion";
+import { useTranslations } from "next-intl";
+
+import { Link } from "@/i18n/navigation";
 import { PHONE, PHONE_TEL, EMAIL, SOCIAL } from "@/lib/constants";
+
 import styles from "./Footer.module.css";
 
 const FOOTER_SERVICES_CONFIG = [
   { href: "/treatments", labelKey: "footerServices.cosmeticDentistry" },
   { href: "/treatments", labelKey: "footerServices.dentalImplants" },
   { href: "/packages", labelKey: "footerServices.dentalPackages" },
-  { href: "/istanbul-experience", labelKey: "footerServices.istanbulExperience" },
+  {
+    href: "/istanbul-experience",
+    labelKey: "footerServices.istanbulExperience",
+  },
   { href: "/why-us", labelKey: "footerServices.medicalTourism" },
   { href: "/#technology", labelKey: "footerServices.technology" },
 ] as const;
@@ -46,24 +51,53 @@ const FOOTER_TREATMENTS_CONFIG = [
 const FOOTER_LEGAL_CONFIG = [
   { href: "/privacy", labelKey: "footerLegal.privacyPolicy", external: false },
   { href: "/terms", labelKey: "footerLegal.termsOfService", external: false },
-  { href: "https://readdy.link", labelKey: "footerLegal.websiteBuilder", external: true },
+  {
+    href: "https://readdy.link",
+    labelKey: "footerLegal.websiteBuilder",
+    external: true,
+  },
 ] as const;
 
 export function Footer() {
   const t = useTranslations("common");
 
   const socialLinks = [
-    { labelKey: "footer.instagram", href: SOCIAL.instagram, Icon: IconBrandInstagram },
-    { labelKey: "footer.facebook", href: SOCIAL.facebook, Icon: IconBrandFacebook },
-    { labelKey: "footer.youtube", href: SOCIAL.youtube, Icon: IconBrandYoutube },
-    { labelKey: "footer.whatsapp", href: SOCIAL.whatsapp, Icon: IconBrandWhatsapp },
+    {
+      labelKey: "footer.instagram",
+      href: SOCIAL.instagram,
+      Icon: IconBrandInstagram,
+    },
+    {
+      labelKey: "footer.facebook",
+      href: SOCIAL.facebook,
+      Icon: IconBrandFacebook,
+    },
+    {
+      labelKey: "footer.youtube",
+      href: SOCIAL.youtube,
+      Icon: IconBrandYoutube,
+    },
+    {
+      labelKey: "footer.whatsapp",
+      href: SOCIAL.whatsapp,
+      Icon: IconBrandWhatsapp,
+    },
   ];
 
   return (
     <footer className={styles.footer}>
-      <Box component="section" py={{ base: "sm", sm: "lg" }} className={styles.ctaBar}>
+      <Box
+        component="section"
+        py={{ base: "sm", sm: "lg" }}
+        className={styles.ctaBar}
+      >
         <Container size="xl">
-          <Group justify="space-between" wrap="wrap" gap="md" className={styles.ctaGroup}>
+          <Group
+            justify="space-between"
+            wrap="wrap"
+            gap="md"
+            className={styles.ctaGroup}
+          >
             <Text size="lg" fw={600} c="white" className={styles.ctaText}>
               {t("footer.doYouWantAppointment")}
             </Text>
@@ -84,9 +118,17 @@ export function Footer() {
         </Container>
       </Box>
 
-      <Container size="xl" py={{ base: "md", sm: "xl" }} className={styles.footerMain}>
-        <Box mb={{ base: "md", sm: "xl" }} >
-          <Link href="/" className={styles.footerLogoLink} aria-label={t("siteName")}>
+      <Container
+        size="xl"
+        py={{ base: "md", sm: "xl" }}
+        className={styles.footerMain}
+      >
+        <Box mb={{ base: "md", sm: "xl" }}>
+          <Link
+            href="/"
+            className={styles.footerLogoLink}
+            aria-label={t("siteName")}
+          >
             <Image
               src="/logo-white.png"
               alt="Linova Clinic"
@@ -106,7 +148,14 @@ export function Footer() {
           mb={{ base: "md", sm: "xl" }}
         >
           <Box>
-            <Title order={3} size="h4" c="white" fw={700} mb="sm" className={styles.sectionTitle}>
+            <Title
+              order={3}
+              size="h4"
+              c="white"
+              fw={700}
+              mb="sm"
+              className={styles.sectionTitle}
+            >
               {t("siteName")}
             </Title>
             <Stack gap="xs" className={styles.footerLinkStack}>
@@ -132,7 +181,14 @@ export function Footer() {
           </Box>
 
           <Box>
-            <Title order={3} size="h4" c="white" fw={700} mb="sm" className={styles.sectionTitle}>
+            <Title
+              order={3}
+              size="h4"
+              c="white"
+              fw={700}
+              mb="sm"
+              className={styles.sectionTitle}
+            >
               {t("footer.services")}
             </Title>
             <Stack gap="xs" className={styles.footerLinkStack}>
@@ -145,7 +201,14 @@ export function Footer() {
           </Box>
 
           <Box>
-            <Title order={3} size="h4" c="white" fw={700} mb="sm" className={styles.sectionTitle}>
+            <Title
+              order={3}
+              size="h4"
+              c="white"
+              fw={700}
+              mb="sm"
+              className={styles.sectionTitle}
+            >
               {t("footer.popularTreatments")}
             </Title>
             <Stack gap="xs" className={styles.footerLinkStack}>
@@ -158,7 +221,14 @@ export function Footer() {
           </Box>
 
           <Box>
-            <Title order={3} size="h4" c="white" fw={700} mb="sm" className={styles.sectionTitle}>
+            <Title
+              order={3}
+              size="h4"
+              c="white"
+              fw={700}
+              mb="sm"
+              className={styles.sectionTitle}
+            >
               {t("footer.getInTouch")}
             </Title>
             <Stack gap="sm" mb="lg" className={styles.footerContactStack}>
@@ -171,7 +241,14 @@ export function Footer() {
                 {EMAIL}
               </a>
             </Stack>
-            <Title order={3} size="h4" c="white" fw={700} mb="sm" className={styles.sectionTitle}>
+            <Title
+              order={3}
+              size="h4"
+              c="white"
+              fw={700}
+              mb="sm"
+              className={styles.sectionTitle}
+            >
               {t("footer.visitUs")}
             </Title>
             <Group gap="sm" align="flex-start">
@@ -188,16 +265,27 @@ export function Footer() {
           </Box>
         </SimpleGrid>
 
-        <Divider color="rgba(255,255,255,0.15)" mb="lg" className={styles.footerDivider} />
+        <Divider
+          color="rgba(255,255,255,0.15)"
+          mb="lg"
+          className={styles.footerDivider}
+        />
 
-        <Group justify="space-between" wrap="wrap" gap="md" className={styles.footerBottomGroup}>
+        <Group
+          justify="space-between"
+          wrap="wrap"
+          gap="md"
+          className={styles.footerBottomGroup}
+        >
           <Group gap="sm">
             {socialLinks.map(({ labelKey, href, Icon }) => (
               <a
                 key={labelKey}
                 href={href}
                 target={href.startsWith("http") ? "_blank" : undefined}
-                rel={href.startsWith("http") ? "noopener noreferrer" : undefined}
+                rel={
+                  href.startsWith("http") ? "noopener noreferrer" : undefined
+                }
                 aria-label={t(labelKey)}
                 className={styles.socialBtn}
               >
@@ -213,7 +301,8 @@ export function Footer() {
             ))}
           </Group>
           <Text size="xs" c="rgba(255,255,255,0.6)">
-            © {new Date().getFullYear()} {t("siteName")}. {t("footer.allRightsReserved")}.
+            © {new Date().getFullYear()} {t("siteName")}.{" "}
+            {t("footer.allRightsReserved")}.
           </Text>
           <Group gap={4}>
             {FOOTER_LEGAL_CONFIG.map((item, i) => (
@@ -235,7 +324,10 @@ export function Footer() {
                     </motion.span>
                   </a>
                 ) : (
-                  <Link href={item.href as "/privacy"} className={styles.legalLink}>
+                  <Link
+                    href={item.href as "/privacy"}
+                    className={styles.legalLink}
+                  >
                     <motion.span
                       className={styles.legalSpan}
                       whileHover={{ color: "white" }}

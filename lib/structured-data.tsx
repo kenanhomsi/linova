@@ -6,12 +6,34 @@ import {
   WORKING_HOURS,
 } from "./constants";
 
+type JsonLdValue =
+  | string
+  | number
+  | boolean
+  | null
+  | JsonLdValue[]
+  | { [k: string]: JsonLdValue };
+
+function JsonLdScript({ data }: { data: Record<string, JsonLdValue> }) {
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
+    />
+  );
+}
+
 export function OrganizationJsonLd() {
   const data = {
     "@context": "https://schema.org",
     "@type": "Dentist",
     name: SITE_FULL_NAME,
-    alternateName: ["Linova Dental Clinic", "Linova Turkey", "Linova Clinic", "Linova Dental"],
+    alternateName: [
+      "Linova Dental Clinic",
+      "Linova Turkey",
+      "Linova Clinic",
+      "Linova Dental",
+    ],
     url: "https://linovaclinic.com",
     logo: "https://linovaclinic.com/icon-512.png",
     image: "https://linovaclinic.com/images/og-image.jpg",
@@ -115,18 +137,13 @@ export function OrganizationJsonLd() {
     ],
   };
 
-  return (
-    <script
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
-    />
-  );
+  return <JsonLdScript data={data} />;
 }
 
 export function FAQJsonLd({
   items,
 }: {
-  items: Array<{ question: string; answer: string }>;
+  items: { question: string; answer: string }[];
 }) {
   const validItems = items.filter((item) => item.answer && item.answer.trim());
 
@@ -145,18 +162,13 @@ export function FAQJsonLd({
     })),
   };
 
-  return (
-    <script
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
-    />
-  );
+  return <JsonLdScript data={data} />;
 }
 
 export function BreadcrumbJsonLd({
   items,
 }: {
-  items: Array<{ name: string; url: string }>;
+  items: { name: string; url: string }[];
 }) {
   const data = {
     "@context": "https://schema.org",
@@ -169,12 +181,7 @@ export function BreadcrumbJsonLd({
     })),
   };
 
-  return (
-    <script
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
-    />
-  );
+  return <JsonLdScript data={data} />;
 }
 
 export function MedicalBusinessJsonLd() {
@@ -207,12 +214,7 @@ export function MedicalBusinessJsonLd() {
     ],
   };
 
-  return (
-    <script
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
-    />
-  );
+  return <JsonLdScript data={data} />;
 }
 
 export function WebSiteJsonLd() {
@@ -230,10 +232,90 @@ export function WebSiteJsonLd() {
     },
   };
 
-  return (
-    <script
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
-    />
-  );
+  return <JsonLdScript data={data} />;
+}
+
+export function BlogPostingJsonLd({
+  url,
+  headline,
+  description,
+  image,
+  datePublished,
+  authorName,
+  inLanguage,
+}: {
+  url: string;
+  headline: string;
+  description: string;
+  image: string;
+  datePublished: string;
+  authorName: string;
+  inLanguage?: string;
+}) {
+  const data = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": url,
+    },
+    headline,
+    description,
+    image: [image],
+    datePublished,
+    dateModified: datePublished,
+    author: {
+      "@type": "Person",
+      name: authorName,
+    },
+    publisher: {
+      "@type": "Organization",
+      name: SITE_FULL_NAME,
+      logo: {
+        "@type": "ImageObject",
+        url: "https://linovaclinic.com/icon-512.png",
+      },
+    },
+    ...(inLanguage ? { inLanguage } : {}),
+  };
+
+  return <JsonLdScript data={data} />;
+}
+
+export function MedicalProcedureJsonLd({
+  url,
+  name,
+  description,
+  image,
+  inLanguage,
+}: {
+  url: string;
+  name: string;
+  description: string;
+  image?: string;
+  inLanguage?: string;
+}) {
+  const data = {
+    "@context": "https://schema.org",
+    "@type": "MedicalProcedure",
+    name,
+    description,
+    url,
+    ...(image ? { image: [image] } : {}),
+    ...(inLanguage ? { inLanguage } : {}),
+    provider: {
+      "@type": "Dentist",
+      name: SITE_FULL_NAME,
+      url: "https://linovaclinic.com",
+      telephone: PHONE,
+      email: EMAIL,
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: ADDRESS,
+      },
+      openingHours: WORKING_HOURS,
+    },
+  };
+
+  return <JsonLdScript data={data} />;
 }

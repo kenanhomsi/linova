@@ -1,4 +1,5 @@
 import { Container, Title, Text, Stack, Button } from "@mantine/core";
+
 import { ContactForm } from "@/components/shared/ContactForm";
 import { WHATSAPP_LINK } from "@/lib/constants";
 
@@ -11,7 +12,8 @@ export function CTAForm() {
             Get a Free Consultation
           </Title>
           <Text maw={500} mx="auto" c="dimmed" size="lg">
-            Tell us what you need. We&apos;ll send you a personalized treatment plan.
+            Tell us what you need. We&apos;ll send you a personalized treatment
+            plan.
           </Text>
         </Stack>
         <ContactForm />

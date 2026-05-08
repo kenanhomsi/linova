@@ -1,21 +1,28 @@
-import type { Metadata } from "next";
 import "../globals.css";
 import { notFound } from "next/navigation";
-import { getMessages, getTranslations, setRequestLocale } from "next-intl/server";
 import { NextIntlClientProvider } from "next-intl";
+import {
+  getMessages,
+  getTranslations,
+  setRequestLocale,
+} from "next-intl/server";
+
+import { ChatWidgetLoader } from "@/components/chat/ChatWidgetLoader";
+import { Footer } from "@/components/layout/Footer";
+import { Header } from "@/components/layout/Header";
 import { MantineProvider } from "@/components/providers/MantineProvider";
-import { ThemeProvider } from "@/components/providers/ThemeProvider";
 import { SyncColorScheme } from "@/components/providers/SyncColorScheme";
 import { SyncDir } from "@/components/providers/SyncDir";
-import { Header } from "@/components/layout/Header";
-import { Footer } from "@/components/layout/Footer";
-import { ChatWidgetLoader } from "@/components/chat/ChatWidgetLoader";
-import { routing } from "@/i18n/routing";
+import { ThemeProvider } from "@/components/providers/ThemeProvider";
 import { getTextDirection } from "@/i18n/locale-direction";
+import { routing } from "@/i18n/routing";
+
+import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: {
-    default: "Linova Clinic | Dental Clinic in Turkey for Implants, Veneers & Hollywood Smile",
+    default:
+      "Linova Clinic | Dental Clinic in Turkey for Implants, Veneers & Hollywood Smile",
     template: "%s | Linova Clinic",
   },
   description:
@@ -33,10 +40,11 @@ export const metadata: Metadata = {
     "affordable dental care turkey",
     "dental implants turkey",
     "veneers turkey",
-    "hollywood smile turkey"
+    "hollywood smile turkey",
   ],
   openGraph: {
-    title: "Linova Clinic | Dental Clinic in Turkey for Implants, Veneers & Hollywood Smile",
+    title:
+      "Linova Clinic | Dental Clinic in Turkey for Implants, Veneers & Hollywood Smile",
     description:
       "Dental clinic in Turkey for implants, veneers, Hollywood Smile, and smile makeovers. Discover Linova Clinic in Istanbul for your medical tourism needs.",
   },
@@ -46,10 +54,10 @@ export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
 }
 
-type Props = {
+interface Props {
   children: React.ReactNode;
   params: Promise<{ locale: string }>;
-};
+}
 
 export default async function LocaleLayout({ children, params }: Props) {
   const { locale } = await params;

@@ -40,7 +40,9 @@
   color: var(--readdy-teal);
   border: none;
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
-  transition: background var(--transition-fast), box-shadow var(--transition-fast);
+  transition:
+    background var(--transition-fast),
+    box-shadow var(--transition-fast);
 }
 
 /* Dark theme flips --readdy-teal to a bright mint that matches the bar; use the
@@ -63,7 +65,9 @@
   color: rgba(255, 255, 255, 0.75);
   text-decoration: none;
   display: inline-block;
-  transition: color var(--transition-fast), transform var(--transition-fast);
+  transition:
+    color var(--transition-fast),
+    transform var(--transition-fast);
 }
 
 .footerLink:hover {
@@ -105,7 +109,10 @@
   align-items: center;
   justify-content: center;
   text-decoration: none;
-  transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
 }
 
 .socialBtn:hover {

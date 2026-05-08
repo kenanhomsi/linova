@@ -1,22 +1,23 @@
 import { setRequestLocale, getTranslations } from "next-intl/server";
-import { routing } from "@/i18n/routing";
-import { IstanbulHero } from "@/components/istanbul-experience/IstanbulHero";
+
 import { AreasToStay } from "@/components/istanbul-experience/AreasToStay";
-import { ThingsToDo } from "@/components/istanbul-experience/ThingsToDo";
 import { BestTimeToVisit } from "@/components/istanbul-experience/BestTimeToVisit";
-import { SampleItineraries } from "@/components/istanbul-experience/SampleItineraries";
-import { TravelFAQ } from "@/components/istanbul-experience/TravelFAQ";
-import { TourismTestimonials } from "@/components/istanbul-experience/TourismTestimonials";
 import { IstanbulCTA } from "@/components/istanbul-experience/IstanbulCTA";
+import { IstanbulHero } from "@/components/istanbul-experience/IstanbulHero";
+import { SampleItineraries } from "@/components/istanbul-experience/SampleItineraries";
+import { ThingsToDo } from "@/components/istanbul-experience/ThingsToDo";
+import { TourismTestimonials } from "@/components/istanbul-experience/TourismTestimonials";
+import { TravelFAQ } from "@/components/istanbul-experience/TravelFAQ";
 import { BackToTop } from "@/components/layout/BackToTop";
+import { routing } from "@/i18n/routing";
 import { BreadcrumbJsonLd } from "@/lib/structured-data";
+
 import type { Metadata } from "next";
-import DentalHoliday from './test.jsx'
 const BASE_URL = "https://linovaclinic.com";
 
-type Props = {
+interface Props {
   params: Promise<{ locale: string }>;
-};
+}
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
@@ -54,14 +55,16 @@ export default async function IstanbulExperiencePage({ params }: Props) {
       <BreadcrumbJsonLd
         items={[
           { name: tCommon("nav.home"), url: `${BASE_URL}/${locale}` },
-          { name: tIst("title"), url: `${BASE_URL}/${locale}/istanbul-experience` },
+          {
+            name: tIst("title"),
+            url: `${BASE_URL}/${locale}/istanbul-experience`,
+          },
         ]}
       />
       <IstanbulHero />
-      {/* <AreasToStay />
+      <AreasToStay />
       <ThingsToDo />
-      <BestTimeToVisit /> */}
-      <DentalHoliday />
+      <BestTimeToVisit />
       <SampleItineraries />
       <TravelFAQ />
       <TourismTestimonials />

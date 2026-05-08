@@ -2,17 +2,23 @@ import Image from "next/image";
 import { Container, Title, Text, Box, Group } from "@mantine/core";
 import { IconClock, IconMapPin } from "@tabler/icons-react";
 import { getTranslations } from "next-intl/server";
-import { SectionReveal, StaggerContainer, StaggerItem } from "@/components/ui/Animate";
+
+import {
+  SectionReveal,
+  StaggerContainer,
+  StaggerItem,
+} from "@/components/ui/Animate";
 import { istanbulImageSrc } from "@/lib/istanbul-experience-images";
+
 import styles from "./ThingsToDo.module.css";
 
-type Activity = {
+interface Activity {
   imageKey?: string;
   title: string;
   time: string;
   distance: string;
   description: string;
-};
+}
 
 export async function ThingsToDo() {
   const t = await getTranslations("istanbulExperience");
@@ -20,13 +26,29 @@ export async function ThingsToDo() {
 
   return (
     <SectionReveal delay={0.03}>
-      <Box component="section" className={styles.section} aria-labelledby="activities-heading">
+      <Box
+        component="section"
+        className={styles.section}
+        aria-labelledby="activities-heading"
+      >
         <Container size="lg">
           <div className={styles.header}>
-            <Title order={2} id="activities-heading" className={styles.title} ta="center">
+            <Title
+              order={2}
+              id="activities-heading"
+              className={styles.title}
+              ta="center"
+            >
               {t("activities.title")}
             </Title>
-            <Text c="dimmed" ta="center" size="md" maw={560} mx="auto" className={styles.subtitle}>
+            <Text
+              c="dimmed"
+              ta="center"
+              size="md"
+              maw={560}
+              mx="auto"
+              className={styles.subtitle}
+            >
               {t("activities.subtitle")}
             </Text>
           </div>

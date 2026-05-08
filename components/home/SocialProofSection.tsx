@@ -1,7 +1,17 @@
-import { getTranslations } from "next-intl/server";
-import { Container, Title, Text, SimpleGrid, Card, Stack, Box } from "@mantine/core";
+import {
+  Container,
+  Title,
+  Text,
+  SimpleGrid,
+  Card,
+  Stack,
+  Box,
+} from "@mantine/core";
 import { IconQuote } from "@tabler/icons-react";
+import { getTranslations } from "next-intl/server";
+
 import { FadeInUp } from "@/components/ui/Animate";
+
 import styles from "./SocialProofSection.module.css";
 
 const QUOTE_MAX_LENGTH = 100;
@@ -10,12 +20,12 @@ export async function SocialProofSection() {
   const t = await getTranslations("home");
   const eyebrow = t("socialProof.eyebrow");
   const title = t("socialProof.title");
-  const testimonials = t.raw("testimonials") as Array<{
+  const testimonials = t.raw("testimonials") as {
     flag: string;
     quote: string;
     name: string;
     country: string;
-  }>;
+  }[];
 
   const featured = testimonials.slice(0, 2).map((item) => ({
     ...item,
@@ -31,7 +41,12 @@ export async function SocialProofSection() {
         <Stack gap="xl">
           <FadeInUp>
             <Stack gap="xs" ta="center" maw={640} mx="auto">
-              <Text size="sm" fw={700} tt="uppercase" className={styles.eyebrow}>
+              <Text
+                size="sm"
+                fw={700}
+                tt="uppercase"
+                className={styles.eyebrow}
+              >
                 {eyebrow}
               </Text>
               <Title order={2} className={styles.title}>
@@ -42,12 +57,18 @@ export async function SocialProofSection() {
           <FadeInUp delay={0.05}>
             <SimpleGrid cols={{ base: 1, sm: 2 }} spacing="lg">
               {featured.map((item) => (
-                <Card key={item.country + item.name} className={styles.card} padding="lg" radius="md" withBorder>
+                <Card
+                  key={item.country + item.name}
+                  className={styles.card}
+                  padding="lg"
+                  radius="md"
+                  withBorder
+                >
                   <Box className={styles.quoteIcon}>
                     <IconQuote size={28} stroke={1.5} />
                   </Box>
                   <Text size="md" lh={1.6} className={styles.quote}>
-                    "{item.shortQuote}"
+                    “{item.shortQuote}”
                   </Text>
                   <Stack gap={2} mt="md">
                     <Text fw={600} size="sm">

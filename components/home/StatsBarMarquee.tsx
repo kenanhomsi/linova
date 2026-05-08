@@ -2,12 +2,20 @@
 
 import { useEffect, useRef, useState } from "react";
 import { Text, Box, Container } from "@mantine/core";
+
 import styles from "./StatsBar.module.css";
 
-export type StatItem = { value: string; label: string };
+export interface StatItem {
+  value: string;
+  label: string;
+}
 
 /** Parse stat value string into number + prefix/suffix for count-up (e.g. "98%" → 98 + "%", "10K+" → 10 + "K+", "%98" → 98 + "%") */
-function parseStatValue(value: string): { target: number; prefix: string; suffix: string } {
+function parseStatValue(value: string): {
+  target: number;
+  prefix: string;
+  suffix: string;
+} {
   const numMatch = value.match(/(\d+(?:\.\d+)?)/);
   if (!numMatch) return { target: 0, prefix: "", suffix: value };
   const numStr = numMatch[1];
@@ -42,7 +50,7 @@ export function StatsBarMarquee({ stats }: { stats: StatItem[] }) {
         if (!entries[0]?.isIntersecting) return;
         setHasAnimated(true);
       },
-      { threshold: 0.2, rootMargin: "0px 0px -50px 0px" }
+      { threshold: 0.2, rootMargin: "0px 0px -50px 0px" },
     );
 
     observer.observe(el);
@@ -97,7 +105,13 @@ export function StatsBarMarquee({ stats }: { stats: StatItem[] }) {
                 {counts[i]}
                 {parsed[i].suffix}
               </Text>
-              <Text size="sm" c="teal.1" fw={500} mt={4} className={styles.label}>
+              <Text
+                size="sm"
+                c="teal.1"
+                fw={500}
+                mt={4}
+                className={styles.label}
+              >
                 {stat.label}
               </Text>
             </Box>

@@ -52,7 +52,11 @@
 }
 
 .card:hover {
-  border-color: color-mix(in srgb, var(--readdy-teal) 45%, var(--readdy-border));
+  border-color: color-mix(
+    in srgb,
+    var(--readdy-teal) 45%,
+    var(--readdy-border)
+  );
   box-shadow: 0 20px 48px rgba(14, 156, 140, 0.12);
   transform: translateY(-4px);
 }
@@ -76,7 +80,11 @@
 .imageFallback {
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, var(--readdy-teal-pale), var(--readdy-gray-100));
+  background: linear-gradient(
+    135deg,
+    var(--readdy-teal-pale),
+    var(--readdy-gray-100)
+  );
 }
 
 .imageOverlay {
@@ -154,5 +162,9 @@
 }
 
 [data-theme="dark"] .imageFallback {
-  background: linear-gradient(135deg, rgba(14, 156, 140, 0.2), rgba(255, 255, 255, 0.04));
+  background: linear-gradient(
+    135deg,
+    rgba(14, 156, 140, 0.2),
+    rgba(255, 255, 255, 0.04)
+  );
 }

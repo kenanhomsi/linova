@@ -1,8 +1,6 @@
 "use client";
 
 import React, { useState, useCallback, useEffect, useRef } from "react";
-import { useTranslations } from "next-intl";
-import { Link } from "@/i18n/navigation";
 import Image from "next/image";
 import {
   Container,
@@ -14,7 +12,6 @@ import {
   Button,
   UnstyledButton,
 } from "@mantine/core";
-import { motion, AnimatePresence } from "framer-motion";
 import {
   IconSparkles,
   IconDental,
@@ -26,8 +23,13 @@ import {
   IconCheck,
   IconChevronRight,
 } from "@tabler/icons-react";
-import { COMPLETE_DENTAL_SOLUTIONS_CARDS } from "@/lib/home-data-client";
+import { motion, AnimatePresence } from "framer-motion";
+import { useTranslations } from "next-intl";
+
 import { FadeInUp } from "@/components/ui/Animate";
+import { Link } from "@/i18n/navigation";
+import { COMPLETE_DENTAL_SOLUTIONS_CARDS } from "@/lib/home-data-client";
+
 import styles from "./CompleteDentalSolutionsSection.module.css";
 
 /* ─── Constants ─── */
@@ -69,14 +71,14 @@ interface Props {
   animated?: boolean;
 }
 
-type CardTranslation = {
+interface CardTranslation {
   category: string;
   title: string;
   description: string;
   cta: string;
   badge?: string;
   highlights?: string[];
-};
+}
 
 type MergedCard = (typeof COMPLETE_DENTAL_SOLUTIONS_CARDS)[number] &
   CardTranslation;
@@ -118,7 +120,7 @@ export function CompleteDentalSolutionsSection({ animated = true }: Props) {
     if (paused) return;
     timer.current = setTimeout(
       () => setActive((p) => (p + 1) % cards.length),
-      AUTO_PLAY_MS
+      AUTO_PLAY_MS,
     );
     return () => clearTimeout(timer.current);
   }, [active, paused, cards.length]);
@@ -128,12 +130,11 @@ export function CompleteDentalSolutionsSection({ animated = true }: Props) {
       if (i === active) return;
       setActive(i);
     },
-    [active]
+    [active],
   );
 
-
   const counter = `${String(active + 1).padStart(2, "0")} / ${String(
-    cards.length
+    cards.length,
   ).padStart(2, "0")}`;
 
   return (
@@ -156,12 +157,7 @@ export function CompleteDentalSolutionsSection({ animated = true }: Props) {
               >
                 {t("expertise.eyebrow")}
               </Text>
-              <Title
-                order={2}
-                size="2rem"
-                fw={700}
-                className={styles.heading}
-              >
+              <Title order={2} size="2rem" fw={700} className={styles.heading}>
                 {t("expertise.title")}
               </Title>
               <Text size="lg" lh={1.6} className={styles.sub}>
@@ -178,8 +174,9 @@ export function CompleteDentalSolutionsSection({ animated = true }: Props) {
                   <UnstyledButton
                     key={i}
                     onClick={() => go(i)}
-                    className={`${styles.tab} ${i === active ? styles.tabOn : ""
-                      }`}
+                    className={`${styles.tab} ${
+                      i === active ? styles.tabOn : ""
+                    }`}
                     role="tab"
                     aria-selected={i === active}
                   >
@@ -308,8 +305,9 @@ export function CompleteDentalSolutionsSection({ animated = true }: Props) {
                   <UnstyledButton
                     key={i}
                     onClick={() => go(i)}
-                    className={`${styles.dot} ${i === active ? styles.dotOn : ""
-                      }`}
+                    className={`${styles.dot} ${
+                      i === active ? styles.dotOn : ""
+                    }`}
                     aria-label={`Treatment ${i + 1}`}
                   />
                 ))}

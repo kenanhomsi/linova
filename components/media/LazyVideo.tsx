@@ -28,6 +28,7 @@ export function LazyVideo({
   autoPlay = false,
   muted = true,
   playsInline = true,
+  children,
   ...rest
 }: LazyVideoProps) {
   const wrapperRef = React.useRef<HTMLDivElement>(null);
@@ -55,7 +56,7 @@ export function LazyVideo({
           obs.disconnect();
         }
       },
-      { rootMargin }
+      { rootMargin },
     );
 
     obs.observe(el);
@@ -69,7 +70,7 @@ export function LazyVideo({
     if (!v) return;
     // Some browsers require play() after a microtask even when muted.
     queueMicrotask(() => {
-      v.play().catch(() => {});
+      v.play().catch(() => undefined);
     });
   }, [shouldLoad, autoPlay]);
 
@@ -83,8 +84,10 @@ export function LazyVideo({
         playsInline={playsInline}
         {...(autoPlay ? { autoPlay: true } : {})}
         {...rest}
-      />
+      >
+        <track kind="captions" srcLang="en" label="English" src="" />
+        {children}
+      </video>
     </div>
   );
 }
-

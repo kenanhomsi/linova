@@ -2,17 +2,23 @@ import Image from "next/image";
 import { Container, Title, Text, Box, Badge } from "@mantine/core";
 import { IconMapPin } from "@tabler/icons-react";
 import { getTranslations } from "next-intl/server";
-import { SectionReveal, StaggerContainer, StaggerItem } from "@/components/ui/Animate";
+
+import {
+  SectionReveal,
+  StaggerContainer,
+  StaggerItem,
+} from "@/components/ui/Animate";
 import { istanbulImageSrc } from "@/lib/istanbul-experience-images";
+
 import styles from "./AreasToStay.module.css";
 
-type Area = {
+interface Area {
   imageKey?: string;
   name: string;
   distance: string;
   vibe: string;
   price: string;
-};
+}
 
 export async function AreasToStay() {
   const t = await getTranslations("istanbulExperience");
@@ -20,13 +26,29 @@ export async function AreasToStay() {
 
   return (
     <SectionReveal>
-      <Box component="section" className={styles.section} aria-labelledby="areas-heading">
+      <Box
+        component="section"
+        className={styles.section}
+        aria-labelledby="areas-heading"
+      >
         <Container size="lg">
           <div className={styles.header}>
-            <Title order={2} id="areas-heading" className={styles.title} ta="center">
+            <Title
+              order={2}
+              id="areas-heading"
+              className={styles.title}
+              ta="center"
+            >
               {t("areas.title")}
             </Title>
-            <Text c="dimmed" ta="center" size="md" maw={560} mx="auto" className={styles.subtitle}>
+            <Text
+              c="dimmed"
+              ta="center"
+              size="md"
+              maw={560}
+              mx="auto"
+              className={styles.subtitle}
+            >
               {t("areas.subtitle")}
             </Text>
           </div>
@@ -50,13 +72,22 @@ export async function AreasToStay() {
                           <div className={styles.imageFallback} aria-hidden />
                         )}
                         <div className={styles.imageOverlay} aria-hidden />
-                        <Badge className={styles.priceBadge} variant="filled" size="lg" radius="md">
+                        <Badge
+                          className={styles.priceBadge}
+                          variant="filled"
+                          size="lg"
+                          radius="md"
+                        >
                           {area.price}
                         </Badge>
                       </div>
                       <div className={styles.body}>
                         <h3 className={styles.name}>
-                          <IconMapPin size={22} className={styles.pinIcon} aria-hidden />
+                          <IconMapPin
+                            size={22}
+                            className={styles.pinIcon}
+                            aria-hidden
+                          />
                           {area.name}
                         </h3>
                         <div className={styles.meta} dir="auto">

@@ -1,8 +1,10 @@
-import { getTranslations } from "next-intl/server";
 import { Container, Title, Box } from "@mantine/core";
+import { getTranslations } from "next-intl/server";
+
 import { FadeInUp } from "@/components/ui/Animate";
-import { GalleryStripClient } from "./GalleryStripClient";
+
 import styles from "./GallerySection.module.css";
+import { GalleryStripClient } from "./GalleryStripClient";
 
 const PATIENT_VIDEOS = [
   "/images/WhatsApp Video 2026-01-27 at 1.29.29 PM.mp4",

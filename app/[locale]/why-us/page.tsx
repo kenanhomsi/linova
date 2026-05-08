@@ -1,20 +1,22 @@
 import { setRequestLocale, getTranslations } from "next-intl/server";
-import { routing } from "@/i18n/routing";
-import { WhyUsPageHeader } from "@/components/why-us/WhyUsPageHeader";
-import { WhyUsStatsSection } from "@/components/why-us/WhyUsStatsSection";
-import { WhyUsReasonsSection } from "@/components/why-us/WhyUsReasonsSection";
-import { WhyUsSupportSection } from "@/components/why-us/WhyUsSupportSection";
-import { WhyUsJourneySection } from "@/components/why-us/WhyUsJourneySection";
-import { WhyUsCTASection } from "@/components/why-us/WhyUsCTASection";
+
 import { BackToTop } from "@/components/layout/BackToTop";
+import { WhyUsCTASection } from "@/components/why-us/WhyUsCTASection";
+import { WhyUsJourneySection } from "@/components/why-us/WhyUsJourneySection";
+import { WhyUsPageHeader } from "@/components/why-us/WhyUsPageHeader";
+import { WhyUsReasonsSection } from "@/components/why-us/WhyUsReasonsSection";
+import { WhyUsStatsSection } from "@/components/why-us/WhyUsStatsSection";
+import { WhyUsSupportSection } from "@/components/why-us/WhyUsSupportSection";
+import { routing } from "@/i18n/routing";
 import { BreadcrumbJsonLd } from "@/lib/structured-data";
+
 import type { Metadata } from "next";
 
 const BASE_URL = "https://linovaclinic.com";
 
-type Props = {
+interface Props {
   params: Promise<{ locale: string }>;
-};
+}
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;

@@ -80,7 +80,11 @@
 }
 
 [data-theme="dark"] .section {
-  background: linear-gradient(180deg, rgba(14, 156, 140, 0.08) 0%, var(--background) 50%);
+  background: linear-gradient(
+    180deg,
+    rgba(14, 156, 140, 0.08) 0%,
+    var(--background) 50%
+  );
 }
 
 [data-theme="dark"] .colSavings {

@@ -1,16 +1,22 @@
 "use client";
 
 import { useState } from "react";
-import { useTranslations } from "next-intl";
 import { Container, Title, Text, Box } from "@mantine/core";
 import { IconPlus } from "@tabler/icons-react";
+import { useTranslations } from "next-intl";
+
 import { FadeInUp } from "@/components/ui/Animate";
+
 import styles from "./FAQSection.module.css";
 
 export function FAQSection() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
   const t = useTranslations("home");
-  const faq = t.raw("faq") as { title: string; subtitle: string; items: Array<{ question: string; answer: string }> };
+  const faq = t.raw("faq") as {
+    title: string;
+    subtitle: string;
+    items: { question: string; answer: string }[];
+  };
 
   return (
     <Box id="faq" className={styles.root}>
@@ -60,9 +66,7 @@ export function FAQSection() {
                       hidden={!isOpen}
                     >
                       {item.answer && (
-                        <Box className={styles.content}>
-                          {item.answer}
-                        </Box>
+                        <Box className={styles.content}>{item.answer}</Box>
                       )}
                     </Box>
                   </Box>

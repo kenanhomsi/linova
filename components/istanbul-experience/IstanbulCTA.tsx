@@ -1,7 +1,9 @@
 import { Container, Title, Text, Box, Button, Group } from "@mantine/core";
 import { getTranslations } from "next-intl/server";
-import { Link } from "@/i18n/navigation";
+
 import { SectionReveal } from "@/components/ui/Animate";
+import { Link } from "@/i18n/navigation";
+
 import styles from "./IstanbulCTA.module.css";
 
 export async function IstanbulCTA() {
@@ -9,7 +11,11 @@ export async function IstanbulCTA() {
 
   return (
     <SectionReveal delay={0.06}>
-      <Box component="section" className={styles.section} aria-labelledby="istanbul-cta-heading">
+      <Box
+        component="section"
+        className={styles.section}
+        aria-labelledby="istanbul-cta-heading"
+      >
         <Container size="lg">
           <div className={styles.inner}>
             <Title order={2} id="istanbul-cta-heading" className={styles.title}>
@@ -23,7 +29,12 @@ export async function IstanbulCTA() {
                 </Button>
               </Link>
               <Link href="/packages" className={styles.linkPlain}>
-                <Button size="lg" radius="md" variant="outline" className={styles.btnOutline}>
+                <Button
+                  size="lg"
+                  radius="md"
+                  variant="outline"
+                  className={styles.btnOutline}
+                >
                   {t("cta.buttonPackages")}
                 </Button>
               </Link>

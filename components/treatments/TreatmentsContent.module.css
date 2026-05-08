@@ -56,8 +56,11 @@
   white-space: nowrap;
   flex-shrink: 0;
   scroll-snap-align: start;
-  transition: color var(--transition-fast), background var(--transition-fast),
-    transform var(--transition-fast), box-shadow var(--transition-fast);
+  transition:
+    color var(--transition-fast),
+    background var(--transition-fast),
+    transform var(--transition-fast),
+    box-shadow var(--transition-fast);
 }
 
 .navLink:hover {

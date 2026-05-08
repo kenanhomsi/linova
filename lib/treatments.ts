@@ -1,6 +1,6 @@
-import type { Treatment, TreatmentCategoryInfo } from "@/types";
-
 import laserDentistry from "@/public/Laser Dentistry.jpg";
+
+import type { Treatment, TreatmentCategoryInfo } from "@/types";
 
 const IMAGES = {
   hollywoodSmile: "/images/Hollywood Smile Makeover.jpeg",
@@ -253,7 +253,7 @@ export const TREATMENTS: Treatment[] = [
 ];
 
 export function getTreatmentsByCategory(
-  category: Treatment["category"]
+  category: Treatment["category"],
 ): Treatment[] {
   return TREATMENTS.filter((t) => t.category === category);
 }
@@ -263,7 +263,7 @@ export function getTreatmentBySlug(slug: string): Treatment | undefined {
 }
 
 export function getCategoryById(
-  id: Treatment["category"]
+  id: Treatment["category"],
 ): TreatmentCategoryInfo | undefined {
   return CATEGORIES.find((c) => c.id === id);
 }

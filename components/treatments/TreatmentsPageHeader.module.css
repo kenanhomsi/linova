@@ -87,7 +87,9 @@
   border-radius: var(--radius-lg);
   padding: 1.25rem 1rem;
   text-align: center;
-  transition: background var(--transition-fast), transform var(--transition-fast);
+  transition:
+    background var(--transition-fast),
+    transform var(--transition-fast);
 }
 
 .statCard:hover {

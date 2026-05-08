@@ -1,6 +1,10 @@
 .section {
   padding: clamp(3.5rem, 9vw, 6rem) 1rem;
-  background: linear-gradient(180deg, var(--background) 0%, var(--readdy-teal-pale) 100%);
+  background: linear-gradient(
+    180deg,
+    var(--background) 0%,
+    var(--readdy-teal-pale) 100%
+  );
 }
 
 .header {
@@ -48,7 +52,11 @@
 
 .card:hover {
   transform: translateY(-4px);
-  border-color: color-mix(in srgb, var(--readdy-teal) 40%, var(--readdy-border));
+  border-color: color-mix(
+    in srgb,
+    var(--readdy-teal) 40%,
+    var(--readdy-border)
+  );
   box-shadow: 0 16px 40px rgba(14, 156, 140, 0.12);
 }
 
@@ -129,7 +137,11 @@
 }
 
 [data-theme="dark"] .section {
-  background: linear-gradient(180deg, var(--background) 0%, rgba(14, 156, 140, 0.1) 100%);
+  background: linear-gradient(
+    180deg,
+    var(--background) 0%,
+    rgba(14, 156, 140, 0.1) 100%
+  );
 }
 
 [data-theme="dark"] .card:hover {

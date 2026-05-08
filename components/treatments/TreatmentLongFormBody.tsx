@@ -1,11 +1,13 @@
 import { Fragment, type ReactNode } from "react";
-import { Box, Title, Text } from "@mantine/core";
 import Image from "next/image";
+import { Box, Title, Text } from "@mantine/core";
+
 import styles from "./TreatmentDetailContent.module.css";
 
 interface TreatmentLongFormBodyProps {
   content: string;
   contentImages: string[];
+  contextTitle?: string;
 }
 
 function renderInlineBold(text: string) {
@@ -21,7 +23,8 @@ function renderInlineBold(text: string) {
 function renderContentBlock(
   block: string,
   contentImages: string[],
-  blockKey: string
+  contextTitle: string | undefined,
+  blockKey: string,
 ) {
   const trimmed = block.trim();
   if (!trimmed) return null;
@@ -41,7 +44,11 @@ function renderContentBlock(
       <figure key={blockKey} className={styles.proseFigure}>
         <Image
           src={src}
-          alt=""
+          alt={
+            contextTitle
+              ? `${contextTitle} - image ${idx + 1}`
+              : `Treatment image ${idx + 1}`
+          }
           width={1200}
           height={800}
           className={styles.proseImg}
@@ -53,11 +60,7 @@ function renderContentBlock(
 
   if (trimmed.startsWith("# ")) {
     return (
-      <Title
-        key={blockKey}
-        order={2}
-        className={styles.proseH2}
-      >
+      <Title key={blockKey} order={2} className={styles.proseH2}>
         {trimmed.replace(/^#\s+/, "")}
       </Title>
     );
@@ -65,11 +68,7 @@ function renderContentBlock(
 
   if (trimmed.startsWith("## ")) {
     return (
-      <Title
-        key={blockKey}
-        order={3}
-        className={styles.proseH3}
-      >
+      <Title key={blockKey} order={3} className={styles.proseH3}>
         {trimmed.replace(/^##\s+/, "")}
       </Title>
     );
@@ -77,18 +76,16 @@ function renderContentBlock(
 
   if (trimmed.startsWith("### ")) {
     return (
-      <Title
-        key={blockKey}
-        order={4}
-        className={styles.proseH4}
-      >
+      <Title key={blockKey} order={4} className={styles.proseH4}>
         {trimmed.replace(/^###\s+/, "")}
       </Title>
     );
   }
 
   const lines = trimmed.split("\n").map((l) => l.trim());
-  const listItems = lines.filter((l) => l.startsWith("* ")).map((l) => l.slice(2));
+  const listItems = lines
+    .filter((l) => l.startsWith("* "))
+    .map((l) => l.slice(2));
   if (listItems.length > 0 && listItems.length === lines.length) {
     return (
       <Box key={blockKey} component="ul" className={styles.proseList}>
@@ -121,10 +118,9 @@ function isH2(block: string): boolean {
 export function TreatmentLongFormBody({
   content,
   contentImages,
+  contextTitle,
 }: TreatmentLongFormBodyProps) {
-  const blocks = content
-    .split("\n\n")
-    .filter((p) => p.trim().length > 0);
+  const blocks = content.split("\n\n").filter((p) => p.trim().length > 0);
 
   const out: ReactNode[] = [];
   let i = 0;
@@ -137,7 +133,7 @@ export function TreatmentLongFormBody({
 
     if (b === "---") {
       out.push(
-        <div key={nextId()} className={styles.proseDivider} role="separator" />
+        <div key={nextId()} className={styles.proseDivider} role="separator" />,
       );
       i++;
       continue;
@@ -162,20 +158,35 @@ export function TreatmentLongFormBody({
         const chunkKey = nextId();
         out.push(
           <div key={chunkKey} className={styles.articleChunk}>
-            {renderContentBlock(headingBlock, contentImages, `${chunkKey}-h`)}
+            {renderContentBlock(
+              headingBlock,
+              contentImages,
+              contextTitle,
+              `${chunkKey}-h`,
+            )}
             <div className={styles.articleMediaRow}>
               <div className={styles.articleMediaFigure}>
-                {renderContentBlock(imageBlock, contentImages, `${chunkKey}-img`)}
+                {renderContentBlock(
+                  imageBlock,
+                  contentImages,
+                  contextTitle,
+                  `${chunkKey}-img`,
+                )}
               </div>
               <div className={styles.articleMediaText}>
                 {rest.map((blk, j) => (
                   <Fragment key={`${chunkKey}-t-${j}`}>
-                    {renderContentBlock(blk, contentImages, `${chunkKey}-p-${j}`)}
+                    {renderContentBlock(
+                      blk,
+                      contentImages,
+                      contextTitle,
+                      `${chunkKey}-p-${j}`,
+                    )}
                   </Fragment>
                 ))}
               </div>
             </div>
-          </div>
+          </div>,
         );
         continue;
       }
@@ -192,15 +203,25 @@ export function TreatmentLongFormBody({
       const chunkKey = nextId();
       out.push(
         <div key={chunkKey} className={styles.articleChunk}>
-          {renderContentBlock(headingBlock, contentImages, `${chunkKey}-h`)}
+          {renderContentBlock(
+            headingBlock,
+            contentImages,
+            contextTitle,
+            `${chunkKey}-h`,
+          )}
           <div className={styles.articleStack}>
             {rest.map((blk, j) => (
               <Fragment key={`${chunkKey}-s-${j}`}>
-                {renderContentBlock(blk, contentImages, `${chunkKey}-s-${j}`)}
+                {renderContentBlock(
+                  blk,
+                  contentImages,
+                  contextTitle,
+                  `${chunkKey}-s-${j}`,
+                )}
               </Fragment>
             ))}
           </div>
-        </div>
+        </div>,
       );
       continue;
     }
@@ -219,10 +240,15 @@ export function TreatmentLongFormBody({
       <div key={orphanKey} className={styles.articleStack}>
         {orphan.map((blk, j) => (
           <Fragment key={`${orphanKey}-o-${j}`}>
-            {renderContentBlock(blk, contentImages, `${orphanKey}-o-${j}`)}
+            {renderContentBlock(
+              blk,
+              contentImages,
+              contextTitle,
+              `${orphanKey}-o-${j}`,
+            )}
           </Fragment>
         ))}
-      </div>
+      </div>,
     );
   }
 

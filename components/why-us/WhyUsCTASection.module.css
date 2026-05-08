@@ -68,7 +68,9 @@
   border: none !important;
   position: relative;
   z-index: 1;
-  transition: transform var(--transition-fast), box-shadow var(--transition-fast) !important;
+  transition:
+    transform var(--transition-fast),
+    box-shadow var(--transition-fast) !important;
 }
 
 .ctaPrimary:hover {
@@ -81,7 +83,9 @@
   border-color: rgba(255, 255, 255, 0.4) !important;
   position: relative;
   z-index: 1;
-  transition: background var(--transition-fast), border-color var(--transition-fast) !important;
+  transition:
+    background var(--transition-fast),
+    border-color var(--transition-fast) !important;
 }
 
 .ctaSecondary:hover {

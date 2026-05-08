@@ -8,8 +8,15 @@ import {
   IconHeartHandshake,
 } from "@tabler/icons-react";
 import { getTranslations } from "next-intl/server";
-import { SectionReveal, StaggerContainer, StaggerItem, FadeInUp } from "@/components/ui/Animate";
+
+import {
+  SectionReveal,
+  StaggerContainer,
+  StaggerItem,
+  FadeInUp,
+} from "@/components/ui/Animate";
 import heroPatient from "@/public/images/hero-patient-2.jpg";
+
 import styles from "./WhyUsJourneySection.module.css";
 
 const STEP_ICONS = [
@@ -20,20 +27,32 @@ const STEP_ICONS = [
   IconHeartHandshake,
 ];
 
-type StepItem = { label: string; description: string; duration: string };
+interface StepItem {
+  label: string;
+  description: string;
+  duration: string;
+}
 
 export async function WhyUsJourneySection() {
   const t = await getTranslations("whyUs");
   const steps = t.raw("journey.steps") as StepItem[];
   return (
     <SectionReveal delay={0.03} amount={0.08}>
-      <Box component="section" className={styles.section} aria-labelledby="journey-heading">
+      <Box
+        component="section"
+        className={styles.section}
+        aria-labelledby="journey-heading"
+      >
         <Container size="xl">
           <Stack gap="xs" mb="xl" ta="center">
             <Text size="sm" fw={600} tt="uppercase" className={styles.eyebrow}>
               {t("journey.eyebrow")}
             </Text>
-            <Title id="journey-heading" order={2} className={styles.sectionTitle}>
+            <Title
+              id="journey-heading"
+              order={2}
+              className={styles.sectionTitle}
+            >
               {t("journey.sectionTitle")}
             </Title>
             <Text className={styles.sectionSubtitle}>
@@ -55,8 +74,12 @@ export async function WhyUsJourneySection() {
                 />
                 <div className={styles.sideImageOverlay} />
                 <div className={styles.sideImageBadge}>
-                  <Text className={styles.badgeValue}>{t("journey.badgeValue")}</Text>
-                  <Text className={styles.badgeLabel}>{t("journey.badgeLabel")}</Text>
+                  <Text className={styles.badgeValue}>
+                    {t("journey.badgeValue")}
+                  </Text>
+                  <Text className={styles.badgeLabel}>
+                    {t("journey.badgeLabel")}
+                  </Text>
                 </div>
               </div>
             </FadeInUp>
@@ -80,7 +103,9 @@ export async function WhyUsJourneySection() {
                             <div className={styles.cardIconWrap}>
                               <Icon size={24} stroke={1.8} />
                             </div>
-                            <span className={styles.durationBadge}>{step.duration}</span>
+                            <span className={styles.durationBadge}>
+                              {step.duration}
+                            </span>
                           </div>
                           <h3 className={styles.cardTitle}>{step.label}</h3>
                           <Text size="sm" className={styles.cardDesc}>

@@ -1,19 +1,21 @@
 import { setRequestLocale, getTranslations } from "next-intl/server";
-import { routing } from "@/i18n/routing";
-import { PackagesHero } from "@/components/packages/PackagesHero";
+
+import { BackToTop } from "@/components/layout/BackToTop";
 import { PackageCards } from "@/components/packages/PackageCards";
-import { SavingsComparison } from "@/components/packages/SavingsComparison";
 import { PackageIncludes } from "@/components/packages/PackageIncludes";
 import { PackagesCTA } from "@/components/packages/PackagesCTA";
-import { BackToTop } from "@/components/layout/BackToTop";
+import { PackagesHero } from "@/components/packages/PackagesHero";
+import { SavingsComparison } from "@/components/packages/SavingsComparison";
+import { routing } from "@/i18n/routing";
 import { BreadcrumbJsonLd } from "@/lib/structured-data";
+
 import type { Metadata } from "next";
 
 const BASE_URL = "https://linovaclinic.com";
 
-type Props = {
+interface Props {
   params: Promise<{ locale: string }>;
-};
+}
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
@@ -28,7 +30,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: t("title"),
     description: t("description"),
-    keywords: t("seoKeywords")?.split(",").map((k) => k.trim()),
+    keywords: t("seoKeywords")
+      ?.split(",")
+      .map((k) => k.trim()),
     alternates: {
       canonical: `${BASE_URL}/${locale}/packages`,
       languages,

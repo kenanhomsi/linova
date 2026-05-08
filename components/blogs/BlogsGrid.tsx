@@ -1,14 +1,24 @@
 "use client";
 
 import { useState } from "react";
-import { useTranslations } from "next-intl";
-import { Container, Box, Group, UnstyledButton, Stack, Text } from "@mantine/core";
+import {
+  Container,
+  Box,
+  Group,
+  UnstyledButton,
+  Stack,
+  Text,
+} from "@mantine/core";
 import { motion } from "framer-motion";
-import { BLOG_POSTS, BLOG_CATEGORIES } from "@/lib/blog-data";
-import type { BlogCategory } from "@/lib/blog-data";
-import { BlogCard } from "./BlogCard";
+import { useTranslations } from "next-intl";
+
 import { StaggerContainer, StaggerItem } from "@/components/ui/Animate";
+import { BLOG_POSTS, BLOG_CATEGORIES } from "@/lib/blog-data";
+
+import { BlogCard } from "./BlogCard";
 import styles from "./BlogsGrid.module.css";
+
+import type { BlogCategory } from "@/lib/blog-data";
 
 export function BlogsGrid() {
   const t = useTranslations("blogs");
@@ -37,7 +47,11 @@ export function BlogsGrid() {
                     <motion.div
                       layoutId="blogCategoryBar"
                       className={styles.activeBar}
-                      transition={{ type: "spring", stiffness: 500, damping: 35 }}
+                      transition={{
+                        type: "spring",
+                        stiffness: 500,
+                        damping: 35,
+                      }}
                     />
                   )}
                 </UnstyledButton>
@@ -47,7 +61,8 @@ export function BlogsGrid() {
 
           {/* Results count */}
           <Text size="sm" fw={500} className={styles.resultCount}>
-            {filteredPosts.length} {filteredPosts.length === 1 ? "article" : "articles"}
+            {filteredPosts.length}{" "}
+            {filteredPosts.length === 1 ? "article" : "articles"}
           </Text>
 
           {/* Blog Cards Grid */}

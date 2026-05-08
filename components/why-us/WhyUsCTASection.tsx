@@ -1,8 +1,18 @@
 import Link from "next/link";
-import { Container, Title, Text, Stack, Group, Button, Box } from "@mantine/core";
+import {
+  Container,
+  Title,
+  Text,
+  Stack,
+  Group,
+  Button,
+  Box,
+} from "@mantine/core";
 import { IconMessageCircle, IconPhoneCall } from "@tabler/icons-react";
 import { getTranslations } from "next-intl/server";
+
 import { SectionReveal } from "@/components/ui/Animate";
+
 import styles from "./WhyUsCTASection.module.css";
 
 export async function WhyUsCTASection() {

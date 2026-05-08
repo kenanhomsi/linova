@@ -1,10 +1,11 @@
 "use client";
 
-import { useLocale } from "next-intl";
-import { usePathname, useRouter } from "@/i18n/navigation";
-import { routing } from "@/i18n/routing";
 import { Button, Group, Menu } from "@mantine/core";
 import { IconLanguage } from "@tabler/icons-react";
+import { useLocale } from "next-intl";
+
+import { usePathname, useRouter } from "@/i18n/navigation";
+import { routing } from "@/i18n/routing";
 
 const localeLabels: Record<string, string> = {
   en: "EN",

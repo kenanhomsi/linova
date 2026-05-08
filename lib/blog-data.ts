@@ -1,9 +1,9 @@
-import { hollywoodSmileLongArticle } from "./treatmentData";
-import { dentalVeneersLongArticle } from "./dentalVeneersArticle";
-import { dentalImplantsLongArticle } from "./dentalImplantsArticle";
 import { allOn46LongArticle } from "./allOn46Article";
-import { teethWhiteningLongArticle } from "./teethWhiteningArticle";
 import { compositeBondingLongArticle } from "./compositeBondingArticle";
+import { dentalImplantsLongArticle } from "./dentalImplantsArticle";
+import { dentalVeneersLongArticle } from "./dentalVeneersArticle";
+import { teethWhiteningLongArticle } from "./teethWhiteningArticle";
+import { hollywoodSmileLongArticle } from "./treatmentData";
 
 export interface BlogPost {
   id: string;

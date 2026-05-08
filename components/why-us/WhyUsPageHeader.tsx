@@ -7,8 +7,14 @@ import {
   IconShieldCheck,
 } from "@tabler/icons-react";
 import { getTranslations } from "next-intl/server";
-import { FadeInUp, StaggerContainer, StaggerItem } from "@/components/ui/Animate";
+
+import {
+  FadeInUp,
+  StaggerContainer,
+  StaggerItem,
+} from "@/components/ui/Animate";
 import heroImage from "@/public/heroSection.jpg";
+
 import styles from "./WhyUsPageHeader.module.css";
 
 const HIGHLIGHT_KEYS = [
@@ -40,7 +46,9 @@ export async function WhyUsPageHeader() {
             </Text>
             <Title order={1} className={styles.title}>
               {t("pageHeader.title")}{" "}
-              <span className={styles.titleHighlight}>{t("pageHeader.titleHighlight")}</span>
+              <span className={styles.titleHighlight}>
+                {t("pageHeader.titleHighlight")}
+              </span>
             </Title>
             <Text size="lg" lh={1.7} className={styles.subtitle}>
               {t("pageHeader.subtitle")}
@@ -55,8 +63,12 @@ export async function WhyUsPageHeader() {
                 <div className={styles.highlightCard}>
                   <item.icon size={28} className={styles.highlightIcon} />
                   <div>
-                    <Text className={styles.highlightTitle}>{t(`pageHeader.highlights.${item.key}.title`)}</Text>
-                    <Text className={styles.highlightDesc}>{t(`pageHeader.highlights.${item.key}.desc`)}</Text>
+                    <Text className={styles.highlightTitle}>
+                      {t(`pageHeader.highlights.${item.key}.title`)}
+                    </Text>
+                    <Text className={styles.highlightDesc}>
+                      {t(`pageHeader.highlights.${item.key}.desc`)}
+                    </Text>
                   </div>
                 </div>
               </StaggerItem>

@@ -1,10 +1,21 @@
 "use client";
 
-import { useTranslations } from "next-intl";
-import { TextInput, Textarea, Button, Stack, Select, SimpleGrid, Box, Text } from "@mantine/core";
+import {
+  TextInput,
+  Textarea,
+  Button,
+  Stack,
+  Select,
+  SimpleGrid,
+  Box,
+  Text,
+} from "@mantine/core";
 import { useForm } from "@mantine/form";
 import { IconSend } from "@tabler/icons-react";
+import { useTranslations } from "next-intl";
+
 import { WHATSAPP_LINK } from "@/lib/constants";
+
 import styles from "./FooterForm.module.css";
 
 interface FormValues {
@@ -17,7 +28,16 @@ interface FormValues {
 
 export function FooterForm() {
   const t = useTranslations("home");
-  const formLabels = t.raw("footerForm") as { fullName: string; email: string; phone: string; treatmentInterest: string; treatmentOptions: string[]; message: string; messagePlaceholder: string; sendButton: string };
+  const formLabels = t.raw("footerForm") as {
+    fullName: string;
+    email: string;
+    phone: string;
+    treatmentInterest: string;
+    treatmentOptions: string[];
+    message: string;
+    messagePlaceholder: string;
+    sendButton: string;
+  };
   const treatmentOptions = formLabels.treatmentOptions
     .filter((opt) => opt !== "Select a treatment")
     .map((opt) => ({ value: opt, label: opt }));

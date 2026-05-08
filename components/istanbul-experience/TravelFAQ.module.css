@@ -1,12 +1,20 @@
 .root {
-  background: linear-gradient(to right, var(--readdy-teal-pale) 0%, var(--background) 55%);
+  background: linear-gradient(
+    to right,
+    var(--readdy-teal-pale) 0%,
+    var(--background) 55%
+  );
   padding: var(--section-padding) 20px;
   padding-top: clamp(4rem, 8vw, 6rem);
   padding-bottom: clamp(4rem, 8vw, 6rem);
 }
 
 [dir="rtl"] .root {
-  background: linear-gradient(to left, var(--readdy-teal-pale) 0%, var(--background) 55%);
+  background: linear-gradient(
+    to left,
+    var(--readdy-teal-pale) 0%,
+    var(--background) 55%
+  );
 }
 
 .main {

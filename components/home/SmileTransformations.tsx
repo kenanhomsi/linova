@@ -1,12 +1,28 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { useTranslations } from "next-intl";
 import Image from "next/image";
-import { Container, Title, Text, Stack, SimpleGrid, Card, Box, Button, Group } from "@mantine/core";
+import {
+  Container,
+  Title,
+  Text,
+  Stack,
+  SimpleGrid,
+  Card,
+  Box,
+  Button,
+  Group,
+} from "@mantine/core";
 import { motion } from "framer-motion";
+import { useTranslations } from "next-intl";
+
+import {
+  FadeInUp,
+  StaggerContainer,
+  StaggerItem,
+} from "@/components/ui/Animate";
 import { TRANSFORMATIONS } from "@/lib/home-data-client";
-import { FadeInUp, StaggerContainer, StaggerItem } from "@/components/ui/Animate";
+
 import styles from "./SmileTransformations.module.css";
 
 function imagePath(filename: string) {
@@ -20,8 +36,15 @@ export function SmileTransformations() {
   const [activeTabIndex, setActiveTabIndex] = useState(0);
   const activeTab = TAB_OPTIONS[activeTabIndex];
 
-  const transformationsText = t.raw("transformations") as Array<{ title: string; detail: string; category: string }>;
-  const items = TRANSFORMATIONS.map((item, i) => ({ ...item, ...(transformationsText[i] ?? {}) }));
+  const transformationsText = t.raw("transformations") as {
+    title: string;
+    detail: string;
+    category: string;
+  }[];
+  const items = TRANSFORMATIONS.map((item, i) => ({
+    ...item,
+    ...(transformationsText[i] ?? {}),
+  }));
 
   const filtered = useMemo(() => {
     if (activeTabIndex === 0) {
@@ -36,7 +59,12 @@ export function SmileTransformations() {
         <Stack gap="xl">
           <FadeInUp>
             <Stack gap="xs" ta="center" maw={700} mx="auto">
-              <Text size="sm" fw={600} tt="uppercase" className={styles.eyebrow}>
+              <Text
+                size="sm"
+                fw={600}
+                tt="uppercase"
+                className={styles.eyebrow}
+              >
                 {t("smileTransformations.eyebrow")}
               </Text>
               <Title order={2} size="2rem" fw={700} className={styles.title}>
@@ -59,7 +87,11 @@ export function SmileTransformations() {
                   component={motion.button}
                   whileHover={{ scale: 1.03 }}
                   whileTap={{ scale: 0.97 }}
-                  className={activeTabIndex === idx ? styles.tabActive : styles.tabInactive}
+                  className={
+                    activeTabIndex === idx
+                      ? styles.tabActive
+                      : styles.tabInactive
+                  }
                   suppressHydrationWarning
                 >
                   {tabLabel}
@@ -71,7 +103,10 @@ export function SmileTransformations() {
             <SimpleGrid cols={{ base: 1, sm: 2, md: 3 }} spacing="lg">
               {filtered.map((item, index) => (
                 <StaggerItem key={`${activeTabIndex}-${item.title}-${index}`}>
-                  <motion.div whileHover={{ y: -4 }} transition={{ duration: 0.25 }}>
+                  <motion.div
+                    whileHover={{ y: -4 }}
+                    transition={{ duration: 0.25 }}
+                  >
                     <Card
                       shadow="sm"
                       padding={0}
@@ -87,7 +122,14 @@ export function SmileTransformations() {
                             className={styles.beforeImage}
                             sizes="(max-width: 768px) 50vw, 33vw"
                           />
-                          <Box pos="absolute" top={8} left={8} px="xs" py={2} className={styles.badgeBefore}>
+                          <Box
+                            pos="absolute"
+                            top={8}
+                            left={8}
+                            px="xs"
+                            py={2}
+                            className={styles.badgeBefore}
+                          >
                             Before
                           </Box>
                         </Box>
@@ -99,13 +141,25 @@ export function SmileTransformations() {
                             className={styles.afterImage}
                             sizes="(max-width: 768px) 50vw, 33vw"
                           />
-                          <Box pos="absolute" top={8} left={8} px="xs" py={2} className={styles.badgeAfter}>
+                          <Box
+                            pos="absolute"
+                            top={8}
+                            left={8}
+                            px="xs"
+                            py={2}
+                            className={styles.badgeAfter}
+                          >
                             {t("smileTransformations.after")}
                           </Box>
                         </Box>
                       </Box>
                       <Stack gap="xs" p="md" ta="center">
-                        <Title order={4} size="h5" fw={700} className={styles.cardTitle}>
+                        <Title
+                          order={4}
+                          size="h5"
+                          fw={700}
+                          className={styles.cardTitle}
+                        >
                           {item.title}
                         </Title>
                         <Text size="sm" fw={500} className={styles.cardDetail}>

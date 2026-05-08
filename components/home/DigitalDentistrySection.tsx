@@ -1,11 +1,22 @@
-import { getTranslations } from "next-intl/server";
-import { Link } from "@/i18n/navigation";
-import { Container, Title, Text, Stack, SimpleGrid, Card, Button, Box } from "@mantine/core";
-import { IconScan, IconPrinter, IconStar } from "@tabler/icons-react";
-import { DIGITAL_DENTISTRY } from "@/lib/home-data-client";
-import { FadeInUp, StaggerContainer } from "@/components/ui/Animate";
-import styles from "./DigitalDentistrySection.module.css";
 import Image from "next/image";
+import {
+  Container,
+  Title,
+  Text,
+  Stack,
+  SimpleGrid,
+  Card,
+  Button,
+  Box,
+} from "@mantine/core";
+import { IconScan, IconPrinter, IconStar } from "@tabler/icons-react";
+import { getTranslations } from "next-intl/server";
+
+import { FadeInUp, StaggerContainer } from "@/components/ui/Animate";
+import { Link } from "@/i18n/navigation";
+import { DIGITAL_DENTISTRY } from "@/lib/home-data-client";
+
+import styles from "./DigitalDentistrySection.module.css";
 
 const DIGITAL_SMILE_HIGHLIGHT_IMAGE = "/images/digital-smile-design/pic1.jpeg";
 
@@ -16,7 +27,7 @@ export async function DigitalDentistrySection() {
     ...meta,
     ...(digital.tech[i] ?? {}),
   }));
-  const titleLines = (digital.title ?? t("digitalDentistry.title"))
+  const titleLines = digital.title ?? t("digitalDentistry.title");
 
   return (
     <Box id="technology" className={`section-spacing   ${styles.root}`}>
@@ -40,7 +51,8 @@ export async function DigitalDentistrySection() {
               <Card radius="xl" className={styles.highlightCard} withBorder>
                 <span className={styles.latestBadge}>
                   <IconStar size={12} stroke={2} className={styles.badgeStar} />
-                  {digital.tech?.[0]?.badge ?? t("digitalDentistry.tech.0.badge")}
+                  {digital.tech?.[0]?.badge ??
+                    t("digitalDentistry.tech.0.badge")}
                 </span>
                 <Box className={styles.highlightImageBox}>
                   <Image
@@ -59,7 +71,10 @@ export async function DigitalDentistrySection() {
                 <Text className={styles.highlightDesc}>
                   {t("digitalDentistry.highlight.description")}
                 </Text>
-                <Link href="/treatments#digital-smile-design" className={styles.link}>
+                <Link
+                  href="/treatments#digital-smile-design"
+                  className={styles.link}
+                >
                   <Button
                     fullWidth
                     size="md"
@@ -72,36 +87,87 @@ export async function DigitalDentistrySection() {
               </Card>
 
               <Box className={styles.rightCol}>
-                <SimpleGrid cols={{ base: 1, sm: 2 }} spacing="md" className={styles.grid2x2}>
+                <SimpleGrid
+                  cols={{ base: 1, sm: 2 }}
+                  spacing="md"
+                  className={styles.grid2x2}
+                >
                   {techWithImages.map((item) => (
-                    <Card key={item.title} padding={0} radius="xl" className={styles.techCard} withBorder>
+                    <Card
+                      key={item.title}
+                      padding={0}
+                      radius="xl"
+                      className={styles.techCard}
+                      withBorder
+                    >
                       <span className={styles.techBadge}>
-                        <IconStar size={12} stroke={2} className={styles.techBadgeStar} />
+                        <IconStar
+                          size={12}
+                          stroke={2}
+                          className={styles.techBadgeStar}
+                        />
                         {item.badge}
                       </span>
                       <Box pos="relative" className={styles.techImageBox}>
-                        <Image src={item.image} alt={item.title} fill className={styles.techImg} sizes="(max-width: 900px) 100vw, 50vw" />
+                        <Image
+                          src={item.image}
+                          alt={item.title}
+                          fill
+                          className={styles.techImg}
+                          sizes="(max-width: 900px) 100vw, 50vw"
+                        />
                       </Box>
                       <Stack gap="xs" className={styles.techContent}>
-                        <Title order={4} className={styles.techTitle}>{item.title}</Title>
-                        <Text size="sm" lh={1.6} className={styles.techDesc}>{item.description}</Text>
-                        <Link href={`/treatments#${item.treatmentSlug}`} className={styles.link}>
-                          <Button fullWidth size="md" radius="xl" className={styles.techButton}>
+                        <Title order={4} className={styles.techTitle}>
+                          {item.title}
+                        </Title>
+                        <Text size="sm" lh={1.6} className={styles.techDesc}>
+                          {item.description}
+                        </Text>
+                        <Link
+                          href={`/treatments#${item.treatmentSlug}`}
+                          className={styles.link}
+                        >
+                          <Button
+                            fullWidth
+                            size="md"
+                            radius="xl"
+                            className={styles.techButton}
+                          >
                             {item.cta}
                           </Button>
                         </Link>
                       </Stack>
                     </Card>
                   ))}
-                  {digital.bullets.map((item: { title: string; description: string }, i: number) => (
-                    <Card key={item.title} padding="lg" radius="lg" className={styles.bulletCard} withBorder>
-                      <Box className={styles.bulletIcon}>
-                        {i === 0 ? <IconScan size={22} /> : <IconPrinter size={22} />}
-                      </Box>
-                      <Title order={4} className={styles.bulletTitle}>{item.title}</Title>
-                      <Text size="sm" lh={1.6} className={styles.bulletDesc}>{item.description}</Text>
-                    </Card>
-                  ))}
+                  {digital.bullets.map(
+                    (
+                      item: { title: string; description: string },
+                      i: number,
+                    ) => (
+                      <Card
+                        key={item.title}
+                        padding="lg"
+                        radius="lg"
+                        className={styles.bulletCard}
+                        withBorder
+                      >
+                        <Box className={styles.bulletIcon}>
+                          {i === 0 ? (
+                            <IconScan size={22} />
+                          ) : (
+                            <IconPrinter size={22} />
+                          )}
+                        </Box>
+                        <Title order={4} className={styles.bulletTitle}>
+                          {item.title}
+                        </Title>
+                        <Text size="sm" lh={1.6} className={styles.bulletDesc}>
+                          {item.description}
+                        </Text>
+                      </Card>
+                    ),
+                  )}
                 </SimpleGrid>
               </Box>
             </Box>

@@ -1,13 +1,15 @@
 "use client";
 
 import { Box } from "@mantine/core";
+
 import { LazyVideo } from "@/components/media/LazyVideo";
+
 import styles from "./GallerySection.module.css";
 
 export function GalleryStripClient({ videos }: { videos: string[] }) {
   return (
     <Box className={styles.stripWrapper}>
-      <ul className={styles.imageStrip} role="list">
+      <ul className={styles.imageStrip}>
         {videos.map((src, i) => (
           <li key={`${src}-${i}`} className={styles.stripItem}>
             <Box className={styles.videoWrapper}>
@@ -30,4 +32,3 @@ export function GalleryStripClient({ videos }: { videos: string[] }) {
     </Box>
   );
 }
-

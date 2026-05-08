@@ -1,13 +1,17 @@
-import type { Metadata } from "next";
 import { setRequestLocale, getTranslations } from "next-intl/server";
-import { routing } from "@/i18n/routing";
-import { Hero } from "@/components/home/Hero";
-import { StatsBar } from "@/components/home/StatsBar";
+
 import { CompleteDentalSolutionsSection } from "@/components/home/CompleteDentalSolutionsSection";
-import { GallerySection } from "@/components/home/GallerySection";
+import { DentalJourneySection } from "@/components/home/DentalJourneySection";
 import { DigitalDentistrySection } from "@/components/home/DigitalDentistrySection";
-import { SectionReveal } from "@/components/ui/Animate";
+import { GallerySection } from "@/components/home/GallerySection";
+import { Hero } from "@/components/home/Hero";
+import { HomeBelowFoldClient } from "@/components/home/HomeBelowFoldClient";
+import { HomeFoldClient } from "@/components/home/HomeFoldClient";
+import { SeoContentSection } from "@/components/home/SeoContentSection";
+import { StatsBar } from "@/components/home/StatsBar";
 import { BackToTop } from "@/components/layout/BackToTop";
+import { SectionReveal } from "@/components/ui/Animate";
+import { routing } from "@/i18n/routing";
 import {
   FAQJsonLd,
   BreadcrumbJsonLd,
@@ -15,16 +19,14 @@ import {
   MedicalBusinessJsonLd,
   WebSiteJsonLd,
 } from "@/lib/structured-data";
-import { HomeBelowFoldClient } from "@/components/home/HomeBelowFoldClient";
-import { HomeFoldClient } from "@/components/home/HomeFoldClient";
-import { DentalJourneySection } from "@/components/home/DentalJourneySection";
-import { SeoContentSection } from "@/components/home/SeoContentSection";
+
+import type { Metadata } from "next";
 
 const BASE_URL = "https://linovaclinic.com";
 
-type Props = {
+interface Props {
   params: Promise<{ locale: string }>;
-};
+}
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
@@ -40,7 +42,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: `${tCommon("siteFullName")} | ${tCommon("siteTagline")}`,
     description: tHome("seoDescription"),
-    keywords: tHome("seoKeywords").split(",").map((k) => k.trim()),
+    keywords: tHome("seoKeywords")
+      .split(",")
+      .map((k) => k.trim()),
     alternates: {
       canonical: `${BASE_URL}/${locale}`,
       languages,
@@ -63,10 +67,10 @@ export default async function Home({ params }: Props) {
   setRequestLocale(locale);
 
   const tHome = await getTranslations("home");
-  const faqItems = tHome.raw("faq.items") as Array<{
+  const faqItems = tHome.raw("faq.items") as {
     question: string;
     answer: string;
-  }>;
+  }[];
 
   return (
     <div>
@@ -75,9 +79,7 @@ export default async function Home({ params }: Props) {
       <WebSiteJsonLd />
       <FAQJsonLd items={faqItems} />
       <BreadcrumbJsonLd
-        items={[
-          { name: "Home", url: `${BASE_URL}/${locale}` },
-        ]}
+        items={[{ name: "Home", url: `${BASE_URL}/${locale}` }]}
       />
       <Hero />
       <StatsBar />

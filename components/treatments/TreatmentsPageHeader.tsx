@@ -1,26 +1,45 @@
 import Image from "next/image";
 import { Container, Stack, Title, Text, Box } from "@mantine/core";
-import { IconDental, IconStarFilled, IconWorld, IconUsers } from "@tabler/icons-react";
+import {
+  IconDental,
+  IconStarFilled,
+  IconWorld,
+  IconUsers,
+} from "@tabler/icons-react";
 import { getTranslations } from "next-intl/server";
-import { FadeInUp } from "@/components/ui/Animate";
-import { StaggerContainer, StaggerItem } from "@/components/ui/Animate";
+
+import {
+  FadeInUp,
+  StaggerContainer,
+  StaggerItem,
+} from "@/components/ui/Animate";
 import heroImage from "@/public/images/hero-patient.jpg";
+
 import styles from "./TreatmentsPageHeader.module.css";
 
 const STAT_KEYS = [
   { icon: IconDental, value: "22+", labelKey: "stats.treatments" as const },
-  { icon: IconUsers, value: "10,000+", labelKey: "stats.happyPatients" as const },
+  {
+    icon: IconUsers,
+    value: "10,000+",
+    labelKey: "stats.happyPatients" as const,
+  },
   { icon: IconWorld, value: "50+", labelKey: "stats.countriesServed" as const },
-  { icon: IconStarFilled, value: "98%", labelKey: "stats.satisfactionRate" as const },
+  {
+    icon: IconStarFilled,
+    value: "98%",
+    labelKey: "stats.satisfactionRate" as const,
+  },
 ];
 
 export async function TreatmentsPageHeader() {
   const t = await getTranslations("treatments");
+  const heroAlt = `${t("pageHeader.title")} ${t("pageHeader.titleHighlight")} — ${t("description")}`;
   return (
     <Box className={styles.hero}>
       <Image
         src={heroImage}
-        alt=""
+        alt={heroAlt}
         fill
         priority
         placeholder="blur"
@@ -36,7 +55,9 @@ export async function TreatmentsPageHeader() {
             </Text>
             <Title order={1} className={styles.title}>
               {t("pageHeader.title")}{" "}
-              <span className={styles.titleHighlight}>{t("pageHeader.titleHighlight")}</span>
+              <span className={styles.titleHighlight}>
+                {t("pageHeader.titleHighlight")}
+              </span>
             </Title>
             <Text size="lg" lh={1.7} className={styles.subtitle}>
               {t("pageHeader.subtitle")}

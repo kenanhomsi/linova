@@ -1,11 +1,13 @@
 "use client";
 
-import { useTranslations } from "next-intl";
-import { Link } from "@/i18n/navigation";
-import { LazyVideo } from "@/components/media/LazyVideo";
 import { Container, Text, Button, Stack, Box, Group } from "@mantine/core";
-import { motion } from "framer-motion";
 import { IconChevronRight, IconStar } from "@tabler/icons-react";
+import { motion } from "framer-motion";
+import { useTranslations } from "next-intl";
+
+import { LazyVideo } from "@/components/media/LazyVideo";
+import { Link } from "@/i18n/navigation";
+
 import styles from "./Hero.module.css";
 
 /** Desktop: diagonal split (clinic + Istanbul). Mobile (CSS): right panel hidden — one video only. */
@@ -96,12 +98,7 @@ export function Hero() {
               </Box>
             </motion.div>
             <motion.div variants={item}>
-              <Text
-                component="h1"
-                fw={800}
-                lh={1.05}
-                className={styles.title}
-              >
+              <Text component="h1" fw={800} lh={1.05} className={styles.title}>
                 {heroTitle.replace(heroTitleHighlight, "").trim()}{" "}
                 <Box component="span" className={styles.titleHighlight}>
                   {heroTitleHighlight}
@@ -109,7 +106,13 @@ export function Hero() {
               </Text>
             </motion.div>
             <motion.div variants={item}>
-              <Text size="lg" c="rgba(255,255,255,0.9)" lh={1.7} maw={560} className={styles.subtitle}>
+              <Text
+                size="lg"
+                c="rgba(255,255,255,0.9)"
+                lh={1.7}
+                maw={560}
+                className={styles.subtitle}
+              >
                 {t("hero.subtitle")}
               </Text>
             </motion.div>
@@ -129,7 +132,10 @@ export function Hero() {
                     {t("hero.ctaPrimary")}
                   </Button>
                 </Link>
-                <Link href="/blogs/hollywood-smile-makeover" className={styles.link}>
+                <Link
+                  href="/blogs/hollywood-smile-makeover"
+                  className={styles.link}
+                >
                   <Button
                     size="lg"
                     variant="outline"

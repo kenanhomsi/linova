@@ -1,8 +1,9 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
 import { IconArrowUp } from "@tabler/icons-react";
+import { motion, AnimatePresence } from "framer-motion";
+
 import styles from "./BackToTop.module.css";
 
 const SHOW_AFTER = 400;

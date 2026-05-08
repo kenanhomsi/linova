@@ -1,10 +1,7 @@
 "use client";
 
-import { useTranslations } from "next-intl";
-import { Link } from "@/i18n/navigation";
 import Image from "next/image";
 import { Container, Title, Text, Stack, SimpleGrid, Box } from "@mantine/core";
-import { motion } from "framer-motion";
 import {
   IconMessageCircle,
   IconPlane,
@@ -12,12 +9,26 @@ import {
   IconWorld,
   IconArrowRight,
 } from "@tabler/icons-react";
-import dentalJourneyBg from "@/public/istanbul.jpg";
+import { motion } from "framer-motion";
+import { useTranslations } from "next-intl";
+
+import {
+  FadeInUp,
+  StaggerContainer,
+  ParallaxImage,
+} from "@/components/ui/Animate";
+import { Link } from "@/i18n/navigation";
 import { WHATSAPP_LINK } from "@/lib/constants";
-import { FadeInUp, StaggerContainer, ParallaxImage } from "@/components/ui/Animate";
+import dentalJourneyBg from "@/public/istanbul.jpg";
+
 import styles from "./DentalJourneySection.module.css";
 
-const JOURNEY_ICONS = [IconMessageCircle, IconPlane, IconBuilding, IconWorld] as const;
+const JOURNEY_ICONS = [
+  IconMessageCircle,
+  IconPlane,
+  IconBuilding,
+  IconWorld,
+] as const;
 
 const journeyCardVariant = (index: number) => ({
   hidden: {
@@ -38,7 +49,9 @@ const journeyCardVariant = (index: number) => ({
   },
 });
 
-type CardAction = { type: "whatsapp"; message: string } | { type: "link"; href: string };
+type CardAction =
+  | { type: "whatsapp"; message: string }
+  | { type: "link"; href: string };
 
 export function DentalJourneySection() {
   const t = useTranslations("home");
@@ -48,7 +61,7 @@ export function DentalJourneySection() {
     cta: string;
     whatsappConsultation: string;
     whatsappMultilingual: string;
-    cards: Array<{ title: string; description: string }>;
+    cards: { title: string; description: string }[];
   };
 
   const cardActions: CardAction[] = [
@@ -90,7 +103,8 @@ export function DentalJourneySection() {
                 const Icon = JOURNEY_ICONS[i] ?? IconMessageCircle;
                 const action = cardActions[i];
                 const [firstWord, ...restWords] = card.title.split(" ");
-                const restOfTitle = restWords.length > 0 ? ` ${restWords.join(" ")}` : "";
+                const restOfTitle =
+                  restWords.length > 0 ? ` ${restWords.join(" ")}` : "";
                 const cardContent = (
                   <Box className={styles.card}>
                     <Box className={styles.cardIcon}>
@@ -99,7 +113,9 @@ export function DentalJourneySection() {
                     <Title order={4} size="h5" c="white" fw={700} mb="xs">
                       {firstWord}
                       {restOfTitle && (
-                        <span className={styles.cardTitleAccent}>{restOfTitle}</span>
+                        <span className={styles.cardTitleAccent}>
+                          {restOfTitle}
+                        </span>
                       )}
                     </Title>
                     <Text size="sm" c="rgba(255,255,255,0.88)" lh={1.6}>
@@ -121,7 +137,11 @@ export function DentalJourneySection() {
                         {cardContent}
                       </a>
                     ) : action?.type === "link" ? (
-                      <Link href={action.href} className={styles.cardLink} aria-label={card.title}>
+                      <Link
+                        href={action.href}
+                        className={styles.cardLink}
+                        aria-label={card.title}
+                      >
                         {cardContent}
                       </Link>
                     ) : (

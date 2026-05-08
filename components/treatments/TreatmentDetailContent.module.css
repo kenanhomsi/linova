@@ -31,7 +31,9 @@
   padding: 0.35rem 0.85rem 0.35rem 0.35rem;
   margin-inline-start: -0.35rem;
   border-radius: var(--radius-md);
-  transition: background var(--transition-fast), color var(--transition-fast),
+  transition:
+    background var(--transition-fast),
+    color var(--transition-fast),
     transform var(--transition-fast);
 }
 
@@ -242,7 +244,9 @@
   );
   border: none;
   box-shadow: 0 4px 14px rgba(14, 156, 140, 0.35);
-  transition: transform var(--transition-fast), filter var(--transition-fast),
+  transition:
+    transform var(--transition-fast),
+    filter var(--transition-fast),
     box-shadow var(--transition-fast);
 }
 
@@ -257,7 +261,9 @@
   border-color: var(--readdy-teal);
   color: var(--readdy-teal);
   background: transparent;
-  transition: background var(--transition-fast), color var(--transition-fast),
+  transition:
+    background var(--transition-fast),
+    color var(--transition-fast),
     transform var(--transition-fast);
 }
 
@@ -365,7 +371,9 @@
   color: #0e786c;
   font-weight: 800;
   box-shadow: 0 10px 28px rgba(0, 0, 0, 0.16);
-  transition: transform var(--transition-fast), filter var(--transition-fast);
+  transition:
+    transform var(--transition-fast),
+    filter var(--transition-fast);
 }
 
 .articleCtaBtn:hover {
@@ -650,7 +658,9 @@
   border-radius: var(--radius-lg);
   border: 1px solid var(--readdy-border);
   box-shadow: var(--shadow-sm);
-  transition: border-color var(--transition-normal), box-shadow var(--transition-normal),
+  transition:
+    border-color var(--transition-normal),
+    box-shadow var(--transition-normal),
     transform var(--transition-fast);
   height: 100%;
 }
@@ -673,7 +683,11 @@
 }
 
 .benefitCard:hover {
-  border-color: color-mix(in srgb, var(--readdy-teal) 35%, var(--readdy-border));
+  border-color: color-mix(
+    in srgb,
+    var(--readdy-teal) 35%,
+    var(--readdy-border)
+  );
   box-shadow: var(--shadow-md);
   transform: translateY(-3px);
 }

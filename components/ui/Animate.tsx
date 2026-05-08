@@ -1,7 +1,14 @@
 "use client";
 
 import React from "react";
-import { motion, useInView, useScroll, useTransform, type Variants } from "framer-motion";
+import {
+  motion,
+  useInView,
+  useScroll,
+  useTransform,
+  type Variants,
+} from "framer-motion";
+
 import styles from "./Animate.module.css";
 
 const defaultEase = [0.25, 0.46, 0.45, 0.94] as const;
@@ -151,7 +158,11 @@ interface StaggerItemProps {
   as?: keyof typeof motion;
 }
 
-export function StaggerItem({ children, className, as = "div" }: StaggerItemProps) {
+export function StaggerItem({
+  children,
+  className,
+  as = "div",
+}: StaggerItemProps) {
   const Component = motion[as] as typeof motion.div;
   return (
     <Component
@@ -213,7 +224,11 @@ export function ParallaxImage({
     target: ref,
     offset: ["start end", "end start"],
   });
-  const y = useTransform(scrollYProgress, [0, 1], [`${speed * -100}%`, `${speed * 100}%`]);
+  const y = useTransform(
+    scrollYProgress,
+    [0, 1],
+    [`${speed * -100}%`, `${speed * 100}%`],
+  );
 
   return (
     <motion.div ref={ref} style={{ y }} className={className}>

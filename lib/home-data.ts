@@ -250,13 +250,13 @@ export type TransformationCategory =
   | "Veneers"
   | "Whitening";
 
-export const TRANSFORMATIONS: Array<{
+export const TRANSFORMATIONS: {
   title: string;
   detail: string;
   category: TransformationCategory;
   before: string;
   after: string;
-}> = [
+}[] = [
   {
     title: "Hollywood Smile Transformation",
     detail: "16 Zirconia Veneers",

@@ -21,7 +21,10 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
     const stored = localStorage.getItem(STORAGE_KEY) as Theme | null;
     if (stored === "light" || stored === "dark") {
       setThemeState(stored);
-    } else if (typeof window !== "undefined" && window.matchMedia("(prefers-color-scheme: dark)").matches) {
+    } else if (
+      typeof window !== "undefined" &&
+      window.matchMedia("(prefers-color-scheme: dark)").matches
+    ) {
       setThemeState("dark");
     }
   }, []);
@@ -33,7 +36,8 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
   }, [theme, mounted]);
 
   const setTheme = (value: Theme) => setThemeState(value);
-  const toggleTheme = () => setThemeState((t) => (t === "light" ? "dark" : "light"));
+  const toggleTheme = () =>
+    setThemeState((t) => (t === "light" ? "dark" : "light"));
 
   return (
     <ThemeContext.Provider value={{ theme, setTheme, toggleTheme }}>

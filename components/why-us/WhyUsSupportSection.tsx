@@ -8,8 +8,14 @@ import {
   IconMapPin,
 } from "@tabler/icons-react";
 import { getTranslations } from "next-intl/server";
-import { SectionReveal, StaggerContainer, StaggerItem } from "@/components/ui/Animate";
+
+import {
+  SectionReveal,
+  StaggerContainer,
+  StaggerItem,
+} from "@/components/ui/Animate";
 import istanbulImage from "@/public/istanbul.jpg";
+
 import styles from "./WhyUsSupportSection.module.css";
 
 const SERVICE_ICONS = [
@@ -20,20 +26,34 @@ const SERVICE_ICONS = [
   IconMapPin,
 ];
 
-type ServiceItem = { title: string; description: string; stat: string; statLabel: string };
+interface ServiceItem {
+  title: string;
+  description: string;
+  stat: string;
+  statLabel: string;
+}
 
 export async function WhyUsSupportSection() {
   const t = await getTranslations("whyUs");
   const services = t.raw("support.services") as ServiceItem[];
   return (
     <SectionReveal delay={0.03} amount={0.08}>
-      <Box component="section" id="support" className={styles.section} aria-labelledby="support-heading">
+      <Box
+        component="section"
+        id="support"
+        className={styles.section}
+        aria-labelledby="support-heading"
+      >
         <Container size="xl">
           <Stack gap="xs" mb="xl" ta="center">
             <Text size="sm" fw={600} tt="uppercase" className={styles.eyebrow}>
               {t("support.eyebrow")}
             </Text>
-            <Title id="support-heading" order={2} className={styles.sectionTitle}>
+            <Title
+              id="support-heading"
+              order={2}
+              className={styles.sectionTitle}
+            >
               {t("support.sectionTitle")}
             </Title>
             <Text className={styles.sectionSubtitle}>
@@ -70,8 +90,12 @@ export async function WhyUsSupportSection() {
                           <Icon size={28} stroke={1.8} />
                         </div>
                         <div className={styles.statBadge}>
-                          <span className={styles.statValue}>{service.stat}</span>
-                          <span className={styles.statLabel}>{service.statLabel}</span>
+                          <span className={styles.statValue}>
+                            {service.stat}
+                          </span>
+                          <span className={styles.statLabel}>
+                            {service.statLabel}
+                          </span>
                         </div>
                       </div>
                       <div className={styles.cardContent}>

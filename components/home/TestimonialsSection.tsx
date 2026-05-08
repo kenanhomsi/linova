@@ -1,7 +1,6 @@
 "use client";
 
 import { useRef, useState, useEffect } from "react";
-import { useTranslations } from "next-intl";
 import {
   Container,
   Title,
@@ -19,10 +18,20 @@ import {
   IconQuote,
   IconShieldCheck,
 } from "@tabler/icons-react";
+import { useTranslations } from "next-intl";
+
 import { FadeInUp } from "@/components/ui/Animate";
+
 import styles from "./TestimonialsSection.module.css";
 
-const GOOGLE_COLORS = ["#4285F4", "#EA4335", "#FBBC05", "#4285F4", "#34A853", "#EA4335"];
+const GOOGLE_COLORS = [
+  "#4285F4",
+  "#EA4335",
+  "#FBBC05",
+  "#4285F4",
+  "#34A853",
+  "#EA4335",
+];
 
 function GoogleLogo() {
   return (
@@ -62,14 +71,14 @@ export function TestimonialsSection() {
     readMore: string;
     quoteMaxLength: number;
   };
-  const testimonials = t.raw("testimonials") as Array<{
+  const testimonials = t.raw("testimonials") as {
     flag: string;
     quote: string;
     name: string;
     country: string;
     treatment: string;
     timeAgo: string;
-  }>;
+  }[];
 
   const scrollRef = useRef<HTMLDivElement>(null);
   const [canScrollLeft, setCanScrollLeft] = useState(false);
@@ -101,7 +110,10 @@ export function TestimonialsSection() {
     const el = scrollRef.current;
     if (!el) return;
     const amount = el.clientWidth * 0.8;
-    el.scrollBy({ left: dir === "left" ? -amount : amount, behavior: "smooth" });
+    el.scrollBy({
+      left: dir === "left" ? -amount : amount,
+      behavior: "smooth",
+    });
     setTimeout(updateScrollState, 350);
   };
 
@@ -225,10 +237,17 @@ export function TestimonialsSection() {
                           </Box>
                           <Box style={{ flex: 1, minWidth: 0 }}>
                             <Group gap={6} wrap="nowrap">
-                              <Text fw={700} size="sm" className={styles.cardName}>
+                              <Text
+                                fw={700}
+                                size="sm"
+                                className={styles.cardName}
+                              >
                                 {item.name}
                               </Text>
-                              <Box className={styles.googleDot} title="Google review">
+                              <Box
+                                className={styles.googleDot}
+                                title="Google review"
+                              >
                                 <Text
                                   size="xs"
                                   fw={800}

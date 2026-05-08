@@ -1,15 +1,17 @@
 import { Container, Title, Text, Box } from "@mantine/core";
 import { getTranslations } from "next-intl/server";
+
 import { SectionReveal } from "@/components/ui/Animate";
+
 import styles from "./SavingsComparison.module.css";
 
-type Row = {
+interface Row {
   treatment: string;
   uk: string;
   us: string;
   linova: string;
   savings: string;
-};
+}
 
 export async function SavingsComparison() {
   const t = await getTranslations("packages");
@@ -24,7 +26,11 @@ export async function SavingsComparison() {
 
   return (
     <SectionReveal delay={0.04}>
-      <Box component="section" className={styles.section} aria-labelledby="savings-heading">
+      <Box
+        component="section"
+        className={styles.section}
+        aria-labelledby="savings-heading"
+      >
         <Container size="lg">
           <div className={styles.header}>
             <Title order={2} id="savings-heading" mb="sm" ta="center">

@@ -1,18 +1,23 @@
 "use client";
 
-import { useTranslations } from "next-intl";
 import { Container, Title, Text, Box, Accordion } from "@mantine/core";
+import { useTranslations } from "next-intl";
+
 import { FadeInUp } from "@/components/ui/Animate";
+
 import styles from "./SampleItineraries.module.css";
 
-type DayPlan = {
+interface DayPlan {
   label: string;
   morning: string;
   afternoon: string;
   evening: string;
-};
+}
 
-type Itinerary = { name: string; days: DayPlan[] };
+interface Itinerary {
+  name: string;
+  days: DayPlan[];
+}
 
 export function SampleItineraries() {
   const t = useTranslations("istanbulExperience");
@@ -24,11 +29,20 @@ export function SampleItineraries() {
   };
 
   return (
-    <Box component="section" className={styles.section} aria-labelledby="itineraries-heading">
+    <Box
+      component="section"
+      className={styles.section}
+      aria-labelledby="itineraries-heading"
+    >
       <Container size="lg">
         <FadeInUp>
           <div className={styles.header}>
-            <Title order={2} id="itineraries-heading" className={styles.title} ta="center">
+            <Title
+              order={2}
+              id="itineraries-heading"
+              className={styles.title}
+              ta="center"
+            >
               {t("itineraries.title")}
             </Title>
             <Text c="dimmed" ta="center" size="md" className={styles.subtitle}>
@@ -37,7 +51,11 @@ export function SampleItineraries() {
           </div>
         </FadeInUp>
         <FadeInUp delay={0.06}>
-          <Accordion variant="separated" radius="md" className={styles.accordion}>
+          <Accordion
+            variant="separated"
+            radius="md"
+            className={styles.accordion}
+          >
             {items.map((it) => (
               <Accordion.Item key={it.name} value={it.name}>
                 <Accordion.Control>{it.name}</Accordion.Control>

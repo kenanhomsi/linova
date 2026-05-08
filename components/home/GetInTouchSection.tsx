@@ -1,9 +1,11 @@
 "use client";
 
-import { useTranslations } from "next-intl";
 import { Container, Box, Stack, Title, Text } from "@mantine/core";
+import { useTranslations } from "next-intl";
+
 import { ContactBlock } from "@/components/shared/ContactBlock";
 import { FadeInUp } from "@/components/ui/Animate";
+
 import styles from "./GetInTouchSection.module.css";
 
 export function GetInTouchSection() {
@@ -15,7 +17,12 @@ export function GetInTouchSection() {
         <Stack gap="xl">
           <FadeInUp>
             <Stack gap="xs" ta="center" maw={640} mx="auto">
-              <Text size="sm" fw={600} tt="uppercase" className={styles.eyebrow}>
+              <Text
+                size="sm"
+                fw={600}
+                tt="uppercase"
+                className={styles.eyebrow}
+              >
                 GET IN TOUCH
               </Text>
               <Title order={2} size="2.25rem" fw={700} className={styles.title}>

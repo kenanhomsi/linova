@@ -1,7 +1,6 @@
 "use client";
 
 import { useCallback, useRef, useState, useEffect } from "react";
-import { useTranslations } from "next-intl";
 import Image from "next/image";
 import {
   Container,
@@ -13,15 +12,18 @@ import {
   Button,
   UnstyledButton,
 } from "@mantine/core";
-import { motion, AnimatePresence } from "framer-motion";
 import {
   IconArrowRight,
   IconChevronLeft,
   IconChevronRight,
 } from "@tabler/icons-react";
-import { TRANSFORMATIONS } from "@/lib/home-data-client";
+import { motion, AnimatePresence } from "framer-motion";
+import { useTranslations } from "next-intl";
+
 import { FadeInUp } from "@/components/ui/Animate";
 import { Link } from "@/i18n/navigation";
+import { TRANSFORMATIONS } from "@/lib/home-data-client";
+
 import styles from "./BeforeAfterShowcase.module.css";
 
 function imagePath(filename: string) {
@@ -30,11 +32,11 @@ function imagePath(filename: string) {
 
 export function BeforeAfterShowcase() {
   const t = useTranslations("home");
-  const transformationsText = t.raw("transformations") as Array<{
+  const transformationsText = t.raw("transformations") as {
     title: string;
     detail: string;
     category: string;
-  }>;
+  }[];
   const cases = TRANSFORMATIONS.map((item, i) => ({
     ...item,
     ...(transformationsText[i] ?? {}),
@@ -63,7 +65,7 @@ export function BeforeAfterShowcase() {
       setIsDragging(true);
       updateSliderPosition(e.clientX);
     },
-    [updateSliderPosition]
+    [updateSliderPosition],
   );
 
   const handlePointerMove = useCallback(
@@ -71,7 +73,7 @@ export function BeforeAfterShowcase() {
       if (!isDragging) return;
       updateSliderPosition(e.clientX);
     },
-    [isDragging, updateSliderPosition]
+    [isDragging, updateSliderPosition],
   );
 
   const handlePointerUp = useCallback(() => {
@@ -83,8 +85,7 @@ export function BeforeAfterShowcase() {
     setSliderPos(50);
   }, [activeIndex]);
 
-  const goNext = () =>
-    setActiveIndex((prev) => (prev + 1) % cases.length);
+  const goNext = () => setActiveIndex((prev) => (prev + 1) % cases.length);
   const goPrev = () =>
     setActiveIndex((prev) => (prev - 1 + cases.length) % cases.length);
 
