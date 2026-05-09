@@ -6,7 +6,7 @@ import toIco from "to-ico";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const root = path.join(__dirname, "..");
-const svgPath = path.join(root, "public", "tab-logo3.svg");
+const svgPath = path.join(root, "public", "tab-logo.svg");
 const outPath = path.join(root, "public", "favicon.ico");
 
 const sizes = [16, 32, 48];
