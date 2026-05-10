@@ -1,5 +1,9 @@
 export const SITE_NAME = "Linova Clinic";
 export const SITE_FULL_NAME = "Linova Clinic Istanbul";
+
+/** Canonical public hostname (no scheme, no path). Used for SEO redirects. */
+export const SITE_CANONICAL_HOST = "linovadental.com";
+export const SITE_CANONICAL_ORIGIN = `https://${SITE_CANONICAL_HOST}`;
 export const SITE_TAGLINE = "Dental Implants Turkey | Hollywood Smile Makeover";
 
 // First clinic image for hero (path under public/)

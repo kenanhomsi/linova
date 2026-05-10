@@ -6,6 +6,7 @@ import "./globals.css";
 
 import { getTextDirection, isAppLocale } from "@/i18n/locale-direction";
 import { routing } from "@/i18n/routing";
+import { SITE_CANONICAL_ORIGIN } from "@/lib/constants";
 
 import type { Metadata } from "next";
 
@@ -31,8 +32,28 @@ async function getRequestBaseUrl() {
   return new URL(`${proto}://${host}`);
 }
 
+/** Stable absolute URLs for icons and Open Graph (avoids www/http duplicate SERP assets). */
+async function getMetadataBaseUrl(): Promise<URL> {
+  const fromEnv = process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "");
+  if (fromEnv) {
+    try {
+      return new URL(fromEnv);
+    } catch {
+      /* ignore invalid env */
+    }
+  }
+  if (process.env.VERCEL_ENV === "production") {
+    return new URL(SITE_CANONICAL_ORIGIN);
+  }
+  const vercelUrl = process.env.VERCEL_URL;
+  if (vercelUrl) {
+    return new URL(`https://${vercelUrl}`);
+  }
+  return getRequestBaseUrl();
+}
+
 export async function generateMetadata(): Promise<Metadata> {
-  const baseUrl = await getRequestBaseUrl();
+  const baseUrl = await getMetadataBaseUrl();
 
   return {
     ...baseMetadata,
