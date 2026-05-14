@@ -1,5 +1,6 @@
 import { setRequestLocale, getTranslations } from "next-intl/server";
 
+import { TestimonialsSection } from "@/components/home/TestimonialsSection";
 import { BackToTop } from "@/components/layout/BackToTop";
 import { PackageCards } from "@/components/packages/PackageCards";
 import { PackageIncludes } from "@/components/packages/PackageIncludes";
@@ -31,7 +32,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: t("title"),
     description: t("description"),
     keywords: t("seoKeywords")
-      ?.split(",")
+      .split(",")
       .map((k) => k.trim()),
     alternates: {
       canonical: `${BASE_URL}/${locale}/packages`,
@@ -63,6 +64,7 @@ export default async function PackagesPage({ params }: Props) {
       <PackageCards />
       <SavingsComparison />
       <PackageIncludes />
+      <TestimonialsSection />
       <PackagesCTA />
       <BackToTop />
     </main>

@@ -33,33 +33,38 @@ export async function PackageIncludes() {
         className={styles.section}
         aria-labelledby="includes-heading"
       >
-        <Container size="lg">
-          <div className={styles.header}>
-            <Title order={2} id="includes-heading" mb="sm" ta="center">
-              {t("includes.title")}
-            </Title>
-            <Text c="dimmed" ta="center" size="md">
-              {t("includes.subtitle")}
-            </Text>
-          </div>
-          <StaggerContainer staggerChildren={0.06}>
-            <div className={styles.grid}>
-              {items.map((item, i) => {
-                const Icon = ICONS[i % ICONS.length];
-                return (
-                  <StaggerItem key={item.title}>
-                    <div className={styles.item}>
-                      <div className={styles.iconWrap}>
-                        <Icon size={26} stroke={1.75} />
-                      </div>
-                      <h3 className={styles.itemTitle}>{item.title}</h3>
-                      <p className={styles.itemDesc}>{item.description}</p>
-                    </div>
-                  </StaggerItem>
-                );
-              })}
+        <Container size="xl">
+          <div className={styles.layout}>
+            <div className={styles.header}>
+              <Text className={styles.eyebrow}>{t("hero.eyebrow")}</Text>
+              <Title order={2} id="includes-heading" className={styles.title}>
+                {t("includes.title")}
+              </Title>
+              <Text className={styles.subtitle}>{t("includes.subtitle")}</Text>
             </div>
-          </StaggerContainer>
+
+            <StaggerContainer staggerChildren={0.06}>
+              <div className={styles.grid}>
+                {items.map((item, i) => {
+                  const Icon = ICONS[i % ICONS.length];
+                  return (
+                    <StaggerItem key={item.title}>
+                      <div className={styles.item}>
+                        <div className={styles.itemHeader}>
+                          <div className={styles.iconWrap}>
+                            <Icon size={26} stroke={1.75} />
+                          </div>
+                          <span className={styles.itemNumber}>0{i + 1}</span>
+                        </div>
+                        <h3 className={styles.itemTitle}>{item.title}</h3>
+                        <p className={styles.itemDesc}>{item.description}</p>
+                      </div>
+                    </StaggerItem>
+                  );
+                })}
+              </div>
+            </StaggerContainer>
+          </div>
         </Container>
       </Box>
     </SectionReveal>

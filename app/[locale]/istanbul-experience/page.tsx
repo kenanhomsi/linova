@@ -66,8 +66,8 @@ export default async function IstanbulExperiencePage({ params }: Props) {
       <ThingsToDo />
       <BestTimeToVisit />
       <SampleItineraries />
-      <TravelFAQ />
       <TourismTestimonials />
+      <TravelFAQ />
       <IstanbulCTA />
       <BackToTop />
     </main>

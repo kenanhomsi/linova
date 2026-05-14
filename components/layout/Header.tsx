@@ -25,9 +25,9 @@ import { ThemeToggle } from "./ThemeToggle";
 const NAV_CONFIG = [
   { href: "/", labelKey: "nav.home" },
   { href: "/treatments", labelKey: "nav.Treatments" },
-  // { href: "/packages", labelKey: "nav.packages" },
+  { href: "/packages", labelKey: "nav.packages" },
   { href: "/why-us", labelKey: "nav.whyChooseUs" },
-  // { href: "/istanbul-experience", labelKey: "nav.istanbulExperience" },
+  { href: "/istanbul-experience", labelKey: "nav.istanbulExperience" },
   { href: "/blogs", labelKey: "nav.blog" },
   { href: "/contact", labelKey: "nav.contact" },
 ] as const;

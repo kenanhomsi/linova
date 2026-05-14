@@ -1036,18 +1036,19 @@
       "eyebrow": "More than a clinic visit",
       "title": "Discover Istanbul",
       "titleHighlight": "between appointments",
-      "subtitle": "Pair world-class dental care with one of the world’s great cities — historic sites, Bosphorus views, food, and culture, all woven around your treatment schedule.",
+      "subtitle": "Turn your treatment trip into a calm, well-planned Istanbul stay with the right neighborhood, recovery-friendly activities, and beautifully used time between appointments.",
       "imageAlt": "Istanbul skyline and the Bosphorus — historic city view"
     },
     "areas": {
       "title": "Best areas to stay",
-      "subtitle": "Neighborhoods our patients love — close to the clinic or a short transfer away.",
+      "subtitle": "Choose the part of Istanbul that best fits your treatment schedule, recovery pace, and travel style.",
       "items": [
         {
           "imageKey": "nisantasi",
           "name": "Nişantaşı",
           "distance": "~5–15 min to clinic",
           "vibe": "Upscale shopping, cafés, and calm streets — closest to many dental schedules.",
+          "bestFor": "Best for quiet recovery and short transfer times",
           "price": "$$$"
         },
         {
@@ -1055,6 +1056,7 @@
           "name": "Taksim & Beyoğlu",
           "distance": "~15–25 min",
           "vibe": "Energetic, Istiklal Avenue, nightlife, and easy metro links.",
+          "bestFor": "Best for patients who want evenings out after lighter appointments",
           "price": "$$–$$$"
         },
         {
@@ -1062,6 +1064,7 @@
           "name": "Sultanahmet",
           "distance": "~25–40 min",
           "vibe": "Hagia Sophia, Blue Mosque, and historic core — perfect for sightseeing days.",
+          "bestFor": "Best for first-time visitors who want iconic landmarks nearby",
           "price": "$$–$$$"
         },
         {
@@ -1069,81 +1072,88 @@
           "name": "Beşiktaş & Ortaköy",
           "distance": "~20–35 min",
           "vibe": "Bosphorus views, ferries, and seafood by the water.",
+          "bestFor": "Best for scenic waterfront walks and relaxed afternoons",
           "price": "$$–$$$"
         }
       ]
     },
     "activities": {
       "title": "Between sessions",
-      "subtitle": "Easy wins for rest days — we can help you book trusted partners.",
+      "subtitle": "Gentle, memorable ideas for rest days and lighter moments between appointments.",
       "items": [
         {
           "imageKey": "bosphorus",
           "title": "Bosphorus cruise",
           "time": "2–3 hours",
           "distance": "Various docks",
-          "description": "Classic skyline and waterfront mansions from the water."
+          "description": "Classic skyline and waterfront mansions from the water.",
+          "bestFor": "Ideal on a lighter treatment day or after your final fitting"
         },
         {
           "imageKey": "bazaar",
           "title": "Grand Bazaar & Spice Bazaar",
           "time": "Half day",
           "distance": "Old City",
-          "description": "Spices, teas, and crafts — go with comfortable shoes."
+          "description": "Spices, teas, ceramics, and covered market atmosphere in the historic core.",
+          "bestFor": "Best when you feel up for a slow-paced cultural walk"
         },
         {
           "imageKey": "hagia",
           "title": "Hagia Sophia & Blue Mosque",
           "time": "2–4 hours",
           "distance": "Sultanahmet",
-          "description": "Iconic landmarks; check visiting hours and dress code."
+          "description": "Istanbul's most iconic religious and architectural landmarks in one easy area.",
+          "bestFor": "Great for your main sightseeing day between clinic visits"
         },
         {
           "imageKey": "istiklal",
           "title": "Istiklal Avenue",
           "time": "2–3 hours",
           "distance": "Beyoğlu",
-          "description": "Walk, tram, street food, and galleries."
+          "description": "Walk, tram, coffee stops, boutiques, and a lively city feel without a fixed plan.",
+          "bestFor": "Best for patients who want an easy spontaneous afternoon"
         },
         {
           "imageKey": "hamam",
           "title": "Turkish bath (hamam)",
           "time": "1.5–2 hours",
           "distance": "Citywide",
-          "description": "Relaxing tradition — ask us for hygienic, trusted options."
+          "description": "A classic Turkish wellness ritual for a slower recovery-minded day.",
+          "bestFor": "Best after consultation days, not immediately after major procedures"
         },
         {
           "imageKey": "galata",
           "title": "Galata Tower & Karaköy",
           "time": "2 hours",
           "distance": "Golden Horn",
-          "description": "Panoramic views and coffee culture."
+          "description": "Panoramic city views, stylish cafés, and one of the easiest neighborhoods to enjoy at your own pace.",
+          "bestFor": "Ideal for a short outing before dinner or departure day"
         }
       ]
     },
     "seasons": {
       "title": "Best time to visit",
-      "subtitle": "Istanbul is a year-round city — here’s how seasons feel for travelers.",
+      "subtitle": "Each season changes the city's pace. Here's when patients usually feel most comfortable visiting.",
       "items": [
         {
           "imageKey": "spring",
           "name": "Spring (Apr–Jun)",
-          "detail": "Mild weather, blooming city — ideal for walking and outdoor dining."
+          "detail": "Mild weather, blooming streets, and comfortable walking conditions make spring the easiest season for balancing treatment with gentle sightseeing."
         },
         {
           "imageKey": "summer",
           "name": "Summer (Jul–Aug)",
-          "detail": "Warm and busy; seasides and islands are popular for extra days."
+          "detail": "Summer is vibrant and energetic, with long daylight hours and Bosphorus evenings, though patients usually prefer slower plans during the hottest afternoons."
         },
         {
           "imageKey": "autumn",
           "name": "Autumn (Sep–Nov)",
-          "detail": "Often the sweet spot: comfortable temperatures and fewer crowds than peak summer."
+          "detail": "Autumn is often the sweet spot: warm enough for the water and walking, but calmer than peak summer for hotels, transfers, and sightseeing."
         },
         {
           "imageKey": "winter",
           "name": "Winter (Dec–Mar)",
-          "detail": "Cooler and quieter; great for shorter treatment trips and indoor culture."
+          "detail": "Winter feels quieter and more practical for shorter medical trips, especially if you prefer museums, cafés, and less crowded streets over full-day outdoor plans."
         }
       ]
     },
@@ -1298,8 +1308,8 @@
       ]
     },
     "tourismTestimonials": {
-      "title": "The full Istanbul experience",
-      "subtitle": "What patients say about treatment and the city together.",
+      "title": "Why patients love the city too",
+      "subtitle": "Real feedback from patients who combined treatment with time in Istanbul.",
       "items": [
         {
           "quote": "I came for veneers but left with the best week of my life — the clinic was flawless and Istanbul stole my heart.",
@@ -1322,8 +1332,8 @@
       ]
     },
     "cta": {
-      "title": "Ready to plan your trip?",
-      "subtitle": "Combine your treatment plan with hotels, transfers, and Istanbul experiences — start with a free online consultation.",
+      "title": "Ready to plan a smoother Istanbul stay?",
+      "subtitle": "We'll help you match treatment dates with the right area, hotel, transfers, and downtime plans before you book.",
       "buttonContact": "Contact us",
       "buttonPackages": "View packages"
     }

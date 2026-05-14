@@ -24,6 +24,7 @@ export function TravelFAQ() {
         <Box className={styles.main}>
           <FadeInUp>
             <Box className={styles.header}>
+              <Text className={styles.eyebrow}>{t("hero.eyebrow")}</Text>
               <Title order={2} className={styles.title}>
                 {faq.title}
               </Title>

@@ -38,8 +38,9 @@ export async function TourismTestimonials() {
         className={styles.section}
         aria-labelledby="tourism-testimonials-heading"
       >
-        <Container size="lg">
+        <Container size="xl">
           <div className={styles.header}>
+            <Text className={styles.eyebrow}>{t("hero.eyebrow")}</Text>
             <Title
               order={2}
               id="tourism-testimonials-heading"
@@ -54,9 +55,11 @@ export async function TourismTestimonials() {
           </div>
           <StaggerContainer staggerChildren={0.08}>
             <div className={styles.grid}>
-              {block.items.map((item) => (
+              {block.items.map((item, index) => (
                 <StaggerItem key={item.name}>
-                  <blockquote className={styles.card}>
+                  <blockquote
+                    className={`${styles.card} ${index === 0 ? styles.cardFeatured : ""}`}
+                  >
                     <div className={styles.inner}>
                       <span className={styles.avatar} aria-hidden>
                         {initialFromName(item.name)}

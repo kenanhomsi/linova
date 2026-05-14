@@ -28,58 +28,49 @@ export async function BestTimeToVisit() {
         className={styles.section}
         aria-labelledby="seasons-heading"
       >
-        <Container size="lg">
-          <div className={styles.header}>
-            <Title
-              order={2}
-              id="seasons-heading"
-              className={styles.title}
-              ta="center"
-            >
-              {t("seasons.title")}
-            </Title>
-            <Text
-              c="dimmed"
-              ta="center"
-              size="md"
-              maw={560}
-              mx="auto"
-              className={styles.subtitle}
-            >
-              {t("seasons.subtitle")}
-            </Text>
-          </div>
-          <StaggerContainer staggerChildren={0.06}>
-            <div className={styles.grid}>
-              {items.map((s) => {
-                const src = istanbulImageSrc(s.imageKey);
-                return (
-                  <StaggerItem key={s.name}>
-                    <article className={styles.card}>
-                      <div className={styles.thumb}>
-                        {src ? (
-                          <Image
-                            src={src}
-                            alt={s.name}
-                            fill
-                            className={styles.thumbImage}
-                            sizes="(max-width: 48em) 100vw, 25vw"
-                          />
-                        ) : (
-                          <div className={styles.thumbFallback} aria-hidden />
-                        )}
-                        <div className={styles.thumbOverlay} aria-hidden />
-                      </div>
-                      <div className={styles.cardText}>
-                        <h3 className={styles.season}>{s.name}</h3>
-                        <p className={styles.detail}>{s.detail}</p>
-                      </div>
-                    </article>
-                  </StaggerItem>
-                );
-              })}
+        <Container size="xl">
+          <div className={styles.layout}>
+            <div className={styles.header}>
+              <Text className={styles.eyebrow}>{t("hero.eyebrow")}</Text>
+              <Title order={2} id="seasons-heading" className={styles.title}>
+                {t("seasons.title")}
+              </Title>
+              <Text size="md" className={styles.subtitle}>
+                {t("seasons.subtitle")}
+              </Text>
             </div>
-          </StaggerContainer>
+            <StaggerContainer staggerChildren={0.06}>
+              <div className={styles.grid}>
+                {items.map((s) => {
+                  const src = istanbulImageSrc(s.imageKey);
+                  return (
+                    <StaggerItem key={s.name}>
+                      <article className={styles.card}>
+                        <div className={styles.thumb}>
+                          {src ? (
+                            <Image
+                              src={src}
+                              alt={s.name}
+                              fill
+                              className={styles.thumbImage}
+                              sizes="(max-width: 48em) 100vw, 25vw"
+                            />
+                          ) : (
+                            <div className={styles.thumbFallback} aria-hidden />
+                          )}
+                          <div className={styles.thumbOverlay} aria-hidden />
+                        </div>
+                        <div className={styles.cardText}>
+                          <h3 className={styles.season}>{s.name}</h3>
+                          <p className={styles.detail}>{s.detail}</p>
+                        </div>
+                      </article>
+                    </StaggerItem>
+                  );
+                })}
+              </div>
+            </StaggerContainer>
+          </div>
         </Container>
       </Box>
     </SectionReveal>

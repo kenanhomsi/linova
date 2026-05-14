@@ -18,6 +18,7 @@ interface Activity {
   time: string;
   distance: string;
   description: string;
+  bestFor?: string;
 }
 
 export async function ThingsToDo() {
@@ -31,8 +32,9 @@ export async function ThingsToDo() {
         className={styles.section}
         aria-labelledby="activities-heading"
       >
-        <Container size="lg">
+        <Container size="xl">
           <div className={styles.header}>
+            <Text className={styles.eyebrow}>{t("hero.eyebrow")}</Text>
             <Title
               order={2}
               id="activities-heading"
@@ -54,11 +56,13 @@ export async function ThingsToDo() {
           </div>
           <StaggerContainer staggerChildren={0.05}>
             <div className={styles.grid}>
-              {items.map((item) => {
+              {items.map((item, index) => {
                 const src = istanbulImageSrc(item.imageKey);
                 return (
                   <StaggerItem key={item.title}>
-                    <article className={styles.card}>
+                    <article
+                      className={`${styles.card} ${index === 0 ? styles.cardFeatured : ""}`}
+                    >
                       <div className={styles.imageWrap}>
                         {src ? (
                           <Image
@@ -88,6 +92,9 @@ export async function ThingsToDo() {
                             <span>{item.distance}</span>
                           </span>
                         </Group>
+                        {item.bestFor ? (
+                          <Text className={styles.bestFor}>{item.bestFor}</Text>
+                        ) : null}
                         <p className={styles.desc}>{item.description}</p>
                       </div>
                     </article>

@@ -34,9 +34,10 @@ export function SampleItineraries() {
       className={styles.section}
       aria-labelledby="itineraries-heading"
     >
-      <Container size="lg">
+      <Container size="xl">
         <FadeInUp>
           <div className={styles.header}>
+            <Text className={styles.eyebrow}>{t("hero.eyebrow")}</Text>
             <Title
               order={2}
               id="itineraries-heading"
@@ -58,7 +59,14 @@ export function SampleItineraries() {
           >
             {items.map((it) => (
               <Accordion.Item key={it.name} value={it.name}>
-                <Accordion.Control>{it.name}</Accordion.Control>
+                <Accordion.Control>
+                  <div className={styles.controlInner}>
+                    <span className={styles.itineraryName}>{it.name}</span>
+                    <span className={styles.itineraryMeta}>
+                      {it.days[0]?.label} - {it.days[it.days.length - 1]?.label}
+                    </span>
+                  </div>
+                </Accordion.Control>
                 <Accordion.Panel>
                   {it.days.map((d) => (
                     <div key={d.label} className={styles.day}>

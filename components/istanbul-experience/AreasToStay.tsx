@@ -17,6 +17,7 @@ interface Area {
   name: string;
   distance: string;
   vibe: string;
+  bestFor?: string;
   price: string;
 }
 
@@ -31,76 +32,74 @@ export async function AreasToStay() {
         className={styles.section}
         aria-labelledby="areas-heading"
       >
-        <Container size="lg">
-          <div className={styles.header}>
-            <Title
-              order={2}
-              id="areas-heading"
-              className={styles.title}
-              ta="center"
-            >
-              {t("areas.title")}
-            </Title>
-            <Text
-              c="dimmed"
-              ta="center"
-              size="md"
-              maw={560}
-              mx="auto"
-              className={styles.subtitle}
-            >
-              {t("areas.subtitle")}
-            </Text>
-          </div>
-          <StaggerContainer staggerChildren={0.06}>
-            <div className={styles.grid}>
-              {items.map((area) => {
-                const src = istanbulImageSrc(area.imageKey);
-                return (
-                  <StaggerItem key={area.name}>
-                    <article className={styles.card}>
-                      <div className={styles.imageWrap}>
-                        {src ? (
-                          <Image
-                            src={src}
-                            alt={area.name}
-                            fill
-                            className={styles.image}
-                            sizes="(max-width: 48em) 100vw, 50vw"
-                          />
-                        ) : (
-                          <div className={styles.imageFallback} aria-hidden />
-                        )}
-                        <div className={styles.imageOverlay} aria-hidden />
-                        <Badge
-                          className={styles.priceBadge}
-                          variant="filled"
-                          size="lg"
-                          radius="md"
-                        >
-                          {area.price}
-                        </Badge>
-                      </div>
-                      <div className={styles.body}>
-                        <h3 className={styles.name}>
-                          <IconMapPin
-                            size={22}
-                            className={styles.pinIcon}
-                            aria-hidden
-                          />
-                          {area.name}
-                        </h3>
-                        <div className={styles.meta} dir="auto">
-                          {area.distance}
-                        </div>
-                        <p className={styles.vibe}>{area.vibe}</p>
-                      </div>
-                    </article>
-                  </StaggerItem>
-                );
-              })}
+        <Container size="xl">
+          <div className={styles.layout}>
+            <div className={styles.header}>
+              <Text className={styles.eyebrow}>{t("hero.eyebrow")}</Text>
+              <Title order={2} id="areas-heading" className={styles.title}>
+                {t("areas.title")}
+              </Title>
+              <Text size="md" className={styles.subtitle}>
+                {t("areas.subtitle")}
+              </Text>
             </div>
-          </StaggerContainer>
+
+            <StaggerContainer staggerChildren={0.06}>
+              <div className={styles.grid}>
+                {items.map((area) => {
+                  const src = istanbulImageSrc(area.imageKey);
+                  return (
+                    <StaggerItem key={area.name}>
+                      <article className={styles.card}>
+                        <div className={styles.imageWrap}>
+                          {src ? (
+                            <Image
+                              src={src}
+                              alt={area.name}
+                              fill
+                              className={styles.image}
+                              sizes="(max-width: 48em) 100vw, 50vw"
+                            />
+                          ) : (
+                            <div className={styles.imageFallback} aria-hidden />
+                          )}
+                          <div className={styles.imageOverlay} aria-hidden />
+                          <Badge
+                            className={styles.priceBadge}
+                            variant="filled"
+                            radius="md"
+                          >
+                            {area.price}
+                          </Badge>
+                        </div>
+                        <div className={styles.body}>
+                          <div className={styles.topRow}>
+                            <h3 className={styles.name}>
+                              <IconMapPin
+                                size={20}
+                                className={styles.pinIcon}
+                                aria-hidden
+                              />
+                              {area.name}
+                            </h3>
+                            <span className={styles.meta} dir="auto">
+                              {area.distance}
+                            </span>
+                          </div>
+                          {area.bestFor ? (
+                            <Text className={styles.bestFor}>
+                              {area.bestFor}
+                            </Text>
+                          ) : null}
+                          <p className={styles.vibe}>{area.vibe}</p>
+                        </div>
+                      </article>
+                    </StaggerItem>
+                  );
+                })}
+              </div>
+            </StaggerContainer>
+          </div>
         </Container>
       </Box>
     </SectionReveal>

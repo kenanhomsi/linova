@@ -31,7 +31,7 @@ export async function SavingsComparison() {
         className={styles.section}
         aria-labelledby="savings-heading"
       >
-        <Container size="lg">
+        <Container size="xl">
           <div className={styles.header}>
             <Title order={2} id="savings-heading" mb="sm" ta="center">
               {t("savings.title")}
@@ -40,31 +40,59 @@ export async function SavingsComparison() {
               {t("savings.subtitle")}
             </Text>
           </div>
-          <div className={styles.scroll}>
-            <table className={styles.table}>
-              <thead>
-                <tr>
-                  <th scope="col" className={styles.colTreatment}>
-                    {cols.treatment}
-                  </th>
-                  <th scope="col">{cols.uk}</th>
-                  <th scope="col">{cols.us}</th>
-                  <th scope="col">{cols.linova}</th>
-                  <th scope="col">{cols.savings}</th>
-                </tr>
-              </thead>
-              <tbody>
-                {rows.map((row, i) => (
-                  <tr key={i}>
-                    <td className={styles.colTreatment}>{row.treatment}</td>
-                    <td>{row.uk}</td>
-                    <td>{row.us}</td>
-                    <td>{row.linova}</td>
-                    <td className={styles.colSavings}>{row.savings}</td>
+          <div className={styles.mobileCards}>
+            {rows.map((row) => (
+              <article key={row.treatment} className={styles.mobileCard}>
+                <Text className={styles.mobileTreatment}>{row.treatment}</Text>
+                <dl className={styles.mobileMeta}>
+                  <div>
+                    <dt>{cols.uk}</dt>
+                    <dd>{row.uk}</dd>
+                  </div>
+                  <div>
+                    <dt>{cols.us}</dt>
+                    <dd>{row.us}</dd>
+                  </div>
+                  <div>
+                    <dt>{cols.linova}</dt>
+                    <dd>{row.linova}</dd>
+                  </div>
+                  <div>
+                    <dt>{cols.savings}</dt>
+                    <dd className={styles.mobileSavings}>{row.savings}</dd>
+                  </div>
+                </dl>
+              </article>
+            ))}
+          </div>
+
+          <div className={styles.tableShell}>
+            <div className={styles.scroll}>
+              <table className={styles.table}>
+                <thead>
+                  <tr>
+                    <th scope="col" className={styles.colTreatment}>
+                      {cols.treatment}
+                    </th>
+                    <th scope="col">{cols.uk}</th>
+                    <th scope="col">{cols.us}</th>
+                    <th scope="col">{cols.linova}</th>
+                    <th scope="col">{cols.savings}</th>
                   </tr>
-                ))}
-              </tbody>
-            </table>
+                </thead>
+                <tbody>
+                  {rows.map((row, i) => (
+                    <tr key={i}>
+                      <td className={styles.colTreatment}>{row.treatment}</td>
+                      <td>{row.uk}</td>
+                      <td>{row.us}</td>
+                      <td>{row.linova}</td>
+                      <td className={styles.colSavings}>{row.savings}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
           </div>
           <Text className={styles.footnote}>{t("savings.footnote")}</Text>
         </Container>
