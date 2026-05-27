@@ -42,6 +42,10 @@ const FOOTER_SERVICES_CONFIG = [
 ] as const;
 
 const FOOTER_TREATMENTS_CONFIG = [
+  {
+    href: "/landing/hollywood-smile",
+    labelKey: "footerTreatments.hollywoodSmileOffer",
+  },
   { href: "/treatments", labelKey: "footerTreatments.hollywoodSmile" },
   { href: "/treatments", labelKey: "footerTreatments.allOn4Implants" },
   { href: "/treatments", labelKey: "footerTreatments.veneers" },
