@@ -10,13 +10,13 @@ export const SITE_TAGLINE = "Dental Implants Turkey | Hollywood Smile Makeover";
 export const HERO_IMAGE =
   "/images/WhatsApp Image 2026-01-27 at 12.47.00 PM.jpeg";
 
-export const WHATSAPP_NUMBER = "905321234567"; // +90 532 123 4567
+export const WHATSAPP_NUMBER = "905061099770"; // +90 532 123 4567
 export const WHATSAPP_LINK = WHATSAPP_NUMBER
   ? `https://wa.me/${WHATSAPP_NUMBER.replace(/\D/g, "")}`
   : "#";
 
-export const PHONE = "+90 532 123 4567";
-export const PHONE_TEL = "tel:+905321234567";
+export const PHONE = "+90 506 109 9770";
+export const PHONE_TEL = "tel:+905061099770";
 export const EMAIL = "info@linovaclinic.com";
 export const ADDRESS = "Nişantaşı District, Istanbul, Turkey";
 export const WORKING_HOURS = "Mon - Fri: 09:00 - 18:00";
@@ -25,8 +25,8 @@ export const WORKING_HOURS_FOOTER =
 
 export const SOCIAL = {
   whatsapp: WHATSAPP_LINK,
-  instagram: "#",
-  facebook: "#",
+  instagram: "https://www.instagram.com/linovadental?igsh=MWp2eXc4d3c1Z21laQ==",
+  facebook: "https://www.facebook.com/people/Linova-Clinic/61588817529414/",
   youtube: "#",
 } as const;
 

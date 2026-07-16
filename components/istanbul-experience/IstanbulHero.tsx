@@ -89,9 +89,9 @@ export async function IstanbulHero() {
                     <span>{t("cta.buttonContact")}</span>
                     <IconArrowRight size={18} stroke={2} />
                   </Link>
-                  <Link href="/packages" className={styles.secondaryAction}>
+                  {/* <Link href="/packages" className={styles.secondaryAction}>
                     <span>{t("cta.buttonPackages")}</span>
-                  </Link>
+                  </Link> */}
                 </div>
 
                 <div className={styles.statsRow}>

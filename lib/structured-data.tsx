@@ -131,8 +131,8 @@ export function OrganizationJsonLd() {
       bestRating: "5",
     },
     sameAs: [
-      "https://www.instagram.com/linovaclinic",
-      "https://www.facebook.com/linovaclinic",
+      "https://www.instagram.com/linovadental?igsh=MWp2eXc4d3c1Z21laQ==",
+      "https://www.facebook.com/people/Linova-Clinic/61588817529414/",
       "https://www.youtube.com/linovaclinic",
     ],
   };

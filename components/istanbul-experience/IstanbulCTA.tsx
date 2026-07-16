@@ -49,9 +49,9 @@ export async function IstanbulCTA() {
                   <span>{t("cta.buttonContact")}</span>
                   <IconArrowRight size={18} stroke={2} />
                 </Link>
-                <Link href="/packages" className={styles.btnOutline}>
+                {/* <Link href="/packages" className={styles.btnOutline}>
                   {t("cta.buttonPackages")}
-                </Link>
+                </Link> */}
               </div>
             </div>
           </div>

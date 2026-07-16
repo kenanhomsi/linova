@@ -15,7 +15,7 @@ const pages = [
   },
   { path: "/treatments", changeFrequency: "weekly" as const, priority: 0.9 },
   { path: "/blogs", changeFrequency: "weekly" as const, priority: 0.85 },
-  { path: "/packages", changeFrequency: "weekly" as const, priority: 0.9 },
+  // { path: "/packages", changeFrequency: "weekly" as const, priority: 0.9 },
   {
     path: "/istanbul-experience",
     changeFrequency: "weekly" as const,
