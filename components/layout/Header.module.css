@@ -46,16 +46,39 @@
   position: relative;
   white-space: nowrap;
   color: var(--nav-color, var(--header-fg));
+  padding-bottom: 4px;
   transition: color 0.2s ease;
+}
+
+.navLink::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--readdy-teal);
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.25s var(--ease-out-smooth);
 }
 
 .navLink:hover {
   color: var(--readdy-teal);
 }
 
+.navLink:hover::after {
+  transform: scaleX(1);
+}
+
 .navLinkActive {
   font-weight: 600;
   color: var(--readdy-teal) !important;
+}
+
+.navLinkActive::after {
+  transform: scaleX(1);
 }
 
 .logoWrap {

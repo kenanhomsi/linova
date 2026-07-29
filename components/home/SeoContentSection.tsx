@@ -84,11 +84,7 @@ export function SeoContentSection({ locale }: SeoContentSectionProps) {
               <Link href="/treatments" style={linkStyle}>
                 dental clinic in Turkey
               </Link>{" "}
-              for implants or cosmetic dentistry, exploring{" "}
-              {/* <Link href="/packages" style={linkStyle}>
-                treatment packages
-              </Link> */}
-              , or checking{" "}
+              for implants or cosmetic dentistry, or checking{" "}
               <Link href="/why-us" style={linkStyle}>
                 why patients choose Linova
               </Link>

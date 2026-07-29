@@ -4,6 +4,7 @@ import {
   EMAIL,
   ADDRESS,
   WORKING_HOURS,
+  SITE_CANONICAL_ORIGIN,
 } from "./constants";
 
 type JsonLdValue =
@@ -34,14 +35,14 @@ export function OrganizationJsonLd() {
       "Linova Clinic",
       "Linova Dental",
     ],
-    url: "https://linovaclinic.com",
-    logo: "https://linovaclinic.com/icon-512.png",
-    image: "https://linovaclinic.com/images/og-image.jpg",
+    url: SITE_CANONICAL_ORIGIN,
+    logo: `${SITE_CANONICAL_ORIGIN}/icon-512.png`,
+    image: `${SITE_CANONICAL_ORIGIN}/images/og-image.jpg`,
     description:
       "Linova Clinic is a premier dental clinic in Turkey specializing in dental implants, veneers, Hollywood Smile, full mouth restoration, and medical tourism. Located in Istanbul, offering world-class dental treatments.",
     telephone: PHONE,
     email: EMAIL,
-    availableLanguage: ["English", "Arabic", "Turkish"],
+    availableLanguage: ["English", "Arabic", "Turkish", "German", "French"],
     address: {
       "@type": "PostalAddress",
       streetAddress: "Nişantaşı District",
@@ -124,12 +125,10 @@ export function OrganizationJsonLd() {
         },
       ],
     },
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: "5",
-      reviewCount: "500",
-      bestRating: "5",
-    },
+    // aggregateRating intentionally omitted: schema.org/Google guidelines require
+    // this to reflect real, verifiable reviews (e.g. from Google Business Profile).
+    // Re-add once genuine review count/rating data is available — see
+    // OrganizationJsonLd's docstring-equivalent note above for context.
     sameAs: [
       "https://www.instagram.com/linovadental?igsh=MWp2eXc4d3c1Z21laQ==",
       "https://www.facebook.com/people/Linova-Clinic/61588817529414/",
@@ -191,7 +190,7 @@ export function MedicalBusinessJsonLd() {
     name: SITE_FULL_NAME,
     medicalSpecialty: "Dentistry",
     isAcceptingNewPatients: true,
-    availableLanguage: ["English", "Arabic", "Turkish"],
+    availableLanguage: ["English", "Arabic", "Turkish", "German", "French"],
     availableService: [
       {
         "@type": "MedicalProcedure",
@@ -222,10 +221,10 @@ export function WebSiteJsonLd() {
     "@context": "https://schema.org",
     "@type": "WebSite",
     name: SITE_FULL_NAME,
-    url: "https://linovaclinic.com",
+    url: SITE_CANONICAL_ORIGIN,
     description:
       "Linova Clinic is a dental clinic in Turkey for dental implants, veneers, Hollywood Smile, and patient-friendly dental tourism in Istanbul.",
-    inLanguage: ["en", "tr", "ar"],
+    inLanguage: ["en", "tr", "ar", "de", "fr"],
     publisher: {
       "@type": "Dentist",
       name: SITE_FULL_NAME,
@@ -273,7 +272,7 @@ export function BlogPostingJsonLd({
       name: SITE_FULL_NAME,
       logo: {
         "@type": "ImageObject",
-        url: "https://linovaclinic.com/icon-512.png",
+        url: `${SITE_CANONICAL_ORIGIN}/icon-512.png`,
       },
     },
     ...(inLanguage ? { inLanguage } : {}),
@@ -306,7 +305,7 @@ export function MedicalProcedureJsonLd({
     provider: {
       "@type": "Dentist",
       name: SITE_FULL_NAME,
-      url: "https://linovaclinic.com",
+      url: SITE_CANONICAL_ORIGIN,
       telephone: PHONE,
       email: EMAIL,
       address: {

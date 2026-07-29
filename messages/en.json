@@ -70,7 +70,8 @@
       "titleHighlight": "in Istanbul",
       "subtitle": "Discover dental implants, veneers, Hollywood Smile makeovers, and patient-friendly dental tourism support at Linova Clinic in Turkey.",
       "ctaPrimary": "Get Free Consultation",
-      "ctaSecondary": "Explore Services"
+      "ctaSecondary": "Explore Services",
+      "scrollCue": "Scroll"
     },
     "stats": [
       { "value": "15+", "label": "Years Experience" },
@@ -470,6 +471,10 @@
       ],
       "message": "Message",
       "messagePlaceholder": "0/500 characters",
+      "messageFieldPlaceholder": "Tell us about your dental needs...",
+      "charactersSuffix": "characters",
+      "validationRequired": "Required",
+      "validationInvalidEmail": "Invalid email",
       "sendButton": "Send Message",
       "quickContact": "Quick Contact",
       "callUs": "Call Us",

@@ -63,11 +63,13 @@ export function FAQSection() {
                       id={`faq-answer-${index}`}
                       role="region"
                       aria-labelledby={`faq-question-${index}`}
-                      hidden={!isOpen}
+                      aria-hidden={!isOpen}
                     >
-                      {item.answer && (
-                        <Box className={styles.content}>{item.answer}</Box>
-                      )}
+                      <Box className={styles.panelInner}>
+                        {item.answer && (
+                          <Box className={styles.content}>{item.answer}</Box>
+                        )}
+                      </Box>
                     </Box>
                   </Box>
                 );

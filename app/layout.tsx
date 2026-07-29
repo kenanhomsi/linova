@@ -4,6 +4,7 @@ import { headers } from "next/headers";
 import "@mantine/core/styles.css";
 import "./globals.css";
 
+import { GoogleAnalytics } from "@/components/analytics/GoogleAnalytics";
 import { getTextDirection, isAppLocale } from "@/i18n/locale-direction";
 import { routing } from "@/i18n/routing";
 import { SITE_CANONICAL_ORIGIN } from "@/lib/constants";
@@ -92,6 +93,9 @@ export async function generateMetadata(): Promise<Metadata> {
       email: true,
       address: true,
     },
+    // Set NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION (and/or _BING) once you have a
+    // real code from Search Console / Bing Webmaster Tools — see
+    // https://search.google.com/search-console -> Settings -> Ownership verification -> HTML tag.
     openGraph: {
       type: "website",
       siteName: "Linova Clinic Istanbul",
@@ -125,7 +129,12 @@ export async function generateMetadata(): Promise<Metadata> {
         "max-snippet": -1,
       },
     },
-    verification: {},
+    verification: {
+      google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION || undefined,
+      other: process.env.NEXT_PUBLIC_BING_SITE_VERIFICATION
+        ? { "msvalidate.01": process.env.NEXT_PUBLIC_BING_SITE_VERIFICATION }
+        : undefined,
+    },
   };
 }
 
@@ -150,6 +159,7 @@ export default async function RootLayout({
         suppressHydrationWarning
       >
         {children}
+        <GoogleAnalytics />
       </body>
     </html>
   );

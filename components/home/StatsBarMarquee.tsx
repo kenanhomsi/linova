@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { Text, Box, Container } from "@mantine/core";
+import { Box, Container } from "@mantine/core";
 
 import styles from "./StatsBar.module.css";
 
@@ -26,7 +26,7 @@ function parseStatValue(value: string): {
   return { target, prefix, suffix };
 }
 
-const DURATION_MS = 2000;
+const DURATION_MS = 1400;
 
 export function StatsBarMarquee({ stats }: { stats: StatItem[] }) {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -82,41 +82,26 @@ export function StatsBarMarquee({ stats }: { stats: StatItem[] }) {
   return (
     <Box
       ref={containerRef}
-      py="xl"
-      className={`${styles.steadyWrap} ${hasAnimated ? styles.visible : ""}`}
+      component="section"
+      className={`${styles.section} ${hasAnimated ? styles.visible : ""}`}
     >
       <Container size="xl">
-        <Box className={styles.grid}>
+        <div className={styles.grid}>
           {stats.map((stat, i) => (
-            <Box
+            <div
               key={`${stat.label}-${i}`}
-              className={styles.statPart}
+              className={styles.item}
               style={{ ["--i" as any]: i }}
             >
-              <Text
-                component="span"
-                className={styles.value}
-                fw={800}
-                size="clamp(1.5rem, 4vw, 2.5rem)"
-                lh={1.1}
-                c="white"
-              >
+              <span className={styles.value}>
                 {parsed[i].prefix}
                 {counts[i]}
                 {parsed[i].suffix}
-              </Text>
-              <Text
-                size="sm"
-                c="teal.1"
-                fw={500}
-                mt={4}
-                className={styles.label}
-              >
-                {stat.label}
-              </Text>
-            </Box>
+              </span>
+              <span className={styles.label}>{stat.label}</span>
+            </div>
           ))}
-        </Box>
+        </div>
       </Container>
     </Box>
   );

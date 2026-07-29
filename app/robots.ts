@@ -1,3 +1,5 @@
+import { SITE_CANONICAL_ORIGIN } from "@/lib/constants";
+
 import type { MetadataRoute } from "next";
 
 export default function robots(): MetadataRoute.Robots {
@@ -9,6 +11,6 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ["/api/", "/_next/"],
       },
     ],
-    sitemap: "https://linovaclinic.com/sitemap.xml",
+    sitemap: `${SITE_CANONICAL_ORIGIN}/sitemap.xml`,
   };
 }

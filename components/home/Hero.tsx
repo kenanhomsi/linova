@@ -116,7 +116,7 @@ export function Hero() {
                 {t("hero.subtitle")}
               </Text>
             </motion.div>
-            <motion.div variants={item}>
+            <motion.div variants={item} className={styles.ctaGroup}>
               <Group gap="sm" justify="center" wrap="wrap">
                 <Link href="/contact" className={styles.link}>
                   <Button
@@ -154,6 +154,17 @@ export function Hero() {
           </Stack>
         </motion.div>
       </Container>
+
+      <motion.div
+        className={styles.scrollCue}
+        aria-hidden
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 1, duration: 0.6 }}
+      >
+        <span className={styles.scrollCueLabel}>{t("hero.scrollCue")}</span>
+        <span className={styles.scrollCueDot} />
+      </motion.div>
     </Box>
   );
 }

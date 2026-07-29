@@ -8,7 +8,9 @@ import { BreadcrumbJsonLd } from "@/lib/structured-data";
 
 import type { Metadata } from "next";
 
-const BASE_URL = "https://linovaclinic.com";
+import { SITE_CANONICAL_ORIGIN } from "@/lib/constants";
+
+const BASE_URL = SITE_CANONICAL_ORIGIN;
 const OG_IMAGE = `${BASE_URL}/images/hero-patient.jpg`;
 
 interface Props {

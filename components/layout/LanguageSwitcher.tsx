@@ -11,6 +11,16 @@ const localeLabels: Record<string, string> = {
   en: "EN",
   ar: "AR",
   tr: "TR",
+  de: "DE",
+  fr: "FR",
+};
+
+const localeNames: Record<string, string> = {
+  en: "English",
+  ar: "العربية",
+  tr: "Türkçe",
+  de: "Deutsch",
+  fr: "Français",
 };
 
 export function LanguageSwitcher() {
@@ -23,7 +33,7 @@ export function LanguageSwitcher() {
   };
 
   return (
-    <Menu position="bottom-end" shadow="md" width={120}>
+    <Menu position="bottom-end" shadow="md" width={150}>
       <Menu.Target>
         <Button
           variant="subtle"
@@ -42,7 +52,7 @@ export function LanguageSwitcher() {
             onClick={() => switchLocale(loc)}
             style={{ fontWeight: locale === loc ? 700 : 400 }}
           >
-            {localeLabels[loc] ?? loc.toUpperCase()}
+            {localeNames[loc] ?? localeLabels[loc] ?? loc.toUpperCase()}
           </Menu.Item>
         ))}
       </Menu.Dropdown>

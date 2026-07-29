@@ -369,7 +369,8 @@
       "titleHighlight": "لينوفا للأسنان",
       "subtitle": "اكتشف زراعة الأسنان والفينير وابتسامة هوليوود مع دعم سياحة علاجية سهل وواضح في عيادة لينوفا بتركيا.",
       "ctaPrimary": "احصل على استشارة مجانية",
-      "ctaSecondary": "اكتشف خدماتنا"
+      "ctaSecondary": "اكتشف خدماتنا",
+      "scrollCue": "مرر للأسفل"
     },
     "stats": [
       {
@@ -802,6 +803,10 @@
       ],
       "message": "رسالتك",
       "messagePlaceholder": "0/500 حرف",
+      "messageFieldPlaceholder": "أخبرنا عن احتياجات أسنانك...",
+      "charactersSuffix": "حرف",
+      "validationRequired": "مطلوب",
+      "validationInvalidEmail": "بريد إلكتروني غير صالح",
       "sendButton": "أرسل رسالتك",
       "quickContact": "تواصل سريع",
       "callUs": "اتصل بنا",

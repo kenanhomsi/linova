@@ -12,6 +12,7 @@ import { StatsBar } from "@/components/home/StatsBar";
 import { BackToTop } from "@/components/layout/BackToTop";
 import { SectionReveal } from "@/components/ui/Animate";
 import { routing } from "@/i18n/routing";
+import { SITE_CANONICAL_ORIGIN } from "@/lib/constants";
 import {
   FAQJsonLd,
   BreadcrumbJsonLd,
@@ -22,7 +23,7 @@ import {
 
 import type { Metadata } from "next";
 
-const BASE_URL = "https://linovaclinic.com";
+const BASE_URL = SITE_CANONICAL_ORIGIN;
 
 interface Props {
   params: Promise<{ locale: string }>;
@@ -87,7 +88,7 @@ export default async function Home({ params }: Props) {
         <CompleteDentalSolutionsSection animated />
       </SectionReveal>
       <HomeFoldClient />
-      {/* <SeoContentSection locale={locale} /> */}
+      <SeoContentSection locale={locale} />
       <SectionReveal delay={0.05}>
         <GallerySection />
       </SectionReveal>

@@ -23,7 +23,9 @@ import {
 
 import type { Metadata } from "next";
 
-const BASE_URL = "https://linovaclinic.com";
+import { SITE_CANONICAL_ORIGIN } from "@/lib/constants";
+
+const BASE_URL = SITE_CANONICAL_ORIGIN;
 const PAGE_PATH = "/dental-clinic-turkey";
 
 type Locale = "en" | "tr" | "ar";

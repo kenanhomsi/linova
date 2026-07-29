@@ -14,7 +14,7 @@ import {
   IconBrandWhatsapp,
   IconCalendarEvent,
 } from "@tabler/icons-react";
-import { getTranslations } from "next-intl/server";
+import { getLocale, getTranslations } from "next-intl/server";
 
 import { ServiceCard } from "@/components/shared/ServiceCard";
 import { TreatmentLongFormBody } from "@/components/treatments/TreatmentLongFormBody";
@@ -40,6 +40,7 @@ export async function TreatmentDetailContent({
   treatment,
 }: TreatmentDetailContentProps) {
   const t = await getTranslations("treatments");
+  const locale = await getLocale();
 
   const title = t(`items.${treatment.slug}.title`);
   const shortDescription = t(`items.${treatment.slug}.shortDescription`);
@@ -51,7 +52,7 @@ export async function TreatmentDetailContent({
     .filter((item) => item.slug !== treatment.slug)
     .slice(0, 3);
 
-  const longArticle = getTreatmentLongArticle(treatment.slug);
+  const longArticle = getTreatmentLongArticle(treatment.slug, locale);
 
   return (
     <div className={styles.pageRoot}>

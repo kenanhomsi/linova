@@ -3,6 +3,7 @@
 import { TextInput, Textarea, Button, Stack } from "@mantine/core";
 import { useForm } from "@mantine/form";
 
+import { ANALYTICS_EVENTS, trackEvent } from "@/lib/analytics";
 import { WHATSAPP_LINK } from "@/lib/constants";
 
 interface FormValues {
@@ -34,6 +35,7 @@ export function ContactForm() {
       `Message: ${values.message}`,
     ].join("\n");
     const url = `${WHATSAPP_LINK}?text=${encodeURIComponent(text)}`;
+    trackEvent(ANALYTICS_EVENTS.CONTACT_FORM_SUBMIT, { location: "contact_form" });
     window.open(url, "_blank", "noopener,noreferrer");
   };
 

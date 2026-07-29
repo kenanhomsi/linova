@@ -15,6 +15,14 @@ const IMAGES = {
   IntraoralScanning: "/images/Intraoral Scanning.jpeg",
   zygomaticImplants: "/images/zygomatic-implants.jpeg",
   gumtrutments: "/images/gum-trutments.jpeg",
+  fullMouthRestoration: "/images/dental-crowns-bridges/pic1.jpeg",
+  oralSurgery: "/images/services/oral-surgery.jpg",
+  sinusLiftBoneGraft: "/images/services/sinus-lift-bone-graft.jpg",
+  rootCanal: "/images/services/root-canal.jpg",
+  onlineConsultation: "/images/services/online-consultation.jpg",
+  airportTransfers: "/images/services/airport-transfers.jpg",
+  accommodation: "/images/services/accommodation.jpg",
+  multilingualCoordinators: "/images/services/multilingual-coordinators.jpg",
 } as const;
 
 export const CATEGORIES: TreatmentCategoryInfo[] = [
@@ -137,6 +145,15 @@ export const TREATMENTS: Treatment[] = [
     category: "restorative",
     image: IMAGES.dentalCrowns,
   },
+  {
+    id: "full-mouth-restoration",
+    slug: "full-mouth-restoration",
+    title: "Full Mouth Restoration",
+    shortDescription:
+      "A comprehensive reconstruction plan combining multiple treatments to fully restore function, aesthetics, and oral health for long-term results.",
+    category: "restorative",
+    image: IMAGES.fullMouthRestoration,
+  },
 
   // General
   {
@@ -146,6 +163,7 @@ export const TREATMENTS: Treatment[] = [
     shortDescription:
       "A thorough oral health evaluation with digital imaging, personalized treatment planning, and expert guidance to keep your smile healthy.",
     category: "general",
+    image: IMAGES.IntraoralScanning,
   },
   {
     id: "xray-cbct",
@@ -173,6 +191,7 @@ export const TREATMENTS: Treatment[] = [
     shortDescription:
       "From wisdom tooth extractions to complex surgical procedures — performed by experienced oral surgeons with minimally invasive techniques and fast recovery.",
     category: "surgical",
+    image: IMAGES.oralSurgery,
   },
   {
     id: "sinus-lift-bone-graft",
@@ -181,6 +200,7 @@ export const TREATMENTS: Treatment[] = [
     shortDescription:
       "Advanced bone augmentation procedures to build the foundation needed for successful implant placement, using premium graft materials.",
     category: "surgical",
+    image: IMAGES.sinusLiftBoneGraft,
   },
   {
     id: "root-canal",
@@ -189,6 +209,7 @@ export const TREATMENTS: Treatment[] = [
     shortDescription:
       "Save your natural tooth with precise endodontic treatment — modern techniques and anesthesia ensure a comfortable, virtually painless experience.",
     category: "surgical",
+    image: IMAGES.rootCanal,
   },
   // Digital
   {
@@ -217,6 +238,7 @@ export const TREATMENTS: Treatment[] = [
     shortDescription:
       "Start your dental journey from home — share photos, get a detailed virtual assessment, and receive a personalized treatment plan with transparent pricing.",
     category: "tourism",
+    image: IMAGES.onlineConsultation,
   },
   {
     id: "airport-transfers",
@@ -225,6 +247,7 @@ export const TREATMENTS: Treatment[] = [
     shortDescription:
       "Arrive in style with complimentary VIP pickup from Istanbul Airport — a dedicated driver takes you directly to your hotel or clinic, hassle-free.",
     category: "tourism",
+    image: IMAGES.airportTransfers,
   },
   {
     id: "accommodation",
@@ -233,6 +256,7 @@ export const TREATMENTS: Treatment[] = [
     shortDescription:
       "Stay in hand-picked premium hotels near the clinic, perfectly matched to your treatment schedule and personal preferences.",
     category: "tourism",
+    image: IMAGES.accommodation,
   },
   {
     id: "multilingual-coordinators",
@@ -241,6 +265,7 @@ export const TREATMENTS: Treatment[] = [
     shortDescription:
       "Dedicated coordinators fluent in English, Arabic, Turkish, and more — guiding you through every step of your treatment journey.",
     category: "tourism",
+    image: IMAGES.multilingualCoordinators,
   },
   {
     id: "tour-addons",
@@ -249,6 +274,7 @@ export const TREATMENTS: Treatment[] = [
     shortDescription:
       "Combine your dental visit with curated Istanbul experiences — historic tours, Bosphorus cruises, shopping excursions, and cultural highlights.",
     category: "tourism",
+    image: "/istanbul.jpg",
   },
 ];
 

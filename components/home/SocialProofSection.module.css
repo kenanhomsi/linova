@@ -1,21 +1,17 @@
 .root {
-  background: var(--mantine-color-gray-0);
+  background: var(--readdy-gray-50);
 }
 
-[data-mantine-color-scheme="dark"] .root {
-  background: var(--mantine-color-dark-7);
+[data-theme="dark"] .root {
+  background: var(--background);
 }
 
 .eyebrow {
-  color: var(--mantine-color-teal-6);
+  color: var(--readdy-teal);
 }
 
 .title {
-  color: var(--mantine-color-gray-9);
-}
-
-[data-mantine-color-scheme="dark"] .title {
-  color: var(--mantine-color-gray-0);
+  color: var(--readdy-gray-900);
 }
 
 .card {
@@ -31,15 +27,11 @@
 }
 
 .quoteIcon {
-  color: var(--mantine-color-teal-4);
+  color: var(--readdy-teal);
   opacity: 0.7;
   margin-bottom: var(--mantine-spacing-xs);
 }
 
 .quote {
-  color: var(--mantine-color-gray-7);
-}
-
-[data-mantine-color-scheme="dark"] .quote {
-  color: var(--mantine-color-gray-4);
+  color: var(--readdy-gray-700);
 }

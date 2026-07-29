@@ -13,7 +13,9 @@ import { routing } from "@/i18n/routing";
 import { BreadcrumbJsonLd } from "@/lib/structured-data";
 
 import type { Metadata } from "next";
-const BASE_URL = "https://linovaclinic.com";
+import { SITE_CANONICAL_ORIGIN } from "@/lib/constants";
+
+const BASE_URL = SITE_CANONICAL_ORIGIN;
 
 interface Props {
   params: Promise<{ locale: string }>;

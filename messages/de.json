@@ -1,0 +1,1346 @@
+{
+  "common": {
+    "siteName": "Linova Clinic",
+    "siteFullName": "Linova Clinic Istanbul",
+    "siteTagline": "Zahnklinik in der Türkei | Implantate, Veneers & Hollywood Smile",
+    "skipToContent": "Zum Hauptinhalt springen",
+    "getAppointment": "Termin vereinbaren",
+    "whatsapp": "WhatsApp",
+    "bookNow": "Jetzt buchen",
+    "learnMore": "Mehr erfahren",
+    "nav": {
+      "home": "Startseite",
+      "Treatments": "Behandlungen",
+      "packages": "Pakete",
+      "whyChooseUs": "Warum wir",
+      "istanbulExperience": "zahnreise",
+      "technology": "Technologie",
+      "contact": "Kontakt",
+      "blog": "Blog"
+    },
+    "footer": {
+      "aboutUs": "Über uns",
+      "treatments": "Behandlungen",
+      "smileGallery": "Lächeln-Galerie",
+      "team": "Team",
+      "contact": "Kontakt",
+      "blog": "Blog",
+      "services": "Leistungen",
+      "popularTreatments": "Beliebte Behandlungen",
+      "getInTouch": "Kontaktieren Sie uns",
+      "visitUs": "Besuchen Sie uns",
+      "doYouWantAppointment": "Möchten Sie einen Termin vereinbaren?",
+      "getAnAppointment": "Termin vereinbaren",
+      "allRightsReserved": "Alle Rechte vorbehalten",
+      "instagram": "Instagram",
+      "facebook": "Facebook",
+      "youtube": "YouTube",
+      "whatsapp": "WhatsApp"
+    },
+    "footerServices": {
+      "cosmeticDentistry": "Kosmetische Zahnheilkunde",
+      "dentalImplants": "Zahnimplantate",
+      "dentalPackages": "Zahnpakete",
+      "istanbulExperience": "Istanbul-Erlebnis",
+      "medicalTourism": "Medizintourismus",
+      "technology": "Technologie"
+    },
+    "footerTreatments": {
+      "hollywoodSmile": "Hollywood Smile",
+      "hollywoodSmileOffer": "Hollywood-Smile-Angebot",
+      "allOn4Implants": "All-on-4-Implantate",
+      "veneers": "Veneers",
+      "teethWhitening": "Zahnaufhellung"
+    },
+    "footerLegal": {
+      "privacyPolicy": "Datenschutzerklärung",
+      "termsOfService": "Nutzungsbedingungen",
+      "websiteBuilder": "Website-Ersteller"
+    },
+    "address": "Stadtteil Nişantaşı, Istanbul, Türkei",
+    "workingHours": "Mo - Fr: 09:00 - 18:00",
+    "workingHoursFooter": "Mo - Fr: 9:00 - 18:00 Uhr\nSa: 10:00 - 16:00 Uhr"
+  },
+  "home": {
+    "seoDescription": "Linova Clinic ist eine vertrauenswürdige Zahnklinik in der Türkei für Zahnimplantate, Veneers, Hollywood Smile und komplette Mundrestauration in Istanbul. Kostenlose Beratung und patientenfreundliche Planung für Medizintourismus.",
+    "seoKeywords": "linova, linova dental, linova clinic, linova türkei, klinik türkei, zahnbehandlung türkei, medizintourismus türkei, zahnklinik türkei, zahnklinik istanbul, zahnimplantate türkei, veneers türkei, hollywood smile türkei, bester zahnarzt in istanbul",
+    "hero": {
+      "badge": "Vertrauenswürdige Zahnklinik in der Türkei",
+      "title": "Linova Zahnklinik in Istanbul",
+      "titleHighlight": "in Istanbul",
+      "subtitle": "Entdecken Sie Zahnimplantate, Veneers, Hollywood-Smile-Verwandlungen und patientenfreundliche Unterstützung beim Zahntourismus in der Linova Clinic in der Türkei.",
+      "ctaPrimary": "Kostenlose Beratung erhalten",
+      "ctaSecondary": "Leistungen entdecken",
+      "scrollCue": "Scrollen"
+    },
+    "stats": [
+      { "value": "15+", "label": "Jahre Erfahrung" },
+      { "value": "10K+", "label": "Zufriedene Patienten" },
+      { "value": "50+", "label": "Betreute Länder" },
+      { "value": "98%", "label": "Zufriedenheitsrate" }
+    ],
+    "socialProof": {
+      "eyebrow": "Weltweit vertraut",
+      "title": "Geschätzt von Patienten aus über 50 Ländern"
+    },
+    "expertise": {
+      "eyebrow": "Unsere Expertise",
+      "title": "Umfassende Zahnlösungen",
+      "subtitle": "Von kosmetischen Verbesserungen bis zu komplexen Restaurationen bieten wir umfassende Zahnbehandlungen mit modernster Technologie und Techniken"
+    },
+    "treatmentCards": [
+      {
+        "category": "Kosmetische Zahnheilkunde",
+        "title": "Hollywood Smile Makeover",
+        "description": "Komplette kosmetische Verwandlung aus Veneers, Aufhellung und Lächeln-Design für ein atemberaubendes, natürlich wirkendes Ergebnis",
+        "cta": "Mehr erfahren",
+        "badge": "Am beliebtesten"
+      },
+      {
+        "category": "Restaurative Zahnheilkunde",
+        "title": "Zahnimplantate",
+        "description": "Dauerhafter Zahnersatz mit Titanimplantaten, die wie natürliche Zähne aussehen, sich anfühlen und funktionieren",
+        "cta": "Mehr erfahren",
+        "badge": "Am beliebtesten"
+      },
+      {
+        "category": "Restaurative Zahnheilkunde",
+        "title": "All-on-4 & All-on-6-Implantate",
+        "description": "Feste Vollbogenlösungen für mehrere fehlende Zähne mit sofortigem Ergebnis",
+        "cta": "Mehr erfahren"
+      },
+      {
+        "category": "Kosmetische Zahnheilkunde",
+        "title": "Zahn-Veneers",
+        "description": "Ultradünne Schalen aus Zirkonoxid, E-max und Porzellan für perfekte Zähne",
+        "cta": "Mehr erfahren"
+      },
+      {
+        "category": "Kosmetische Zahnheilkunde",
+        "title": "Zahnaufhellung",
+        "description": "Professionelle Laserbleichung für ein strahlenderes, selbstbewusstes Lächeln",
+        "cta": "Mehr erfahren"
+      },
+      {
+        "category": "Restaurative Zahnheilkunde",
+        "title": "Zahnkronen & Brücken",
+        "description": "Stellen Sie Stärke, Funktion und Aussehen beschädigter Zähne wieder her",
+        "cta": "Mehr erfahren"
+      },
+      {
+        "category": "Digitale Zahnheilkunde",
+        "title": "Digitales Lächeln-Design",
+        "description": "3D-Vorschau und Planung für Ihre ideale Lächeln-Verwandlung",
+        "cta": "Mehr erfahren"
+      },
+      {
+        "category": "Fortschrittliche Technologie",
+        "title": "Laser-Zahnheilkunde",
+        "description": "Präzise, minimal-invasive Behandlungen mit moderner Lasertechnologie",
+        "cta": "Mehr erfahren"
+      }
+    ],
+    "completeDentalSolutionsCards": [
+      {
+        "category": "Kosmetische Zahnheilkunde",
+        "title": "Hollywood Smile Makeover",
+        "description": "Komplette kosmetische Verwandlung aus Veneers, Aufhellung und Lächeln-Design für ein atemberaubendes, natürlich wirkendes Ergebnis, das Ihr Selbstvertrauen stärkt und Ihr Erscheinungsbild verbessert.",
+        "cta": "Mehr erfahren",
+        "badge": "Am beliebtesten",
+        "highlights": [
+          "Individuelle digitale Lächeln-Design-Vorschau",
+          "Premium E-max- & Zirkonoxid-Materialien",
+          "Komplette Verwandlung in 5–7 Tagen"
+        ]
+      },
+      {
+        "category": "Restaurative Zahnheilkunde",
+        "title": "Zahnimplantate",
+        "description": "Dauerhafter Zahnersatz mit Titanimplantaten, die wie natürliche Zähne aussehen, sich anfühlen und funktionieren. Digital geplant für Präzision und langlebige Ergebnisse.",
+        "cta": "Mehr erfahren",
+        "badge": "Am beliebtesten",
+        "highlights": [
+          "Deutsche Titan-Implantatsysteme",
+          "Lebenslange Garantie inklusive",
+          "3D-digitale Operationsplanung"
+        ]
+      },
+      {
+        "category": "Restaurative Zahnheilkunde",
+        "title": "All-on-4 & All-on-6",
+        "description": "Feste Vollbogenlösungen für mehrere fehlende Zähne mit sofortigem Ergebnis. Stellen Sie einen kompletten Kiefer in einer einzigen Sitzung mit fortschrittlichen Implantattechniken wieder her.",
+        "cta": "Mehr erfahren",
+        "highlights": [
+          "Vollständige Kieferrestauration an einem Tag",
+          "Kein Knochenaufbau erforderlich",
+          "Sofortige feste Prothese"
+        ]
+      },
+      {
+        "category": "Kosmetische Zahnheilkunde",
+        "title": "Zahn-Veneers",
+        "description": "Ultradünne Schalen aus Zirkonoxid, E-max und Porzellan für perfekte Zähne. Korrigieren Sie Lücken, Absplitterungen und Verfärbungen mit einem makellosen, natürlich wirkenden Aussehen.",
+        "cta": "Mehr erfahren",
+        "highlights": [
+          "Ultradünne 0,3-mm-Schalen",
+          "Optionen ohne oder mit minimalem Schliff",
+          "Natürlich abgestimmte Transluzenz"
+        ]
+      },
+      {
+        "category": "Kosmetische Zahnheilkunde",
+        "title": "Zahnaufhellung",
+        "description": "Professionelle Laserbleichung für ein strahlenderes, selbstbewussteres Lächeln. Erzielen Sie sichtbare Ergebnisse in einer einzigen Sitzung mit lang anhaltender Aufhellung.",
+        "cta": "Mehr erfahren",
+        "highlights": [
+          "Bis zu 8 Nuancen heller",
+          "Professionelle Behandlung in der Praxis",
+          "Lang anhaltende Ergebnisse"
+        ]
+      },
+      {
+        "category": "Restaurative Zahnheilkunde",
+        "title": "Zahnkronen & Brücken",
+        "description": "Stellen Sie Stärke, Funktion und Aussehen beschädigter Zähne mit präzisionsgefertigten Keramikrestaurationen wieder her, die auf Langlebigkeit und Ästhetik ausgelegt sind.",
+        "cta": "Mehr erfahren",
+        "highlights": [
+          "CAD/CAM-präzisionsgefertigte Passform",
+          "Restaurationen am selben Tag möglich",
+          "Hochwertige Keramikmaterialien"
+        ]
+      },
+      {
+        "category": "Digitale Zahnheilkunde",
+        "title": "Digitales Lächeln-Design",
+        "description": "3D-Vorschau und Planung für Ihre ideale Lächeln-Verwandlung. Sehen Sie Ihr zukünftiges Lächeln, bevor die Behandlung beginnt, mit KI-gestützten digitalen Entwürfen.",
+        "cta": "Mehr erfahren",
+        "highlights": [
+          "Vorschau Ihres Lächelns vor der Behandlung",
+          "KI-gestützte Gesichtsanalyse",
+          "Präzise digitale Entwürfe"
+        ]
+      },
+      {
+        "category": "Fortschrittliche Technologie",
+        "title": "Laser-Zahnheilkunde",
+        "description": "Präzise, minimal-invasive Behandlungen mit moderner Lasertechnologie. Erleben Sie schnellere Heilung, weniger Beschwerden und überlegene Präzision.",
+        "cta": "Mehr erfahren",
+        "highlights": [
+          "Minimal-invasive Verfahren",
+          "Schnellere Heilung & Erholung",
+          "Weniger Beschwerden"
+        ]
+      }
+    ],
+    "whyLinova": {
+      "eyebrow": "Warum Linova Clinic",
+      "title": "Ihr vertrauenswürdiger Partner in Istanbul",
+      "subtitle": "Wir verbinden erstklassige zahnmedizinische Expertise mit außergewöhnlicher Patientenbetreuung und exzellentem Medizintourismus",
+      "cards": [
+        {
+          "title": "Internationale Standards",
+          "description": "ISO-zertifizierte Klinik mit europäischen Qualitätsprotokollen und Sterilisationsstandards",
+          "cta": "Mehr erfahren"
+        },
+        {
+          "title": "Expertenteam",
+          "description": "Hochqualifizierte Zahnärzte mit internationaler Ausbildung und über 15 Jahren Erfahrung",
+          "cta": "Mehr erfahren"
+        },
+        {
+          "title": "Transparente Preise",
+          "description": "Bis zu 70% Ersparnis im Vergleich zu Preisen in UK/USA ohne versteckte Kosten",
+          "cta": "Mehr erfahren"
+        },
+        {
+          "title": "Medizintourismus",
+          "description": "Komplette Reisebegleitung, Flughafentransfers und Unterstützung bei der Unterkunft",
+          "cta": "Mehr erfahren"
+        },
+        {
+          "title": "Lebenslange Garantie",
+          "description": "Erweiterte Garantien auf alle Behandlungen mit umfassender Nachsorge",
+          "cta": "Mehr erfahren"
+        },
+        {
+          "title": "24/7-Support",
+          "description": "Mehrsprachige Patientenkoordinatoren rund um die Uhr erreichbar",
+          "cta": "Mehr erfahren"
+        }
+      ]
+    },
+    "smileTransformations": {
+      "eyebrow": "Echte Ergebnisse",
+      "title": "Lächeln-Verwandlungen",
+      "subtitle": "Sehen Sie die lebensverändernden Ergebnisse, die unsere Patienten mit unseren fachkundigen Zahnbehandlungen erzielt haben",
+      "tabs": [
+        "Alle Fälle",
+        "Hollywood Smile",
+        "Implantate",
+        "Veneers",
+        "Aufhellung"
+      ],
+      "before": "Vorher",
+      "after": "Nachher"
+    },
+    "beforeAfterShowcase": {
+      "eyebrow": "Bewährte Ergebnisse",
+      "title": "Sehen Sie den Unterschied.",
+      "titleAccent": "Spüren Sie das Selbstvertrauen.",
+      "subtitle": "Ziehen Sie, um die Verwandlung zu enthüllen — echte Patienten, echte Ergebnisse, keine Filter",
+      "cta": "Starten Sie Ihre Verwandlung",
+      "dragHint": "Ziehen zum Vergleichen"
+    },
+    "transformations": [
+      {
+        "title": "Hollywood-Smile-Verwandlung",
+        "detail": "16 Zirkonoxid-Veneers",
+        "category": "Hollywood Smile"
+      },
+      {
+        "title": "Erfolgreiche Zahnimplantation",
+        "detail": "4 Zahnimplantate",
+        "category": "Implantate"
+      },
+      {
+        "title": "Perfekte Veneers",
+        "detail": "8 E-max-Veneers",
+        "category": "Veneers"
+      },
+      {
+        "title": "Ergebnisse der Laseraufhellung",
+        "detail": "Professionelle Laseraufhellung",
+        "category": "Aufhellung"
+      },
+      {
+        "title": "All-on-4-Vollrestauration",
+        "detail": "All-on-4-Implantate",
+        "category": "Implantate"
+      }
+    ],
+    "gallery": {
+      "sectionTitle": "Geschichten unserer Patienten"
+    },
+    "galleryTabs": ["Vorher & Nachher", "Unsere Klinik"],
+    "galleryItems": [
+      { "title": "Hollywood Smile", "tag": "Veneers" },
+      { "title": "Zahn-Veneers", "tag": "Kosmetik" },
+      { "title": "All-on-4-Implantate", "tag": "Implantate" },
+      { "title": "Zahnaufhellung", "tag": "Aufhellung" }
+    ],
+    "dentalJourney": {
+      "title": "ihre zahnreise in istanbul",
+      "subtitle": "Komplette Pflegepakete inklusive luxuriöser Unterkunft, VIP-Transfers und persönlichen Behandlungsplänen",
+      "cta": "Planen Sie Ihren Besuch",
+      "whatsappConsultation": "Hallo, ich möchte eine Fernberatung buchen und einen persönlichen Behandlungsplan erhalten.",
+      "whatsappMultilingual": "Hallo, ich habe eine Frage.",
+      "cards": [
+        {
+          "title": "Online-Beratung",
+          "description": "Beginnen Sie Ihre Reise von zu Hause aus mit einer detaillierten virtuellen Einschätzung und persönlichen Behandlungsplänen"
+        },
+        {
+          "title": "VIP-Flughafentransfer",
+          "description": "Bequemer Transport vom Flughafen zur Klinik und zum Hotel mit persönlichem Fahrservice"
+        },
+        {
+          "title": "Luxuriöse Unterkunft",
+          "description": "Komfortable Hotelaufenthalte, abgestimmt auf Ihren Behandlungsplan, an Premium-Standorten in Istanbul"
+        },
+        {
+          "title": "Mehrsprachiger Support",
+          "description": "Patientenkoordinatoren, fließend in Englisch und weiteren Sprachen, während Ihres gesamten Aufenthalts"
+        }
+      ]
+    },
+    "digitalDentistry": {
+      "eyebrow": "Fortschrittliche digitale Zahnheilkunde",
+      "title": "Fortschrittliche digitale Zahnheilkunde",
+      "intro": "Wir investieren in modernste Technologie, um präzise Diagnosen, komfortable Behandlungen und vorhersehbare Ergebnisse zu gewährleisten. Unser digitaler Workflow verbessert jeden Aspekt Ihrer zahnmedizinischen Erfahrung.",
+      "highlight": {
+        "title": "Digitales Lächeln-Design",
+        "description": "Visualisieren Sie Ihr neues Lächeln, bevor die Behandlung beginnt. Unsere DSD-Technologie erstellt einen präzisen digitalen Entwurf Ihrer idealen Lächeln-Verwandlung.",
+        "cta": "Technologie ansehen"
+      },
+      "tech": [
+        {
+          "badge": "Neueste Technologie",
+          "title": "3D-CBCT-Bildgebung",
+          "description": "Dreidimensionale Bildgebung für präzise Implantatplanung und komplexe chirurgische Eingriffe bei minimaler Strahlenbelastung.",
+          "cta": "Mehr erfahren"
+        },
+        {
+          "badge": "Intraoraler Scan",
+          "title": "Intraoraler Scan",
+          "description": "Digitale Abdrücke ersetzen unangenehme traditionelle Abformungen und bieten zugleich überlegene Genauigkeit für Kronen, Veneers und Schienen.",
+          "cta": "Mehr erfahren"
+        }
+      ],
+      "bullets": [
+        {
+          "title": "CAD/CAM-System",
+          "description": "Restaurationen am selben Tag, hausintern entworfen und gefräst — kürzere Behandlungszeit und perfekte Passform sowie Ästhetik."
+        }
+      ]
+    },
+    "testimonials": [
+      {
+        "flag": "🇬🇧",
+        "quote": "Ich bin von London nach Istanbul gereist, um mein Hollywood Smile zu bekommen, und es war die beste Entscheidung überhaupt! Das Team der Linova Clinic war unglaublich professionell, und die Ergebnisse übertrafen meine Erwartungen. Mein Selbstvertrauen ist enorm gestiegen!",
+        "name": "Sarah Mitchell",
+        "country": "Vereinigtes Königreich",
+        "treatment": "Hollywood Smile Makeover",
+        "timeAgo": "vor 3 Wochen"
+      },
+      {
+        "flag": "🇺🇸",
+        "quote": "Nach jahrelangen Zahnproblemen habe ich endlich die Lösung bei der Linova Clinic gefunden. Der All-on-4-Eingriff war schmerzfrei, und die Ergebnisse sind erstaunlich. Ich habe im Vergleich zu US-Preisen tausende gespart und bessere Qualität erhalten!",
+        "name": "James Anderson",
+        "country": "Vereinigte Staaten",
+        "treatment": "All-on-4-Zahnimplantate",
+        "timeAgo": "vor 1 Monat"
+      },
+      {
+        "flag": "🇦🇺",
+        "quote": "Die gesamte Erfahrung verlief von Anfang bis Ende nahtlos. Die Klinik hat alles organisiert - Flughafenabholung, Hotel und alle Termine. Meine Veneers sehen absolut natürlich aus, und ich könnte mit meinem neuen Lächeln nicht glücklicher sein!",
+        "name": "Emma Thompson",
+        "country": "Australien",
+        "treatment": "Zahn-Veneers",
+        "timeAgo": "vor 2 Wochen"
+      },
+      {
+        "flag": "🇩🇪",
+        "quote": "Außergewöhnliche Qualität und Professionalität! Die deutschen Präzisionsstandards kombiniert mit türkischer Gastfreundschaft machten diese Erfahrung herausragend. Meine komplette Mundrestauration sieht perfekt aus, und die Nachsorge ist exzellent.",
+        "name": "Michael Weber",
+        "country": "Deutschland",
+        "treatment": "Komplette Mundrestauration",
+        "timeAgo": "vor 1 Monat"
+      },
+      {
+        "flag": "🇫🇷",
+        "quote": "Magnifique! Die Liebe zum Detail und der künstlerische Ansatz bei meinem Lächeln-Design waren beeindruckend. Das Team verstand genau, was ich wollte, und die Ergebnisse sind natürlich schön. Sehr empfehlenswert für alle, die Zahntourismus in Betracht ziehen!",
+        "name": "Sophie Laurent",
+        "country": "Frankreich",
+        "treatment": "Zahnaufhellung & Veneers",
+        "timeAgo": "vor 3 Wochen"
+      },
+      {
+        "flag": "🇨🇦",
+        "quote": "Ich war nervös, für eine Zahnbehandlung ins Ausland zu reisen, aber die Linova Clinic hat alles einfach gemacht. Die verwendete Technologie ist hochmodern, und die Ergebnisse sind fantastisch. Jeden Cent und die Reise aus Toronto wert!",
+        "name": "David Chen",
+        "country": "Kanada",
+        "treatment": "Zahnimplantate & Kronen",
+        "timeAgo": "vor 2 Wochen"
+      }
+    ],
+    "reviewsSection": {
+      "eyebrow": "WAS UNSERE PATIENTEN SAGEN",
+      "title": "Echte Geschichten, echte Lächeln",
+      "subtitle": "Tausende Patienten weltweit vertrauen der Linova Clinic für ihre Zahnverwandlung. Hier ist, was sie zu sagen haben.",
+      "googleRating": "4,9",
+      "googleLabel": "Top bewerteter Service",
+      "verifiedBadge": "Verifiziert von Trustindex",
+      "readMore": "Weiterlesen",
+      "quoteMaxLength": 140
+    },
+    "readyCta": {
+      "eyebrow": "JETZT STARTEN",
+      "title": "Bereit für Ihr Traumlächeln?",
+      "subtitle": "Starten Sie Ihre Lächeln-Verwandlung noch heute mit einem detaillierten, persönlichen Behandlungsplan. Unser mehrsprachiges Team begleitet Sie bei jedem Schritt Ihrer Zahnreise.",
+      "callLabel": "Rufen Sie uns jederzeit an",
+      "emailLabel": "Schreiben Sie uns",
+      "hoursLabel": "Öffnungszeiten",
+      "hours": "Mo - Fr: 09:00 - 18:00",
+      "ctaButton": "Kostenlose Beratung buchen"
+    },
+    "footerForm": {
+      "title": "Beginnen Sie Ihre Lächeln-Reise",
+      "subtitle": "Buchen Sie Ihre kostenlose Beratung und entdecken Sie, wie wir Ihr Lächeln verwandeln können",
+      "fullName": "Vollständiger Name",
+      "email": "E-Mail",
+      "phone": "Telefonnummer",
+      "treatmentInterest": "Interessierte Behandlung",
+      "treatmentOptions": [
+        "Behandlung auswählen",
+        "Hollywood Smile Makeover",
+        "Zahnimplantate",
+        "Zahn-Veneers",
+        "Zahnaufhellung",
+        "All-on-4-Implantate",
+        "Andere Behandlung"
+      ],
+      "message": "Nachricht",
+      "messagePlaceholder": "0/500 Zeichen",
+      "messageFieldPlaceholder": "Erzählen Sie uns von Ihren zahnmedizinischen Bedürfnissen...",
+      "charactersSuffix": "Zeichen",
+      "validationRequired": "Erforderlich",
+      "validationInvalidEmail": "Ungültige E-Mail",
+      "sendButton": "Nachricht senden",
+      "quickContact": "Schnellkontakt",
+      "callUs": "Rufen Sie uns an",
+      "whatsapp": "Chatten Sie mit uns",
+      "emailUs": "E-Mail",
+      "visitTitle": "Besuchen Sie unsere Klinik",
+      "addressLabel": "Adresse",
+      "address": "Stadtteil Nişantaşı\nIstanbul, Türkei",
+      "hoursLabel": "Öffnungszeiten",
+      "hours": "Mo - Fr: 9:00 - 18:00 Uhr\nSa: 10:00 - 16:00 Uhr"
+    },
+    "faq": {
+      "title": "FAQ",
+      "subtitle": "häufig gestellte Fragen",
+      "items": [
+        {
+          "question": "Wie sparen Patienten durch die Wahl von Linova in Istanbul erheblich bei der Zahnbehandlung?",
+          "answer": "Die günstige Wirtschaftsstruktur der Türkei — niedrigere Betriebskosten, vorteilhafte Wechselkurse und starke staatliche Investitionen in das Gesundheitswesen — bedeutet, dass erstklassige Zahnbehandlungen zu einem Bruchteil westlicher Preise angeboten werden können. Dies ist kein Kompromiss bei der Qualität. Linova verwendet dieselben international zertifizierten Implantatmarken, hochwertigen Keramikmaterialien und fortschrittlichen digitalen Technologien wie führende Kliniken in Europa und den USA. Patienten stellen durchweg fest, dass die Ersparnisse ausreichen, um die gesamte Reise — Flüge, Unterkunft und Behandlung — zu decken, und dennoch weniger zu zahlen als zu Hause."
+        },
+        {
+          "question": "Ist eine Zahnbehandlung in der Türkei wirklich sicher?",
+          "answer": "Absolut. Die Türkei begrüßt jährlich über 500.000 internationale Zahnpatienten — und das aus gutem Grund. Die Linova Clinic arbeitet nach den Standards des türkischen Gesundheitsministeriums, und unsere Zahnärzte verfügen über international anerkannte Zertifizierungen. Wir verwenden ausschließlich EU- und FDA-zugelassene Implantatsysteme und Materialien. Jeder Eingriff folgt strengen sterilen chirurgischen Protokollen, und alle Behandlungen kommen mit einer schriftlichen Garantie. Tausende Patienten aus Großbritannien, Europa, dem Golf und Russland haben Linova vertraut — und sind mit einem Lächeln gegangen, das für sich spricht."
+        },
+        {
+          "question": "Wie kümmert sich Linova um mich ab dem Moment, in dem ich in Istanbul lande?",
+          "answer": "Von Ihrer ersten Nachricht bis zu Ihrem Rückflug kümmern wir uns um alles:\n Bevor Sie ankommen: Kostenlose Online-Beratung, persönlicher Behandlungsplan und vollständige Kostenaufstellung — innerhalb von 24 Stunden. Bei der Landung: VIP-Flughafentransfer direkt zu Ihrem Hotel oder zur Klinik — ohne Stress, ohne Verwirrung. Während der Behandlung: Ein engagierter mehrsprachiger Koordinator (Englisch, Arabisch, Russisch) begleitet Sie bei jedem Schritt. Freizeit: Kuratierte Istanbul-Erlebnisse zwischen den Terminen — der Bosporus, historische Stätten, erstklassige Gastronomie. Bei der Abreise: Vollständige Behandlungsunterlagen, Nachsorge-Set und laufender WhatsApp-Support."
+        },
+        {
+          "question": "Wie fange ich an — muss ich nur für eine Beratung nach Istanbul fliegen?",
+          "answer": "Überhaupt nicht. Ihre Reise beginnt kostenlos von zu Hause aus. Senden Sie uns einfach Fotos Ihrer Zähne und vorhandene Röntgenbilder per WhatsApp oder unser Kontaktformular. Unser Fachteam bewertet Ihren Fall und sendet Ihnen einen detaillierten Behandlungsplan mit transparenter Preisgestaltung — normalerweise innerhalb von 24 Stunden. Sobald Sie mit dem Plan zufrieden sind, helfen wir Ihnen, Ihre Reisetermine, Ihr Hotel und Ihren Flughafentransfer zu koordinieren. Die meisten Behandlungen werden in ein oder zwei Besuchen abgeschlossen, und wir sorgen dafür, dass jeder Tag zählt."
+        },
+        {
+          "question": "Was passiert, wenn ich nach meiner Rückkehr ein Problem habe?",
+          "answer": "Ihre Betreuung endet nicht, wenn Ihr Flug abhebt. Jeder Linova-Patient erhält eine schriftliche Garantie auf seine Behandlung, vollständige digitale Unterlagen und Röntgenbilder sowie direkten Zugang zu seinem Patientenkoordinator über WhatsApp für alle Fragen. Bei kleineren Anliegen bietet unser Team kostenlose Fernberatung und Videokonsultationen an. Falls eine persönliche Nachuntersuchung erforderlich ist, koordinieren wir mit vertrauenswürdigen Partnerkliniken international — sodass Sie, egal wo auf der Welt Sie sich befinden, nie ohne Unterstützung sind."
+        }
+      ]
+    }
+  },
+  "contact": {
+    "title": "Kontakt",
+    "description": "Erhalten Sie eine kostenlose Beratung. Kontaktieren Sie die Linova Clinic in Istanbul für Zahnbehandlungen, WhatsApp oder senden Sie eine Nachricht."
+  },
+  "treatments": {
+    "seoKeywords": "zahnbehandlungen türkei, zahnimplantate istanbul, veneers türkei, hollywood smile, all-on-4-implantate, zahnaufhellung, wurzelbehandlung türkei, kosmetische zahnheilkunde istanbul, zahnkronen, lächeln-makeover",
+    "title": "Behandlungen",
+    "description": "Umfassende Zahnbehandlungen: kosmetisch, restaurativ, Implantate, Veneers, komplette Mundrestauration und Unterstützung für Medizintourismus in Istanbul.",
+    "pageHeader": {
+      "eyebrow": "Umfassende Zahnlösungen",
+      "title": "Erstklassige Behandlungen,",
+      "titleHighlight": "individuell für Sie",
+      "subtitle": "Von kosmetischen Lächeln-Makeovers bis zu fortschrittlichen Implantatlösungen und kompletter Mundrestauration — unser Expertenteam bietet außergewöhnliche Zahnpflege mit modernster Technologie im Herzen von Istanbul. Sparen Sie bis zu 70% im Vergleich zu Preisen in UK und USA."
+    },
+    "stats": {
+      "treatments": "Behandlungen",
+      "happyPatients": "Zufriedene Patienten",
+      "countriesServed": "Betreute Länder",
+      "satisfactionRate": "Zufriedenheitsrate"
+    },
+    "cta": {
+      "eyebrow": "Bereit anzufangen?",
+      "title": "Buchen Sie Ihre kostenlose Beratung",
+      "subtitle": "Besprechen Sie Ihre Ziele mit unserem Team und erhalten Sie einen persönlichen Behandlungsplan. Wir sind hier, um Ihnen zu einem selbstbewussten Lächeln zu verhelfen."
+    },
+    "categories": {
+      "cosmetic": {
+        "title": "Kosmetische Zahnheilkunde",
+        "description": "Erreichen Sie Ihr Traumlächeln mit unserem vollen Angebot an kosmetischen Behandlungen — von Hollywood-Smile-Makeovers über Präzisionsveneers bis zu professioneller Aufhellung."
+      },
+      "restorative": {
+        "title": "Restaurative & rekonstruktive Zahnheilkunde",
+        "description": "Stellen Sie Funktion und Schönheit mit dauerhaften Implantatlösungen, fortschrittlichen Vollbogenrestaurationen und langlebigen Kronen- und Brückenarbeiten wieder her."
+      },
+      "general": {
+        "title": "Allgemeine & präventive Zahnheilkunde",
+        "description": "Erhalten Sie optimale Mundgesundheit mit umfassenden Kontrolluntersuchungen, fortschrittlicher Diagnosebildgebung und fachkundiger Parodontalpflege."
+      },
+      "surgical": {
+        "title": "Spezialisierte & chirurgische Leistungen",
+        "description": "Komplexe Eingriffe, durchgeführt von erfahrenen Oralchirurgen mit modernsten minimal-invasiven Techniken für schnellere Genesung."
+      },
+      "digital": {
+        "title": "Digitale & technologiegestützte Zahnheilkunde",
+        "description": "Erleben Sie die Zukunft der Zahnheilkunde mit 3D-Lächeln-Vorschauen, computergestützter Implantatplatzierung und präzisen Laserbehandlungen."
+      },
+      "tourism": {
+        "title": "Medizintourismus & Patientenbetreuung",
+        "description": "Ein nahtloses Zahntourismus-Erlebnis — von Ihrer ersten virtuellen Beratung bis zu VIP-Flughafentransfers, luxuriöser Unterkunft und Nachsorge."
+      }
+    },
+    "items": {
+      "hollywood-smile": {
+        "title": "Hollywood Smile Makeover",
+        "shortDescription": "Eine komplette Lächeln-Verwandlung aus individuellen Veneers, professioneller Aufhellung und digitalem Lächeln-Design für ein atemberaubendes, natürlich wirkendes Ergebnis, das Blicke auf sich zieht."
+      },
+      "dental-veneers": {
+        "title": "Zahn-Veneers (Zirkonoxid, E-max, Porzellan)",
+        "shortDescription": "Ultradünne, individuell gefertigte Schalen, die auf Ihre Zähne aufgebracht werden, um Farbe, Form und Symmetrie zu perfektionieren — wählen Sie aus Premium-Zirkonoxid-, E-max- oder Porzellan-Optionen."
+      },
+      "teeth-whitening": {
+        "title": "Zahnaufhellung",
+        "shortDescription": "Professionelle Laseraufhellung in der Praxis, die Ihr Lächeln in einer einzigen Sitzung um bis zu 8 Nuancen aufhellt, mit lang anhaltenden Ergebnissen, die Sie lieben werden."
+      },
+      "composite-bonding": {
+        "title": "Kompositbonding",
+        "shortDescription": "Beheben Sie kleine Absplitterungen, schließen Sie Lücken oder formen Sie unregelmäßige Zähne in einer einzigen schmerzfreien Sitzung mit zahnfarbenem Kompositharz für ein nahtloses, natürliches Ergebnis."
+      },
+      "dental-implants": {
+        "title": "Zahnimplantate",
+        "shortDescription": "Der Goldstandard beim dauerhaften Zahnersatz — Titanimplantate, die genau wie Ihre natürlichen Zähne aussehen, sich anfühlen und funktionieren, mit einer Erfolgsrate von 98%."
+      },
+      "all-on-4-6": {
+        "title": "All-on-4 & All-on-6-Implantate",
+        "shortDescription": "Feste Vollbogenprothetik auf nur 4–6 strategisch platzierten Implantaten — ein komplettes Gebiss an einem einzigen Tag mit sofortiger Funktion und Ästhetik."
+      },
+      "zygomatic-implants": {
+        "title": "Zygomatische Implantate",
+        "shortDescription": "Eine fortschrittliche Implantatlösung für Patienten mit starkem Knochenschwund, verankert im Jochbein, um Knochenaufbau-Verfahren zu vermeiden."
+      },
+      "crowns-bridges": {
+        "title": "Zahnkronen & Brücken",
+        "shortDescription": "Stellen Sie beschädigte oder fehlende Zähne mit individuell gefertigten Kronen und Brücken wieder her, die Ihre natürlichen Zähne in Stärke, Farbe und Form nachbilden."
+      },
+      "full-mouth-restoration": {
+        "title": "Komplette Mundrestauration",
+        "shortDescription": "Ein umfassender Rekonstruktionsplan, der mehrere Behandlungen kombiniert, um Funktion, Ästhetik und Mundgesundheit für langfristige Ergebnisse vollständig wiederherzustellen."
+      },
+      "checkups": {
+        "title": "Routine-Zahnkontrollen & Beratung",
+        "shortDescription": "Eine gründliche Untersuchung der Mundgesundheit mit digitaler Bildgebung, individueller Behandlungsplanung und fachkundiger Beratung, um Ihr Lächeln gesund zu halten."
+      },
+      "xray-cbct": {
+        "title": "Zahnröntgen / 3D-CBCT-Bildgebung",
+        "shortDescription": "Modernste 3D-Kegelstrahl-Bildgebung für präzise Diagnose, Implantatplanung und komplexes Behandlungsdesign bei minimaler Strahlenbelastung."
+      },
+      "gum-periodontal": {
+        "title": "Zahnfleisch- & Parodontalbehandlungen",
+        "shortDescription": "Fachkundige Behandlung von Zahnfleischerkrankungen, Tiefenreinigung und Parodontaltherapie, um Ihre Zähne zu schützen und eine dauerhafte Mundgesundheit zu gewährleisten."
+      },
+      "oral-surgery": {
+        "title": "Oralchirurgie",
+        "shortDescription": "Von Weisheitszahnextraktionen bis zu komplexen chirurgischen Eingriffen — durchgeführt von erfahrenen Oralchirurgen mit minimal-invasiven Techniken und schneller Genesung."
+      },
+      "sinus-lift-bone-graft": {
+        "title": "Sinuslift & Knochenaufbau",
+        "shortDescription": "Fortschrittliche Knochenaufbauverfahren, um die Grundlage für eine erfolgreiche Implantatplatzierung zu schaffen, unter Verwendung hochwertiger Transplantatmaterialien."
+      },
+      "root-canal": {
+        "title": "Wurzelkanalbehandlung",
+        "shortDescription": "Retten Sie Ihren natürlichen Zahn mit einer präzisen endodontischen Behandlung — moderne Techniken und Anästhesie sorgen für ein komfortables, nahezu schmerzfreies Erlebnis."
+      },
+      "digital-smile-design": {
+        "title": "Digitales Lächeln-Design (DSD)",
+        "shortDescription": "Visualisieren Sie Ihr neues Lächeln, bevor die Behandlung beginnt, mit fortschrittlicher 3D-Digitalplanung — sehen Sie genau, wie Ihre Verwandlung aus jedem Blickwinkel aussehen wird."
+      },
+      "laser-dentistry": {
+        "title": "Laser-Zahnheilkunde",
+        "shortDescription": "Präzise, minimal-invasive Weich- und Hartgewebebehandlungen mit modernster Lasertechnologie für schnellere Heilung und überlegenen Komfort."
+      },
+      "online-consultation": {
+        "title": "Online-Beratung & Behandlungsplanung",
+        "shortDescription": "Beginnen Sie Ihre Zahnreise von zu Hause aus — teilen Sie Fotos, erhalten Sie eine detaillierte virtuelle Einschätzung und einen persönlichen Behandlungsplan mit transparenter Preisgestaltung."
+      },
+      "airport-transfers": {
+        "title": "VIP-Flughafentransfers",
+        "shortDescription": "Kommen Sie stilvoll an mit kostenloser VIP-Abholung vom Flughafen Istanbul — ein persönlicher Fahrer bringt Sie direkt zu Ihrem Hotel oder zur Klinik, ganz unkompliziert."
+      },
+      "accommodation": {
+        "title": "Luxuriöse Unterkunftsarrangements",
+        "shortDescription": "Übernachten Sie in ausgewählten Premium-Hotels in der Nähe der Klinik, perfekt abgestimmt auf Ihren Behandlungsplan und Ihre persönlichen Vorlieben."
+      },
+      "multilingual-coordinators": {
+        "title": "Mehrsprachige Patientenkoordinatoren",
+        "shortDescription": "Engagierte Koordinatoren, fließend in Englisch, Arabisch, Türkisch und mehr — sie begleiten Sie bei jedem Schritt Ihrer Behandlungsreise."
+      },
+      "tour-addons": {
+        "title": "Touren & Erlebnis-Zusatzoptionen",
+        "shortDescription": "Kombinieren Sie Ihren Zahnarztbesuch mit kuratierten Istanbul-Erlebnissen — historische Touren, Bosporus-Kreuzfahrten, Shopping-Ausflüge und kulturelle Highlights."
+      }
+    },
+    "learnMore": "Mehr erfahren",
+    "detail": {
+      "backToTreatments": "Zurück zu Behandlungen",
+      "bookConsultation": "Kostenlose Beratung buchen",
+      "whatsapp": "Auf WhatsApp chatten",
+      "articleGuideEyebrow": "Expertenratgeber",
+      "articleGuideTitle": "Alles, was Sie wissen müssen",
+      "ctaHint": "Kostenlose Beratung · Unverbindlich · Mehrsprachige Koordinatoren",
+      "relatedTreatments": "Verwandte Behandlungen",
+      "whyLinovaEyebrow": "Der Linova-Unterschied",
+      "whyLinova": "Warum Linova für diese Behandlung wählen",
+      "benefits": [
+        {
+          "title": "Experten-Spezialisten",
+          "desc": "Über 15 Jahre Erfahrung mit international zertifizierten Zahnärzten."
+        },
+        {
+          "title": "Neueste Technologie",
+          "desc": "Modernste Ausrüstung und digitale Präzision für jeden Eingriff."
+        },
+        {
+          "title": "Sparen Sie bis zu 70%",
+          "desc": "Erstklassige Ergebnisse zu einem Bruchteil der UK- & US-Preise, keine versteckten Gebühren."
+        },
+        {
+          "title": "Lebenslange Garantie",
+          "desc": "Wir stehen zu unserer Arbeit mit erweiterten Garantien und Nachsorge-Support."
+        }
+      ]
+    }
+  },
+  "whyUs": {
+    "title": "Warum wir",
+    "description": "Online-Beratung, VIP-Flughafentransfers, luxuriöse Unterkunft, mehrsprachige Koordinatoren und kulturelle Touren in Istanbul zusammen mit Ihrer Zahnbehandlung.",
+    "pageHeader": {
+      "eyebrow": "Warum die Linova Clinic wählen",
+      "title": "Wo erstklassige Zahnheilkunde",
+      "titleHighlight": "auf außergewöhnliche Pflege trifft",
+      "subtitle": "Wir verbinden international zertifizierte zahnmedizinische Expertise mit einem erstklassigen Medizintourismus-Erlebnis — von Ihrer ersten virtuellen Beratung bis zu VIP-Transfers, luxuriösen Aufenthalten und lebenslanger Nachsorge. Alles ist auf Ihren Komfort, Ihre Sicherheit und Ihr Lächeln ausgelegt.",
+      "highlights": {
+        "iso": {
+          "title": "ISO-zertifiziert",
+          "desc": "Europäische Qualitätsstandards"
+        },
+        "years": { "title": "15+ Jahre", "desc": "Fachkundige Zahnpflege" },
+        "savings": {
+          "title": "Bis zu 70% Ersparnis",
+          "desc": "Vs. UK- & US-Preise"
+        },
+        "warranty": {
+          "title": "Lebenslange Garantie",
+          "desc": "Auf alle Behandlungen"
+        }
+      }
+    },
+    "stats": [
+      {
+        "value": "10.000+",
+        "label": "Behandelte Patienten",
+        "detail": "Aus über 50 Ländern weltweit"
+      },
+      {
+        "value": "15+",
+        "label": "Jahre Erfahrung",
+        "detail": "In fortschrittlicher Zahnpflege"
+      },
+      {
+        "value": "70%",
+        "label": "Durchschnittliche Ersparnis",
+        "detail": "Im Vergleich zu UK- & US-Preisen"
+      },
+      {
+        "value": "98%",
+        "label": "Zufriedenheitsrate",
+        "detail": "Basierend auf Patientenbewertungen"
+      },
+      {
+        "value": "24/7",
+        "label": "Patientensupport",
+        "detail": "Mehrsprachige Koordinatoren"
+      },
+      {
+        "value": "5★",
+        "label": "Google-Bewertung",
+        "detail": "Verifizierte Patientenbewertungen"
+      }
+    ],
+    "reasons": {
+      "eyebrow": "Unser Unterschied",
+      "sectionTitle": "Ihr vertrauenswürdiger Zahnpartner in Istanbul",
+      "sectionSubtitle": "Sechs Säulen, die uns auszeichnen — sie verbinden erstklassige zahnmedizinische Expertise mit einer außergewöhnlichen Patientenerfahrung, die Tausende immer wieder zurückkommen lässt.",
+      "items": [
+        {
+          "title": "Internationale Standards & Zertifizierungen",
+          "description": "Unsere ISO-zertifizierte Klinik folgt strengen europäischen Qualitätsprotokollen, modernsten Sterilisationsstandards und verwendet ausschließlich FDA-zugelassene Materialien führender globaler Marken.",
+          "highlight": "ISO-9001-zertifiziert",
+          "cta": "Mehr erfahren",
+          "blogSlug": "hollywood-smile-makeover"
+        },
+        {
+          "title": "Experten-Zahnärzteteam",
+          "description": "Unsere Zahnärzte verfügen über internationale Qualifikationen mit über 15 Jahren Erfahrung in kosmetischer und restaurativer Zahnheilkunde. Viele wurden an führenden europäischen und amerikanischen Universitäten ausgebildet.",
+          "highlight": "15+ Jahre Erfahrung",
+          "cta": "Team kennenlernen",
+          "blogSlug": "hollywood-smile-makeover"
+        },
+        {
+          "title": "Transparente & erschwingliche Preise",
+          "description": "Sparen Sie bis zu 70% im Vergleich zu Preisen in UK, USA und Europa — ohne versteckte Gebühren. Jeder Behandlungsplan enthält eine detaillierte, im Voraus offengelegte Kostenaufstellung, bevor Sie sich verpflichten.",
+          "highlight": "Bis zu 70% Ersparnis",
+          "cta": "Preise ansehen",
+          "blogSlug": "hollywood-smile-makeover"
+        },
+        {
+          "title": "Komplettes Medizintourismus-Paket",
+          "description": "Von VIP-Flughafentransfers und luxuriösen Hotelaufenthalten bis zu mehrsprachiger Koordination und Stadtführungen durch Istanbul — wir kümmern uns um jedes Detail, damit Sie sich auf Ihr Lächeln konzentrieren können.",
+          "highlight": "All-inclusive-Pakete",
+          "cta": "Besuch planen",
+          "blogSlug": "hollywood-smile-makeover"
+        },
+        {
+          "title": "Lebenslange Garantie & Nachsorge",
+          "description": "Wir stehen mit erweiterten Garantien auf alle wichtigen Behandlungen zu unserer Arbeit. Unser Nachsorgeprogramm umfasst Folgeberatungen, auch nachdem Sie nach Hause zurückgekehrt sind.",
+          "highlight": "Lebenslange Garantie",
+          "cta": "Mehr erfahren",
+          "blogSlug": "hollywood-smile-makeover"
+        },
+        {
+          "title": "24/7 mehrsprachiger Support",
+          "description": "Engagierte Patientenkoordinatoren, rund um die Uhr verfügbar in Englisch, Arabisch, Türkisch, Deutsch und mehr — von Ihrer ersten Anfrage bis zur Nachbehandlung.",
+          "highlight": "Immer verfügbar",
+          "cta": "Kontaktieren Sie uns",
+          "blogSlug": "hollywood-smile-makeover"
+        }
+      ]
+    },
+    "support": {
+      "eyebrow": "Exzellenz im Medizintourismus",
+      "sectionTitle": "Ihr komplettes Betreuungspaket",
+      "sectionSubtitle": "Wir kümmern uns um alles jenseits Ihrer Zahnbehandlung — vom Moment der Buchung bis lange nach Ihrer Rückkehr. Ihre einzige Aufgabe ist es zu lächeln.",
+      "bannerText": "Ihr Zahnreiseziel: Istanbul, Türkei",
+      "services": [
+        {
+          "title": "Kostenlose Online-Beratung",
+          "description": "Beginnen Sie ganz bequem von zu Hause aus. Teilen Sie Fotos oder Röntgenbilder, besprechen Sie Ihre Ziele mit unseren Zahnärzten und erhalten Sie einen detaillierten Behandlungsplan mit transparenter Preisgestaltung — alles per Videoanruf.",
+          "stat": "Innerhalb von 24h",
+          "statLabel": "Antwortzeit"
+        },
+        {
+          "title": "VIP-Flughafentransfers",
+          "description": "Ein persönlicher Fahrer empfängt Sie bei der Ankunft am Flughafen Istanbul mit einem Namensschild. Genießen Sie eine private, komfortable Fahrt direkt zu Ihrem Hotel oder zur Klinik — in jedem Paket inbegriffen.",
+          "stat": "Kostenlos",
+          "statLabel": "für alle Patienten"
+        },
+        {
+          "title": "Premium-Unterkunft",
+          "description": "Wir arbeiten mit sorgfältig ausgewählten 4- und 5-Sterne-Hotels in der Nähe der Klinik zusammen. Ihr Aufenthalt wird auf Ihren Behandlungsplan abgestimmt, mit speziellen Medizintourismus-Tarifen.",
+          "stat": "4-5★",
+          "statLabel": "Partnerhotels"
+        },
+        {
+          "title": "Mehrsprachige Koordinatoren",
+          "description": "Engagierte Patientenkoordinatoren, fließend in Englisch, Arabisch, Türkisch, Deutsch, Französisch und mehr. Sie begleiten Sie bei jedem Schritt — von der Buchung bis zur Nachsorge.",
+          "stat": "6+",
+          "statLabel": "gesprochene Sprachen"
+        },
+        {
+          "title": "Istanbul-Touren & Erlebnisse",
+          "description": "Machen Sie das Beste aus Ihrem Besuch mit kuratierten Erlebnissen — Bosporus-Bootstouren, Shopping im Grand Bazaar, Besuche historischer Stätten und authentischen türkischen Kulinarik-Erlebnissen.",
+          "stat": "10+",
+          "statLabel": "kuratierte Erlebnisse"
+        }
+      ]
+    },
+    "journey": {
+      "eyebrow": "So funktioniert es",
+      "sectionTitle": "Ihre Patientenreise in 5 einfachen Schritten",
+      "sectionSubtitle": "Vom ersten Kontakt bis zur lebenslangen Nachsorge — wir begleiten Sie bei jedem Schritt Ihrer Zahn-Verwandlung mit engagierter Unterstützung in jeder Phase.",
+      "badgeValue": "10.000+",
+      "badgeLabel": "Zufriedene Patienten weltweit",
+      "steps": [
+        {
+          "label": "Online-Beratung",
+          "description": "Teilen Sie Ihre zahnmedizinischen Anliegen, Fotos und Röntgenbilder. Unser Team erstellt einen detaillierten, persönlichen Behandlungsplan mit transparenter Preisgestaltung — ganz bequem von zu Hause aus.",
+          "duration": "1–2 Tage"
+        },
+        {
+          "label": "Buchen & Reise planen",
+          "description": "Bestätigen Sie Ihren Behandlungsplan, und wir übernehmen den Rest — Flugkoordination, Hotelbuchung und ein komplettes Reiseprogramm, zugeschnitten auf Ihre Bedürfnisse und Vorlieben.",
+          "duration": "1–2 Wochen vorher"
+        },
+        {
+          "label": "Ankunft & VIP-Transfer",
+          "description": "Ein persönlicher Fahrer empfängt Sie am Flughafen Istanbul für einen privaten Transfer zu Ihrem Hotel. Ihr Patientenkoordinator kontaktiert Sie, um die Termine für den nächsten Tag zu bestätigen.",
+          "duration": "Tag 1"
+        },
+        {
+          "label": "Ihre Behandlung",
+          "description": "Fachkundige Zahnpflege in unserer modernen Istanbul-Klinik mit modernster Technologie. Mehrere Behandlungen können effizient kombiniert werden, um Ihre Aufenthaltsdauer zu minimieren.",
+          "duration": "Tag 2–5"
+        },
+        {
+          "label": "Nachsorge & Nachbetreuung",
+          "description": "Kehren Sie mit einem vollständigen Nachsorgeleitfaden nach Hause zurück. Unser Team bietet laufende Fernbetreuung, beantwortet alle Fragen und koordiniert bei Bedarf lokale Kontrolluntersuchungen.",
+          "duration": "Laufend"
+        }
+      ]
+    },
+    "cta": {
+      "eyebrow": "Beginnen Sie Ihre Reise",
+      "title": "Bereit, Ihr Lächeln zu verwandeln?",
+      "subtitle": "Schließen Sie sich über 10.000 zufriedenen Patienten aus über 50 Ländern an, die der Linova Clinic ihr Lächeln anvertraut haben. Buchen Sie noch heute Ihre kostenlose Beratung und erhalten Sie einen persönlichen Behandlungsplan mit transparenter Preisgestaltung.",
+      "buttonConsultation": "Kostenlose Beratung buchen",
+      "buttonCall": "Jetzt anrufen",
+      "note": "Kostenlose Beratung ohne Verpflichtung. Antwort innerhalb von 2 Stunden."
+    }
+  },
+  "chat": {
+    "title": "Chatten Sie mit uns",
+    "subtitle": "Ihr Lächeln-Assistent",
+    "placeholder": "Schreiben Sie Ihre Nachricht...",
+    "send": "Senden",
+    "welcomeMessage": "Willkommen bei der Linova Clinic! Ich bin Ihr Assistent für Zahnpflege. Wie kann ich Ihnen heute helfen?",
+    "poweredBy": "Linova Clinic Assistent",
+    "quickActions": {
+      "treatments": "Unsere Behandlungen",
+      "pricing": "Preisinformationen",
+      "consultation": "Kostenlose Beratung",
+      "whatsapp": "Auf WhatsApp chatten"
+    },
+    "botName": "Linova Assistent",
+    "typing": "Schreibt..."
+  },
+  "blogs": {
+    "title": "Blog",
+    "description": "Fachkundige Einblicke in die Zahnmedizin, Patientenratgeber und die neuesten Entwicklungen in der kosmetischen und restaurativen Zahnheilkunde von der Linova Clinic Istanbul.",
+    "pageHeader": {
+      "eyebrow": "Einblicke & Experten-Tipps",
+      "title": "Zahngesundheit",
+      "titleHighlight": "Blog",
+      "subtitle": "Expertenartikel, Patientenratgeber und die neuesten Zahntrends von unserem Facharztteam in Istanbul"
+    },
+    "categories": {
+      "all": "Alle Beiträge",
+      "cosmeticDentistry": "Kosmetische Zahnheilkunde",
+      "dentalImplants": "Zahnimplantate",
+      "medicalTourism": "Medizintourismus",
+      "oralHealth": "Mundgesundheit",
+      "technology": "Technologie"
+    },
+    "readMore": "Artikel lesen",
+    "minRead": "Min. Lesezeit",
+    "featuredBadge": "Empfohlen",
+    "byAuthor": "Von"
+  },
+  "packages": {
+    "seoKeywords": "zahnpakete türkei, zahnurlaub türkei, all-inclusive zahnbehandlung türkei, zahnimplantat-paket, hollywood-smile-paket, komplette mundrestauration türkei, günstige zahnbehandlung türkei, zahntourismus-pakete",
+    "title": "Zahntourismus-Pakete",
+    "description": "Vergleichen Sie All-inclusive-Zahnpakete in Istanbul: Behandlung, Hotelübernachtungen, Transfers und kuratierte Erlebnisse — mit transparenten Ersparnissen gegenüber UK- und US-Preisen.",
+    "hero": {
+      "eyebrow": "All-inclusive in Istanbul",
+      "title": "Pakete, gestaltet rund um",
+      "titleHighlight": "Ihr Lächeln & Ihren Aufenthalt",
+      "subtitle": "Wählen Sie eine Stufe, die zu Ihrer Behandlungsdauer passt und wie viel von Istanbul Sie erleben möchten. Jedes Paket beinhaltet Koordination, Qualitätspflege und klare Preisgestaltung."
+    },
+    "tiersSection": {
+      "title": "Drei Wege, Linova zu erleben",
+      "subtitle": "Die Behandlung ist immer individuell; Pakete ergänzen die richtige Anzahl an Hotelübernachtungen, Transfers und Istanbul-Erlebnissen."
+    },
+    "tiers": {
+      "essential": {
+        "name": "Essential",
+        "nights": "3 Nächte",
+        "description": "Ideal für kürzere Behandlungen oder schnelle Veneer-Besuche.",
+        "features": [
+          "Zahnbehandlung gemäß Ihrem Plan",
+          "3 Nächte in einem 4★-Partnerhotel (Nişantaşı-Gegend)",
+          "Transfers Flughafen ↔ Hotel/Klinik",
+          "Koordination des Behandlungsplans",
+          "Mehrsprachiger Patientenkoordinator"
+        ]
+      },
+      "premium": {
+        "name": "Premium",
+        "badge": "Am beliebtesten",
+        "nights": "5 Nächte",
+        "description": "Unser ausgewogenes Paket: Komfort, Erholungszeit und ein Vorgeschmack auf die Stadt.",
+        "features": [
+          "Alles aus Essential",
+          "5 Nächte in einem 4–5★-Partnerhotel",
+          "Halbtägige Istanbul-Highlight-Tour",
+          "Willkommensdinner in einem Partnerrestaurant",
+          "Vorrangige Terminplanung"
+        ]
+      },
+      "vip": {
+        "name": "VIP-Erlebnis",
+        "nights": "7 Nächte",
+        "description": "Maximaler Komfort, Privatsphäre und kuratierte Istanbul-Momente zwischen den Sitzungen.",
+        "features": [
+          "Alles aus Premium",
+          "7 Nächte in einem 5★-Partnerhotel",
+          "Privater VIP-Flughafentransfer",
+          "Private Bosporus-Kreuzfahrt oder individuelle Tour",
+          "Concierge für Gastronomie & Erlebnisse",
+          "Erweiterte Nachsorge-Betreuung"
+        ]
+      }
+    },
+    "savings": {
+      "title": "Typische Ersparnisse gegenüber UK & USA",
+      "subtitle": "Beispielhafter Vergleich für komplette Behandlungen; Ihr Angebot wird nach der Beratung individuell erstellt.",
+      "columns": {
+        "treatment": "Behandlung",
+        "uk": "UK (ab)",
+        "us": "USA (ab)",
+        "linova": "Linova (ab)",
+        "savings": "Sie sparen (ca.)"
+      },
+      "rows": [
+        {
+          "treatment": "Hollywood Smile (20 Zirkonoxid-Kronen)",
+          "uk": "£7.500 – £12.000",
+          "us": "$10.000 – $18.000",
+          "linova": "ab €2.800",
+          "savings": "bis zu ~70%"
+        },
+        {
+          "treatment": "Einzelnes Zahnimplantat + Krone",
+          "uk": "£2.500 – £4.000",
+          "us": "$3.500 – $6.000",
+          "linova": "ab €900",
+          "savings": "bis zu ~65%"
+        },
+        {
+          "treatment": "Porzellan-Veneers (pro Zahn)",
+          "uk": "£800 – £1.200",
+          "us": "$1.200 – $2.000",
+          "linova": "ab €250",
+          "savings": "bis zu ~70%"
+        },
+        {
+          "treatment": "Komplette Mundrestauration (komplex)",
+          "uk": "£15.000+",
+          "us": "$25.000+",
+          "linova": "Individuelles Angebot",
+          "savings": "oft 60–70%"
+        }
+      ],
+      "footnote": "Preise variieren je nach Komplexität des Falls und den verwendeten Materialien. Kontaktieren Sie uns für einen detaillierten Plan und Paketpreis."
+    },
+    "includes": {
+      "title": "Was jeder Patient erhält",
+      "subtitle": "Mehr als nur die Behandlung — der Linova-Standard für internationale Patienten.",
+      "items": [
+        {
+          "title": "Transparenter Behandlungsplan",
+          "description": "Schriftlicher Plan, Zeitplan und Preisgestaltung, bevor Sie reisen."
+        },
+        {
+          "title": "Garantie & Nachsorge",
+          "description": "Klinische Garantie auf wichtige Arbeiten und Fernbetreuung."
+        },
+        {
+          "title": "Englisch, Arabisch & mehr",
+          "description": "Koordinatoren und klinisches Team mit Erfahrung im Umgang mit internationalen Patienten."
+        },
+        {
+          "title": "Moderne Istanbul-Klinik",
+          "description": "Digitale Arbeitsabläufe, Hygiene und komfortorientierte Pflege."
+        }
+      ]
+    },
+    "cta": {
+      "title": "Erhalten Sie ein persönliches Paketangebot",
+      "subtitle": "Nennen Sie uns Ihre Ziele und Reisedaten — wir ordnen Sie der richtigen Stufe und den passenden Hotelpartnern zu.",
+      "buttonContact": "Angebot anfordern",
+      "buttonWhatsapp": "Schreiben Sie uns auf WhatsApp"
+    }
+  },
+  "istanbulExperience": {
+    "title": "Ihr Istanbul-Erlebnis",
+    "description": "Wo Sie wohnen, was Sie zwischen den Terminen unternehmen können, Beispiel-Reiserouten und Reise-FAQs für Zahntouristen, die die Linova Clinic besuchen.",
+    "hero": {
+      "eyebrow": "Mehr als ein Klinikbesuch",
+      "title": "Entdecken Sie Istanbul",
+      "titleHighlight": "zwischen den Terminen",
+      "subtitle": "Verwandeln Sie Ihre Behandlungsreise in einen ruhigen, gut geplanten Istanbul-Aufenthalt mit dem richtigen Viertel, erholungsfreundlichen Aktivitäten und schön genutzter Zeit zwischen den Terminen.",
+      "imageAlt": "Istanbuls Skyline und der Bosporus — historischer Stadtblick"
+    },
+    "areas": {
+      "title": "Beste Viertel zum Übernachten",
+      "subtitle": "Wählen Sie den Teil Istanbuls, der am besten zu Ihrem Behandlungsplan, Ihrem Erholungstempo und Ihrem Reisestil passt.",
+      "items": [
+        {
+          "imageKey": "nisantasi",
+          "name": "Nişantaşı",
+          "distance": "~5–15 Min. zur Klinik",
+          "vibe": "Gehobenes Einkaufen, Cafés und ruhige Straßen — am nächsten an vielen Zahnterminen.",
+          "bestFor": "Am besten für ruhige Erholung und kurze Transferzeiten",
+          "price": "$$$"
+        },
+        {
+          "imageKey": "taksim",
+          "name": "Taksim & Beyoğlu",
+          "distance": "~15–25 Min.",
+          "vibe": "Lebendig, Istiklal-Allee, Nachtleben und einfache Metro-Anbindung.",
+          "bestFor": "Am besten für Patienten, die nach leichteren Terminen abends ausgehen möchten",
+          "price": "$$–$$$"
+        },
+        {
+          "imageKey": "sultanahmet",
+          "name": "Sultanahmet",
+          "distance": "~25–40 Min.",
+          "vibe": "Hagia Sophia, Blaue Moschee und historischer Kern — perfekt für Sightseeing-Tage.",
+          "bestFor": "Am besten für Erstbesucher, die berühmte Wahrzeichen in der Nähe möchten",
+          "price": "$$–$$$"
+        },
+        {
+          "imageKey": "besiktas",
+          "name": "Beşiktaş & Ortaköy",
+          "distance": "~20–35 Min.",
+          "vibe": "Bosporus-Blicke, Fähren und Meeresfrüchte am Wasser.",
+          "bestFor": "Am besten für malerische Spaziergänge am Ufer und entspannte Nachmittage",
+          "price": "$$–$$$"
+        }
+      ]
+    },
+    "activities": {
+      "title": "Zwischen den Sitzungen",
+      "subtitle": "Sanfte, unvergessliche Ideen für Ruhetage und entspanntere Momente zwischen den Terminen.",
+      "items": [
+        {
+          "imageKey": "bosphorus",
+          "title": "Bosporus-Kreuzfahrt",
+          "time": "2–3 Stunden",
+          "distance": "Verschiedene Anlegestellen",
+          "description": "Klassische Skyline und Uferpaläste vom Wasser aus.",
+          "bestFor": "Ideal an einem leichteren Behandlungstag oder nach Ihrer letzten Anpassung"
+        },
+        {
+          "imageKey": "bazaar",
+          "title": "Großer Basar & Gewürzbasar",
+          "time": "Halber Tag",
+          "distance": "Altstadt",
+          "description": "Gewürze, Tees, Keramik und überdachte Marktatmosphäre im historischen Kern.",
+          "bestFor": "Am besten, wenn Sie Lust auf einen gemächlichen Kulturspaziergang haben"
+        },
+        {
+          "imageKey": "hagia",
+          "title": "Hagia Sophia & Blaue Moschee",
+          "time": "2–4 Stunden",
+          "distance": "Sultanahmet",
+          "description": "Istanbuls ikonischste religiöse und architektonische Wahrzeichen in einem leicht erreichbaren Gebiet.",
+          "bestFor": "Ideal für Ihren Haupt-Sightseeing-Tag zwischen den Klinikbesuchen"
+        },
+        {
+          "imageKey": "istiklal",
+          "title": "Istiklal-Allee",
+          "time": "2–3 Stunden",
+          "distance": "Beyoğlu",
+          "description": "Spazieren, Straßenbahn, Kaffeepausen, Boutiquen und ein lebendiges Stadtgefühl ohne festen Plan.",
+          "bestFor": "Am besten für Patienten, die einen unkomplizierten, spontanen Nachmittag möchten"
+        },
+        {
+          "imageKey": "hamam",
+          "title": "Türkisches Bad (Hamam)",
+          "time": "1,5–2 Stunden",
+          "distance": "Stadtweit",
+          "description": "Ein klassisches türkisches Wellness-Ritual für einen ruhigeren, erholungsorientierten Tag.",
+          "bestFor": "Am besten nach Beratungstagen, nicht direkt nach größeren Eingriffen"
+        },
+        {
+          "imageKey": "galata",
+          "title": "Galata-Turm & Karaköy",
+          "time": "2 Stunden",
+          "distance": "Goldenes Horn",
+          "description": "Panoramablicke über die Stadt, stilvolle Cafés und eines der am einfachsten in eigenem Tempo zu genießenden Viertel.",
+          "bestFor": "Ideal für einen kurzen Ausflug vor dem Abendessen oder am Abreisetag"
+        }
+      ]
+    },
+    "seasons": {
+      "title": "Beste Reisezeit",
+      "subtitle": "Jede Jahreszeit verändert das Tempo der Stadt. Hier erfahren Sie, wann sich Patienten normalerweise am wohlsten fühlen.",
+      "items": [
+        {
+          "imageKey": "spring",
+          "name": "Frühling (Apr–Jun)",
+          "detail": "Mildes Wetter, blühende Straßen und angenehme Bedingungen zum Spazieren machen den Frühling zur einfachsten Jahreszeit, um Behandlung und sanftes Sightseeing zu verbinden."
+        },
+        {
+          "imageKey": "summer",
+          "name": "Sommer (Jul–Aug)",
+          "detail": "Der Sommer ist lebendig und energiegeladen, mit langen Tageslichtstunden und Abenden am Bosporus, obwohl Patienten während der heißesten Nachmittage in der Regel langsamere Pläne bevorzugen."
+        },
+        {
+          "imageKey": "autumn",
+          "name": "Herbst (Sep–Nov)",
+          "detail": "Der Herbst ist oft der ideale Zeitpunkt: warm genug fürs Wasser und Spaziergänge, aber ruhiger als der Hochsommer bei Hotels, Transfers und Sightseeing."
+        },
+        {
+          "imageKey": "winter",
+          "name": "Winter (Dez–Mär)",
+          "detail": "Der Winter fühlt sich ruhiger und praktischer für kürzere medizinische Reisen an, besonders wenn Sie Museen, Cafés und weniger überfüllte Straßen gegenüber ganztägigen Outdoor-Plänen bevorzugen."
+        }
+      ]
+    },
+    "itineraries": {
+      "title": "Beispiel-Reiserouten",
+      "subtitle": "Nur Beispiele — Ihr klinischer Plan hat immer Vorrang.",
+      "timeLabels": {
+        "morning": "Morgen",
+        "afternoon": "Nachmittag",
+        "evening": "Abend"
+      },
+      "items": [
+        {
+          "name": "5-Tage-Hollywood-Smile",
+          "days": [
+            {
+              "label": "Tag 1",
+              "morning": "Ankunft, VIP-Transfer zum Hotel, Ruhe",
+              "afternoon": "Leichter Spaziergang in Nişantaşı",
+              "evening": "Einfaches Abendessen in Hotelnähe"
+            },
+            {
+              "label": "Tag 2",
+              "morning": "Klinik: Beratung & Vorbereitung",
+              "afternoon": "Ruhe / weiche Kost",
+              "evening": "Optionale kurze Sonnenuntergangs-Bootstour auf dem Bosporus"
+            },
+            {
+              "label": "Tag 3",
+              "morning": "Klinik: Hauptbehandlungssitzung",
+              "afternoon": "Ruhe im Hotel",
+              "evening": "Ruhiger Abend — Erholung zuerst"
+            },
+            {
+              "label": "Tag 4",
+              "morning": "Klinik: Anpassungen & Passform-Kontrolle",
+              "afternoon": "Großer Basar oder Gewürzbasar (entspanntes Tempo)",
+              "evening": "Traditionelles Abendessen"
+            },
+            {
+              "label": "Tag 5",
+              "morning": "Abschlusskontrolle",
+              "afternoon": "Transfer zum Flughafen",
+              "evening": "Abreise"
+            }
+          ]
+        },
+        {
+          "name": "7-Tage-Behandlung + Tourismus",
+          "days": [
+            {
+              "label": "Tag 1",
+              "morning": "Ankunft & Transfer",
+              "afternoon": "Einleben, Koordinator-Briefing",
+              "evening": "Abendessen im Viertel"
+            },
+            {
+              "label": "Tag 2",
+              "morning": "Klinik-Sitzung",
+              "afternoon": "Ruhe",
+              "evening": "Freier Abend"
+            },
+            {
+              "label": "Tag 3",
+              "morning": "Klinik-Sitzung",
+              "afternoon": "Hamam oder Hotel-Spa",
+              "evening": "Früh schlafen"
+            },
+            {
+              "label": "Tag 4",
+              "morning": "Ruhetag — Sultanahmet-Highlights",
+              "afternoon": "Hagia-Sophia-Gebiet",
+              "evening": "Tee auf der Dachterrasse mit Aussicht"
+            },
+            {
+              "label": "Tag 5",
+              "morning": "Klinik-Sitzung",
+              "afternoon": "Ruhe",
+              "evening": "Spaziergang auf der Istiklal-Allee"
+            },
+            {
+              "label": "Tag 6",
+              "morning": "Bosporus-Kreuzfahrt",
+              "afternoon": "Ortaköy oder Beşiktaş",
+              "evening": "Abschiedsessen"
+            },
+            {
+              "label": "Tag 7",
+              "morning": "Abschlussbesuch & Unterlagen",
+              "afternoon": "Flughafentransfer",
+              "evening": "Abreise"
+            }
+          ]
+        },
+        {
+          "name": "3-Tage-Schnellbesuch für Veneers",
+          "days": [
+            {
+              "label": "Tag 1",
+              "morning": "Ankunft",
+              "afternoon": "Klinik: Unterlagen & Planung",
+              "evening": "Ruhe"
+            },
+            {
+              "label": "Tag 2",
+              "morning": "Klinik: Hauptbehandlung",
+              "afternoon": "Ruhe im Hotel",
+              "evening": "Nur leichte Aktivität, wenn Sie sich gut fühlen"
+            },
+            {
+              "label": "Tag 3",
+              "morning": "Klinik: Abschluss & Kontrolle",
+              "afternoon": "Abreise",
+              "evening": "—"
+            }
+          ]
+        }
+      ]
+    },
+    "travelFaq": {
+      "title": "Reise-FAQ",
+      "subtitle": "Praktische Antworten für Patienten, die nach Istanbul fliegen.",
+      "items": [
+        {
+          "question": "Ist Istanbul sicher für Touristen?",
+          "answer": "Wie in jeder Großstadt sollten Sie übliche Vorsichtsmaßnahmen treffen: lizenzierte Taxis oder Apps nutzen, Wertsachen sichern und lokale Hinweise beachten. Millionen Touristen besuchen die Stadt jährlich; unsere Koordinatoren teilen aktuelle Tipps für Ihren Aufenthalt."
+        },
+        {
+          "question": "Welche Sprachen werden in der Klinik gesprochen?",
+          "answer": "Wir betreuen regelmäßig Patienten auf Englisch, Arabisch, Türkisch und weiteren Sprachen über unsere Koordinatoren — teilen Sie uns Ihre Präferenz bei der Buchung mit."
+        },
+        {
+          "question": "Benötige ich ein Visum?",
+          "answer": "Viele Nationalitäten können das E-Visum der Türkei nutzen oder visumfrei zu touristischen Zwecken einreisen. Regelungen ändern sich — prüfen Sie die offizielle E-Visa-Seite der Republik Türkei für Ihren Reisepass, bevor Sie Flüge buchen."
+        },
+        {
+          "question": "Welche Währung sollte ich mitbringen?",
+          "answer": "Türkische Lira (TRY) wird vor Ort verwendet; Karten funktionieren weitgehend in Hotels und Einkaufszentren. Ihre Paketpreise werden im Voraus in der von uns angegebenen Währung vereinbart."
+        },
+        {
+          "question": "Wie komme ich vom Flughafen weg?",
+          "answer": "Unsere Pakete beinhalten koordinierte Transfers. Sie werden am Flughafen abgeholt oder von Ihrem Hotel für Klinikbesuche gemäß Ihrer Stufe abgeholt."
+        },
+        {
+          "question": "Was sollte ich anziehen — besonders als muslimischer Patient?",
+          "answer": "Kleiden Sie sich dezent, wenn Sie Moscheen besuchen möchten (Schultern/Knie bedeckt; Frauen benötigen eventuell ein Kopftuch). Im Alltag und in der Klinik ist bequeme, lässige Kleidung in Ordnung. Unser Team kann Sie je nach Saison beraten."
+        },
+        {
+          "question": "Wie weit im Voraus sollte ich buchen?",
+          "answer": "Wir empfehlen mindestens 2–3 Wochen für einfachere Fälle und mehr für komplexe Vollmund-Arbeiten, damit wir Hotel- und Labor-Timing abstimmen können. Eilige Fälle sind möglicherweise möglich — fragen Sie uns."
+        }
+      ]
+    },
+    "tourismTestimonials": {
+      "title": "Warum Patienten auch die Stadt lieben",
+      "subtitle": "Echtes Feedback von Patienten, die Behandlung mit Zeit in Istanbul verbunden haben.",
+      "items": [
+        {
+          "quote": "Ich kam für Veneers, ging aber mit der besten Woche meines Lebens — die Klinik war makellos, und Istanbul hat mein Herz gestohlen.",
+          "name": "Sarah M.",
+          "country": "UK",
+          "highlight": "5-Nächte-Aufenthalt"
+        },
+        {
+          "quote": "Zwischen den Terminen haben wir den Bosporus und den Großen Basar erlebt. Professionelle Zahnheilkunde und ein echter Urlaub.",
+          "name": "Omar K.",
+          "country": "VAE",
+          "highlight": "Premium-Paket"
+        },
+        {
+          "quote": "Nişantaşı war perfekt für Erholungsspaziergänge. Das Team hat alles so geplant, dass ich mich nie gehetzt fühlte.",
+          "name": "Lea D.",
+          "country": "Frankreich",
+          "highlight": "Hollywood-Smile-Reise"
+        }
+      ]
+    },
+    "cta": {
+      "title": "Bereit, einen entspannteren Istanbul-Aufenthalt zu planen?",
+      "subtitle": "Wir helfen Ihnen, Behandlungstermine mit dem richtigen Viertel, Hotel, Transfers und Freizeitplänen abzustimmen, bevor Sie buchen.",
+      "buttonContact": "Kontaktieren Sie uns",
+      "buttonPackages": "Pakete ansehen"
+    }
+  }
+}

@@ -70,7 +70,8 @@
       "titleHighlight": "Linova Diş Kliniği",
       "subtitle": "Türkiye'de diş implantı, kaplama, Hollywood gülüş tasarımı ve hasta dostu sağlık turizmi desteğini Linova Clinic'te keşfedin.",
       "ctaPrimary": "Ücretsiz Danışmanlık Alın",
-      "ctaSecondary": "Hizmetlerimizi Keşfedin"
+      "ctaSecondary": "Hizmetlerimizi Keşfedin",
+      "scrollCue": "Kaydır"
     },
     "stats": [
       {
@@ -503,6 +504,10 @@
       ],
       "message": "Mesajınız",
       "messagePlaceholder": "0/500 karakter",
+      "messageFieldPlaceholder": "Diş ihtiyaçlarınızdan bahsedin...",
+      "charactersSuffix": "karakter",
+      "validationRequired": "Zorunlu alan",
+      "validationInvalidEmail": "Geçersiz e-posta",
       "sendButton": "Mesajı Gönder",
       "quickContact": "Hızlı İletişim",
       "callUs": "Bizi Arayın",

@@ -41,6 +41,23 @@
 }
 
 @media (max-width: 768px) {
+  .tabsScroll {
+    mask-image: linear-gradient(
+      to right,
+      transparent 0,
+      black 20px,
+      black calc(100% - 20px),
+      transparent 100%
+    );
+    -webkit-mask-image: linear-gradient(
+      to right,
+      transparent 0,
+      black 20px,
+      black calc(100% - 20px),
+      transparent 100%
+    );
+  }
+
   .tabsRow {
     justify-content: flex-start;
     padding: 0 1rem;

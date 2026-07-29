@@ -6,13 +6,16 @@ import { TreatmentDetailContent } from "@/components/treatments/TreatmentDetailC
 import { routing } from "@/i18n/routing";
 import {
   BreadcrumbJsonLd,
+  FAQJsonLd,
   MedicalProcedureJsonLd,
 } from "@/lib/structured-data";
 import { TREATMENTS, getTreatmentBySlug } from "@/lib/treatments";
 
 import type { Metadata } from "next";
 
-const BASE_URL = "https://linovaclinic.com";
+import { SITE_CANONICAL_ORIGIN } from "@/lib/constants";
+
+const BASE_URL = SITE_CANONICAL_ORIGIN;
 
 interface Props {
   params: Promise<{ locale: string; slug: string }>;
@@ -96,10 +99,15 @@ export default async function TreatmentDetailPage({ params }: Props) {
 
   const tCommon = await getTranslations("common");
   const tTreatments = await getTranslations("treatments");
+  const tHome = await getTranslations("home");
   const itemTitle = tTreatments(`items.${slug}.title`);
   const itemDescription = tTreatments(`items.${slug}.shortDescription`);
   const absoluteUrl = `${BASE_URL}/${locale}/treatments/${slug}`;
   const absoluteOgImage = toAbsoluteImageUrl(treatment.image);
+  const faqItems = tHome.raw("faq.items") as {
+    question: string;
+    answer: string;
+  }[];
 
   return (
     <main>
@@ -110,6 +118,7 @@ export default async function TreatmentDetailPage({ params }: Props) {
         image={absoluteOgImage}
         inLanguage={locale}
       />
+      <FAQJsonLd items={faqItems} />
       <BreadcrumbJsonLd
         items={[
           { name: tCommon("nav.home"), url: `${BASE_URL}/${locale}` },

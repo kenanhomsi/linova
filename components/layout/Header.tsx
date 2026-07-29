@@ -16,6 +16,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { useTranslations } from "next-intl";
 
 import { Link, usePathname } from "@/i18n/navigation";
+import { ANALYTICS_EVENTS, trackEvent } from "@/lib/analytics";
 import { WHATSAPP_LINK } from "@/lib/constants";
 import logo from "@/public/logo-m2.svg";
 
@@ -137,6 +138,11 @@ export function Header() {
               target="_blank"
               rel="noopener noreferrer"
               className={styles.whatsappLink}
+              onClick={() =>
+                trackEvent(ANALYTICS_EVENTS.WHATSAPP_CLICK, {
+                  location: "header_desktop",
+                })
+              }
             >
               <Button
                 variant="outline"
@@ -229,6 +235,11 @@ export function Header() {
             target="_blank"
             rel="noopener noreferrer"
             className={styles.drawerWhatsApp}
+            onClick={() =>
+              trackEvent(ANALYTICS_EVENTS.WHATSAPP_CLICK, {
+                location: "header_mobile_drawer",
+              })
+            }
           >
             <Button
               variant="outline"

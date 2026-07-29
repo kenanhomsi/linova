@@ -5,11 +5,13 @@ import { TreatmentsContent } from "@/components/treatments/TreatmentsContent";
 import { TreatmentsCTA } from "@/components/treatments/TreatmentsCTA";
 import { TreatmentsPageHeader } from "@/components/treatments/TreatmentsPageHeader";
 import { routing } from "@/i18n/routing";
-import { BreadcrumbJsonLd } from "@/lib/structured-data";
+import { BreadcrumbJsonLd, FAQJsonLd } from "@/lib/structured-data";
 
 import type { Metadata } from "next";
 
-const BASE_URL = "https://linovaclinic.com";
+import { SITE_CANONICAL_ORIGIN } from "@/lib/constants";
+
+const BASE_URL = SITE_CANONICAL_ORIGIN;
 const OG_IMAGE = `${BASE_URL}/images/hero-patient.jpg`;
 
 interface Props {
@@ -58,9 +60,15 @@ export default async function TreatmentsPage({ params }: Props) {
   setRequestLocale(locale);
   const tCommon = await getTranslations("common");
   const tTreatments = await getTranslations("treatments");
+  const tHome = await getTranslations("home");
+  const faqItems = tHome.raw("faq.items") as {
+    question: string;
+    answer: string;
+  }[];
 
   return (
     <main>
+      <FAQJsonLd items={faqItems} />
       <BreadcrumbJsonLd
         items={[
           { name: tCommon("nav.home"), url: `${BASE_URL}/${locale}` },

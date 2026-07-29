@@ -1,10 +1,11 @@
 import { routing } from "@/i18n/routing";
 import { BLOG_POSTS } from "@/lib/blog-data";
+import { SITE_CANONICAL_ORIGIN } from "@/lib/constants";
 import { TREATMENTS } from "@/lib/treatments";
 
 import type { MetadataRoute } from "next";
 
-const BASE_URL = "https://linovaclinic.com";
+const BASE_URL = SITE_CANONICAL_ORIGIN;
 
 const pages = [
   { path: "", changeFrequency: "weekly" as const, priority: 1.0 },
