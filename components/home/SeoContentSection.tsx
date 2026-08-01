@@ -45,6 +45,7 @@ export function SeoContentSection({ locale }: SeoContentSectionProps) {
 
   return (
     <Box
+      display="none"
       component="section"
       py={72}
       bg="#f8fafc"
