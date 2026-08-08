@@ -48,7 +48,7 @@ export function SeoContentSection({ locale }: SeoContentSectionProps) {
       display="none"
       component="section"
       py={72}
-      bg="#f8fafc"
+      bg="red"
       aria-labelledby="seo-content-title"
     >
       <Container size="lg">
