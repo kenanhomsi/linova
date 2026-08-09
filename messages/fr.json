@@ -878,6 +878,7 @@
     "send": "Envoyer",
     "welcomeMessage": "Bienvenue à la Linova Clinic ! Je suis votre assistant de soins dentaires. Comment puis-je vous aider aujourd'hui ?",
     "poweredBy": "Assistant Linova Clinic",
+    "errorMessage": "Désolé, j'ai du mal à répondre pour le moment. Réessayez, ou écrivez-nous sur WhatsApp et notre équipe vous aidera tout de suite.",
     "quickActions": {
       "treatments": "Nos traitements",
       "pricing": "Infos tarifaires",

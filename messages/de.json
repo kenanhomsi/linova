@@ -878,6 +878,7 @@
     "send": "Senden",
     "welcomeMessage": "Willkommen bei der Linova Clinic! Ich bin Ihr Assistent für Zahnpflege. Wie kann ich Ihnen heute helfen?",
     "poweredBy": "Linova Clinic Assistent",
+    "errorMessage": "Entschuldigung, ich habe gerade Schwierigkeiten zu antworten. Bitte versuchen Sie es erneut oder schreiben Sie uns auf WhatsApp — unser Team hilft Ihnen sofort weiter.",
     "quickActions": {
       "treatments": "Unsere Behandlungen",
       "pricing": "Preisinformationen",

@@ -4,7 +4,6 @@ import { useState, useRef, useEffect, useCallback } from "react";
 import Image from "next/image";
 import { useLocale, useTranslations } from "next-intl";
 
-import { detectIntent, getResponse, detectLanguage } from "@/lib/chatKnowledge";
 import { WHATSAPP_LINK } from "@/lib/constants";
 
 import styles from "./ChatWidget.module.css";
@@ -15,6 +14,13 @@ interface Message {
   timestamp: Date;
 }
 
+interface ApiChatMessage {
+  role: "user" | "assistant";
+  content: string;
+}
+
+const WELCOME_MESSAGE_ID = "welcome";
+
 export function ChatWidget() {
   const locale = useLocale();
   const t = useTranslations("chat");
@@ -23,6 +29,7 @@ export function ChatWidget() {
   const [messages, setMessages] = useState<Message[]>([]);
   const [inputValue, setInputValue] = useState("");
   const [isTyping, setIsTyping] = useState(false);
+  const [isSending, setIsSending] = useState(false);
   const [showQuickActions, setShowQuickActions] = useState(true);
   const [hasInteracted, setHasInteracted] = useState(false);
 
@@ -41,7 +48,7 @@ export function ChatWidget() {
     if (isOpen && messages.length === 0) {
       setMessages([
         {
-          id: "welcome",
+          id: WELCOME_MESSAGE_ID,
           text: t("welcomeMessage"),
           sender: "bot",
           timestamp: new Date(),
@@ -56,53 +63,121 @@ export function ChatWidget() {
     }
   }, [isOpen]);
 
-  const addBotResponse = useCallback(
-    (userMessage: string) => {
+  // Streams a real AI reply from /api/chat given the full conversation so
+  // far (including the just-sent user message), appending text as it
+  // arrives so the bubble fills in live instead of popping in all at once.
+  const streamAssistantReply = useCallback(
+    async (history: Message[]) => {
       setIsTyping(true);
+      setIsSending(true);
 
-      const detectedLang = detectLanguage(userMessage);
-      const responseLocale = detectedLang !== "en" ? detectedLang : locale;
-      const intent = detectIntent(userMessage);
-      const response = getResponse(intent, responseLocale);
+      const apiMessages: ApiChatMessage[] = history
+        .filter((m) => m.id !== WELCOME_MESSAGE_ID)
+        .map((m) => ({
+          role: m.sender === "bot" ? "assistant" : "user",
+          content: m.text,
+        }));
 
-      const delay = Math.min(600 + response.length * 1.5, 1800);
+      const botMessageId = `bot-${Date.now()}`;
+      let botMessageAdded = false;
+      let accumulated = "";
 
-      setTimeout(() => {
-        setMessages((prev) => [
-          ...prev,
-          {
-            id: `bot-${Date.now()}`,
-            text: response,
-            sender: "bot",
-            timestamp: new Date(),
-          },
-        ]);
+      try {
+        const res = await fetch("/api/chat", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ messages: apiMessages, locale }),
+        });
+
+        if (!res.ok || !res.body) {
+          throw new Error(`Chat request failed with status ${res.status}`);
+        }
+
+        const reader = res.body.getReader();
+        const decoder = new TextDecoder();
+
+        for (;;) {
+          const { done, value } = await reader.read();
+          if (done) break;
+
+          const chunk = decoder.decode(value, { stream: true });
+          if (!chunk) continue;
+
+          if (!botMessageAdded) {
+            botMessageAdded = true;
+            setIsTyping(false);
+            setMessages((prev) => [
+              ...prev,
+              {
+                id: botMessageId,
+                text: "",
+                sender: "bot",
+                timestamp: new Date(),
+              },
+            ]);
+          }
+
+          accumulated += chunk;
+          const finalText = accumulated;
+          setMessages((prev) =>
+            prev.map((m) =>
+              m.id === botMessageId ? { ...m, text: finalText } : m,
+            ),
+          );
+        }
+
+        if (!botMessageAdded || !accumulated.trim()) {
+          throw new Error("Empty response from chat assistant");
+        }
+      } catch (err) {
+        console.error("Chat assistant error:", err);
+        const fallback = t("errorMessage");
+        if (botMessageAdded) {
+          setMessages((prev) =>
+            prev.map((m) =>
+              m.id === botMessageId && !m.text.trim()
+                ? { ...m, text: fallback }
+                : m,
+            ),
+          );
+        } else {
+          setMessages((prev) => [
+            ...prev,
+            {
+              id: botMessageId,
+              text: fallback,
+              sender: "bot",
+              timestamp: new Date(),
+            },
+          ]);
+        }
+      } finally {
         setIsTyping(false);
-      }, delay);
+        setIsSending(false);
+      }
     },
-    [locale],
+    [locale, t],
   );
 
   const handleSend = useCallback(() => {
     const trimmed = inputValue.trim();
-    if (!trimmed) return;
+    if (!trimmed || isSending) return;
 
     setShowQuickActions(false);
     if (!hasInteracted) setHasInteracted(true);
 
-    setMessages((prev) => [
-      ...prev,
-      {
-        id: `user-${Date.now()}`,
-        text: trimmed,
-        sender: "user",
-        timestamp: new Date(),
-      },
-    ]);
+    const userMessage: Message = {
+      id: `user-${Date.now()}`,
+      text: trimmed,
+      sender: "user",
+      timestamp: new Date(),
+    };
+    const next = [...messages, userMessage];
 
+    setMessages(next);
     setInputValue("");
-    addBotResponse(trimmed);
-  }, [inputValue, hasInteracted, addBotResponse]);
+    void streamAssistantReply(next);
+  }, [inputValue, isSending, hasInteracted, messages, streamAssistantReply]);
 
   const handleKeyDown = useCallback(
     (e: React.KeyboardEvent) => {
@@ -123,48 +198,22 @@ export function ChatWidget() {
         return;
       }
 
-      const actionMap: Record<string, string> = {
-        treatments: "services",
-        pricing: "pricing",
-        consultation: "consultation",
-      };
-
-      const intent = actionMap[action];
-      if (!intent) return;
+      if (isSending) return;
 
       const userText = t(`quickActions.${action}` as Parameters<typeof t>[0]);
+      const userMessage: Message = {
+        id: `user-${Date.now()}`,
+        text: userText,
+        sender: "user",
+        timestamp: new Date(),
+      };
+      const next = [...messages, userMessage];
 
-      setMessages((prev) => [
-        ...prev,
-        {
-          id: `user-${Date.now()}`,
-          text: userText,
-          sender: "user",
-          timestamp: new Date(),
-        },
-      ]);
-
-      setIsTyping(true);
-      const response = getResponse(
-        intent as Parameters<typeof getResponse>[0],
-        locale,
-      );
-      const delay = Math.min(600 + response.length * 1.5, 1800);
-
-      setTimeout(() => {
-        setMessages((prev) => [
-          ...prev,
-          {
-            id: `bot-${Date.now()}`,
-            text: response,
-            sender: "bot",
-            timestamp: new Date(),
-          },
-        ]);
-        setIsTyping(false);
-      }, delay);
+      setMessages(next);
+      setShowQuickActions(false);
+      void streamAssistantReply(next);
     },
-    [hasInteracted, locale, t],
+    [hasInteracted, isSending, messages, t, streamAssistantReply],
   );
 
   const toggleChat = useCallback(() => {
@@ -346,7 +395,7 @@ export function ChatWidget() {
           <button
             className={styles.chatSendBtn}
             onClick={handleSend}
-            disabled={!inputValue.trim()}
+            disabled={!inputValue.trim() || isSending}
             aria-label={t("send")}
           >
             <svg

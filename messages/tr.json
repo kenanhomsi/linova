@@ -915,6 +915,7 @@
     "send": "Gönder",
     "welcomeMessage": "Linova Clinic'e hoş geldiniz! Diş bakım asistanınızım. Bugün size nasıl yardımcı olabilirim?",
     "poweredBy": "Linova Clinic Asistanı",
+    "errorMessage": "Üzgünüm, şu anda yanıt vermekte sorun yaşıyorum. Lütfen tekrar deneyin veya WhatsApp'tan bize yazın, ekibimiz hemen yardımcı olsun.",
     "quickActions": {
       "treatments": "Tedavilerimiz",
       "pricing": "Fiyat Bilgisi",
